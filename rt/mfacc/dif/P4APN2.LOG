@@ -1,0 +1,19 @@
+Comparing files MFACC\P4APN2.LOG and RT\MFACC\SAVE\P4APN2.LOG
+***** MFACC\P4APN2.LOG
+EZ390I program = mfacc\P4APN2.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P4APN2.LOG
+EZ390I program = mfacc\P4APN2.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P4APN2.LOG
+EZ390I total errors         = 0
+P4APN2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=182 INS=853
+***** RT\MFACC\SAVE\P4APN2.LOG
+EZ390I total errors         = 0
+P4APN2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=181 INS=853
+*****
+

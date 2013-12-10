@@ -1,0 +1,3 @@
+Comparing files LINKLIB\zstrmac.txt and RT\LINKLIB\SAVE\ZSTRMAC.TXT
+FC: no differences encountered
+

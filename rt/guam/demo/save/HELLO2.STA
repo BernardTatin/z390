@@ -1,0 +1,452 @@
+HELLO2    MZ390 START
+HELLO2    MZ390 Copyright 2010 Automated Software Tools Corporation
+HELLO2    MZ390 z390 is licensed under GNU General Public License
+HELLO2    MZ390 program = guam\demo\HELLO2.MLC
+HELLO2    MZ390 options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+HELLO2    MZ390 final_options=ALIGN
+HELLO2    MZ390 final_options=NOALLOW
+HELLO2    MZ390 final_options=NOAMODE24
+HELLO2    MZ390 final_options=AMODE31
+HELLO2    MZ390 final_options=NOASCII
+HELLO2    MZ390 final_options=ASM
+HELLO2    MZ390 final_options=NOASSIST
+HELLO2    MZ390 final_options=AUTOLINK
+HELLO2    MZ390 final_options=BAL
+HELLO2    MZ390 final_options=NOBS2000
+HELLO2    MZ390 final_options=EDF
+HELLO2    MZ390 final_options=NOCICS
+HELLO2    MZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+HELLO2    MZ390 final_options=COMMENT
+HELLO2    MZ390 final_options=CON
+HELLO2    MZ390 final_options=NODUMP
+HELLO2    MZ390 final_options=EPILOG
+HELLO2    MZ390 final_options=NOERRSUM
+HELLO2    MZ390 final_options=EXTEND
+HELLO2    MZ390 final_options=FLOAT(DECIMAL)
+HELLO2    MZ390 final_options=GUAM
+HELLO2    MZ390 final_options=INIT
+HELLO2    MZ390 final_options=LIST
+HELLO2    MZ390 final_options=LISTCALL
+HELLO2    MZ390 final_options=LISTUSE
+HELLO2    MZ390 final_options=LOADHIGH
+HELLO2    MZ390 final_options=NOMCALL
+HELLO2    MZ390 final_options=NOMOD
+HELLO2    MZ390 final_options=OBJ
+HELLO2    MZ390 final_options=NOOBJHEX
+HELLO2    MZ390 final_options=PC
+HELLO2    MZ390 final_options=PCOPT
+HELLO2    MZ390 final_options=NOPRINTALL
+HELLO2    MZ390 final_options=PROLOG
+HELLO2    MZ390 final_options=PROTECT
+HELLO2    MZ390 final_options=R64
+HELLO2    MZ390 final_options=NOREFORMAT
+HELLO2    MZ390 final_options=NOREGS
+HELLO2    MZ390 final_options=RMODE24
+HELLO2    MZ390 final_options=NORMODE31
+HELLO2    MZ390 final_options=STATS
+HELLO2    MZ390 final_options=NOTEST
+HELLO2    MZ390 final_options=NOTIME
+HELLO2    MZ390 final_options=NOTIMING
+HELLO2    MZ390 final_options=NOTRACE
+HELLO2    MZ390 final_options=NOTRACEA
+HELLO2    MZ390 final_options=NOTRACEALL
+HELLO2    MZ390 final_options=NOTRACEC
+HELLO2    MZ390 final_options=NOTRACEG
+HELLO2    MZ390 final_options=NOTRACEL
+HELLO2    MZ390 final_options=NOTRACEM
+HELLO2    MZ390 final_options=NOTRACEP
+HELLO2    MZ390 final_options=NOTRACEQ
+HELLO2    MZ390 final_options=NOTRACES
+HELLO2    MZ390 final_options=NOTRACET
+HELLO2    MZ390 final_options=NOTRACEV
+HELLO2    MZ390 final_options=TRAP
+HELLO2    MZ390 final_options=NOTRUNC
+HELLO2    MZ390 final_options=NOTS
+HELLO2    MZ390 final_options=VCB
+HELLO2    MZ390 final_options=WARN
+HELLO2    MZ390 final_options=XREF
+HELLO2    MZ390 final_options=ZSTRMAC
+HELLO2    MZ390 final_options=CHKMAC=0
+HELLO2    MZ390 final_options=CHKSRC=1
+HELLO2    MZ390 final_options=ERR=100
+HELLO2    MZ390 final_options=MAXCALL=50
+HELLO2    MZ390 final_options=MAXDISPLAY=80
+HELLO2    MZ390 final_options=MAXESD=1000
+HELLO2    MZ390 final_options=MAXFILE=1000
+HELLO2    MZ390 final_options=MAXGBL=100000
+HELLO2    MZ390 final_options=MAXHEIGHT=600
+HELLO2    MZ390 final_options=MAXLCL=100000
+HELLO2    MZ390 final_options=MAXLEN=80
+HELLO2    MZ390 final_options=MAXLINE=200000
+HELLO2    MZ390 final_options=MAXLOG=1000000
+HELLO2    MZ390 final_options=MAXPARM=10000
+HELLO2    MZ390 final_options=MAXPASS=2
+HELLO2    MZ390 final_options=MAXPC=50000
+HELLO2    MZ390 final_options=MAXQUE=1000
+HELLO2    MZ390 final_options=MAXRLD=10000
+HELLO2    MZ390 final_options=MAXSIZE=52428800
+HELLO2    MZ390 final_options=MAXSYM=50000
+HELLO2    MZ390 final_options=MAXWARN=4
+HELLO2    MZ390 final_options=MAXWIDTH=800
+HELLO2    MZ390 final_options=MEM=1
+HELLO2    MZ390 final_options=MINHEIGHT=150
+HELLO2    MZ390 final_options=MINWIDTH=150
+HELLO2    MZ390 final_options=PARM=
+HELLO2    MZ390 final_options=PROFILE=
+HELLO2    MZ390 final_options=STATS=W:\work\z390\guam\demo\HELLO2.STA
+HELLO2    MZ390 final_options=SYSPARM=
+HELLO2    MZ390 final_options=SYSTERM=W:\work\z390\guam\demo\HELLO2.ERR
+HELLO2    MZ390 final_options=TESTDD=
+HELLO2    MZ390 final_options=TIME=15
+HELLO2    MZ390 final_options=TRACE=
+HELLO2    MZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+HELLO2    MZ390 final_options=Z390BROWSER=cmd.exe /c Start
+HELLO2    MZ390 final_options=Z390COMMAND=cmd.exe
+HELLO2    MZ390 final_options=Z390EDITOR=notepad.exe
+HELLO2    MZ390 final_options=INSTALL=
+HELLO2    MZ390 final_options=IPL=
+HELLO2    MZ390 final_options=LOG=
+HELLO2    MZ390 final_options=SYS390=guam\demo\+linklib
+HELLO2    MZ390 final_options=SYSBAL=guam\demo\
+HELLO2    MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+HELLO2    MZ390 final_options=SYSDAT=guam\demo\
+HELLO2    MZ390 final_options=SYSERR=guam\demo\
+HELLO2    MZ390 final_options=SYSLOG=guam\demo\
+HELLO2    MZ390 final_options=SYSLST=guam\demo\
+HELLO2    MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+HELLO2    MZ390 final_options=SYSMLC=guam\demo\
+HELLO2    MZ390 final_options=SYSPCH=guam\demo\
+HELLO2    MZ390 final_options=SYSPRN=guam\demo\
+HELLO2    MZ390 final_options=SYSOBJ=guam\demo\
+HELLO2    MZ390 final_options=SYSOPT=guam\demo\
+HELLO2    MZ390 final_options=SYSTRC=guam\demo\
+HELLO2    MZ390 total MLC/MAC loaded  = 194
+HELLO2    MZ390 total BAL output lines= 66
+HELLO2    MZ390 total BAL instructions= 16
+HELLO2    MZ390 total macros          = 7
+HELLO2    MZ390 total macro loads     = 7
+HELLO2    MZ390 total macro calls     = 8
+HELLO2    MZ390 total AENTRY blocks   = 0
+HELLO2    MZ390 total ACALL  calls    = 0
+HELLO2    MZ390 total AIF    blocks   = 0
+HELLO2    MZ390 total ACASE  blocks   = 0
+HELLO2    MZ390 total AWHILE calls    = 0
+HELLO2    MZ390 total AUNTIL blocks   = 0
+HELLO2    MZ390 total global set names= 46
+HELLO2    MZ390 tot global seta cells = 0
+HELLO2    MZ390 tot global setb cells = 7
+HELLO2    MZ390 tot global setc cells = 39
+HELLO2    MZ390 max local pos parms   = 4
+HELLO2    MZ390 max local key parms   = 1
+HELLO2    MZ390 max local set names   = 19
+HELLO2    MZ390 max local seta cells  = 4
+HELLO2    MZ390 max local setb cells  = 0
+HELLO2    MZ390 max local setc cells  = 15
+HELLO2    MZ390 total array expansions= 0
+HELLO2    MZ390 total Keys            = 1398
+HELLO2    MZ390 Key searches          = 2327
+HELLO2    MZ390 Key avg comps         = 0
+HELLO2    MZ390 Key max comps         = 3
+HELLO2    MZ390 total macro line exec = 146
+HELLO2    MZ390 total pcode line exec = 4
+HELLO2    MZ390 total pcode line gen. = 62
+HELLO2    MZ390 total pcode line reuse= 0
+HELLO2    MZ390 total pcode op   gen. = 262
+HELLO2    MZ390 total pcode op   exec = 10
+HELLO2    MZ390 total pcode gen  opt  = 92
+HELLO2    MZ390 total pcode exec opt  = 2
+HELLO2    MZ390 FID=  1 ERR= 0 W:\work\z390\guam\demo\HELLO2.MLC
+HELLO2    MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SAVE.MAC
+HELLO2    MZ390 FID=  3 ERR= 0 W:\work\z390\mac\STFSMODE.MAC
+HELLO2    MZ390 FID=  4 ERR= 0 W:\work\z390\mac\STTMPMD.MAC
+HELLO2    MZ390 FID=  5 ERR= 0 W:\work\z390\mac\TPUT.MAC
+HELLO2    MZ390 FID=  6 ERR= 0 W:\work\z390\mac\TGET.MAC
+HELLO2    MZ390 FID=  7 ERR= 0 W:\work\z390\mac\STLINENO.MAC
+HELLO2    MZ390 total mnote warnings  = 0
+HELLO2    MZ390 total mnote errors    = 0
+HELLO2    MZ390 max   mnote level     = 0
+HELLO2    MZ390 total mz390 errors    = 0
+HELLO2    AZ390 BAL lines             = 66
+HELLO2    AZ390 symbols               = 6
+HELLO2    AZ390 Literals              = 2
+HELLO2    AZ390 alloc passes          = 2
+HELLO2    AZ390 Keys                  = 1189
+HELLO2    AZ390 Key searches          = 1481
+HELLO2    AZ390 Key avg comps         = 0
+HELLO2    AZ390 Key max comps         = 3
+HELLO2    AZ390 ESD symbols           = 1
+HELLO2    AZ390 object bytes          = 91
+HELLO2    AZ390 object rlds           = 0
+HELLO2    AZ390 total mnote warnings  = 0
+HELLO2    AZ390 total mnote errors    = 0
+HELLO2    AZ390 max   mnote level     = 0
+HELLO2    AZ390 total mz390 errors    = 0
+HELLO2    AZ390 total az390 errors    = 0
+HELLO2    MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1199
+HELLO2    LZ390 START
+HELLO2    LZ390 Copyright 2010 Automated Software Tools Corporation
+HELLO2    LZ390 z390 is licensed under GNU General Public License
+HELLO2    LZ390 options = @rt\RT1=(bal notiming stats) guam
+HELLO2    LZ390 program = guam\demo\HELLO2.OBJ
+HELLO2    LZ390 final_options=ALIGN
+HELLO2    LZ390 final_options=NOALLOW
+HELLO2    LZ390 final_options=NOAMODE24
+HELLO2    LZ390 final_options=AMODE31
+HELLO2    LZ390 final_options=NOASCII
+HELLO2    LZ390 final_options=ASM
+HELLO2    LZ390 final_options=NOASSIST
+HELLO2    LZ390 final_options=AUTOLINK
+HELLO2    LZ390 final_options=BAL
+HELLO2    LZ390 final_options=NOBS2000
+HELLO2    LZ390 final_options=EDF
+HELLO2    LZ390 final_options=NOCICS
+HELLO2    LZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+HELLO2    LZ390 final_options=COMMENT
+HELLO2    LZ390 final_options=CON
+HELLO2    LZ390 final_options=NODUMP
+HELLO2    LZ390 final_options=EPILOG
+HELLO2    LZ390 final_options=NOERRSUM
+HELLO2    LZ390 final_options=EXTEND
+HELLO2    LZ390 final_options=FLOAT(DECIMAL)
+HELLO2    LZ390 final_options=GUAM
+HELLO2    LZ390 final_options=INIT
+HELLO2    LZ390 final_options=LIST
+HELLO2    LZ390 final_options=LISTCALL
+HELLO2    LZ390 final_options=LISTUSE
+HELLO2    LZ390 final_options=LOADHIGH
+HELLO2    LZ390 final_options=NOMCALL
+HELLO2    LZ390 final_options=NOMOD
+HELLO2    LZ390 final_options=OBJ
+HELLO2    LZ390 final_options=NOOBJHEX
+HELLO2    LZ390 final_options=PC
+HELLO2    LZ390 final_options=PCOPT
+HELLO2    LZ390 final_options=NOPRINTALL
+HELLO2    LZ390 final_options=PROLOG
+HELLO2    LZ390 final_options=PROTECT
+HELLO2    LZ390 final_options=R64
+HELLO2    LZ390 final_options=NOREFORMAT
+HELLO2    LZ390 final_options=NOREGS
+HELLO2    LZ390 final_options=RMODE24
+HELLO2    LZ390 final_options=NORMODE31
+HELLO2    LZ390 final_options=STATS
+HELLO2    LZ390 final_options=NOTEST
+HELLO2    LZ390 final_options=NOTIME
+HELLO2    LZ390 final_options=NOTIMING
+HELLO2    LZ390 final_options=NOTRACE
+HELLO2    LZ390 final_options=NOTRACEA
+HELLO2    LZ390 final_options=NOTRACEALL
+HELLO2    LZ390 final_options=NOTRACEC
+HELLO2    LZ390 final_options=NOTRACEG
+HELLO2    LZ390 final_options=NOTRACEL
+HELLO2    LZ390 final_options=NOTRACEM
+HELLO2    LZ390 final_options=NOTRACEP
+HELLO2    LZ390 final_options=NOTRACEQ
+HELLO2    LZ390 final_options=NOTRACES
+HELLO2    LZ390 final_options=NOTRACET
+HELLO2    LZ390 final_options=NOTRACEV
+HELLO2    LZ390 final_options=TRAP
+HELLO2    LZ390 final_options=NOTRUNC
+HELLO2    LZ390 final_options=NOTS
+HELLO2    LZ390 final_options=VCB
+HELLO2    LZ390 final_options=WARN
+HELLO2    LZ390 final_options=XREF
+HELLO2    LZ390 final_options=ZSTRMAC
+HELLO2    LZ390 final_options=CHKMAC=0
+HELLO2    LZ390 final_options=CHKSRC=1
+HELLO2    LZ390 final_options=ERR=100
+HELLO2    LZ390 final_options=MAXCALL=50
+HELLO2    LZ390 final_options=MAXDISPLAY=80
+HELLO2    LZ390 final_options=MAXESD=1000
+HELLO2    LZ390 final_options=MAXFILE=1000
+HELLO2    LZ390 final_options=MAXGBL=100000
+HELLO2    LZ390 final_options=MAXHEIGHT=600
+HELLO2    LZ390 final_options=MAXLCL=100000
+HELLO2    LZ390 final_options=MAXLEN=80
+HELLO2    LZ390 final_options=MAXLINE=200000
+HELLO2    LZ390 final_options=MAXLOG=1000000
+HELLO2    LZ390 final_options=MAXPARM=10000
+HELLO2    LZ390 final_options=MAXPASS=2
+HELLO2    LZ390 final_options=MAXPC=50000
+HELLO2    LZ390 final_options=MAXQUE=1000
+HELLO2    LZ390 final_options=MAXRLD=10000
+HELLO2    LZ390 final_options=MAXSIZE=52428800
+HELLO2    LZ390 final_options=MAXSYM=50000
+HELLO2    LZ390 final_options=MAXWARN=4
+HELLO2    LZ390 final_options=MAXWIDTH=800
+HELLO2    LZ390 final_options=MEM=1
+HELLO2    LZ390 final_options=MINHEIGHT=150
+HELLO2    LZ390 final_options=MINWIDTH=150
+HELLO2    LZ390 final_options=PARM=
+HELLO2    LZ390 final_options=PROFILE=
+HELLO2    LZ390 final_options=STATS=W:\work\z390\guam\demo\HELLO2.STA
+HELLO2    LZ390 final_options=SYSPARM=
+HELLO2    LZ390 final_options=SYSTERM=W:\work\z390\guam\demo\HELLO2.ERR
+HELLO2    LZ390 final_options=TESTDD=
+HELLO2    LZ390 final_options=TIME=15
+HELLO2    LZ390 final_options=TRACE=
+HELLO2    LZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+HELLO2    LZ390 final_options=Z390BROWSER=cmd.exe /c Start
+HELLO2    LZ390 final_options=Z390COMMAND=cmd.exe
+HELLO2    LZ390 final_options=Z390EDITOR=notepad.exe
+HELLO2    LZ390 final_options=INSTALL=
+HELLO2    LZ390 final_options=IPL=
+HELLO2    LZ390 final_options=LOG=
+HELLO2    LZ390 final_options=SYS390=guam\demo\+linklib
+HELLO2    LZ390 final_options=SYSBAL=guam\demo\
+HELLO2    LZ390 final_options=SYSCPY=guam\demo\
+HELLO2    LZ390 final_options=SYSDAT=guam\demo\
+HELLO2    LZ390 final_options=SYSERR=guam\demo\
+HELLO2    LZ390 final_options=SYSLOG=guam\demo\
+HELLO2    LZ390 final_options=SYSLST=guam\demo\
+HELLO2    LZ390 final_options=SYSMAC=guam\demo\
+HELLO2    LZ390 final_options=SYSMLC=guam\demo\
+HELLO2    LZ390 final_options=SYSPCH=guam\demo\
+HELLO2    LZ390 final_options=SYSPRN=guam\demo\
+HELLO2    LZ390 final_options=SYSOBJ=guam\demo\
+HELLO2    LZ390 final_options=SYSOPT=guam\demo\
+HELLO2    LZ390 final_options=SYSTRC=guam\demo\
+HELLO2    LZ390 Stats total obj files = 1
+HELLO2    LZ390 Stats total esds      = 1
+HELLO2    LZ390 Stats total csects    = 1
+HELLO2    LZ390 Stats total entries   = 0
+HELLO2    LZ390 Stats missing wxtrn's = 0
+HELLO2    LZ390 Stats Keys            = 1
+HELLO2    LZ390 Stats Key searches    = 2
+HELLO2    LZ390 Stats Key avg comps   = 0
+HELLO2    LZ390 Stats Key max comps   = 1
+HELLO2    LZ390 Stats total obj byte  = 91
+HELLO2    LZ390 Stats total obj rlds  = 0
+HELLO2    LZ390 total errors          = 0
+HELLO2    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=162
+HELLO2    EZ390 START
+HELLO2    EZ390 Copyright 2010 Automated Software Tools Corporation
+HELLO2    EZ390 z390 is licensed under GNU General Public License
+HELLO2    EZ390 program = guam\demo\HELLO2.390
+HELLO2    EZ390 options = @rt\RT1=(bal notiming stats) guam
+HELLO2    EZ390 final_options=ALIGN
+HELLO2    EZ390 final_options=NOALLOW
+HELLO2    EZ390 final_options=NOAMODE24
+HELLO2    EZ390 final_options=AMODE31
+HELLO2    EZ390 final_options=NOASCII
+HELLO2    EZ390 final_options=ASM
+HELLO2    EZ390 final_options=NOASSIST
+HELLO2    EZ390 final_options=AUTOLINK
+HELLO2    EZ390 final_options=BAL
+HELLO2    EZ390 final_options=NOBS2000
+HELLO2    EZ390 final_options=EDF
+HELLO2    EZ390 final_options=NOCICS
+HELLO2    EZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+HELLO2    EZ390 final_options=COMMENT
+HELLO2    EZ390 final_options=CON
+HELLO2    EZ390 final_options=NODUMP
+HELLO2    EZ390 final_options=EPILOG
+HELLO2    EZ390 final_options=NOERRSUM
+HELLO2    EZ390 final_options=EXTEND
+HELLO2    EZ390 final_options=FLOAT(DECIMAL)
+HELLO2    EZ390 final_options=GUAM
+HELLO2    EZ390 final_options=INIT
+HELLO2    EZ390 final_options=LIST
+HELLO2    EZ390 final_options=LISTCALL
+HELLO2    EZ390 final_options=LISTUSE
+HELLO2    EZ390 final_options=LOADHIGH
+HELLO2    EZ390 final_options=NOMCALL
+HELLO2    EZ390 final_options=NOMOD
+HELLO2    EZ390 final_options=OBJ
+HELLO2    EZ390 final_options=NOOBJHEX
+HELLO2    EZ390 final_options=PC
+HELLO2    EZ390 final_options=PCOPT
+HELLO2    EZ390 final_options=NOPRINTALL
+HELLO2    EZ390 final_options=PROLOG
+HELLO2    EZ390 final_options=PROTECT
+HELLO2    EZ390 final_options=R64
+HELLO2    EZ390 final_options=NOREFORMAT
+HELLO2    EZ390 final_options=NOREGS
+HELLO2    EZ390 final_options=RMODE24
+HELLO2    EZ390 final_options=NORMODE31
+HELLO2    EZ390 final_options=STATS
+HELLO2    EZ390 final_options=NOTEST
+HELLO2    EZ390 final_options=NOTIME
+HELLO2    EZ390 final_options=NOTIMING
+HELLO2    EZ390 final_options=NOTRACE
+HELLO2    EZ390 final_options=NOTRACEA
+HELLO2    EZ390 final_options=NOTRACEALL
+HELLO2    EZ390 final_options=NOTRACEC
+HELLO2    EZ390 final_options=NOTRACEG
+HELLO2    EZ390 final_options=NOTRACEL
+HELLO2    EZ390 final_options=NOTRACEM
+HELLO2    EZ390 final_options=NOTRACEP
+HELLO2    EZ390 final_options=NOTRACEQ
+HELLO2    EZ390 final_options=NOTRACES
+HELLO2    EZ390 final_options=NOTRACET
+HELLO2    EZ390 final_options=NOTRACEV
+HELLO2    EZ390 final_options=TRAP
+HELLO2    EZ390 final_options=NOTRUNC
+HELLO2    EZ390 final_options=NOTS
+HELLO2    EZ390 final_options=VCB
+HELLO2    EZ390 final_options=WARN
+HELLO2    EZ390 final_options=XREF
+HELLO2    EZ390 final_options=ZSTRMAC
+HELLO2    EZ390 final_options=CHKMAC=0
+HELLO2    EZ390 final_options=CHKSRC=1
+HELLO2    EZ390 final_options=ERR=100
+HELLO2    EZ390 final_options=MAXCALL=50
+HELLO2    EZ390 final_options=MAXDISPLAY=80
+HELLO2    EZ390 final_options=MAXESD=1000
+HELLO2    EZ390 final_options=MAXFILE=1000
+HELLO2    EZ390 final_options=MAXGBL=100000
+HELLO2    EZ390 final_options=MAXHEIGHT=600
+HELLO2    EZ390 final_options=MAXLCL=100000
+HELLO2    EZ390 final_options=MAXLEN=80
+HELLO2    EZ390 final_options=MAXLINE=200000
+HELLO2    EZ390 final_options=MAXLOG=1000000
+HELLO2    EZ390 final_options=MAXPARM=10000
+HELLO2    EZ390 final_options=MAXPASS=2
+HELLO2    EZ390 final_options=MAXPC=50000
+HELLO2    EZ390 final_options=MAXQUE=1000
+HELLO2    EZ390 final_options=MAXRLD=10000
+HELLO2    EZ390 final_options=MAXSIZE=52428800
+HELLO2    EZ390 final_options=MAXSYM=50000
+HELLO2    EZ390 final_options=MAXWARN=4
+HELLO2    EZ390 final_options=MAXWIDTH=800
+HELLO2    EZ390 final_options=MEM=1
+HELLO2    EZ390 final_options=MINHEIGHT=150
+HELLO2    EZ390 final_options=MINWIDTH=150
+HELLO2    EZ390 final_options=PARM=
+HELLO2    EZ390 final_options=PROFILE=
+HELLO2    EZ390 final_options=STATS=W:\work\z390\guam\demo\HELLO2.STA
+HELLO2    EZ390 final_options=SYSPARM=
+HELLO2    EZ390 final_options=SYSTERM=W:\work\z390\guam\demo\HELLO2.ERR
+HELLO2    EZ390 final_options=TESTDD=
+HELLO2    EZ390 final_options=TIME=15
+HELLO2    EZ390 final_options=TRACE=
+HELLO2    EZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+HELLO2    EZ390 final_options=Z390BROWSER=cmd.exe /c Start
+HELLO2    EZ390 final_options=Z390COMMAND=cmd.exe
+HELLO2    EZ390 final_options=Z390EDITOR=notepad.exe
+HELLO2    EZ390 final_options=INSTALL=
+HELLO2    EZ390 final_options=IPL=
+HELLO2    EZ390 final_options=LOG=W:\work\z390\guam\demo\HELLO2.LOG
+HELLO2    EZ390 final_options=SYS390=guam\demo\+linklib
+HELLO2    EZ390 final_options=SYSBAL=guam\demo\
+HELLO2    EZ390 final_options=SYSCPY=guam\demo\
+HELLO2    EZ390 final_options=SYSDAT=guam\demo\
+HELLO2    EZ390 final_options=SYSERR=guam\demo\
+HELLO2    EZ390 final_options=SYSLOG=guam\demo\
+HELLO2    EZ390 final_options=SYSLST=guam\demo\
+HELLO2    EZ390 final_options=SYSMAC=guam\demo\
+HELLO2    EZ390 final_options=SYSMLC=guam\demo\
+HELLO2    EZ390 final_options=SYSPCH=guam\demo\
+HELLO2    EZ390 final_options=SYSPRN=guam\demo\
+HELLO2    EZ390 final_options=SYSOBJ=guam\demo\
+HELLO2    EZ390 final_options=SYSOPT=guam\demo\
+HELLO2    EZ390 final_options=SYSTRC=guam\demo\
+HELLO2    EZ390 TCPIO operations      = 0
+HELLO2    EZ390 DCB operations        = 0
+HELLO2    EZ390 VSAM operations       = 0
+HELLO2    EZ390 Keys                  = 2212
+HELLO2    EZ390 Key searches          = 2
+HELLO2    EZ390 Key avg comps         = 0
+HELLO2    EZ390 Key max comps         = 0
+HELLO2    EZ390 total errors          = 0
+HELLO2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=19

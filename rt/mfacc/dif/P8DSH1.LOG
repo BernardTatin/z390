@@ -1,0 +1,19 @@
+Comparing files MFACC\P8DSH1.LOG and RT\MFACC\SAVE\P8DSH1.LOG
+***** MFACC\P8DSH1.LOG
+EZ390I program = mfacc\P8DSH1.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P8DSH1.LOG
+EZ390I program = mfacc\P8DSH1.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P8DSH1.LOG
+EZ390I total errors         = 0
+P8DSH1    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=975 INS=3293
+***** RT\MFACC\SAVE\P8DSH1.LOG
+EZ390I total errors         = 0
+P8DSH1    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=974 INS=3293
+*****
+

@@ -1,0 +1,26 @@
+Comparing files GUAM\DEMO\DEMOGUI3.LOG and RT\GUAM\DEMO\SAVE\DEMOGUI3.LOG
+***** GUAM\DEMO\DEMOGUI3.LOG
+DEMOGUI3  EZ390 START
+EZ390I Copyright 2011 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\DEMOGUI3.LOG
+DEMOGUI3  EZ390 START
+EZ390I Copyright 2010 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\DEMOGUI3.LOG
+EZ390I program = guam\demo\DEMOGUI3.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+DEMOGUI3 STARTING
+EZ390I total errors         = 0
+DEMOGUI3  EZ390 ENDED   RC=16 MEM(MB)= MB IO=153 INS=19
+***** RT\GUAM\DEMO\SAVE\DEMOGUI3.LOG
+EZ390I program = guam\demo\DEMOGUI3.390
+EZ390I options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI3 STARTING
+DEMOGUI3 ENDING
+EZ390I total errors         = 0
+DEMOGUI3  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=150 INS=61
+*****
+

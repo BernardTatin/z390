@@ -1,0 +1,145 @@
+Comparing files DEMO\SIEVE.STA and RT\DEMO\SAVE\SIEVE.STA
+***** DEMO\SIEVE.STA
+SIEVE     MZ390 program = demo\SIEVE.MLC
+SIEVE     MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) notiming stats systerm(demo\rtdemo)
+SIEVE     MZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     MZ390 program = demo\SIEVE.MLC
+SIEVE     MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) notiming stats systerm(demo\rtdemo)
+SIEVE     MZ390 final_options=ALIGN
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     MZ390 final_options=PROFILE=
+SIEVE     MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\SIEVE.STA
+SIEVE     MZ390 final_options=SYSPARM=
+SIEVE     MZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+SIEVE     MZ390 final_options=TESTDD=
+SIEVE     MZ390 final_options=TIME=15
+SIEVE     MZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     MZ390 final_options=PROFILE=
+SIEVE     MZ390 final_options=STATS=W:\work\z390\demo\SIEVE.STA
+SIEVE     MZ390 final_options=SYSPARM=
+SIEVE     MZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+SIEVE     MZ390 final_options=TESTDD=
+SIEVE     MZ390 final_options=TIME=60
+SIEVE     MZ390 final_options=TRACE=
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     MZ390 final_options=SYSBAL=demo\
+SIEVE     MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+SIEVE     MZ390 final_options=SYSDAT=demo\
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     MZ390 final_options=SYSBAL=demo\
+SIEVE     MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+SIEVE     MZ390 final_options=SYSDAT=demo\
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     MZ390 final_options=SYSLST=demo\
+SIEVE     MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+SIEVE     MZ390 final_options=SYSMLC=demo\
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     MZ390 final_options=SYSLST=demo\
+SIEVE     MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+SIEVE     MZ390 final_options=SYSMLC=demo\
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     MZ390 total pcode exec opt  = 1
+SIEVE     MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\demo\SIEVE.MLC
+SIEVE     MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+SIEVE     MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+SIEVE     MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CALL.MAC
+SIEVE     MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCALL.MAC
+SIEVE     MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+SIEVE     MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\GETMAIN.MAC
+SIEVE     MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZOPTLR.MAC
+SIEVE     MZ390 FID=  9 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\EQUREGS.MAC
+SIEVE     MZ390 total mnote warnings  = 0
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     MZ390 total pcode exec opt  = 1
+SIEVE     MZ390 FID=  1 ERR= 0 W:\work\z390\demo\SIEVE.MLC
+SIEVE     MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+SIEVE     MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+SIEVE     MZ390 FID=  4 ERR= 0 W:\work\z390\mac\CALL.MAC
+SIEVE     MZ390 FID=  5 ERR= 0 W:\work\z390\mac\ZCALL.MAC
+SIEVE     MZ390 FID=  6 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+SIEVE     MZ390 FID=  7 ERR= 0 W:\work\z390\mac\GETMAIN.MAC
+SIEVE     MZ390 FID=  8 ERR= 0 W:\work\z390\mac\ZOPTLR.MAC
+SIEVE     MZ390 FID=  9 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+SIEVE     MZ390 total mnote warnings  = 0
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     LZ390 z390 is licensed under GNU General Public License
+SIEVE     LZ390 options = notiming stats systerm(demo\rtdemo)
+SIEVE     LZ390 program = demo\SIEVE.OBJ
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     LZ390 z390 is licensed under GNU General Public License
+SIEVE     LZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+SIEVE     LZ390 program = demo\SIEVE.OBJ
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     LZ390 final_options=PROFILE=
+SIEVE     LZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\SIEVE.STA
+SIEVE     LZ390 final_options=SYSPARM=
+SIEVE     LZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+SIEVE     LZ390 final_options=TESTDD=
+SIEVE     LZ390 final_options=TIME=15
+SIEVE     LZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     LZ390 final_options=PROFILE=
+SIEVE     LZ390 final_options=STATS=W:\work\z390\demo\SIEVE.STA
+SIEVE     LZ390 final_options=SYSPARM=
+SIEVE     LZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+SIEVE     LZ390 final_options=TESTDD=
+SIEVE     LZ390 final_options=TIME=60
+SIEVE     LZ390 final_options=TRACE=
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     EZ390 program = demo\SIEVE.390
+SIEVE     EZ390 options = notiming stats systerm(demo\rtdemo)
+SIEVE     EZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     EZ390 program = demo\SIEVE.390
+SIEVE     EZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+SIEVE     EZ390 final_options=ALIGN
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     EZ390 final_options=PROFILE=
+SIEVE     EZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\SIEVE.STA
+SIEVE     EZ390 final_options=SYSPARM=
+SIEVE     EZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+SIEVE     EZ390 final_options=TESTDD=
+SIEVE     EZ390 final_options=TIME=15
+SIEVE     EZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     EZ390 final_options=PROFILE=
+SIEVE     EZ390 final_options=STATS=W:\work\z390\demo\SIEVE.STA
+SIEVE     EZ390 final_options=SYSPARM=
+SIEVE     EZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+SIEVE     EZ390 final_options=TESTDD=
+SIEVE     EZ390 final_options=TIME=60
+SIEVE     EZ390 final_options=TRACE=
+*****
+
+***** DEMO\SIEVE.STA
+SIEVE     EZ390 final_options=IPL=
+SIEVE     EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\demo\SIEVE.LOG
+SIEVE     EZ390 final_options=SYS390=demo\+linklib
+***** RT\DEMO\SAVE\SIEVE.STA
+SIEVE     EZ390 final_options=IPL=
+SIEVE     EZ390 final_options=LOG=W:\work\z390\demo\SIEVE.LOG
+SIEVE     EZ390 final_options=SYS390=demo\+linklib
+*****
+

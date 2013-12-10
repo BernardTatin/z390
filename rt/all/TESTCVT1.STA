@@ -1,0 +1,107 @@
+Comparing files MVS\TEST\TESTCVT1.STA and RT\MVS\TEST\SAVE\TESTCVT1.STA
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  MZ390 program = mvs\test\TESTCVT1.MLC
+TESTCVT1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats 
+  sysmac(mvs\maclib+mac) objhex systerm(mvs\test\rtmvs)
+TESTCVT1  MZ390 final_options=ALIGN
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  MZ390 program = mvs\test\TESTCVT1.MLC
+TESTCVT1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) bal notiming stats sysmac(mvs\maclib+mac) objhex 
+  systerm(mvs\test\rtmvs)
+TESTCVT1  MZ390 final_options=ALIGN
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  MZ390 final_options=PROFILE=
+TESTCVT1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTCVT1
+TESTCVT1  MZ390 final_options=.STA
+TESTCVT1  MZ390 final_options=SYSPARM=
+TESTCVT1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\rtmvs.
+TESTCVT1  MZ390 final_options=ERR
+TESTCVT1  MZ390 final_options=TESTDD=
+TESTCVT1  MZ390 final_options=TIME=15
+TESTCVT1  MZ390 final_options=TRACE=
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  MZ390 final_options=PROFILE=
+TESTCVT1  MZ390 final_options=STATS=W:\work\z390\mvs\test\TESTCVT1.STA
+TESTCVT1  MZ390 final_options=SYSPARM=
+TESTCVT1  MZ390 final_options=SYSTERM=W:\work\z390\mvs\test\rtmvs.ERR
+TESTCVT1  MZ390 final_options=TESTDD=
+TESTCVT1  MZ390 final_options=TIME=60
+TESTCVT1  MZ390 final_options=TRACE=
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  MZ390 final_options=SYSBAL=mvs\test\
+TESTCVT1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTCVT1  MZ390 final_options=SYSDAT=mvs\test\
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  MZ390 final_options=SYSBAL=mvs\test\
+TESTCVT1  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+TESTCVT1  MZ390 final_options=SYSDAT=mvs\test\
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  MZ390 total pcode exec opt  = 0
+TESTCVT1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTCVT1.MLC
+TESTCVT1  MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\CVT.MAC
+TESTCVT1  MZ390 total mnote warnings  = 0
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  MZ390 total pcode exec opt  = 0
+TESTCVT1  MZ390 FID=  1 ERR= 0 W:\work\z390\mvs\test\TESTCVT1.MLC
+TESTCVT1  MZ390 FID=  2 ERR= 0 W:\work\z390\mvs\maclib\CVT.MAC
+TESTCVT1  MZ390 total mnote warnings  = 0
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  AZ390 total az390 errors    = 0
+TESTCVT1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=6384
+TESTCVT1  LZ390 START
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  AZ390 total az390 errors    = 0
+TESTCVT1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=6382
+TESTCVT1  LZ390 START
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  LZ390 z390 is licensed under GNU General Public License
+TESTCVT1  LZ390 options = bal notiming stats sysmac(mvs\maclib+mac) 
+  objhex systerm(mvs\test\rtmvs)
+TESTCVT1  LZ390 program = mvs\test\TESTCVT1.OBJ
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  LZ390 z390 is licensed under GNU General Public License
+TESTCVT1  LZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats 
+  sysmac(mvs\maclib+mac) objhex systerm(mvs\test\rtmvs)
+TESTCVT1  LZ390 program = mvs\test\TESTCVT1.OBJ
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  LZ390 final_options=PROFILE=
+TESTCVT1  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTCVT1
+TESTCVT1  LZ390 final_options=.STA
+TESTCVT1  LZ390 final_options=SYSPARM=
+TESTCVT1  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\rtmvs.
+TESTCVT1  LZ390 final_options=ERR
+TESTCVT1  LZ390 final_options=TESTDD=
+TESTCVT1  LZ390 final_options=TIME=15
+TESTCVT1  LZ390 final_options=TRACE=
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  LZ390 final_options=PROFILE=
+TESTCVT1  LZ390 final_options=STATS=W:\work\z390\mvs\test\TESTCVT1.STA
+TESTCVT1  LZ390 final_options=SYSPARM=
+TESTCVT1  LZ390 final_options=SYSTERM=W:\work\z390\mvs\test\rtmvs.ERR
+TESTCVT1  LZ390 final_options=TESTDD=
+TESTCVT1  LZ390 final_options=TIME=60
+TESTCVT1  LZ390 final_options=TRACE=
+*****
+
+***** MVS\TEST\TESTCVT1.STA
+TESTCVT1  LZ390 total errors          = 0
+TESTCVT1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1638
+***** RT\MVS\TEST\SAVE\TESTCVT1.STA
+TESTCVT1  LZ390 total errors          = 0
+TESTCVT1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1636
+*****
+

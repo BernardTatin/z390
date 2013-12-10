@@ -1,0 +1,13 @@
+Comparing files LINKLIB\CVTTOHEX.PRN and RT\LINKLIB\SAVE\CVTTOHEX.PRN
+***** LINKLIB\CVTTOHEX.PRN
+AZ390I program = linklib\CVTTOHEX
+AZ390I options = bal notiming sysmac(mac) syscpy(mac) stats 
+  systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\CVTTOHEX.PRN
+AZ390I program = linklib\CVTTOHEX
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

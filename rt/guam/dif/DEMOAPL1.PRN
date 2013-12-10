@@ -1,0 +1,83 @@
+Comparing files GUAM\DEMO\DEMOAPL1.PRN and RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+***** GUAM\DEMO\DEMOAPL1.PRN
+DEMOAPL1  MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+DEMOAPL1  MZ390 START
+AZ390I Copyright 2010 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+AZ390I program = guam\demo\DEMOAPL1
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+AZ390I program = guam\demo\DEMOAPL1
+AZ390I options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+000000                                      (1/12)12 *********************************************************************
+000000                                      (1/13)13 DEMOAPL1 SUBENTRY 
+000000                                      (2/77)14+DEMOAPL1 CSECT 
+000000 90ECD00C                            (2/167)15+         STM   14,12,12(13)
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+000000                                      (1/12)12 *********************************************************************
+000000                                      (1/13)13 DEMOAPL1 SUBENTRY
+000000                                      (2/77)14+DEMOAPL1    CSECT
+000000 90ECD00C                            (2/167)15+         STM   14,12,12(13)
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+0000A8 0A5D                                (5/107)50+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+0000AA                                      (1/18)52          SUBEXIT 
+0000AA 41F00000                             (6/33)53+         LA    15,0
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+0000A8 0A5D                                (5/107)50+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+0000AA                                      (1/18)52          SUBEXIT
+0000AA 41F00000                             (6/33)53+         LA    15,0
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+0000BC                                     (1/20)169 STREAM   TN3270 ESC,WRT_EW,WCC_KD
+0000BC                  000000BC           (7/37)170+STREAM   EQU   *
+0000BC 27F5C3                              (7/88)171+         DC    AL1(ESC,WRT_EW,WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+0000BC                                     (1/20)169 STREAM   TN3270 ESC,WRT_EW,WCC_KD
+0000BC                  000000BC           (7/37)170+STREAM       EQU   *
+0000BC 27F5C3                              (7/88)171+         DC    AL1(ESC,WRT_EW,WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+0003E7                                    (1/42)1066 GREEN    GUAM  COLOR,GREEN
+0003E8                                    (3/25)1067+GREEN    DS    0H
+0003E8 0000FF00                          (3/370)1068+         DC    AL1(0,0,255,0) RGB GREEN COLOR
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+0003E7                                    (1/42)1066 GREEN    GUAM  COLOR,GREEN
+0003E8                                    (3/25)1067+GREEN       DS    0H
+0003E8 0000FF00                          (3/370)1068+         DC    AL1(0,0,255,0) RGB GREEN COLOR
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+0003EC                                    (1/43)1070 BLACK    GUAM  COLOR,BLACK
+0003EC                                    (3/25)1071+BLACK    DS    0H
+0003EC 00000000                          (3/376)1072+         DC    AL1(0,0,0,0) RGB BLACK COLOR
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+0003EC                                    (1/43)1070 BLACK    GUAM  COLOR,BLACK
+0003EC                                    (3/25)1071+BLACK       DS    0H
+0003EC 00000000                          (3/376)1072+         DC    AL1(0,0,0,0) RGB BLACK COLOR
+*****
+
+***** GUAM\DEMO\DEMOAPL1.PRN
+0003F0                  00000601         (3/352)1100+GUI_SOUND_PLAY         EQU X'0601' GUI SOUND,PLAY,wav_file
+0003F0                                    (1/45)1102          END 
+0003F0 00000000         =A(*-*)
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.PRN
+0003F0                  00000601         (3/352)1100+GUI_SOUND_PLAY         EQU X'0601' GUI SOUND,PLAY,wav_file
+0003F0                                    (1/45)1102          END
+0003F0 00000000         =A(*-*)
+*****
+

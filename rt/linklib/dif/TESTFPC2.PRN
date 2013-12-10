@@ -1,0 +1,15 @@
+Comparing files LINKLIB\TESTFPC2.PRN and RT\LINKLIB\SAVE\TESTFPC2.PRN
+***** LINKLIB\TESTFPC2.PRN
+AZ390I program = linklib\TESTFPC2
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\TESTFPC2.PRN
+AZ390I program = linklib\TESTFPC2
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

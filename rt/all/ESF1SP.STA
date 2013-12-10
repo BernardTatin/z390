@@ -1,0 +1,209 @@
+Comparing files VSAM\DEMO\ESF1SP.STA and RT\VSAM\DEMO\SAVE\ESF1SP.STA
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    MZ390 program = vsam\demo\ESF1SP.MLC
+ESF1SP    MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP    MZ390 final_options=ALIGN
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    MZ390 program = vsam\demo\ESF1SP.MLC
+ESF1SP    MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @vsam\rtvsam=(notiming stats tracev traceq dump) 
+  systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP    MZ390 final_options=ALIGN
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    MZ390 final_options=PROFILE=
+ESF1SP    MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\vsam\demo\ESF1SP.
+ESF1SP    MZ390 final_options=STA
+ESF1SP    MZ390 final_options=SYSPARM=
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    MZ390 final_options=PROFILE=
+ESF1SP    MZ390 final_options=STATS=W:\work\z390\vsam\demo\ESF1SP.STA
+ESF1SP    MZ390 final_options=SYSPARM=
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    MZ390 final_options=TESTDD=
+ESF1SP    MZ390 final_options=TIME=15
+ESF1SP    MZ390 final_options=TRACE=
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    MZ390 final_options=TESTDD=
+ESF1SP    MZ390 final_options=TIME=60
+ESF1SP    MZ390 final_options=TRACE=
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    MZ390 final_options=SYSBAL=vsam\demo\
+ESF1SP    MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+ESF1SP    MZ390 final_options=SYSDAT=vsam\demo\
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    MZ390 final_options=SYSBAL=vsam\demo\
+ESF1SP    MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+ESF1SP    MZ390 final_options=SYSDAT=vsam\demo\
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    MZ390 final_options=SYSLST=vsam\demo\
+ESF1SP    MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+ESF1SP    MZ390 final_options=SYSMLC=vsam\demo\
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    MZ390 final_options=SYSLST=vsam\demo\
+ESF1SP    MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+ESF1SP    MZ390 final_options=SYSMLC=vsam\demo\
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    MZ390 total pcode exec opt  = 4
+ESF1SP    MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\vsam\demo\ESF1SP.MLC
+ESF1SP    MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+ESF1SP    MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+ESF1SP    MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\OPEN.MAC
+ESF1SP    MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZOPEN.MAC
+ESF1SP    MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\DCBD.MAC
+ESF1SP    MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\GET.MAC
+ESF1SP    MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\PUT.MAC
+ESF1SP    MZ390 FID=  9 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CLOSE.MAC
+ESF1SP    MZ390 FID= 10 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCLOSE.MAC
+ESF1SP    MZ390 FID= 11 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+ESF1SP    MZ390 FID= 12 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ABEND.MAC
+ESF1SP    MZ390 FID= 13 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\DCB.MAC
+ESF1SP    MZ390 FID= 14 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ACB.MAC
+ESF1SP    MZ390 FID= 15 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZGENMACF.MAC
+ESF1SP    MZ390 FID= 16 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ACBD.MAC
+ESF1SP    MZ390 FID= 17 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RPL.MAC
+ESF1SP    MZ390 FID= 18 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZGENOPTD.MAC
+ESF1SP    MZ390 FID= 19 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RPLD.MAC
+ESF1SP    MZ390 FID= 20 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\EQUREGS.MAC
+ESF1SP    MZ390 total mnote warnings  = 0
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    MZ390 total pcode exec opt  = 4
+ESF1SP    MZ390 FID=  1 ERR= 0 W:\work\z390\vsam\demo\ESF1SP.MLC
+ESF1SP    MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+ESF1SP    MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+ESF1SP    MZ390 FID=  4 ERR= 0 W:\work\z390\mac\OPEN.MAC
+ESF1SP    MZ390 FID=  5 ERR= 0 W:\work\z390\mac\ZOPEN.MAC
+ESF1SP    MZ390 FID=  6 ERR= 0 W:\work\z390\mac\DCBD.MAC
+ESF1SP    MZ390 FID=  7 ERR= 0 W:\work\z390\mac\GET.MAC
+ESF1SP    MZ390 FID=  8 ERR= 0 W:\work\z390\mac\PUT.MAC
+ESF1SP    MZ390 FID=  9 ERR= 0 W:\work\z390\mac\CLOSE.MAC
+ESF1SP    MZ390 FID= 10 ERR= 0 W:\work\z390\mac\ZCLOSE.MAC
+ESF1SP    MZ390 FID= 11 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+ESF1SP    MZ390 FID= 12 ERR= 0 W:\work\z390\mac\ABEND.MAC
+ESF1SP    MZ390 FID= 13 ERR= 0 W:\work\z390\mac\DCB.MAC
+ESF1SP    MZ390 FID= 14 ERR= 0 W:\work\z390\mac\ACB.MAC
+ESF1SP    MZ390 FID= 15 ERR= 0 W:\work\z390\mac\ZGENMACF.MAC
+ESF1SP    MZ390 FID= 16 ERR= 0 W:\work\z390\mac\ACBD.MAC
+ESF1SP    MZ390 FID= 17 ERR= 0 W:\work\z390\mac\RPL.MAC
+ESF1SP    MZ390 FID= 18 ERR= 0 W:\work\z390\mac\ZGENOPTD.MAC
+ESF1SP    MZ390 FID= 19 ERR= 0 W:\work\z390\mac\RPLD.MAC
+ESF1SP    MZ390 FID= 20 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+ESF1SP    MZ390 total mnote warnings  = 0
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    AZ390 total az390 errors    = 0
+ESF1SP    MZ390 ENDED   RC= 0 MEM(MB)= MB IO=4453
+ESF1SP    LZ390 START
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    AZ390 total az390 errors    = 0
+ESF1SP    MZ390 ENDED   RC= 0 MEM(MB)= MB IO=4452
+ESF1SP    LZ390 START
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    LZ390 z390 is licensed under GNU General Public License
+ESF1SP    LZ390 options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP    LZ390 program = vsam\demo\ESF1SP.OBJ
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    LZ390 z390 is licensed under GNU General Public License
+ESF1SP    LZ390 options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP    LZ390 program = vsam\demo\ESF1SP.OBJ
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    LZ390 final_options=PROFILE=
+ESF1SP    LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\vsam\demo\ESF1SP.
+ESF1SP    LZ390 final_options=STA
+ESF1SP    LZ390 final_options=SYSPARM=
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    LZ390 final_options=PROFILE=
+ESF1SP    LZ390 final_options=STATS=W:\work\z390\vsam\demo\ESF1SP.STA
+ESF1SP    LZ390 final_options=SYSPARM=
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    LZ390 final_options=TESTDD=
+ESF1SP    LZ390 final_options=TIME=15
+ESF1SP    LZ390 final_options=TRACE=
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    LZ390 final_options=TESTDD=
+ESF1SP    LZ390 final_options=TIME=60
+ESF1SP    LZ390 final_options=TRACE=
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    LZ390 total errors          = 0
+ESF1SP    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=293
+ESF1SP    EZ390 START
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    LZ390 total errors          = 0
+ESF1SP    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=292
+ESF1SP    EZ390 START
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    EZ390 program = vsam\demo\ESF1SP.390
+ESF1SP    EZ390 options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP    EZ390 final_options=ALIGN
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    EZ390 program = vsam\demo\ESF1SP.390
+ESF1SP    EZ390 options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP    EZ390 final_options=ALIGN
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    EZ390 final_options=PROFILE=
+ESF1SP    EZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\vsam\demo\ESF1SP.
+ESF1SP    EZ390 final_options=STA
+ESF1SP    EZ390 final_options=SYSPARM=
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    EZ390 final_options=PROFILE=
+ESF1SP    EZ390 final_options=STATS=W:\work\z390\vsam\demo\ESF1SP.STA
+ESF1SP    EZ390 final_options=SYSPARM=
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    EZ390 final_options=TESTDD=
+ESF1SP    EZ390 final_options=TIME=15
+ESF1SP    EZ390 final_options=TRACE=
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    EZ390 final_options=TESTDD=
+ESF1SP    EZ390 final_options=TIME=60
+ESF1SP    EZ390 final_options=TRACE=
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    EZ390 final_options=IPL=
+ESF1SP    EZ390 final options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\vsam\demo\ESF1SP.LO
+ESF1SP    EZ390 final_options=G
+ESF1SP    EZ390 final_options=SYS390=vsam\demo\+linklib
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    EZ390 final_options=IPL=
+ESF1SP    EZ390 final_options=LOG=W:\work\z390\vsam\demo\ESF1SP.LOG
+ESF1SP    EZ390 final_options=SYS390=vsam\demo\+linklib
+*****
+
+***** VSAM\DEMO\ESF1SP.STA
+ESF1SP    EZ390 total errors          = 0
+ESF1SP    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=325 INS=65
+***** RT\VSAM\DEMO\SAVE\ESF1SP.STA
+ESF1SP    EZ390 total errors          = 0
+ESF1SP    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=323 INS=65
+*****
+

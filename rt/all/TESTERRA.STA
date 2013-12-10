@@ -1,0 +1,51 @@
+Comparing files RT\TEST\TESTERRA.STA and RT\TEST\SAVE\TESTERRA.STA
+***** RT\TEST\TESTERRA.STA
+TESTERRA  MZ390 program = rt\test\TESTERRA.MLC
+TESTERRA  MZ390 options = bal notiming sysmac(mac) syscpy(mac) stats 
+  chkmac(2) systerm(rt\test\rttest)
+TESTERRA  MZ390 final_options=ALIGN
+***** RT\TEST\SAVE\TESTERRA.STA
+TESTERRA  MZ390 program = rt\test\TESTERRA.MLC
+TESTERRA  MZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats chkmac(2) systerm(rt\test\rttest)
+TESTERRA  MZ390 final_options=ALIGN
+*****
+
+***** RT\TEST\TESTERRA.STA
+TESTERRA  MZ390 final_options=PROFILE=
+TESTERRA  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTERRA.
+TESTERRA  MZ390 final_options=STA
+TESTERRA  MZ390 final_options=SYSPARM=
+TESTERRA  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTERRA  MZ390 final_options=ERR
+TESTERRA  MZ390 final_options=TESTDD=
+TESTERRA  MZ390 final_options=TIME=15
+TESTERRA  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTERRA.STA
+TESTERRA  MZ390 final_options=PROFILE=
+TESTERRA  MZ390 final_options=STATS=W:\work\z390\rt\test\TESTERRA.STA
+TESTERRA  MZ390 final_options=SYSPARM=
+TESTERRA  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTERRA  MZ390 final_options=TESTDD=
+TESTERRA  MZ390 final_options=TIME=60
+TESTERRA  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTERRA.STA
+TESTERRA  MZ390 total pcode exec opt  = 0
+TESTERRA  MZ390 FID=  1 ERR= 3 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTERRA.MLC
+TESTERRA  MZ390 total mnote warnings  = 6
+***** RT\TEST\SAVE\TESTERRA.STA
+TESTERRA  MZ390 total pcode exec opt  = 0
+TESTERRA  MZ390 FID=  1 ERR= 3 W:\work\z390\rt\test\TESTERRA.MLC
+TESTERRA  MZ390 total mnote warnings  = 6
+*****
+
+***** RT\TEST\TESTERRA.STA
+TESTERRA  AZ390 total az390 errors    = 1
+TESTERRA  MZ390 ENDED   RC=16 MEM(MB)= MB IO=314
+***** RT\TEST\SAVE\TESTERRA.STA
+TESTERRA  AZ390 total az390 errors    = 1
+TESTERRA  MZ390 ENDED   RC=16 MEM(MB)= MB IO=312
+*****
+

@@ -1,0 +1,20 @@
+Comparing files RT\TEST\TESTDCB8.LOG and RT\TEST\SAVE\TESTDCB8.LOG
+***** RT\TEST\TESTDCB8.LOG
+EZ390I program = rt\test\TESTDCB8.390
+EZ390I options = bal notiming stats systerm(rt\test\rttest)
+TESTDCB8 READ SYSUT1 AND WRITE SYSUT2
+***** RT\TEST\SAVE\TESTDCB8.LOG
+EZ390I program = rt\test\TESTDCB8.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats 
+  systerm(rt\test\rttest)
+TESTDCB8 READ SYSUT1 AND WRITE SYSUT2
+*****
+
+***** RT\TEST\TESTDCB8.LOG
+EZ390I total errors         = 0
+TESTDCB8  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=174 INS=121
+***** RT\TEST\SAVE\TESTDCB8.LOG
+EZ390I total errors         = 0
+TESTDCB8  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=171 INS=121
+*****
+

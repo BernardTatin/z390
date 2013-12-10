@@ -1,0 +1,275 @@
+P10MB1    MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = mfacc\P10MB1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=000002F0 TYPE=CST NAME=P10MB1
+Assembler Listing
+000000                                        (1/1)1 *              CONVERT 128 UNSIGNED INTEGER TO DISPLAY DECIMAL
+000000                                        (1/2)2 P10MB1   ZMFACC   CODE,START,NAME='MATS BROBERG AT SEB SWEDEN'
+000000                                       (2/28)4+         MNOTE 4,'No RUNSYS= on first ZMFACC, 390 assumed.'
+000000                                       (2/42)5+         MNOTE 'ZRUNSYS=390'                          DSH2
+000000                                      (2/123)6+P10MB1   CSECT 
+000000 90ECD00C                             (2/125)7+         STM   14,12,12(13)
+000004 45FF0068                             (2/126)8+         BAL   15,GO0001-P10MB1(15)
+000008 0000000000000000                     (2/127)9+SV0001    DC    18F'0'
+000050 D7F1F0D4C2F14040                    (2/128)10+         DC    CL8'P10MB1'
+000058 F0F161F0F261F0F5                    (2/129)11+         DC    CL8'01/02/05'
+000060 F2F24BF3F3404040                    (2/130)12+         DC    CL8'22.33'
+000068                                     (2/141)13+GO0001    DS    0H
+000068 50FD0008                            (2/142)14+         ST    15,8(13)
+00006C 50DF0004                            (2/143)15+         ST    13,4(15)
+000070 18DF                                (2/144)16+         LR    13,15
+000072                                     (2/145)17+      USING SV0001,13
+LISTUSE P10MB1   ESD=0001 LOC=00000008 LEN=01000 REG=D OFF=00000 LAB=
+000072 A715002D                0000CC       (3/49)20+         BRAS  1,*+(WTO#0002_EOT-*+1)/2*2
+000076 00550000E9D4C6C1                     (3/50)21+         DC    AL2(WTO#0002_EOT-*,0),C'ZMFACC Solution for problem P10MB1 by MATS BROBERG AT SEB SWEDEN using RUNSYS=390'
+0000CB                  000000CB            (3/51)23+WTO#0002_EOT     EQU *
+0000CC 0A23                                 (3/52)24+         SVC   35
+0000CE                                     (2/274)28+         DS    0H
+0000CE 58E0D260                000268      (4/112)31+         L     14,=A(INPUTSTR)
+0000D2 58F0D264                00026C      (4/118)32+         L     15,=A(INPUTEND)
+0000D6 A5030001                            (4/126)33+         IILL  0,1                  RPI158
+0000DA A5028000                            (4/131)34+         IILH 0,32768               RPI158
+0000DE 4110D268                000270      (4/138)35+         LA    1,=CL60'Input Area'
+0000E2 0A33                                (4/146)36+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+0000E4                                       (1/3)40 *
+0000E4 EB67D1800004            000188        (1/4)41          LMG   6,7,INPUT        THE NUMBER IS R6*2**64 + R7
+0000EA                                       (1/5)42 * 2**64 = 10**19 + 8446 744 073 709 551 616 = POT10 + B
+0000EA                                       (1/6)43 * R6*2**64 + R7 =
+0000EA                                       (1/7)44 * R6*(POT10 + B) + R7  =
+0000EA                                       (1/8)45 * R6*POT10  + R6*B + R7
+0000EA                                       (1/9)46 *
+0000EA                                      (1/10)47 * ONLY R6*B + R7 CONTRIBUTE TO THE RIGHTMOST 19 DECIMAL DIGITS
+0000EA                                      (1/11)48 * IT MAY VERY WELL CONTRIBUTE TO THE LEFTMOST 20 DIGITS ALSO.
+0000EA                                      (1/12)49 * WE WILL FIRST COMPUTE R6*B + R7
+0000EA                                      (1/13)50 *
+0000EA B9040096                             (1/14)51          LGR   9,6              COMPUTE R6 ...
+0000EE E380D2100086            000218       (1/16)52          MLG   8,B              ... TIMES B INTO R8-R9
+0000F4 B90A0097                             (1/17)53          ALGR  9,7              ADD R7
+0000F8 E380D1F80088            000200       (1/18)54          ALCG  8,NULL           ADD ANY CARRY INTO R8
+0000FE                                      (1/20)55 * R6*B + R7 NOW EQUALS R8*2**64 + R9
+0000FE                                      (1/22)56 * DIVIDING BY POT10 WILL GIVE THE REMAINDER IN R8 AND THAT IS THE
+0000FE                                      (1/23)57 * RIGHTMOST 19 DIGITS. R9 CONTAINS WHAT CONTRIBUTES TO THE LEFTMOST
+0000FE                                      (1/24)58 * 20 DIGITS.
+0000FE E380D2080087            000210       (1/25)59          DLG   8,POT10
+000104                                      (1/27)60 * AND NOW THE SAME NUMBER (R6*B + R7) IS R9*POT10 + R8
+000104                                      (1/29)61 * THE NUMBER WE STARTED WITH IS           R6*POT10 + R9*POT10 + R8 =
+000104                                      (1/30)62 * THE NUMBER WE STARTED WITH IS           (R6 + R9)*POT10 + R8
+000104                                      (1/31)63 * IN THE PACKED FORMAT THEY WILL GO INTO   L2   L1          H
+000104                                      (1/33)64 * SO FAR THE ARITHMETIC HAS BEEN UNSIGNED, BUT CVDG IS SENSITIVE TO
+000104                                      (1/34)65 * THE SIGN. SO WE MUST COMPENSATE FOR THAT.
+000104                                      (1/35)66 * FIRST THE RIGHTMOST 19 DIGITS IN R8
+000104 E380D22C002E            000234       (1/36)67          CVDG  8,H
+00010A B9020088                             (1/37)68          LTGR  8,8
+00010E 47B0D110                000118       (1/38)69          BNM   NOTMIN0
+000112 FAFFD22CD218     000234 000220       (1/39)70           AP   H,TVATO64
+000118                                      (1/40)71 * THEN ONE PART OF THE VALUE IN THE FIRST 20 POSITIONS
+000118 E390D23C002E            000244       (1/41)72 NOTMIN0  CVDG  9,L1
+00011E B9020099                             (1/42)73          LTGR  9,9
+000122 47B0D124                00012C       (1/43)74          BNM   NOTMIN1
+000126 FAFFD23CD218     000244 000220       (1/44)75           AP   L1,TVATO64
+00012C                                      (1/45)76 * AND THE NEXT PART
+00012C E360D24C002E            000254       (1/46)77 NOTMIN1  CVDG  6,L2
+000132 B9020066                             (1/47)78          LTGR  6,6
+000136 47B0D138                000140       (1/48)79          BNM   NOTMIN2
+00013A FAFFD24CD218     000254 000220       (1/49)80           AP   L2,TVATO64
+000140                                      (1/50)81 * FINALLY ADD THE TWO LEFT PARTS.
+000140 FAFFD24CD23C     000254 000244       (1/51)82 NOTMIN2  AP    L2,L1
+000146 F0F0D24C0001     000254              (1/52)83          SRP   L2,1,0
+00014C D209D228D251     000230 000259       (1/53)84          MVC   HD(10),L2+5
+000152 D233D190D1C4     000198 0001CC       (1/54)85          MVC   RES,MASK
+000158 DE33D190D228     000198 000230       (1/55)86          ED    RES,HD
+00015E                                      (1/56)87       ZMFACC   CODE,END
+00015E                                     (2/274)90+         DS    0H
+00015E 58E0D2A4                0002AC      (4/112)93+         L     14,=A(OUTPUTST)
+000162 58F0D2A8                0002B0      (4/118)94+         L     15,=A(OUTPUTEN)
+000166 A5030002                            (4/126)95+         IILL  0,2                  RPI158
+00016A A5028000                            (4/131)96+         IILH 0,32768               RPI158
+00016E 4110D2AC                0002B4      (4/138)97+         LA    1,=CL60'Output Area'
+000172 0A33                                (4/146)98+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+000174 58D0D004                           (2/167)101+         L     13,4(,13)
+000178 58E0D00C                           (2/168)102+         L     14,12(,13)
+00017C 982CD01C                           (2/169)103+         LM    2,12,28(13)
+000180 1BFF                               (2/170)104+         SR    15,15
+000182 07FE                               (2/171)105+         BR    14
+000184                                    (2/176)106+*        YREGS
+000184                                    (2/177)107+***      REGISTER EQUATES
+000184                                    (2/178)108+*
+000184                                    (2/181)110+* GENERAL  REGISTERS
+000184                  00000000          (2/183)112+R0        EQU  0
+000184                  00000001          (2/184)113+R1        EQU  1
+000184                  00000002          (2/185)114+R2        EQU  2
+000184                  00000003          (2/186)115+R3        EQU  3
+000184                  00000004          (2/187)116+R4        EQU  4
+000184                  00000005          (2/188)117+R5        EQU  5
+000184                  00000006          (2/189)118+R6        EQU  6
+000184                  00000007          (2/190)119+R7        EQU  7
+000184                  00000008          (2/191)120+R8        EQU  8
+000184                  00000009          (2/192)121+R9        EQU  9
+000184                  0000000A          (2/193)122+R10       EQU  10
+000184                  0000000B          (2/194)123+R11       EQU  11
+000184                  0000000C          (2/195)124+R12       EQU  12
+000184                  0000000D          (2/196)125+R13       EQU  13
+000184                  0000000E          (2/197)126+R14       EQU  14
+000184                  0000000F          (2/198)127+R15       EQU  15
+000184                                    (2/200)129+* FLOATING POINT REGISTERS
+000184                  00000000          (2/202)131+F0        EQU  0  L0
+000184                  00000001          (2/203)132+F1        EQU  1  L1
+000184                  00000002          (2/204)133+F2        EQU  2  L0+
+000184                  00000003          (2/205)134+F3        EQU  3  L1+
+000184                  00000004          (2/206)135+F4        EQU  4  L4
+000184                  00000005          (2/207)136+F5        EQU  5  L5
+000184                  00000006          (2/208)137+F6        EQU  6  L4+
+000184                  00000007          (2/209)138+F7        EQU  7  L5+
+000184                  00000008          (2/210)139+F8        EQU  8  L8
+000184                  00000009          (2/211)140+F9        EQU  9  L9
+000184                  0000000A          (2/212)141+F10       EQU  10 L8+
+000184                  0000000B          (2/213)142+F11       EQU  11 L9+
+000184                  0000000C          (2/214)143+F12       EQU  12 L12
+000184                  0000000D          (2/215)144+F13       EQU  13 L13
+000184                  0000000E          (2/216)145+F14       EQU  14 L12+
+000184                  0000000F          (2/217)146+F15       EQU  15 L13+
+000184                                    (2/219)148+* EXTENDED CONTROL REGISTERS
+000184                  00000000          (2/221)150+C0        EQU  0
+000184                  00000001          (2/222)151+C1        EQU  1
+000184                  00000002          (2/223)152+C2        EQU  2
+000184                  00000003          (2/224)153+C3        EQU  3
+000184                  00000004          (2/225)154+C4        EQU  4
+000184                  00000005          (2/226)155+C5        EQU  5
+000184                  00000006          (2/227)156+C6        EQU  6
+000184                  00000007          (2/228)157+C7        EQU  7
+000184                  00000008          (2/229)158+C8        EQU  8
+000184                  00000009          (2/230)159+C9        EQU  9
+000184                  0000000A          (2/231)160+C10       EQU  10
+000184                  0000000B          (2/232)161+C11       EQU  11
+000184                  0000000C          (2/233)162+C12       EQU  12
+000184                  0000000D          (2/234)163+C13       EQU  13
+000184                  0000000E          (2/235)164+C14       EQU  14
+000184                  0000000F          (2/236)165+C15       EQU  15
+000184                                     (1/58)167       ZMFACC   INPUT,START
+000184                                    (2/247)168+INPUTSTR DS    0F
+000188 BBBBBBBBBBBBBBBB                    (1/59)170 INPUT    DC    0FD,XL16'BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB'
+000198                                     (1/60)171       ZMFACC   INPUT,END
+000198                  00000198          (2/250)172+INPUTEND  EQU  *
+000198                                     (1/62)174       ZMFACC   OUTPUT,START
+000198                                    (2/261)175+OUTPUTST DS    0F
+000198                                     (1/63)177 RES      DS    CL(MASKL)
+0001CC                                     (1/64)178       ZMFACC   OUTPUT,END
+0001CC                  000001CC          (2/264)179+OUTPUTEN  EQU  *
+0001CC 4020202040202020                    (1/65)181 MASK     DC    X'40',12X'20202040',X'202120'
+000200                  00000034           (1/66)182 MASKL    EQU   *-MASK
+000200                                     (1/67)183          DS    0FD
+000200 0000000000000000                    (1/68)184 NULL     DC    16X'0'
+000210 8AC7230489E80000                    (1/69)185 POT10    DC    X'8AC7230489E80000'      10000000000000000000 (10**19)
+000218 7538DCFB76180000                    (1/70)186 B        DC    X'7538DCFB76180000'       8446744073709551616
+000220 0000000000018446                    (1/71)187 TVATO64  DC    PL16'18446744073709551616' X'10000000000000000'
+000230                                     (1/72)188 HD       DS    XL20
+000244                  00000234           (1/73)189 H        EQU   HD+4,16,C'P'
+000244                                     (1/74)190 L1       DS    PL16
+000254                                     (1/75)191 L2       DS    PL16
+000264                                     (1/76)192       END 
+000268 00000184         =A(INPUTSTR)
+00026C 00000198         =A(INPUTEND)
+000270 C99597A4A340C199 =CL60'Input Area'
+0002AC 00000198         =A(OUTPUTST)
+0002B0 000001CC         =A(OUTPUTEN)
+0002B4 D6A4A397A4A340C1 =CL60'Output Area'
+Relocation Definitions
+ ESD=0001 LOC=00000268 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000026C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002AC LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002B0 LEN=4 SIGN=+ XESD=0001
+
+Symbol Table Listing
+
+ SYM=B        LOC=00000218 LEN=00000008 ESD=0001 TYPE=REL  XREF=186 52 
+ SYM=C0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=150 
+ SYM=C10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=160 
+ SYM=C1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=151 
+ SYM=C11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=161 
+ SYM=C12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=162 
+ SYM=C13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=163 
+ SYM=C14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=164 
+ SYM=C15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=165 
+ SYM=C2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=152 
+ SYM=C3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=153 
+ SYM=C4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=154 
+ SYM=C5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=155 
+ SYM=C6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=156 
+ SYM=C7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=157 
+ SYM=C8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=158 
+ SYM=C9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=159 
+ SYM=F0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=131 
+ SYM=F10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=141 
+ SYM=F1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=132 
+ SYM=F11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=142 
+ SYM=F12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=143 
+ SYM=F13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=144 
+ SYM=F14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=145 
+ SYM=F15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=146 
+ SYM=F2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=133 
+ SYM=F3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=134 
+ SYM=F4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=135 
+ SYM=F5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=136 
+ SYM=F6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=137 
+ SYM=F7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=138 
+ SYM=F8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=139 
+ SYM=F9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=140 
+ SYM=GO0001   LOC=00000068 LEN=00000002 ESD=0001 TYPE=REL  XREF=13 8 
+ SYM=H        LOC=00000234 LEN=00000010 ESD=0001 TYPE=REL  XREF=189 67 70 
+ SYM=HD       LOC=00000230 LEN=00000014 ESD=0001 TYPE=REL  XREF=188 84 86 189 
+ SYM=INPUT    LOC=00000188 LEN=00000008 ESD=0001 TYPE=REL  XREF=170 41 
+ SYM=INPUTEND LOC=00000198 LEN=00000001 ESD=0001 TYPE=REL  XREF=172 32 192 
+ SYM=INPUTSTR LOC=00000184 LEN=00000004 ESD=0001 TYPE=REL  XREF=168 31 192 
+ SYM=L1       LOC=00000244 LEN=00000010 ESD=0001 TYPE=REL  XREF=190 72 75 82 
+ SYM=L2       LOC=00000254 LEN=00000010 ESD=0001 TYPE=REL  XREF=191 77 80 82 83 84 
+ SYM=MASK     LOC=000001CC LEN=00000001 ESD=0001 TYPE=REL  XREF=181 85 182 
+ SYM=MASKL    LOC=00000034 LEN=00000001 ESD=0000 TYPE=ABS  XREF=182 177 
+ SYM=NOTMIN0  LOC=00000118 LEN=00000006 ESD=0001 TYPE=REL  XREF=72 69 
+ SYM=NOTMIN1  LOC=0000012C LEN=00000006 ESD=0001 TYPE=REL  XREF=77 74 
+ SYM=NOTMIN2  LOC=00000140 LEN=00000006 ESD=0001 TYPE=REL  XREF=82 79 
+ SYM=NULL     LOC=00000200 LEN=00000001 ESD=0001 TYPE=REL  XREF=184 54 
+ SYM=OUTPUTEN LOC=000001CC LEN=00000001 ESD=0001 TYPE=REL  XREF=179 94 192 
+ SYM=OUTPUTST LOC=00000198 LEN=00000004 ESD=0001 TYPE=REL  XREF=175 93 192 
+ SYM=P10MB1   LOC=00000000 LEN=000002F0 ESD=0001 TYPE=CST  XREF=6 8 
+ SYM=POT10    LOC=00000210 LEN=00000008 ESD=0001 TYPE=REL  XREF=185 59 
+ SYM=R0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=112 
+ SYM=R10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=122 
+ SYM=R1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=113 
+ SYM=R11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=123 
+ SYM=R12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=124 
+ SYM=R13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=125 
+ SYM=R14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=126 
+ SYM=R15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=127 
+ SYM=R2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=114 
+ SYM=R3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=115 
+ SYM=R4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=116 
+ SYM=R5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=117 
+ SYM=R6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=118 
+ SYM=R7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=119 
+ SYM=R8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=120 
+ SYM=R9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=121 
+ SYM=RES      LOC=00000198 LEN=00000034 ESD=0001 TYPE=REL  XREF=177 85 86 
+ SYM=SV0001   LOC=00000008 LEN=00000004 ESD=0001 TYPE=REL  XREF=9 17 
+ SYM=TVATO64  LOC=00000220 LEN=00000010 ESD=0001 TYPE=REL  XREF=187 70 75 80 
+ SYM=WTO#0002_EOT LOC=000000CB LEN=00000001 ESD=0001 TYPE=REL  XREF=23 20 21 
+
+Literal Table Listing
+
+ LIT=A(INPUTEND) LOC=0000026C LEN=00000004 ESD=0001 POOL=0001 XREF=32 
+ LIT=A(INPUTSTR) LOC=00000268 LEN=00000004 ESD=0001 POOL=0001 XREF=31 
+ LIT=A(OUTPUTEN) LOC=000002B0 LEN=00000004 ESD=0001 POOL=0001 XREF=94 
+ LIT=A(OUTPUTST) LOC=000002AC LEN=00000004 ESD=0001 POOL=0001 XREF=93 
+ LIT=CL60'Input Area' LOC=00000270 LEN=0000003C ESD=0001 POOL=0001 XREF=35 
+ LIT=CL60'Output Area' LOC=000002B4 LEN=0000003C ESD=0001 POOL=0001 XREF=97 
+ 
+AZ390I total mnote warnings = 1
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 4
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+P10MB1    MZ390 ENDED   RC= 4 MEM(MB)= MB IO=1222

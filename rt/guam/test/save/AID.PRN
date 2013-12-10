@@ -1,0 +1,128 @@
+AID       MZ390 START
+AZ390I Copyright 2010 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = guam\test\AID
+AZ390I options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=00000190 TYPE=CST NAME=AID1
+Assembler Listing
+000000                                        (1/1)1 AID1     CSECT ,
+000000                                        (1/2)2          SAVE  (14,12),,*
+000000 90ECD00C                              (2/50)3+         STM   14,12,12+4*(14-14)(13)
+000004 18CF                                   (1/3)5          LR    12,15
+000006                                        (1/4)6          USING AID1,12
+LISTUSE AID1     ESD=0001 LOC=00000000 LEN=01000 REG=C OFF=00000 LAB=
+000006                                        (1/5)7 *
+000006 4110C140                000140         (1/6)8          LA    1,SAVEA
+00000A 5010D008                               (1/7)9          ST    1,8(,13)
+00000E 50D01004                              (1/8)10          ST    13,4(,1)
+000012 18D1                                  (1/9)11          LR    13,1
+000014                                      (1/10)12 *
+000014                                      (1/11)13          STFSMODE ON,INITIAL=YES
+000014                                      (3/16)14+       DS    0H
+000014                                      (1/12)16          STTMPMD ON
+000014                                      (4/16)17+       DS    0H
+000014                                      (1/13)19 *
+000014                                      (1/14)20 LOOP     DS    0H
+000014                                      (1/15)21          TPUT  STREAM,STREAMLN,FULLSCR
+000014 4110C072                000072       (5/61)22+         LA    1,STREAM
+000018 41000034                             (5/67)23+         LA    0,STREAMLN
+00001C BF18C188                000188      (5/134)24+         ICM   1,8,=B'00000011'
+000020 0A5D                                (5/136)25+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+000022                                      (1/16)27 *
+000022                                      (1/17)28          TGET  INBUF,INBUFLN,ASIS
+000022 4110C0A6                0000A6       (6/58)29+         LA    1,INBUF
+000026 41000080                             (6/64)30+         LA    0,INBUFLN
+00002A BF18C189                000189      (6/105)31+         ICM   1,8,=B'10000001'
+00002E 0A5D                                (6/107)32+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+000030                                      (1/18)34 *
+000030                                      (1/19)35 **       CLI   INBUF,X'F3'   IS IT PFK3?
+000030                                      (1/20)36 **       BE    EXIT
+000030                                      (1/21)37 *
+000030 F321C126C0A6     000126 0000A6       (1/22)38          UNPK  WORK3,INBUF(2)
+000036 DC01C126C03E     000126 00003E       (1/23)39          TR    WORK3(2),TRTAB-C'0'
+00003C D201C090C126     000090 000126       (1/24)40          MVC   AIDCHAR,WORK3
+000042                                      (1/25)41 *
+000042 F342C129C0A7     000129 0000A7       (1/26)42          UNPK  WORK5,INBUF+1(3)
+000048 DC03C129C03E     000129 00003E       (1/27)43          TR    WORK5(4),TRTAB-C'0'
+00004E D203C09EC129     00009E 000129       (1/28)44          MVC   CURSOR,WORK5
+000054                                      (1/29)45 *
+000054 9211C0A2                0000A2       (1/30)46          MVI   SETCSR,X'11'          SBA
+000058 D201C0A3C0A7     0000A3 0000A7       (1/31)47          MVC   SETCSR+1(2),INBUF+1   CURSOR POSITION
+00005E 9213C0A5                0000A5       (1/32)48          MVI   SETCSR+3,X'13'        IC (INSERT CUROSR)
+000062                                      (1/33)49 *
+000062 47F0C014                000014       (1/34)50          B     LOOP
+000066                                      (1/35)51 *
+000066                                      (1/36)52 EXIT     DS    0H
+000066                                      (1/37)53          STLINENO LINE=1
+000066                                      (7/16)54+       DS    0H
+000066                                      (1/38)56          STFSMODE OFF
+000066                                      (3/16)57+       DS    0H
+000066                                      (1/39)59          STTMPMD OFF
+000066                                      (4/16)60+       DS    0H
+000066                                      (1/40)62 *
+000066 58D0D004                             (1/41)63          L     13,4(,13)
+00006A 98ECD00C                             (1/42)64          LM    14,12,12(13)
+00006E 1FFF                                 (1/43)65          SLR   15,15
+000070 07FE                                 (1/44)66          BR    14
+000072                                      (1/45)67 *
+000072                                      (1/46)68 STREAM   DS    0C
+000072 27                                   (1/47)69          DC    X'27'       ESCAPE CHAR
+000073 F5                                   (1/48)70          DC    X'F5'       ERASE/WRITE
+000074 C3                                   (1/49)71          DC    X'C3'       WCC
+000075 114BF0                               (1/50)72          DC    X'114BF0'   SBA
+000078 1DF8                                 (1/51)73          DC    X'1DF8'     SF (PROT,HIGH INTENSITY)
+00007A C8C5D3D3D66B40E6                     (1/52)74          DC    C'HELLO, WORLD!'
+000087 114D40                               (1/53)75          DC    X'114D40'   SBA
+00008A 1DF8                                 (1/54)76          DC    X'1DF8'     SF
+00008C C1C9C47E                             (1/55)77          DC    C'AID='
+000090 4040                                 (1/56)78 AIDCHAR  DC    C'  '
+000092 114E50                               (1/57)79          DC    X'114E50'   SBA
+000095 1DF8                                 (1/58)80          DC    X'1DF8'     SF
+000097 C3E4D9E2D6D97E                       (1/59)81          DC    C'CURSOR='
+00009E 40404040                             (1/60)82 CURSOR   DC    C'    '
+0000A2 40404040                             (1/61)83 SETCSR   DC    C'    '
+0000A6                  00000034            (1/62)84 STREAMLN EQU   *-STREAM
+0000A6                                      (1/63)85 *
+0000A6                                      (1/64)86 INBUF    DS    XL128
+000126                  00000080            (1/65)87 INBUFLN  EQU   *-INBUF
+000126                                      (1/66)88 *
+000126 000000                               (1/67)89 WORK3    DC    XL3'00'
+000129 0000000000                           (1/68)90 WORK5    DC    XL5'00'
+00012E                                      (1/69)91 *
+00012E F0F1F2F3F4F5F6F7                     (1/70)92 TRTAB    DC    C'0123456789ABCDEF'
+00013E                                      (1/71)93 *
+000140                                      (1/72)94 SAVEA    DS    18F
+000188                                      (1/73)95          END   ,
+000188 03               =B'00000011'
+000189 81               =B'10000001'
+
+Symbol Table Listing
+
+ SYM=AID1     LOC=00000000 LEN=00000190 ESD=0001 TYPE=CST  XREF=1 6 
+ SYM=AIDCHAR  LOC=00000090 LEN=00000002 ESD=0001 TYPE=REL  XREF=78 40 
+ SYM=CURSOR   LOC=0000009E LEN=00000004 ESD=0001 TYPE=REL  XREF=82 44 
+ SYM=EXIT     LOC=00000066 LEN=00000002 ESD=0001 TYPE=REL  XREF=52 
+ SYM=INBUF    LOC=000000A6 LEN=00000080 ESD=0001 TYPE=REL  XREF=86 29 38 42 47 87 
+ SYM=INBUFLN  LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=87 30 
+ SYM=LOOP     LOC=00000014 LEN=00000002 ESD=0001 TYPE=REL  XREF=20 50 
+ SYM=SAVEA    LOC=00000140 LEN=00000004 ESD=0001 TYPE=REL  XREF=94 8 
+ SYM=SETCSR   LOC=000000A2 LEN=00000004 ESD=0001 TYPE=REL  XREF=83 46 47 48 
+ SYM=STREAM   LOC=00000072 LEN=00000001 ESD=0001 TYPE=REL  XREF=68 22 84 
+ SYM=STREAMLN LOC=00000034 LEN=00000001 ESD=0000 TYPE=ABS  XREF=84 23 
+ SYM=TRTAB    LOC=0000012E LEN=00000010 ESD=0001 TYPE=REL  XREF=92 39 43 
+ SYM=WORK3    LOC=00000126 LEN=00000003 ESD=0001 TYPE=REL  XREF=89 38 39 40 
+ SYM=WORK5    LOC=00000129 LEN=00000005 ESD=0001 TYPE=REL  XREF=90 42 43 44 
+
+Literal Table Listing
+
+ LIT=B'00000011' LOC=00000188 LEN=00000001 ESD=0001 POOL=0001 XREF=24 
+ LIT=B'10000001' LOC=00000189 LEN=00000001 ESD=0001 POOL=0001 XREF=31 
+ 
+AZ390I total mnote warnings = 0
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 0
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+AID       MZ390 ENDED   RC= 0 MEM(MB)= MB IO=685

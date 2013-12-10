@@ -1,0 +1,11 @@
+Comparing files RT\TEST\TESTDMP5.LST and RT\TEST\SAVE\TESTDMP5.LST
+***** RT\TEST\TESTDMP5.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = bal notiming dump ascii 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTDMP5.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming dump ascii 
+  systerm(rt\test\rttest)
+*****
+

@@ -1,0 +1,21 @@
+Comparing files VSAM\DEMO\KSF1DEMO.LOG and RT\VSAM\DEMO\SAVE\KSF1DEMO.LOG
+***** VSAM\DEMO\KSF1DEMO.LOG
+EZ390I program = vsam\demo\KSF1DEMO.390
+EZ390I options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1DEMO QUERY KSF1NAME BY PRIMARY NAME KEY
+***** RT\VSAM\DEMO\SAVE\KSF1DEMO.LOG
+EZ390I program = vsam\demo\KSF1DEMO.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1DEMO QUERY KSF1NAME BY PRIMARY NAME KEY
+*****
+
+***** VSAM\DEMO\KSF1DEMO.LOG
+EZ390I total errors         = 0
+KSF1DEMO  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=328 INS=82
+***** RT\VSAM\DEMO\SAVE\KSF1DEMO.LOG
+EZ390I total errors         = 0
+KSF1DEMO  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=326 INS=82
+*****
+

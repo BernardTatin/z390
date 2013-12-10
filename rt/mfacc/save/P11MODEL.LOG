@@ -1,0 +1,11 @@
+P11MODEL  EZ390 START
+EZ390I Copyright 2011 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = mfacc\P11MODEL.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  SYSCPY(mfacc+mac) systerm(mfacc\rtmfacc)
+ZMFACC Solution for problem P11 by YOUR NAME using RUNSYS=390
+SNAP DUMP ID=1 TEXT=Input Area
+SNAP DUMP ID=2 TEXT=Output Area
+EZ390I total errors         = 0
+P11MODEL  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=167 INS=689307

@@ -1,0 +1,454 @@
+DEMOGUI4  MZ390 START
+DEMOGUI4  MZ390 Copyright 2010 Automated Software Tools Corporation
+DEMOGUI4  MZ390 z390 is licensed under GNU General Public License
+DEMOGUI4  MZ390 program = guam\demo\DEMOGUI4.MLC
+DEMOGUI4  MZ390 options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+DEMOGUI4  MZ390 final_options=ALIGN
+DEMOGUI4  MZ390 final_options=NOALLOW
+DEMOGUI4  MZ390 final_options=NOAMODE24
+DEMOGUI4  MZ390 final_options=AMODE31
+DEMOGUI4  MZ390 final_options=NOASCII
+DEMOGUI4  MZ390 final_options=ASM
+DEMOGUI4  MZ390 final_options=NOASSIST
+DEMOGUI4  MZ390 final_options=AUTOLINK
+DEMOGUI4  MZ390 final_options=BAL
+DEMOGUI4  MZ390 final_options=NOBS2000
+DEMOGUI4  MZ390 final_options=EDF
+DEMOGUI4  MZ390 final_options=NOCICS
+DEMOGUI4  MZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+DEMOGUI4  MZ390 final_options=COMMENT
+DEMOGUI4  MZ390 final_options=CON
+DEMOGUI4  MZ390 final_options=NODUMP
+DEMOGUI4  MZ390 final_options=EPILOG
+DEMOGUI4  MZ390 final_options=NOERRSUM
+DEMOGUI4  MZ390 final_options=EXTEND
+DEMOGUI4  MZ390 final_options=FLOAT(DECIMAL)
+DEMOGUI4  MZ390 final_options=GUAM
+DEMOGUI4  MZ390 final_options=INIT
+DEMOGUI4  MZ390 final_options=LIST
+DEMOGUI4  MZ390 final_options=LISTCALL
+DEMOGUI4  MZ390 final_options=LISTUSE
+DEMOGUI4  MZ390 final_options=LOADHIGH
+DEMOGUI4  MZ390 final_options=NOMCALL
+DEMOGUI4  MZ390 final_options=NOMOD
+DEMOGUI4  MZ390 final_options=OBJ
+DEMOGUI4  MZ390 final_options=NOOBJHEX
+DEMOGUI4  MZ390 final_options=PC
+DEMOGUI4  MZ390 final_options=PCOPT
+DEMOGUI4  MZ390 final_options=NOPRINTALL
+DEMOGUI4  MZ390 final_options=PROLOG
+DEMOGUI4  MZ390 final_options=PROTECT
+DEMOGUI4  MZ390 final_options=R64
+DEMOGUI4  MZ390 final_options=NOREFORMAT
+DEMOGUI4  MZ390 final_options=NOREGS
+DEMOGUI4  MZ390 final_options=RMODE24
+DEMOGUI4  MZ390 final_options=NORMODE31
+DEMOGUI4  MZ390 final_options=STATS
+DEMOGUI4  MZ390 final_options=NOTEST
+DEMOGUI4  MZ390 final_options=NOTIME
+DEMOGUI4  MZ390 final_options=NOTIMING
+DEMOGUI4  MZ390 final_options=NOTRACE
+DEMOGUI4  MZ390 final_options=NOTRACEA
+DEMOGUI4  MZ390 final_options=NOTRACEALL
+DEMOGUI4  MZ390 final_options=NOTRACEC
+DEMOGUI4  MZ390 final_options=NOTRACEG
+DEMOGUI4  MZ390 final_options=NOTRACEL
+DEMOGUI4  MZ390 final_options=NOTRACEM
+DEMOGUI4  MZ390 final_options=NOTRACEP
+DEMOGUI4  MZ390 final_options=NOTRACEQ
+DEMOGUI4  MZ390 final_options=NOTRACES
+DEMOGUI4  MZ390 final_options=NOTRACET
+DEMOGUI4  MZ390 final_options=NOTRACEV
+DEMOGUI4  MZ390 final_options=TRAP
+DEMOGUI4  MZ390 final_options=NOTRUNC
+DEMOGUI4  MZ390 final_options=NOTS
+DEMOGUI4  MZ390 final_options=VCB
+DEMOGUI4  MZ390 final_options=WARN
+DEMOGUI4  MZ390 final_options=XREF
+DEMOGUI4  MZ390 final_options=ZSTRMAC
+DEMOGUI4  MZ390 final_options=CHKMAC=0
+DEMOGUI4  MZ390 final_options=CHKSRC=1
+DEMOGUI4  MZ390 final_options=ERR=100
+DEMOGUI4  MZ390 final_options=MAXCALL=50
+DEMOGUI4  MZ390 final_options=MAXDISPLAY=80
+DEMOGUI4  MZ390 final_options=MAXESD=1000
+DEMOGUI4  MZ390 final_options=MAXFILE=1000
+DEMOGUI4  MZ390 final_options=MAXGBL=100000
+DEMOGUI4  MZ390 final_options=MAXHEIGHT=600
+DEMOGUI4  MZ390 final_options=MAXLCL=100000
+DEMOGUI4  MZ390 final_options=MAXLEN=80
+DEMOGUI4  MZ390 final_options=MAXLINE=200000
+DEMOGUI4  MZ390 final_options=MAXLOG=1000000
+DEMOGUI4  MZ390 final_options=MAXPARM=10000
+DEMOGUI4  MZ390 final_options=MAXPASS=2
+DEMOGUI4  MZ390 final_options=MAXPC=50000
+DEMOGUI4  MZ390 final_options=MAXQUE=1000
+DEMOGUI4  MZ390 final_options=MAXRLD=10000
+DEMOGUI4  MZ390 final_options=MAXSIZE=52428800
+DEMOGUI4  MZ390 final_options=MAXSYM=50000
+DEMOGUI4  MZ390 final_options=MAXWARN=4
+DEMOGUI4  MZ390 final_options=MAXWIDTH=800
+DEMOGUI4  MZ390 final_options=MEM=1
+DEMOGUI4  MZ390 final_options=MINHEIGHT=150
+DEMOGUI4  MZ390 final_options=MINWIDTH=150
+DEMOGUI4  MZ390 final_options=PARM=
+DEMOGUI4  MZ390 final_options=PROFILE=
+DEMOGUI4  MZ390 final_options=STATS=W:\work\z390\guam\demo\DEMOGUI4.STA
+DEMOGUI4  MZ390 final_options=SYSPARM=
+DEMOGUI4  MZ390 final_options=SYSTERM=W:\work\z390\guam\demo\DEMOGUI4.ERR
+DEMOGUI4  MZ390 final_options=TESTDD=
+DEMOGUI4  MZ390 final_options=TIME=15
+DEMOGUI4  MZ390 final_options=TRACE=
+DEMOGUI4  MZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+DEMOGUI4  MZ390 final_options=Z390BROWSER=cmd.exe /c Start
+DEMOGUI4  MZ390 final_options=Z390COMMAND=cmd.exe
+DEMOGUI4  MZ390 final_options=Z390EDITOR=notepad.exe
+DEMOGUI4  MZ390 final_options=INSTALL=
+DEMOGUI4  MZ390 final_options=IPL=
+DEMOGUI4  MZ390 final_options=LOG=
+DEMOGUI4  MZ390 final_options=SYS390=guam\demo\+linklib
+DEMOGUI4  MZ390 final_options=SYSBAL=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+DEMOGUI4  MZ390 final_options=SYSDAT=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSERR=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSLOG=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSLST=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+DEMOGUI4  MZ390 final_options=SYSMLC=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSPCH=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSPRN=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSOBJ=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSOPT=guam\demo\
+DEMOGUI4  MZ390 final_options=SYSTRC=guam\demo\
+DEMOGUI4  MZ390 total MLC/MAC loaded  = 784
+DEMOGUI4  MZ390 total BAL output lines= 295
+DEMOGUI4  MZ390 total BAL instructions= 23
+DEMOGUI4  MZ390 total macros          = 9
+DEMOGUI4  MZ390 total macro loads     = 9
+DEMOGUI4  MZ390 total macro calls     = 21
+DEMOGUI4  MZ390 total AENTRY blocks   = 0
+DEMOGUI4  MZ390 total ACALL  calls    = 0
+DEMOGUI4  MZ390 total AIF    blocks   = 6
+DEMOGUI4  MZ390 total ACASE  blocks   = 0
+DEMOGUI4  MZ390 total AWHILE calls    = 1
+DEMOGUI4  MZ390 total AUNTIL blocks   = 0
+DEMOGUI4  MZ390 total global set names= 61
+DEMOGUI4  MZ390 tot global seta cells = 2
+DEMOGUI4  MZ390 tot global setb cells = 77
+DEMOGUI4  MZ390 tot global setc cells = 42
+DEMOGUI4  MZ390 max local pos parms   = 7
+DEMOGUI4  MZ390 max local key parms   = 11
+DEMOGUI4  MZ390 max local set names   = 21
+DEMOGUI4  MZ390 max local seta cells  = 75
+DEMOGUI4  MZ390 max local setb cells  = 0
+DEMOGUI4  MZ390 max local setc cells  = 25
+DEMOGUI4  MZ390 total array expansions= 0
+DEMOGUI4  MZ390 total Keys            = 1657
+DEMOGUI4  MZ390 Key searches          = 5723
+DEMOGUI4  MZ390 Key avg comps         = 0
+DEMOGUI4  MZ390 Key max comps         = 3
+DEMOGUI4  MZ390 total macro line exec = 929
+DEMOGUI4  MZ390 total pcode line exec = 408
+DEMOGUI4  MZ390 total pcode line gen. = 124
+DEMOGUI4  MZ390 total pcode line reuse= 0
+DEMOGUI4  MZ390 total pcode op   gen. = 754
+DEMOGUI4  MZ390 total pcode op   exec = 2965
+DEMOGUI4  MZ390 total pcode gen  opt  = 199
+DEMOGUI4  MZ390 total pcode exec opt  = 4
+DEMOGUI4  MZ390 FID=  1 ERR= 0 W:\work\z390\guam\demo\DEMOGUI4.MLC
+DEMOGUI4  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+DEMOGUI4  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\GUAM.MAC
+DEMOGUI4  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\TPUT.MAC
+DEMOGUI4  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\ZOPTLR.MAC
+DEMOGUI4  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\TGET.MAC
+DEMOGUI4  MZ390 FID=  7 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+DEMOGUI4  MZ390 FID=  8 ERR= 0 W:\work\z390\mac\TN3270.MAC
+DEMOGUI4  MZ390 FID=  9 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+DEMOGUI4  MZ390 total mnote warnings  = 0
+DEMOGUI4  MZ390 total mnote errors    = 0
+DEMOGUI4  MZ390 max   mnote level     = 0
+DEMOGUI4  MZ390 total mz390 errors    = 0
+DEMOGUI4  AZ390 BAL lines             = 295
+DEMOGUI4  AZ390 symbols               = 127
+DEMOGUI4  AZ390 Literals              = 7
+DEMOGUI4  AZ390 alloc passes          = 2
+DEMOGUI4  AZ390 Keys                  = 1315
+DEMOGUI4  AZ390 Key searches          = 2967
+DEMOGUI4  AZ390 Key avg comps         = 0
+DEMOGUI4  AZ390 Key max comps         = 4
+DEMOGUI4  AZ390 ESD symbols           = 1
+DEMOGUI4  AZ390 object bytes          = 433
+DEMOGUI4  AZ390 object rlds           = 0
+DEMOGUI4  AZ390 total mnote warnings  = 0
+DEMOGUI4  AZ390 total mnote errors    = 0
+DEMOGUI4  AZ390 max   mnote level     = 0
+DEMOGUI4  AZ390 total mz390 errors    = 0
+DEMOGUI4  AZ390 total az390 errors    = 0
+DEMOGUI4  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=3805
+DEMOGUI4  LZ390 START
+DEMOGUI4  LZ390 Copyright 2010 Automated Software Tools Corporation
+DEMOGUI4  LZ390 z390 is licensed under GNU General Public License
+DEMOGUI4  LZ390 options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI4  LZ390 program = guam\demo\DEMOGUI4.OBJ
+DEMOGUI4  LZ390 final_options=ALIGN
+DEMOGUI4  LZ390 final_options=NOALLOW
+DEMOGUI4  LZ390 final_options=NOAMODE24
+DEMOGUI4  LZ390 final_options=AMODE31
+DEMOGUI4  LZ390 final_options=NOASCII
+DEMOGUI4  LZ390 final_options=ASM
+DEMOGUI4  LZ390 final_options=NOASSIST
+DEMOGUI4  LZ390 final_options=AUTOLINK
+DEMOGUI4  LZ390 final_options=BAL
+DEMOGUI4  LZ390 final_options=NOBS2000
+DEMOGUI4  LZ390 final_options=EDF
+DEMOGUI4  LZ390 final_options=NOCICS
+DEMOGUI4  LZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+DEMOGUI4  LZ390 final_options=COMMENT
+DEMOGUI4  LZ390 final_options=CON
+DEMOGUI4  LZ390 final_options=NODUMP
+DEMOGUI4  LZ390 final_options=EPILOG
+DEMOGUI4  LZ390 final_options=NOERRSUM
+DEMOGUI4  LZ390 final_options=EXTEND
+DEMOGUI4  LZ390 final_options=FLOAT(DECIMAL)
+DEMOGUI4  LZ390 final_options=GUAM
+DEMOGUI4  LZ390 final_options=INIT
+DEMOGUI4  LZ390 final_options=LIST
+DEMOGUI4  LZ390 final_options=LISTCALL
+DEMOGUI4  LZ390 final_options=LISTUSE
+DEMOGUI4  LZ390 final_options=LOADHIGH
+DEMOGUI4  LZ390 final_options=NOMCALL
+DEMOGUI4  LZ390 final_options=NOMOD
+DEMOGUI4  LZ390 final_options=OBJ
+DEMOGUI4  LZ390 final_options=NOOBJHEX
+DEMOGUI4  LZ390 final_options=PC
+DEMOGUI4  LZ390 final_options=PCOPT
+DEMOGUI4  LZ390 final_options=NOPRINTALL
+DEMOGUI4  LZ390 final_options=PROLOG
+DEMOGUI4  LZ390 final_options=PROTECT
+DEMOGUI4  LZ390 final_options=R64
+DEMOGUI4  LZ390 final_options=NOREFORMAT
+DEMOGUI4  LZ390 final_options=NOREGS
+DEMOGUI4  LZ390 final_options=RMODE24
+DEMOGUI4  LZ390 final_options=NORMODE31
+DEMOGUI4  LZ390 final_options=STATS
+DEMOGUI4  LZ390 final_options=NOTEST
+DEMOGUI4  LZ390 final_options=NOTIME
+DEMOGUI4  LZ390 final_options=NOTIMING
+DEMOGUI4  LZ390 final_options=NOTRACE
+DEMOGUI4  LZ390 final_options=NOTRACEA
+DEMOGUI4  LZ390 final_options=NOTRACEALL
+DEMOGUI4  LZ390 final_options=NOTRACEC
+DEMOGUI4  LZ390 final_options=NOTRACEG
+DEMOGUI4  LZ390 final_options=NOTRACEL
+DEMOGUI4  LZ390 final_options=NOTRACEM
+DEMOGUI4  LZ390 final_options=NOTRACEP
+DEMOGUI4  LZ390 final_options=NOTRACEQ
+DEMOGUI4  LZ390 final_options=NOTRACES
+DEMOGUI4  LZ390 final_options=NOTRACET
+DEMOGUI4  LZ390 final_options=NOTRACEV
+DEMOGUI4  LZ390 final_options=TRAP
+DEMOGUI4  LZ390 final_options=NOTRUNC
+DEMOGUI4  LZ390 final_options=NOTS
+DEMOGUI4  LZ390 final_options=VCB
+DEMOGUI4  LZ390 final_options=WARN
+DEMOGUI4  LZ390 final_options=XREF
+DEMOGUI4  LZ390 final_options=ZSTRMAC
+DEMOGUI4  LZ390 final_options=CHKMAC=0
+DEMOGUI4  LZ390 final_options=CHKSRC=1
+DEMOGUI4  LZ390 final_options=ERR=100
+DEMOGUI4  LZ390 final_options=MAXCALL=50
+DEMOGUI4  LZ390 final_options=MAXDISPLAY=80
+DEMOGUI4  LZ390 final_options=MAXESD=1000
+DEMOGUI4  LZ390 final_options=MAXFILE=1000
+DEMOGUI4  LZ390 final_options=MAXGBL=100000
+DEMOGUI4  LZ390 final_options=MAXHEIGHT=600
+DEMOGUI4  LZ390 final_options=MAXLCL=100000
+DEMOGUI4  LZ390 final_options=MAXLEN=80
+DEMOGUI4  LZ390 final_options=MAXLINE=200000
+DEMOGUI4  LZ390 final_options=MAXLOG=1000000
+DEMOGUI4  LZ390 final_options=MAXPARM=10000
+DEMOGUI4  LZ390 final_options=MAXPASS=2
+DEMOGUI4  LZ390 final_options=MAXPC=50000
+DEMOGUI4  LZ390 final_options=MAXQUE=1000
+DEMOGUI4  LZ390 final_options=MAXRLD=10000
+DEMOGUI4  LZ390 final_options=MAXSIZE=52428800
+DEMOGUI4  LZ390 final_options=MAXSYM=50000
+DEMOGUI4  LZ390 final_options=MAXWARN=4
+DEMOGUI4  LZ390 final_options=MAXWIDTH=800
+DEMOGUI4  LZ390 final_options=MEM=1
+DEMOGUI4  LZ390 final_options=MINHEIGHT=150
+DEMOGUI4  LZ390 final_options=MINWIDTH=150
+DEMOGUI4  LZ390 final_options=PARM=
+DEMOGUI4  LZ390 final_options=PROFILE=
+DEMOGUI4  LZ390 final_options=STATS=W:\work\z390\guam\demo\DEMOGUI4.STA
+DEMOGUI4  LZ390 final_options=SYSPARM=
+DEMOGUI4  LZ390 final_options=SYSTERM=W:\work\z390\guam\demo\DEMOGUI4.ERR
+DEMOGUI4  LZ390 final_options=TESTDD=
+DEMOGUI4  LZ390 final_options=TIME=15
+DEMOGUI4  LZ390 final_options=TRACE=
+DEMOGUI4  LZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+DEMOGUI4  LZ390 final_options=Z390BROWSER=cmd.exe /c Start
+DEMOGUI4  LZ390 final_options=Z390COMMAND=cmd.exe
+DEMOGUI4  LZ390 final_options=Z390EDITOR=notepad.exe
+DEMOGUI4  LZ390 final_options=INSTALL=
+DEMOGUI4  LZ390 final_options=IPL=
+DEMOGUI4  LZ390 final_options=LOG=
+DEMOGUI4  LZ390 final_options=SYS390=guam\demo\+linklib
+DEMOGUI4  LZ390 final_options=SYSBAL=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSCPY=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSDAT=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSERR=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSLOG=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSLST=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSMAC=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSMLC=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSPCH=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSPRN=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSOBJ=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSOPT=guam\demo\
+DEMOGUI4  LZ390 final_options=SYSTRC=guam\demo\
+DEMOGUI4  LZ390 Stats total obj files = 1
+DEMOGUI4  LZ390 Stats total esds      = 1
+DEMOGUI4  LZ390 Stats total csects    = 1
+DEMOGUI4  LZ390 Stats total entries   = 0
+DEMOGUI4  LZ390 Stats missing wxtrn's = 0
+DEMOGUI4  LZ390 Stats Keys            = 1
+DEMOGUI4  LZ390 Stats Key searches    = 2
+DEMOGUI4  LZ390 Stats Key avg comps   = 0
+DEMOGUI4  LZ390 Stats Key max comps   = 1
+DEMOGUI4  LZ390 Stats total obj byte  = 433
+DEMOGUI4  LZ390 Stats total obj rlds  = 0
+DEMOGUI4  LZ390 total errors          = 0
+DEMOGUI4  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=184
+DEMOGUI4  EZ390 START
+DEMOGUI4  EZ390 Copyright 2010 Automated Software Tools Corporation
+DEMOGUI4  EZ390 z390 is licensed under GNU General Public License
+DEMOGUI4  EZ390 program = guam\demo\DEMOGUI4.390
+DEMOGUI4  EZ390 options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI4  EZ390 final_options=ALIGN
+DEMOGUI4  EZ390 final_options=NOALLOW
+DEMOGUI4  EZ390 final_options=NOAMODE24
+DEMOGUI4  EZ390 final_options=AMODE31
+DEMOGUI4  EZ390 final_options=NOASCII
+DEMOGUI4  EZ390 final_options=ASM
+DEMOGUI4  EZ390 final_options=NOASSIST
+DEMOGUI4  EZ390 final_options=AUTOLINK
+DEMOGUI4  EZ390 final_options=BAL
+DEMOGUI4  EZ390 final_options=NOBS2000
+DEMOGUI4  EZ390 final_options=EDF
+DEMOGUI4  EZ390 final_options=NOCICS
+DEMOGUI4  EZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+DEMOGUI4  EZ390 final_options=COMMENT
+DEMOGUI4  EZ390 final_options=CON
+DEMOGUI4  EZ390 final_options=NODUMP
+DEMOGUI4  EZ390 final_options=EPILOG
+DEMOGUI4  EZ390 final_options=NOERRSUM
+DEMOGUI4  EZ390 final_options=EXTEND
+DEMOGUI4  EZ390 final_options=FLOAT(DECIMAL)
+DEMOGUI4  EZ390 final_options=GUAM
+DEMOGUI4  EZ390 final_options=INIT
+DEMOGUI4  EZ390 final_options=LIST
+DEMOGUI4  EZ390 final_options=LISTCALL
+DEMOGUI4  EZ390 final_options=LISTUSE
+DEMOGUI4  EZ390 final_options=LOADHIGH
+DEMOGUI4  EZ390 final_options=NOMCALL
+DEMOGUI4  EZ390 final_options=NOMOD
+DEMOGUI4  EZ390 final_options=OBJ
+DEMOGUI4  EZ390 final_options=NOOBJHEX
+DEMOGUI4  EZ390 final_options=PC
+DEMOGUI4  EZ390 final_options=PCOPT
+DEMOGUI4  EZ390 final_options=NOPRINTALL
+DEMOGUI4  EZ390 final_options=PROLOG
+DEMOGUI4  EZ390 final_options=PROTECT
+DEMOGUI4  EZ390 final_options=R64
+DEMOGUI4  EZ390 final_options=NOREFORMAT
+DEMOGUI4  EZ390 final_options=NOREGS
+DEMOGUI4  EZ390 final_options=RMODE24
+DEMOGUI4  EZ390 final_options=NORMODE31
+DEMOGUI4  EZ390 final_options=STATS
+DEMOGUI4  EZ390 final_options=NOTEST
+DEMOGUI4  EZ390 final_options=NOTIME
+DEMOGUI4  EZ390 final_options=NOTIMING
+DEMOGUI4  EZ390 final_options=NOTRACE
+DEMOGUI4  EZ390 final_options=NOTRACEA
+DEMOGUI4  EZ390 final_options=NOTRACEALL
+DEMOGUI4  EZ390 final_options=NOTRACEC
+DEMOGUI4  EZ390 final_options=NOTRACEG
+DEMOGUI4  EZ390 final_options=NOTRACEL
+DEMOGUI4  EZ390 final_options=NOTRACEM
+DEMOGUI4  EZ390 final_options=NOTRACEP
+DEMOGUI4  EZ390 final_options=NOTRACEQ
+DEMOGUI4  EZ390 final_options=NOTRACES
+DEMOGUI4  EZ390 final_options=NOTRACET
+DEMOGUI4  EZ390 final_options=NOTRACEV
+DEMOGUI4  EZ390 final_options=TRAP
+DEMOGUI4  EZ390 final_options=NOTRUNC
+DEMOGUI4  EZ390 final_options=NOTS
+DEMOGUI4  EZ390 final_options=VCB
+DEMOGUI4  EZ390 final_options=WARN
+DEMOGUI4  EZ390 final_options=XREF
+DEMOGUI4  EZ390 final_options=ZSTRMAC
+DEMOGUI4  EZ390 final_options=CHKMAC=0
+DEMOGUI4  EZ390 final_options=CHKSRC=1
+DEMOGUI4  EZ390 final_options=ERR=100
+DEMOGUI4  EZ390 final_options=MAXCALL=50
+DEMOGUI4  EZ390 final_options=MAXDISPLAY=80
+DEMOGUI4  EZ390 final_options=MAXESD=1000
+DEMOGUI4  EZ390 final_options=MAXFILE=1000
+DEMOGUI4  EZ390 final_options=MAXGBL=100000
+DEMOGUI4  EZ390 final_options=MAXHEIGHT=600
+DEMOGUI4  EZ390 final_options=MAXLCL=100000
+DEMOGUI4  EZ390 final_options=MAXLEN=80
+DEMOGUI4  EZ390 final_options=MAXLINE=200000
+DEMOGUI4  EZ390 final_options=MAXLOG=1000000
+DEMOGUI4  EZ390 final_options=MAXPARM=10000
+DEMOGUI4  EZ390 final_options=MAXPASS=2
+DEMOGUI4  EZ390 final_options=MAXPC=50000
+DEMOGUI4  EZ390 final_options=MAXQUE=1000
+DEMOGUI4  EZ390 final_options=MAXRLD=10000
+DEMOGUI4  EZ390 final_options=MAXSIZE=52428800
+DEMOGUI4  EZ390 final_options=MAXSYM=50000
+DEMOGUI4  EZ390 final_options=MAXWARN=4
+DEMOGUI4  EZ390 final_options=MAXWIDTH=800
+DEMOGUI4  EZ390 final_options=MEM=1
+DEMOGUI4  EZ390 final_options=MINHEIGHT=150
+DEMOGUI4  EZ390 final_options=MINWIDTH=150
+DEMOGUI4  EZ390 final_options=PARM=
+DEMOGUI4  EZ390 final_options=PROFILE=
+DEMOGUI4  EZ390 final_options=STATS=W:\work\z390\guam\demo\DEMOGUI4.STA
+DEMOGUI4  EZ390 final_options=SYSPARM=
+DEMOGUI4  EZ390 final_options=SYSTERM=W:\work\z390\guam\demo\DEMOGUI4.ERR
+DEMOGUI4  EZ390 final_options=TESTDD=
+DEMOGUI4  EZ390 final_options=TIME=15
+DEMOGUI4  EZ390 final_options=TRACE=
+DEMOGUI4  EZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+DEMOGUI4  EZ390 final_options=Z390BROWSER=cmd.exe /c Start
+DEMOGUI4  EZ390 final_options=Z390COMMAND=cmd.exe
+DEMOGUI4  EZ390 final_options=Z390EDITOR=notepad.exe
+DEMOGUI4  EZ390 final_options=INSTALL=
+DEMOGUI4  EZ390 final_options=IPL=
+DEMOGUI4  EZ390 final_options=LOG=W:\work\z390\guam\demo\DEMOGUI4.LOG
+DEMOGUI4  EZ390 final_options=SYS390=guam\demo\+linklib
+DEMOGUI4  EZ390 final_options=SYSBAL=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSCPY=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSDAT=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSERR=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSLOG=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSLST=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSMAC=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSMLC=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSPCH=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSPRN=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSOBJ=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSOPT=guam\demo\
+DEMOGUI4  EZ390 final_options=SYSTRC=guam\demo\
+DEMOGUI4  EZ390 TCPIO operations      = 0
+DEMOGUI4  EZ390 DCB operations        = 0
+DEMOGUI4  EZ390 VSAM operations       = 0
+DEMOGUI4  EZ390 Keys                  = 2212
+DEMOGUI4  EZ390 Key searches          = 2
+DEMOGUI4  EZ390 Key avg comps         = 0
+DEMOGUI4  EZ390 Key max comps         = 0
+DEMOGUI4  EZ390 total errors          = 0
+DEMOGUI4  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=34

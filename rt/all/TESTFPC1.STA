@@ -1,0 +1,202 @@
+Comparing files LINKLIB\TESTFPC1.STA and RT\LINKLIB\SAVE\TESTFPC1.STA
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  MZ390 program = linklib\TESTFPC1.MLC
+TESTFPC1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+TESTFPC1  MZ390 final_options=ALIGN
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  MZ390 program = linklib\TESTFPC1.MLC
+TESTFPC1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+TESTFPC1  MZ390 final_options=ALIGN
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=PROFILE=
+TESTFPC1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\linklib\TESTFPC1.
+TESTFPC1  MZ390 final_options=STA
+TESTFPC1  MZ390 final_options=SYSPARM=
+TESTFPC1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\linklib\rtlink.
+TESTFPC1  MZ390 final_options=ERR
+TESTFPC1  MZ390 final_options=TESTDD=
+TESTFPC1  MZ390 final_options=TIME=15
+TESTFPC1  MZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=PROFILE=
+TESTFPC1  MZ390 final_options=STATS=W:\work\z390\linklib\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=SYSPARM=
+TESTFPC1  MZ390 final_options=SYSTERM=W:\work\z390\linklib\rtlink.ERR
+TESTFPC1  MZ390 final_options=TESTDD=
+TESTFPC1  MZ390 final_options=TIME=60
+TESTFPC1  MZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=SYSBAL=linklib\
+TESTFPC1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTFPC1  MZ390 final_options=SYSDAT=linklib\
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=SYSBAL=linklib\
+TESTFPC1  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+TESTFPC1  MZ390 final_options=SYSDAT=linklib\
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=SYSLST=linklib\
+TESTFPC1  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTFPC1  MZ390 final_options=SYSMLC=linklib\
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  MZ390 final_options=SYSLST=linklib\
+TESTFPC1  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+TESTFPC1  MZ390 final_options=SYSMLC=linklib\
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  MZ390 total pcode exec opt  = 9
+TESTFPC1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\linklib\TESTFPC1.MLC
+TESTFPC1  MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ASMMSP.CPY
+TESTFPC1  MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZSTRMAC.CPY
+TESTFPC1  MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RT1.MAC
+TESTFPC1  MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+TESTFPC1  MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+TESTFPC1  MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+TESTFPC1  MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ABEND.MAC
+TESTFPC1  MZ390 FID=  9 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\EQUREGS.MAC
+TESTFPC1  MZ390 FID= 10 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CTD.MAC
+TESTFPC1  MZ390 FID= 11 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CALL.MAC
+TESTFPC1  MZ390 FID= 12 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCALL.MAC
+TESTFPC1  MZ390 FID= 13 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\IF.MAC
+TESTFPC1  MZ390 FID= 14 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZSTRGBL.CPY
+TESTFPC1  MZ390 FID= 15 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZSTREQU.MAC
+TESTFPC1  MZ390 FID= 16 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ENDIF.MAC
+TESTFPC1  MZ390 FID= 17 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CFD.MAC
+TESTFPC1  MZ390 FID= 18 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\LX.MAC
+TESTFPC1  MZ390 total mnote warnings  = 0
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  MZ390 total pcode exec opt  = 9
+TESTFPC1  MZ390 FID=  1 ERR= 0 W:\work\z390\linklib\TESTFPC1.MLC
+TESTFPC1  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\ASMMSP.CPY
+TESTFPC1  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\ZSTRMAC.CPY
+TESTFPC1  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\RT1.MAC
+TESTFPC1  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+TESTFPC1  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\WTO.MAC
+TESTFPC1  MZ390 FID=  7 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+TESTFPC1  MZ390 FID=  8 ERR= 0 W:\work\z390\mac\ABEND.MAC
+TESTFPC1  MZ390 FID=  9 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+TESTFPC1  MZ390 FID= 10 ERR= 0 W:\work\z390\mac\CTD.MAC
+TESTFPC1  MZ390 FID= 11 ERR= 0 W:\work\z390\mac\CALL.MAC
+TESTFPC1  MZ390 FID= 12 ERR= 0 W:\work\z390\mac\ZCALL.MAC
+TESTFPC1  MZ390 FID= 13 ERR= 0 W:\work\z390\mac\IF.MAC
+TESTFPC1  MZ390 FID= 14 ERR= 0 W:\work\z390\mac\ZSTRGBL.CPY
+TESTFPC1  MZ390 FID= 15 ERR= 0 W:\work\z390\mac\ZSTREQU.MAC
+TESTFPC1  MZ390 FID= 16 ERR= 0 W:\work\z390\mac\ENDIF.MAC
+TESTFPC1  MZ390 FID= 17 ERR= 0 W:\work\z390\mac\CFD.MAC
+TESTFPC1  MZ390 FID= 18 ERR= 0 W:\work\z390\mac\LX.MAC
+TESTFPC1  MZ390 total mnote warnings  = 0
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  AZ390 total az390 errors    = 0
+TESTFPC1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=81693
+TESTFPC1  LZ390 START
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  AZ390 total az390 errors    = 0
+TESTFPC1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=81691
+TESTFPC1  LZ390 START
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  LZ390 z390 is licensed under GNU General Public License
+TESTFPC1  LZ390 options = @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+TESTFPC1  LZ390 program = linklib\TESTFPC1.OBJ
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  LZ390 z390 is licensed under GNU General Public License
+TESTFPC1  LZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+TESTFPC1  LZ390 program = linklib\TESTFPC1.OBJ
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  LZ390 final_options=PROFILE=
+TESTFPC1  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\linklib\TESTFPC1.
+TESTFPC1  LZ390 final_options=STA
+TESTFPC1  LZ390 final_options=SYSPARM=
+TESTFPC1  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\linklib\rtlink.
+TESTFPC1  LZ390 final_options=ERR
+TESTFPC1  LZ390 final_options=TESTDD=
+TESTFPC1  LZ390 final_options=TIME=15
+TESTFPC1  LZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  LZ390 final_options=PROFILE=
+TESTFPC1  LZ390 final_options=STATS=W:\work\z390\linklib\TESTFPC1.STA
+TESTFPC1  LZ390 final_options=SYSPARM=
+TESTFPC1  LZ390 final_options=SYSTERM=W:\work\z390\linklib\rtlink.ERR
+TESTFPC1  LZ390 final_options=TESTDD=
+TESTFPC1  LZ390 final_options=TIME=60
+TESTFPC1  LZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  LZ390 total errors          = 0
+TESTFPC1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=17060
+TESTFPC1  EZ390 START
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  LZ390 total errors          = 0
+TESTFPC1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=17058
+TESTFPC1  EZ390 START
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  EZ390 program = linklib\TESTFPC1.390
+TESTFPC1  EZ390 options = @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+TESTFPC1  EZ390 final_options=ALIGN
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  EZ390 program = linklib\TESTFPC1.390
+TESTFPC1  EZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+TESTFPC1  EZ390 final_options=ALIGN
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  EZ390 final_options=PROFILE=
+TESTFPC1  EZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\linklib\TESTFPC1.
+TESTFPC1  EZ390 final_options=STA
+TESTFPC1  EZ390 final_options=SYSPARM=
+TESTFPC1  EZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\linklib\rtlink.
+TESTFPC1  EZ390 final_options=ERR
+TESTFPC1  EZ390 final_options=TESTDD=
+TESTFPC1  EZ390 final_options=TIME=15
+TESTFPC1  EZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  EZ390 final_options=PROFILE=
+TESTFPC1  EZ390 final_options=STATS=W:\work\z390\linklib\TESTFPC1.STA
+TESTFPC1  EZ390 final_options=SYSPARM=
+TESTFPC1  EZ390 final_options=SYSTERM=W:\work\z390\linklib\rtlink.ERR
+TESTFPC1  EZ390 final_options=TESTDD=
+TESTFPC1  EZ390 final_options=TIME=60
+TESTFPC1  EZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  EZ390 final_options=IPL=
+TESTFPC1  EZ390 final options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\linklib\TESTFPC1.LO
+TESTFPC1  EZ390 final_options=G
+TESTFPC1  EZ390 final_options=SYS390=linklib\+linklib
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  EZ390 final_options=IPL=
+TESTFPC1  EZ390 final_options=LOG=W:\work\z390\linklib\TESTFPC1.LOG
+TESTFPC1  EZ390 final_options=SYS390=linklib\+linklib
+*****
+
+***** LINKLIB\TESTFPC1.STA
+TESTFPC1  EZ390 total errors          = 0
+TESTFPC1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=3288 INS=1128555
+***** RT\LINKLIB\SAVE\TESTFPC1.STA
+TESTFPC1  EZ390 total errors          = 0
+TESTFPC1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=3285 INS=1128555
+*****
+

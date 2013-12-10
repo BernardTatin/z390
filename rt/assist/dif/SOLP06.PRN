@@ -1,0 +1,14 @@
+Comparing files ASSIST\solp06.PRN and RT\ASSIST\SAVE\SOLP06.PRN
+***** ASSIST\solp06.PRN
+AZ390I program = assist\solp06
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) assist notiming stats 
+  systerm(assist\rtast)
+External Symbol Definitions
+***** RT\ASSIST\SAVE\SOLP06.PRN
+AZ390I program = assist\solp06
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) assist notiming stats systerm(assist\rtast)
+External Symbol Definitions
+*****
+

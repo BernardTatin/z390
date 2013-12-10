@@ -1,0 +1,451 @@
+TESTGP4   MZ390 START
+TESTGP4   MZ390 Copyright 2010 Automated Software Tools Corporation
+TESTGP4   MZ390 z390 is licensed under GNU General Public License
+TESTGP4   MZ390 program = guam\test\TESTGP4.MLC
+TESTGP4   MZ390 options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+TESTGP4   MZ390 final_options=ALIGN
+TESTGP4   MZ390 final_options=NOALLOW
+TESTGP4   MZ390 final_options=NOAMODE24
+TESTGP4   MZ390 final_options=AMODE31
+TESTGP4   MZ390 final_options=NOASCII
+TESTGP4   MZ390 final_options=ASM
+TESTGP4   MZ390 final_options=NOASSIST
+TESTGP4   MZ390 final_options=AUTOLINK
+TESTGP4   MZ390 final_options=BAL
+TESTGP4   MZ390 final_options=NOBS2000
+TESTGP4   MZ390 final_options=EDF
+TESTGP4   MZ390 final_options=NOCICS
+TESTGP4   MZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTGP4   MZ390 final_options=COMMENT
+TESTGP4   MZ390 final_options=CON
+TESTGP4   MZ390 final_options=NODUMP
+TESTGP4   MZ390 final_options=EPILOG
+TESTGP4   MZ390 final_options=NOERRSUM
+TESTGP4   MZ390 final_options=EXTEND
+TESTGP4   MZ390 final_options=FLOAT(DECIMAL)
+TESTGP4   MZ390 final_options=GUAM
+TESTGP4   MZ390 final_options=INIT
+TESTGP4   MZ390 final_options=LIST
+TESTGP4   MZ390 final_options=LISTCALL
+TESTGP4   MZ390 final_options=LISTUSE
+TESTGP4   MZ390 final_options=LOADHIGH
+TESTGP4   MZ390 final_options=NOMCALL
+TESTGP4   MZ390 final_options=NOMOD
+TESTGP4   MZ390 final_options=OBJ
+TESTGP4   MZ390 final_options=NOOBJHEX
+TESTGP4   MZ390 final_options=PC
+TESTGP4   MZ390 final_options=PCOPT
+TESTGP4   MZ390 final_options=NOPRINTALL
+TESTGP4   MZ390 final_options=PROLOG
+TESTGP4   MZ390 final_options=PROTECT
+TESTGP4   MZ390 final_options=R64
+TESTGP4   MZ390 final_options=NOREFORMAT
+TESTGP4   MZ390 final_options=NOREGS
+TESTGP4   MZ390 final_options=RMODE24
+TESTGP4   MZ390 final_options=NORMODE31
+TESTGP4   MZ390 final_options=STATS
+TESTGP4   MZ390 final_options=NOTEST
+TESTGP4   MZ390 final_options=NOTIME
+TESTGP4   MZ390 final_options=NOTIMING
+TESTGP4   MZ390 final_options=NOTRACE
+TESTGP4   MZ390 final_options=NOTRACEA
+TESTGP4   MZ390 final_options=NOTRACEALL
+TESTGP4   MZ390 final_options=NOTRACEC
+TESTGP4   MZ390 final_options=NOTRACEG
+TESTGP4   MZ390 final_options=NOTRACEL
+TESTGP4   MZ390 final_options=NOTRACEM
+TESTGP4   MZ390 final_options=NOTRACEP
+TESTGP4   MZ390 final_options=NOTRACEQ
+TESTGP4   MZ390 final_options=NOTRACES
+TESTGP4   MZ390 final_options=NOTRACET
+TESTGP4   MZ390 final_options=NOTRACEV
+TESTGP4   MZ390 final_options=TRAP
+TESTGP4   MZ390 final_options=NOTRUNC
+TESTGP4   MZ390 final_options=NOTS
+TESTGP4   MZ390 final_options=VCB
+TESTGP4   MZ390 final_options=WARN
+TESTGP4   MZ390 final_options=XREF
+TESTGP4   MZ390 final_options=ZSTRMAC
+TESTGP4   MZ390 final_options=CHKMAC=0
+TESTGP4   MZ390 final_options=CHKSRC=1
+TESTGP4   MZ390 final_options=ERR=100
+TESTGP4   MZ390 final_options=MAXCALL=50
+TESTGP4   MZ390 final_options=MAXDISPLAY=80
+TESTGP4   MZ390 final_options=MAXESD=1000
+TESTGP4   MZ390 final_options=MAXFILE=1000
+TESTGP4   MZ390 final_options=MAXGBL=100000
+TESTGP4   MZ390 final_options=MAXHEIGHT=600
+TESTGP4   MZ390 final_options=MAXLCL=100000
+TESTGP4   MZ390 final_options=MAXLEN=80
+TESTGP4   MZ390 final_options=MAXLINE=200000
+TESTGP4   MZ390 final_options=MAXLOG=1000000
+TESTGP4   MZ390 final_options=MAXPARM=10000
+TESTGP4   MZ390 final_options=MAXPASS=2
+TESTGP4   MZ390 final_options=MAXPC=50000
+TESTGP4   MZ390 final_options=MAXQUE=1000
+TESTGP4   MZ390 final_options=MAXRLD=10000
+TESTGP4   MZ390 final_options=MAXSIZE=52428800
+TESTGP4   MZ390 final_options=MAXSYM=50000
+TESTGP4   MZ390 final_options=MAXWARN=4
+TESTGP4   MZ390 final_options=MAXWIDTH=800
+TESTGP4   MZ390 final_options=MEM=1
+TESTGP4   MZ390 final_options=MINHEIGHT=150
+TESTGP4   MZ390 final_options=MINWIDTH=150
+TESTGP4   MZ390 final_options=PARM=
+TESTGP4   MZ390 final_options=PROFILE=
+TESTGP4   MZ390 final_options=STATS=W:\work\z390\guam\test\TESTGP4.STA
+TESTGP4   MZ390 final_options=SYSPARM=
+TESTGP4   MZ390 final_options=SYSTERM=W:\work\z390\guam\test\TESTGP4.ERR
+TESTGP4   MZ390 final_options=TESTDD=
+TESTGP4   MZ390 final_options=TIME=15
+TESTGP4   MZ390 final_options=TRACE=
+TESTGP4   MZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTGP4   MZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTGP4   MZ390 final_options=Z390COMMAND=cmd.exe
+TESTGP4   MZ390 final_options=Z390EDITOR=notepad.exe
+TESTGP4   MZ390 final_options=INSTALL=
+TESTGP4   MZ390 final_options=IPL=
+TESTGP4   MZ390 final_options=LOG=
+TESTGP4   MZ390 final_options=SYS390=guam\test\+linklib
+TESTGP4   MZ390 final_options=SYSBAL=guam\test\
+TESTGP4   MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+TESTGP4   MZ390 final_options=SYSDAT=guam\test\
+TESTGP4   MZ390 final_options=SYSERR=guam\test\
+TESTGP4   MZ390 final_options=SYSLOG=guam\test\
+TESTGP4   MZ390 final_options=SYSLST=guam\test\
+TESTGP4   MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+TESTGP4   MZ390 final_options=SYSMLC=guam\test\
+TESTGP4   MZ390 final_options=SYSPCH=guam\test\
+TESTGP4   MZ390 final_options=SYSPRN=guam\test\
+TESTGP4   MZ390 final_options=SYSOBJ=guam\test\
+TESTGP4   MZ390 final_options=SYSOPT=guam\test\
+TESTGP4   MZ390 final_options=SYSTRC=guam\test\
+TESTGP4   MZ390 total MLC/MAC loaded  = 242
+TESTGP4   MZ390 total BAL output lines= 87
+TESTGP4   MZ390 total BAL instructions= 19
+TESTGP4   MZ390 total macros          = 6
+TESTGP4   MZ390 total macro loads     = 6
+TESTGP4   MZ390 total macro calls     = 9
+TESTGP4   MZ390 total AENTRY blocks   = 0
+TESTGP4   MZ390 total ACALL  calls    = 0
+TESTGP4   MZ390 total AIF    blocks   = 2
+TESTGP4   MZ390 total ACASE  blocks   = 0
+TESTGP4   MZ390 total AWHILE calls    = 0
+TESTGP4   MZ390 total AUNTIL blocks   = 0
+TESTGP4   MZ390 total global set names= 46
+TESTGP4   MZ390 tot global seta cells = 0
+TESTGP4   MZ390 tot global setb cells = 7
+TESTGP4   MZ390 tot global setc cells = 39
+TESTGP4   MZ390 max local pos parms   = 7
+TESTGP4   MZ390 max local key parms   = 7
+TESTGP4   MZ390 max local set names   = 19
+TESTGP4   MZ390 max local seta cells  = 4
+TESTGP4   MZ390 max local setb cells  = 0
+TESTGP4   MZ390 max local setc cells  = 15
+TESTGP4   MZ390 total array expansions= 0
+TESTGP4   MZ390 total Keys            = 1419
+TESTGP4   MZ390 Key searches          = 2519
+TESTGP4   MZ390 Key avg comps         = 0
+TESTGP4   MZ390 Key max comps         = 3
+TESTGP4   MZ390 total macro line exec = 204
+TESTGP4   MZ390 total pcode line exec = 45
+TESTGP4   MZ390 total pcode line gen. = 58
+TESTGP4   MZ390 total pcode line reuse= 0
+TESTGP4   MZ390 total pcode op   gen. = 260
+TESTGP4   MZ390 total pcode op   exec = 279
+TESTGP4   MZ390 total pcode gen  opt  = 94
+TESTGP4   MZ390 total pcode exec opt  = 2
+TESTGP4   MZ390 FID=  1 ERR= 0 W:\work\z390\guam\test\TESTGP4.MLC
+TESTGP4   MZ390 FID=  2 ERR= 0 W:\work\z390\mac\YREGS.MAC
+TESTGP4   MZ390 FID=  3 ERR= 0 W:\work\z390\mac\TPUT.MAC
+TESTGP4   MZ390 FID=  4 ERR= 0 W:\work\z390\mac\ZOPTLR.MAC
+TESTGP4   MZ390 FID=  5 ERR= 0 W:\work\z390\mac\TGET.MAC
+TESTGP4   MZ390 FID=  6 ERR= 0 W:\work\z390\mac\STIMER.MAC
+TESTGP4   MZ390 total mnote warnings  = 0
+TESTGP4   MZ390 total mnote errors    = 0
+TESTGP4   MZ390 max   mnote level     = 0
+TESTGP4   MZ390 total mz390 errors    = 0
+TESTGP4   AZ390 BAL lines             = 87
+TESTGP4   AZ390 symbols               = 27
+TESTGP4   AZ390 Literals              = 2
+TESTGP4   AZ390 alloc passes          = 2
+TESTGP4   AZ390 Keys                  = 1210
+TESTGP4   AZ390 Key searches          = 1759
+TESTGP4   AZ390 Key avg comps         = 0
+TESTGP4   AZ390 Key max comps         = 2
+TESTGP4   AZ390 ESD symbols           = 1
+TESTGP4   AZ390 object bytes          = 311
+TESTGP4   AZ390 object rlds           = 0
+TESTGP4   AZ390 total mnote warnings  = 0
+TESTGP4   AZ390 total mnote errors    = 0
+TESTGP4   AZ390 max   mnote level     = 0
+TESTGP4   AZ390 total mz390 errors    = 0
+TESTGP4   AZ390 total az390 errors    = 0
+TESTGP4   MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1452
+TESTGP4   LZ390 START
+TESTGP4   LZ390 Copyright 2010 Automated Software Tools Corporation
+TESTGP4   LZ390 z390 is licensed under GNU General Public License
+TESTGP4   LZ390 options = @rt\RT1=(bal notiming stats) guam
+TESTGP4   LZ390 program = guam\test\TESTGP4.OBJ
+TESTGP4   LZ390 final_options=ALIGN
+TESTGP4   LZ390 final_options=NOALLOW
+TESTGP4   LZ390 final_options=NOAMODE24
+TESTGP4   LZ390 final_options=AMODE31
+TESTGP4   LZ390 final_options=NOASCII
+TESTGP4   LZ390 final_options=ASM
+TESTGP4   LZ390 final_options=NOASSIST
+TESTGP4   LZ390 final_options=AUTOLINK
+TESTGP4   LZ390 final_options=BAL
+TESTGP4   LZ390 final_options=NOBS2000
+TESTGP4   LZ390 final_options=EDF
+TESTGP4   LZ390 final_options=NOCICS
+TESTGP4   LZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTGP4   LZ390 final_options=COMMENT
+TESTGP4   LZ390 final_options=CON
+TESTGP4   LZ390 final_options=NODUMP
+TESTGP4   LZ390 final_options=EPILOG
+TESTGP4   LZ390 final_options=NOERRSUM
+TESTGP4   LZ390 final_options=EXTEND
+TESTGP4   LZ390 final_options=FLOAT(DECIMAL)
+TESTGP4   LZ390 final_options=GUAM
+TESTGP4   LZ390 final_options=INIT
+TESTGP4   LZ390 final_options=LIST
+TESTGP4   LZ390 final_options=LISTCALL
+TESTGP4   LZ390 final_options=LISTUSE
+TESTGP4   LZ390 final_options=LOADHIGH
+TESTGP4   LZ390 final_options=NOMCALL
+TESTGP4   LZ390 final_options=NOMOD
+TESTGP4   LZ390 final_options=OBJ
+TESTGP4   LZ390 final_options=NOOBJHEX
+TESTGP4   LZ390 final_options=PC
+TESTGP4   LZ390 final_options=PCOPT
+TESTGP4   LZ390 final_options=NOPRINTALL
+TESTGP4   LZ390 final_options=PROLOG
+TESTGP4   LZ390 final_options=PROTECT
+TESTGP4   LZ390 final_options=R64
+TESTGP4   LZ390 final_options=NOREFORMAT
+TESTGP4   LZ390 final_options=NOREGS
+TESTGP4   LZ390 final_options=RMODE24
+TESTGP4   LZ390 final_options=NORMODE31
+TESTGP4   LZ390 final_options=STATS
+TESTGP4   LZ390 final_options=NOTEST
+TESTGP4   LZ390 final_options=NOTIME
+TESTGP4   LZ390 final_options=NOTIMING
+TESTGP4   LZ390 final_options=NOTRACE
+TESTGP4   LZ390 final_options=NOTRACEA
+TESTGP4   LZ390 final_options=NOTRACEALL
+TESTGP4   LZ390 final_options=NOTRACEC
+TESTGP4   LZ390 final_options=NOTRACEG
+TESTGP4   LZ390 final_options=NOTRACEL
+TESTGP4   LZ390 final_options=NOTRACEM
+TESTGP4   LZ390 final_options=NOTRACEP
+TESTGP4   LZ390 final_options=NOTRACEQ
+TESTGP4   LZ390 final_options=NOTRACES
+TESTGP4   LZ390 final_options=NOTRACET
+TESTGP4   LZ390 final_options=NOTRACEV
+TESTGP4   LZ390 final_options=TRAP
+TESTGP4   LZ390 final_options=NOTRUNC
+TESTGP4   LZ390 final_options=NOTS
+TESTGP4   LZ390 final_options=VCB
+TESTGP4   LZ390 final_options=WARN
+TESTGP4   LZ390 final_options=XREF
+TESTGP4   LZ390 final_options=ZSTRMAC
+TESTGP4   LZ390 final_options=CHKMAC=0
+TESTGP4   LZ390 final_options=CHKSRC=1
+TESTGP4   LZ390 final_options=ERR=100
+TESTGP4   LZ390 final_options=MAXCALL=50
+TESTGP4   LZ390 final_options=MAXDISPLAY=80
+TESTGP4   LZ390 final_options=MAXESD=1000
+TESTGP4   LZ390 final_options=MAXFILE=1000
+TESTGP4   LZ390 final_options=MAXGBL=100000
+TESTGP4   LZ390 final_options=MAXHEIGHT=600
+TESTGP4   LZ390 final_options=MAXLCL=100000
+TESTGP4   LZ390 final_options=MAXLEN=80
+TESTGP4   LZ390 final_options=MAXLINE=200000
+TESTGP4   LZ390 final_options=MAXLOG=1000000
+TESTGP4   LZ390 final_options=MAXPARM=10000
+TESTGP4   LZ390 final_options=MAXPASS=2
+TESTGP4   LZ390 final_options=MAXPC=50000
+TESTGP4   LZ390 final_options=MAXQUE=1000
+TESTGP4   LZ390 final_options=MAXRLD=10000
+TESTGP4   LZ390 final_options=MAXSIZE=52428800
+TESTGP4   LZ390 final_options=MAXSYM=50000
+TESTGP4   LZ390 final_options=MAXWARN=4
+TESTGP4   LZ390 final_options=MAXWIDTH=800
+TESTGP4   LZ390 final_options=MEM=1
+TESTGP4   LZ390 final_options=MINHEIGHT=150
+TESTGP4   LZ390 final_options=MINWIDTH=150
+TESTGP4   LZ390 final_options=PARM=
+TESTGP4   LZ390 final_options=PROFILE=
+TESTGP4   LZ390 final_options=STATS=W:\work\z390\guam\test\TESTGP4.STA
+TESTGP4   LZ390 final_options=SYSPARM=
+TESTGP4   LZ390 final_options=SYSTERM=W:\work\z390\guam\test\TESTGP4.ERR
+TESTGP4   LZ390 final_options=TESTDD=
+TESTGP4   LZ390 final_options=TIME=15
+TESTGP4   LZ390 final_options=TRACE=
+TESTGP4   LZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTGP4   LZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTGP4   LZ390 final_options=Z390COMMAND=cmd.exe
+TESTGP4   LZ390 final_options=Z390EDITOR=notepad.exe
+TESTGP4   LZ390 final_options=INSTALL=
+TESTGP4   LZ390 final_options=IPL=
+TESTGP4   LZ390 final_options=LOG=
+TESTGP4   LZ390 final_options=SYS390=guam\test\+linklib
+TESTGP4   LZ390 final_options=SYSBAL=guam\test\
+TESTGP4   LZ390 final_options=SYSCPY=guam\test\
+TESTGP4   LZ390 final_options=SYSDAT=guam\test\
+TESTGP4   LZ390 final_options=SYSERR=guam\test\
+TESTGP4   LZ390 final_options=SYSLOG=guam\test\
+TESTGP4   LZ390 final_options=SYSLST=guam\test\
+TESTGP4   LZ390 final_options=SYSMAC=guam\test\
+TESTGP4   LZ390 final_options=SYSMLC=guam\test\
+TESTGP4   LZ390 final_options=SYSPCH=guam\test\
+TESTGP4   LZ390 final_options=SYSPRN=guam\test\
+TESTGP4   LZ390 final_options=SYSOBJ=guam\test\
+TESTGP4   LZ390 final_options=SYSOPT=guam\test\
+TESTGP4   LZ390 final_options=SYSTRC=guam\test\
+TESTGP4   LZ390 Stats total obj files = 1
+TESTGP4   LZ390 Stats total esds      = 1
+TESTGP4   LZ390 Stats total csects    = 1
+TESTGP4   LZ390 Stats total entries   = 0
+TESTGP4   LZ390 Stats missing wxtrn's = 0
+TESTGP4   LZ390 Stats Keys            = 1
+TESTGP4   LZ390 Stats Key searches    = 2
+TESTGP4   LZ390 Stats Key avg comps   = 0
+TESTGP4   LZ390 Stats Key max comps   = 1
+TESTGP4   LZ390 Stats total obj byte  = 311
+TESTGP4   LZ390 Stats total obj rlds  = 0
+TESTGP4   LZ390 total errors          = 0
+TESTGP4   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=176
+TESTGP4   EZ390 START
+TESTGP4   EZ390 Copyright 2010 Automated Software Tools Corporation
+TESTGP4   EZ390 z390 is licensed under GNU General Public License
+TESTGP4   EZ390 program = guam\test\TESTGP4.390
+TESTGP4   EZ390 options = @rt\RT1=(bal notiming stats) guam
+TESTGP4   EZ390 final_options=ALIGN
+TESTGP4   EZ390 final_options=NOALLOW
+TESTGP4   EZ390 final_options=NOAMODE24
+TESTGP4   EZ390 final_options=AMODE31
+TESTGP4   EZ390 final_options=NOASCII
+TESTGP4   EZ390 final_options=ASM
+TESTGP4   EZ390 final_options=NOASSIST
+TESTGP4   EZ390 final_options=AUTOLINK
+TESTGP4   EZ390 final_options=BAL
+TESTGP4   EZ390 final_options=NOBS2000
+TESTGP4   EZ390 final_options=EDF
+TESTGP4   EZ390 final_options=NOCICS
+TESTGP4   EZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTGP4   EZ390 final_options=COMMENT
+TESTGP4   EZ390 final_options=CON
+TESTGP4   EZ390 final_options=NODUMP
+TESTGP4   EZ390 final_options=EPILOG
+TESTGP4   EZ390 final_options=NOERRSUM
+TESTGP4   EZ390 final_options=EXTEND
+TESTGP4   EZ390 final_options=FLOAT(DECIMAL)
+TESTGP4   EZ390 final_options=GUAM
+TESTGP4   EZ390 final_options=INIT
+TESTGP4   EZ390 final_options=LIST
+TESTGP4   EZ390 final_options=LISTCALL
+TESTGP4   EZ390 final_options=LISTUSE
+TESTGP4   EZ390 final_options=LOADHIGH
+TESTGP4   EZ390 final_options=NOMCALL
+TESTGP4   EZ390 final_options=NOMOD
+TESTGP4   EZ390 final_options=OBJ
+TESTGP4   EZ390 final_options=NOOBJHEX
+TESTGP4   EZ390 final_options=PC
+TESTGP4   EZ390 final_options=PCOPT
+TESTGP4   EZ390 final_options=NOPRINTALL
+TESTGP4   EZ390 final_options=PROLOG
+TESTGP4   EZ390 final_options=PROTECT
+TESTGP4   EZ390 final_options=R64
+TESTGP4   EZ390 final_options=NOREFORMAT
+TESTGP4   EZ390 final_options=NOREGS
+TESTGP4   EZ390 final_options=RMODE24
+TESTGP4   EZ390 final_options=NORMODE31
+TESTGP4   EZ390 final_options=STATS
+TESTGP4   EZ390 final_options=NOTEST
+TESTGP4   EZ390 final_options=NOTIME
+TESTGP4   EZ390 final_options=NOTIMING
+TESTGP4   EZ390 final_options=NOTRACE
+TESTGP4   EZ390 final_options=NOTRACEA
+TESTGP4   EZ390 final_options=NOTRACEALL
+TESTGP4   EZ390 final_options=NOTRACEC
+TESTGP4   EZ390 final_options=NOTRACEG
+TESTGP4   EZ390 final_options=NOTRACEL
+TESTGP4   EZ390 final_options=NOTRACEM
+TESTGP4   EZ390 final_options=NOTRACEP
+TESTGP4   EZ390 final_options=NOTRACEQ
+TESTGP4   EZ390 final_options=NOTRACES
+TESTGP4   EZ390 final_options=NOTRACET
+TESTGP4   EZ390 final_options=NOTRACEV
+TESTGP4   EZ390 final_options=TRAP
+TESTGP4   EZ390 final_options=NOTRUNC
+TESTGP4   EZ390 final_options=NOTS
+TESTGP4   EZ390 final_options=VCB
+TESTGP4   EZ390 final_options=WARN
+TESTGP4   EZ390 final_options=XREF
+TESTGP4   EZ390 final_options=ZSTRMAC
+TESTGP4   EZ390 final_options=CHKMAC=0
+TESTGP4   EZ390 final_options=CHKSRC=1
+TESTGP4   EZ390 final_options=ERR=100
+TESTGP4   EZ390 final_options=MAXCALL=50
+TESTGP4   EZ390 final_options=MAXDISPLAY=80
+TESTGP4   EZ390 final_options=MAXESD=1000
+TESTGP4   EZ390 final_options=MAXFILE=1000
+TESTGP4   EZ390 final_options=MAXGBL=100000
+TESTGP4   EZ390 final_options=MAXHEIGHT=600
+TESTGP4   EZ390 final_options=MAXLCL=100000
+TESTGP4   EZ390 final_options=MAXLEN=80
+TESTGP4   EZ390 final_options=MAXLINE=200000
+TESTGP4   EZ390 final_options=MAXLOG=1000000
+TESTGP4   EZ390 final_options=MAXPARM=10000
+TESTGP4   EZ390 final_options=MAXPASS=2
+TESTGP4   EZ390 final_options=MAXPC=50000
+TESTGP4   EZ390 final_options=MAXQUE=1000
+TESTGP4   EZ390 final_options=MAXRLD=10000
+TESTGP4   EZ390 final_options=MAXSIZE=52428800
+TESTGP4   EZ390 final_options=MAXSYM=50000
+TESTGP4   EZ390 final_options=MAXWARN=4
+TESTGP4   EZ390 final_options=MAXWIDTH=800
+TESTGP4   EZ390 final_options=MEM=1
+TESTGP4   EZ390 final_options=MINHEIGHT=150
+TESTGP4   EZ390 final_options=MINWIDTH=150
+TESTGP4   EZ390 final_options=PARM=
+TESTGP4   EZ390 final_options=PROFILE=
+TESTGP4   EZ390 final_options=STATS=W:\work\z390\guam\test\TESTGP4.STA
+TESTGP4   EZ390 final_options=SYSPARM=
+TESTGP4   EZ390 final_options=SYSTERM=W:\work\z390\guam\test\TESTGP4.ERR
+TESTGP4   EZ390 final_options=TESTDD=
+TESTGP4   EZ390 final_options=TIME=15
+TESTGP4   EZ390 final_options=TRACE=
+TESTGP4   EZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTGP4   EZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTGP4   EZ390 final_options=Z390COMMAND=cmd.exe
+TESTGP4   EZ390 final_options=Z390EDITOR=notepad.exe
+TESTGP4   EZ390 final_options=INSTALL=
+TESTGP4   EZ390 final_options=IPL=
+TESTGP4   EZ390 final_options=LOG=W:\work\z390\guam\test\TESTGP4.LOG
+TESTGP4   EZ390 final_options=SYS390=guam\test\+linklib
+TESTGP4   EZ390 final_options=SYSBAL=guam\test\
+TESTGP4   EZ390 final_options=SYSCPY=guam\test\
+TESTGP4   EZ390 final_options=SYSDAT=guam\test\
+TESTGP4   EZ390 final_options=SYSERR=guam\test\
+TESTGP4   EZ390 final_options=SYSLOG=guam\test\
+TESTGP4   EZ390 final_options=SYSLST=guam\test\
+TESTGP4   EZ390 final_options=SYSMAC=guam\test\
+TESTGP4   EZ390 final_options=SYSMLC=guam\test\
+TESTGP4   EZ390 final_options=SYSPCH=guam\test\
+TESTGP4   EZ390 final_options=SYSPRN=guam\test\
+TESTGP4   EZ390 final_options=SYSOBJ=guam\test\
+TESTGP4   EZ390 final_options=SYSOPT=guam\test\
+TESTGP4   EZ390 final_options=SYSTRC=guam\test\
+TESTGP4   EZ390 TCPIO operations      = 0
+TESTGP4   EZ390 DCB operations        = 0
+TESTGP4   EZ390 VSAM operations       = 0
+TESTGP4   EZ390 Keys                  = 2212
+TESTGP4   EZ390 Key searches          = 2
+TESTGP4   EZ390 Key avg comps         = 0
+TESTGP4   EZ390 Key max comps         = 0
+TESTGP4   EZ390 total errors          = 0
+TESTGP4   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=29

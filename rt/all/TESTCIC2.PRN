@@ -1,0 +1,15 @@
+Comparing files RT\TEST\TESTCIC2.PRN and RT\TEST\SAVE\TESTCIC2.PRN
+***** RT\TEST\TESTCIC2.PRN
+AZ390I program = rt\test\TESTCIC2
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) cics notiming sysmac(cics+mac) 
+  syscpy(cics+mac) stats systerm(rt\test\rttest)
+External Symbol Definitions
+***** RT\TEST\SAVE\TESTCIC2.PRN
+AZ390I program = rt\test\TESTCIC2
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) cics notiming sysmac(cics+mac) syscpy(cics+mac) 
+  stats systerm(rt\test\rttest)
+External Symbol Definitions
+*****
+

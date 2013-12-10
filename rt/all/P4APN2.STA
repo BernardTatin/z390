@@ -1,0 +1,176 @@
+Comparing files MFACC\P4APN2.STA and RT\MFACC\SAVE\P4APN2.STA
+***** MFACC\P4APN2.STA
+P4APN2    MZ390 program = mfacc\P4APN2.MLC
+P4APN2    MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    MZ390 program = mfacc\P4APN2.MLC
+P4APN2    MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    MZ390 final_options=PROFILE=
+P4APN2    MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P4APN2.STA
+P4APN2    MZ390 final_options=SYSPARM=
+P4APN2    MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\rtmfacc.E
+P4APN2    MZ390 final_options=RR
+P4APN2    MZ390 final_options=TESTDD=
+P4APN2    MZ390 final_options=TIME=15
+P4APN2    MZ390 final_options=TRACE=
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    MZ390 final_options=PROFILE=
+P4APN2    MZ390 final_options=STATS=W:\work\z390\mfacc\P4APN2.STA
+P4APN2    MZ390 final_options=SYSPARM=
+P4APN2    MZ390 final_options=SYSTERM=W:\work\z390\mfacc\rtmfacc.ERR
+P4APN2    MZ390 final_options=TESTDD=
+P4APN2    MZ390 final_options=TIME=60
+P4APN2    MZ390 final_options=TRACE=
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    MZ390 final_options=SYSBAL=mfacc\
+P4APN2    MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+P4APN2    MZ390 final_options=SYSDAT=mfacc\
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    MZ390 final_options=SYSBAL=mfacc\
+P4APN2    MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+P4APN2    MZ390 final_options=SYSDAT=mfacc\
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    MZ390 final_options=SYSLST=mfacc\
+P4APN2    MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+P4APN2    MZ390 final_options=SYSMLC=mfacc\
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    MZ390 final_options=SYSLST=mfacc\
+P4APN2    MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+P4APN2    MZ390 final_options=SYSMLC=mfacc\
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    MZ390 total pcode exec opt  = 1
+P4APN2    MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P4APN2.MLC
+P4APN2    MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZMFACC.MAC
+P4APN2    MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+P4APN2    MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SNAP.MAC
+P4APN2    MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CALL.MAC
+P4APN2    MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCALL.MAC
+P4APN2    MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SAVE.MAC
+P4APN2    MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RETURN.MAC
+P4APN2    MZ390 FID=  9 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZRETURN.MAC
+P4APN2    MZ390 FID= 10 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RESTORE.MAC
+P4APN2    MZ390 total mnote warnings  = 1
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    MZ390 total pcode exec opt  = 1
+P4APN2    MZ390 FID=  1 ERR= 0 W:\work\z390\mfacc\P4APN2.MLC
+P4APN2    MZ390 FID=  2 ERR= 0 W:\work\z390\mac\ZMFACC.MAC
+P4APN2    MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+P4APN2    MZ390 FID=  4 ERR= 0 W:\work\z390\mac\SNAP.MAC
+P4APN2    MZ390 FID=  5 ERR= 0 W:\work\z390\mac\CALL.MAC
+P4APN2    MZ390 FID=  6 ERR= 0 W:\work\z390\mac\ZCALL.MAC
+P4APN2    MZ390 FID=  7 ERR= 0 W:\work\z390\mac\SAVE.MAC
+P4APN2    MZ390 FID=  8 ERR= 0 W:\work\z390\mac\RETURN.MAC
+P4APN2    MZ390 FID=  9 ERR= 0 W:\work\z390\mac\ZRETURN.MAC
+P4APN2    MZ390 FID= 10 ERR= 0 W:\work\z390\mac\RESTORE.MAC
+P4APN2    MZ390 total mnote warnings  = 1
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    AZ390 total az390 errors    = 0
+P4APN2    MZ390 ENDED   RC= 4 MEM(MB)= MB IO=3391
+P4APN2    LZ390 START
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    AZ390 total az390 errors    = 0
+P4APN2    MZ390 ENDED   RC= 4 MEM(MB)= MB IO=3390
+P4APN2    LZ390 START
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    LZ390 z390 is licensed under GNU General Public License
+P4APN2    LZ390 options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    LZ390 z390 is licensed under GNU General Public License
+P4APN2    LZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    LZ390 final_options=PROFILE=
+P4APN2    LZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P4APN2.STA
+P4APN2    LZ390 final_options=SYSPARM=
+P4APN2    LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\rtmfacc.E
+P4APN2    LZ390 final_options=RR
+P4APN2    LZ390 final_options=TESTDD=
+P4APN2    LZ390 final_options=TIME=15
+P4APN2    LZ390 final_options=TRACE=
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    LZ390 final_options=PROFILE=
+P4APN2    LZ390 final_options=STATS=W:\work\z390\mfacc\P4APN2.STA
+P4APN2    LZ390 final_options=SYSPARM=
+P4APN2    LZ390 final_options=SYSTERM=W:\work\z390\mfacc\rtmfacc.ERR
+P4APN2    LZ390 final_options=TESTDD=
+P4APN2    LZ390 final_options=TIME=60
+P4APN2    LZ390 final_options=TRACE=
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    LZ390 total errors          = 0
+P4APN2    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=553
+P4APN2    EZ390 START
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    LZ390 total errors          = 0
+P4APN2    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=552
+P4APN2    EZ390 START
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    EZ390 program = mfacc\P4APN2.390
+P4APN2    EZ390 options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    EZ390 program = mfacc\P4APN2.390
+P4APN2    EZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    EZ390 final_options=PROFILE=
+P4APN2    EZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P4APN2.STA
+P4APN2    EZ390 final_options=SYSPARM=
+P4APN2    EZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\rtmfacc.E
+P4APN2    EZ390 final_options=RR
+P4APN2    EZ390 final_options=TESTDD=
+P4APN2    EZ390 final_options=TIME=15
+P4APN2    EZ390 final_options=TRACE=
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    EZ390 final_options=PROFILE=
+P4APN2    EZ390 final_options=STATS=W:\work\z390\mfacc\P4APN2.STA
+P4APN2    EZ390 final_options=SYSPARM=
+P4APN2    EZ390 final_options=SYSTERM=W:\work\z390\mfacc\rtmfacc.ERR
+P4APN2    EZ390 final_options=TESTDD=
+P4APN2    EZ390 final_options=TIME=60
+P4APN2    EZ390 final_options=TRACE=
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    EZ390 final_options=IPL=
+P4APN2    EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P4APN2.LOG
+P4APN2    EZ390 final_options=SYS390=mfacc\+linklib
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    EZ390 final_options=IPL=
+P4APN2    EZ390 final_options=LOG=W:\work\z390\mfacc\P4APN2.LOG
+P4APN2    EZ390 final_options=SYS390=mfacc\+linklib
+*****
+
+***** MFACC\P4APN2.STA
+P4APN2    EZ390 total errors          = 0
+P4APN2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=182 INS=853
+***** RT\MFACC\SAVE\P4APN2.STA
+P4APN2    EZ390 total errors          = 0
+P4APN2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=181 INS=853
+*****
+

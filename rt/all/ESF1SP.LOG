@@ -1,0 +1,21 @@
+Comparing files VSAM\DEMO\ESF1SP.LOG and RT\VSAM\DEMO\SAVE\ESF1SP.LOG
+***** VSAM\DEMO\ESF1SP.LOG
+EZ390I program = vsam\demo\ESF1SP.390
+EZ390I options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP CREATE ESF1.VES ESDS FIXED FILE FROM QSAM FILE
+***** RT\VSAM\DEMO\SAVE\ESF1SP.LOG
+EZ390I program = vsam\demo\ESF1SP.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+ESF1SP CREATE ESF1.VES ESDS FIXED FILE FROM QSAM FILE
+*****
+
+***** VSAM\DEMO\ESF1SP.LOG
+EZ390I total errors         = 0
+ESF1SP    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=325 INS=65
+***** RT\VSAM\DEMO\SAVE\ESF1SP.LOG
+EZ390I total errors         = 0
+ESF1SP    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=323 INS=65
+*****
+

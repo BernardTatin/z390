@@ -1,0 +1,53 @@
+Comparing files RT\TEST\TESTLAB1.STA and RT\TEST\SAVE\TESTLAB1.STA
+***** RT\TEST\TESTLAB1.STA
+TESTLAB1  MZ390 program = rt\test\TESTLAB1.MLC
+TESTLAB1  MZ390 options = bal notiming sysmac(mac) syscpy(mac) stats 
+  ERR(0) systerm(rt\test\rttest)
+TESTLAB1  MZ390 final_options=ALIGN
+***** RT\TEST\SAVE\TESTLAB1.STA
+TESTLAB1  MZ390 program = rt\test\TESTLAB1.MLC
+TESTLAB1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats ERR(0) systerm(rt\test\rttest)
+TESTLAB1  MZ390 final_options=ALIGN
+*****
+
+***** RT\TEST\TESTLAB1.STA
+TESTLAB1  MZ390 final_options=PROFILE=
+TESTLAB1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTLAB1.
+TESTLAB1  MZ390 final_options=STA
+TESTLAB1  MZ390 final_options=SYSPARM=
+TESTLAB1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTLAB1  MZ390 final_options=ERR
+TESTLAB1  MZ390 final_options=TESTDD=
+TESTLAB1  MZ390 final_options=TIME=15
+TESTLAB1  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTLAB1.STA
+TESTLAB1  MZ390 final_options=PROFILE=
+TESTLAB1  MZ390 final_options=STATS=W:\work\z390\rt\test\TESTLAB1.STA
+TESTLAB1  MZ390 final_options=SYSPARM=
+TESTLAB1  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTLAB1  MZ390 final_options=TESTDD=
+TESTLAB1  MZ390 final_options=TIME=60
+TESTLAB1  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTLAB1.STA
+TESTLAB1  MZ390 total pcode exec opt  = 0
+TESTLAB1  MZ390 FID=  1 ERR= 4 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTLAB1.MLC
+TESTLAB1  MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\YREGS.MAC
+TESTLAB1  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\TESTLAB1.STA
+TESTLAB1  MZ390 total pcode exec opt  = 0
+TESTLAB1  MZ390 FID=  1 ERR= 4 W:\work\z390\rt\test\TESTLAB1.MLC
+TESTLAB1  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\YREGS.MAC
+TESTLAB1  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\TESTLAB1.STA
+TESTLAB1  AZ390 total az390 errors    = 5
+TESTLAB1  MZ390 ENDED   RC=16 MEM(MB)= MB IO=397
+***** RT\TEST\SAVE\TESTLAB1.STA
+TESTLAB1  AZ390 total az390 errors    = 5
+TESTLAB1  MZ390 ENDED   RC=16 MEM(MB)= MB IO=395
+*****
+

@@ -1,0 +1,178 @@
+Comparing files RT\TEST\TESTOBJ2.STA and RT\TEST\SAVE\TESTOBJ2.STA
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  MZ390 program = rt\test\TESTOBJ2.MLC
+TESTOBJ2  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  @TESTOBJ2=(objhex mem(49) rmode31) systerm(rt\test\rttest)
+TESTOBJ2  MZ390 final_options=ALIGN
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  MZ390 program = rt\test\TESTOBJ2.MLC
+TESTOBJ2  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) @TESTOBJ2=(objhex 
+  mem(49) rmode31) systerm(rt\test\rttest)
+TESTOBJ2  MZ390 final_options=ALIGN
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=PROFILE=
+TESTOBJ2  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTOBJ2.
+TESTOBJ2  MZ390 final_options=STA
+TESTOBJ2  MZ390 final_options=SYSPARM=
+TESTOBJ2  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTOBJ2  MZ390 final_options=ERR
+TESTOBJ2  MZ390 final_options=TESTDD=
+TESTOBJ2  MZ390 final_options=TIME=15
+TESTOBJ2  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=PROFILE=
+TESTOBJ2  MZ390 final_options=STATS=W:\work\z390\rt\test\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=SYSPARM=
+TESTOBJ2  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTOBJ2  MZ390 final_options=TESTDD=
+TESTOBJ2  MZ390 final_options=TIME=60
+TESTOBJ2  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=SYSBAL=rt\test\
+TESTOBJ2  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTOBJ2  MZ390 final_options=SYSDAT=rt\test\
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=SYSBAL=rt\test\
+TESTOBJ2  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+TESTOBJ2  MZ390 final_options=SYSDAT=rt\test\
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=SYSLST=rt\test\
+TESTOBJ2  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTOBJ2  MZ390 final_options=SYSMLC=rt\test\
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  MZ390 final_options=SYSLST=rt\test\
+TESTOBJ2  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+TESTOBJ2  MZ390 final_options=SYSMLC=rt\test\
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  MZ390 total pcode exec opt  = 0
+TESTOBJ2  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTOBJ2.MLC
+TESTOBJ2  MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+TESTOBJ2  MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+TESTOBJ2  MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CALL.MAC
+TESTOBJ2  MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCALL.MAC
+TESTOBJ2  MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+TESTOBJ2  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  MZ390 total pcode exec opt  = 0
+TESTOBJ2  MZ390 FID=  1 ERR= 0 W:\work\z390\rt\test\TESTOBJ2.MLC
+TESTOBJ2  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+TESTOBJ2  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+TESTOBJ2  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\CALL.MAC
+TESTOBJ2  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\ZCALL.MAC
+TESTOBJ2  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+TESTOBJ2  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  AZ390 total az390 errors    = 0
+TESTOBJ2  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1497
+TESTOBJ2  LZ390 START
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  AZ390 total az390 errors    = 0
+TESTOBJ2  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1495
+TESTOBJ2  LZ390 START
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  LZ390 z390 is licensed under GNU General Public License
+TESTOBJ2  LZ390 options = @rt\RT1=(bal notiming stats) @TESTOBJ2=(objhex 
+  mem(49) rmode31) systerm(rt\test\rttest)
+TESTOBJ2  LZ390 program = rt\test\TESTOBJ2.OBJ
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  LZ390 z390 is licensed under GNU General Public License
+TESTOBJ2  LZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  @TESTOBJ2=(objhex mem(49) rmode31) systerm(rt\test\rttest)
+TESTOBJ2  LZ390 program = rt\test\TESTOBJ2.OBJ
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  LZ390 final_options=PROFILE=
+TESTOBJ2  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTOBJ2.
+TESTOBJ2  LZ390 final_options=STA
+TESTOBJ2  LZ390 final_options=SYSPARM=
+TESTOBJ2  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTOBJ2  LZ390 final_options=ERR
+TESTOBJ2  LZ390 final_options=TESTDD=
+TESTOBJ2  LZ390 final_options=TIME=15
+TESTOBJ2  LZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  LZ390 final_options=PROFILE=
+TESTOBJ2  LZ390 final_options=STATS=W:\work\z390\rt\test\TESTOBJ2.STA
+TESTOBJ2  LZ390 final_options=SYSPARM=
+TESTOBJ2  LZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTOBJ2  LZ390 final_options=TESTDD=
+TESTOBJ2  LZ390 final_options=TIME=60
+TESTOBJ2  LZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  LZ390 total errors          = 0
+TESTOBJ2  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=310
+TESTOBJ2  EZ390 START
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  LZ390 total errors          = 0
+TESTOBJ2  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=308
+TESTOBJ2  EZ390 START
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  EZ390 program = rt\test\TESTOBJ2.390
+TESTOBJ2  EZ390 options = @rt\RT1=(bal notiming stats) @TESTOBJ2=(objhex 
+  mem(49) rmode31) systerm(rt\test\rttest)
+TESTOBJ2  EZ390 final_options=ALIGN
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  EZ390 program = rt\test\TESTOBJ2.390
+TESTOBJ2  EZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  @TESTOBJ2=(objhex mem(49) rmode31) systerm(rt\test\rttest)
+TESTOBJ2  EZ390 final_options=ALIGN
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  EZ390 final_options=PROFILE=
+TESTOBJ2  EZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTOBJ2.
+TESTOBJ2  EZ390 final_options=STA
+TESTOBJ2  EZ390 final_options=SYSPARM=
+TESTOBJ2  EZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTOBJ2  EZ390 final_options=ERR
+TESTOBJ2  EZ390 final_options=TESTDD=
+TESTOBJ2  EZ390 final_options=TIME=15
+TESTOBJ2  EZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  EZ390 final_options=PROFILE=
+TESTOBJ2  EZ390 final_options=STATS=W:\work\z390\rt\test\TESTOBJ2.STA
+TESTOBJ2  EZ390 final_options=SYSPARM=
+TESTOBJ2  EZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTOBJ2  EZ390 final_options=TESTDD=
+TESTOBJ2  EZ390 final_options=TIME=60
+TESTOBJ2  EZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  EZ390 final_options=IPL=
+TESTOBJ2  EZ390 final options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTOBJ2.LO
+TESTOBJ2  EZ390 final_options=G
+TESTOBJ2  EZ390 final_options=SYS390=rt\test\+linklib
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  EZ390 final_options=IPL=
+TESTOBJ2  EZ390 final_options=LOG=W:\work\z390\rt\test\TESTOBJ2.LOG
+TESTOBJ2  EZ390 final_options=SYS390=rt\test\+linklib
+*****
+
+***** RT\TEST\TESTOBJ2.STA
+TESTOBJ2  EZ390 total errors          = 0
+TESTOBJ2  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=166 INS=49
+***** RT\TEST\SAVE\TESTOBJ2.STA
+TESTOBJ2  EZ390 total errors          = 0
+TESTOBJ2  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=163 INS=49
+*****
+

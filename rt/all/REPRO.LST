@@ -1,0 +1,20 @@
+Comparing files LINKLIB\REPRO.LST and RT\LINKLIB\SAVE\REPRO.LST
+***** LINKLIB\REPRO.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = bal notiming stats systerm(linklib\rtlink)
+LZ390I program = linklib\REPRO.OBJ
+***** RT\LINKLIB\SAVE\REPRO.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats 
+  systerm(linklib\rtlink)
+LZ390I program = linklib\REPRO.OBJ
+*****
+
+***** LINKLIB\REPRO.LST
+LZ390I total errors         = 0
+REPRO     LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1121
+***** RT\LINKLIB\SAVE\REPRO.LST
+LZ390I total errors         = 0
+REPRO     LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1120
+*****
+

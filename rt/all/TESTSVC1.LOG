@@ -1,0 +1,21 @@
+Comparing files RT\TEST\TESTSVC1.LOG and RT\TEST\SAVE\TESTSVC1.LOG
+***** RT\TEST\TESTSVC1.LOG
+EZ390I program = rt\test\TESTSVC1.390
+EZ390I options = @rt\RT1=(bal notiming stats) trace noprotect 
+  systerm(rt\test\rttest)
+HELLO FROM SVC 201 MSG 1
+***** RT\TEST\SAVE\TESTSVC1.LOG
+EZ390I program = rt\test\TESTSVC1.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) trace 
+  noprotect systerm(rt\test\rttest)
+HELLO FROM SVC 201 MSG 1
+*****
+
+***** RT\TEST\TESTSVC1.LOG
+EZ390I total errors         = 0
+TESTSVC1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=157 INS=38
+***** RT\TEST\SAVE\TESTSVC1.LOG
+EZ390I total errors         = 0
+TESTSVC1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=154 INS=38
+*****
+

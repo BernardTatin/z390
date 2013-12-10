@@ -1,0 +1,13 @@
+Comparing files LINKLIB\FPCONMFC.PRN and RT\LINKLIB\SAVE\FPCONMFC.PRN
+***** LINKLIB\FPCONMFC.PRN
+AZ390I program = linklib\FPCONMFC
+AZ390I options = bal notiming sysmac(mac) syscpy(mac) stats 
+  sysmac(mac+linklib) systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\FPCONMFC.PRN
+AZ390I program = linklib\FPCONMFC
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats sysmac(mac+linklib) systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

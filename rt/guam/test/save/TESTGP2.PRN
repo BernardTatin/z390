@@ -1,0 +1,127 @@
+TESTGP2   MZ390 START
+AZ390I Copyright 2010 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = guam\test\TESTGP2
+AZ390I options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=00000000 TYPE=CST NAME=$PRIVATE
+ ESD=0002 LOC=00000000 LEN=00000150 TYPE=CST NAME=GREGTEST
+Assembler Listing
+000000                                        (1/1)1 GREGTEST TITLE ' MY FIRST Z390 TEST'
+000000                                        (1/2)2          YREGS
+000000                  00000000              (2/3)3+R0       EQU   0
+000000                  00000001              (2/4)4+R1       EQU   1
+000000                  00000002              (2/5)5+R2       EQU   2
+000000                  00000003              (2/6)6+R3       EQU   3
+000000                  00000004              (2/7)7+R4       EQU   4
+000000                  00000005              (2/8)8+R5       EQU   5
+000000                  00000006              (2/9)9+R6       EQU   6
+000000                  00000007            (2/10)10+R7       EQU   7
+000000                  00000008            (2/11)11+R8       EQU   8
+000000                  00000009            (2/12)12+R9       EQU   9
+000000                  0000000A            (2/13)13+R10      EQU   10
+000000                  0000000B            (2/14)14+R11      EQU   11
+000000                  0000000C            (2/15)15+R12      EQU   12
+000000                  0000000D            (2/16)16+R13      EQU   13
+000000                  0000000E            (2/17)17+R14      EQU   14
+000000                  0000000F            (2/18)18+R15      EQU   15
+000000                                       (1/3)20 GREGTEST CSECT
+000000                                       (1/4)21 GREGTEST AMODE 31
+000000                                       (1/5)22 GREGTEST RMODE 24
+000000 90ECD00C                              (1/6)23          STM   R14,R12,12(R13)
+000004 18BF                                  (1/7)24          LR    R11,R15
+000006                                       (1/8)25          USING GREGTEST,R11
+LISTUSE GREGTEST ESD=0002 LOC=00000000 LEN=01000 REG=B OFF=00000 LAB=
+000006 4120B0B8                0000B8        (1/9)26          LA    R2,SAVE
+00000A 50D02004                             (1/10)27          ST    R13,4(,R2)
+00000E 5020D008                             (1/11)28          ST    R2,8(,R13)
+000012 18D2                                 (1/12)29          LR    R13,R2
+000014 41200780                             (1/13)30          LA    R2,1920   <=== SCREEN SIZE
+000018 1802                                 (1/14)31 MAINLOOP LR    R0,R2
+00001A 0600                                 (1/15)32          BCTR  R0,0
+00001C 4200B067                000067       (1/16)33          STC   R0,SBA2
+000020 88000006                             (1/17)34          SRL   R0,6
+000024 4200B066                000066       (1/18)35          STC   R0,SBA1
+000028 943FB067                000067       (1/19)36          NI    SBA2,X'3F'
+00002C DC01B066B078     000066 000078       (1/20)37          TR    SBA1(2),TABLE
+000032 41000006                             (1/21)38          LA    R0,MESGLEN
+000036 4110B064                000064       (1/22)39          LA    R1,MESSAGE
+00003A BF18B070                000070       (1/23)40          ICM   R1,8,=X'03' TPUT,FULLSCR
+00003E                                      (1/24)41          TPUT  (1),(0),R
+00003E 0A5D                                (3/136)46+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+000040 4620B018                000018       (1/25)48          BCT   R2,MAINLOOP
+000044 4110B100                000100       (1/26)49          LA    R1,INBUFF
+000048 41000050                             (1/27)50          LA    R0,80
+00004C BF18B071                000071       (1/28)51          ICM   R1,8,=X'80' TGET EDIT MODE
+000050                                      (1/29)52          TGET  (1),(0),R
+000050 0A5D                                (5/107)57+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+000052 BF18B072                000072       (1/30)59          ICM   R1,8,=X'00' TPUT EDIT MODE
+000056                                      (1/31)60          TGET  (1),(0),R
+000056 0A5D                                (5/107)65+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+000058 58D0D004                             (1/32)67          L     R13,4(,R13)
+00005C 98ECD00C                             (1/33)68          LM    R14,R12,12(R13)
+000060 1BFF                                 (1/34)69          SR    R15,R15
+000062 07FE                                 (1/35)70          BR    R14
+000064 0311                                 (1/36)71 MESSAGE  DC    X'0311' < X'27F1C311'  DSH CHANGE TO WCC_KD
+000066 40                                   (1/37)72 SBA1     DC    X'40'
+000067 40                                   (1/38)73 SBA2     DC    X'40'
+000068 7C13                                 (1/39)74          DC    C'@',X'13'
+00006A                  00000006            (1/40)75 MESGLEN  EQU   *-MESSAGE
+00006A                                      (1/41)76          LTORG
+000070 03               =X'03'
+000071 80               =X'80'
+000072 00               =X'00'
+000078                                      (1/42)77          DC    0D'0'
+000078 40C1C2C3C4C5C6C7                     (1/43)78 TABLE    DC    X'40C1C2C3C4C5C6C7C8C94A4B4C4D4E4F'
+000088 50D1D2D3D4D5D6D7                     (1/44)79          DC    X'50D1D2D3D4D5D6D7D8D95A5B5C5D5E5F'
+000098 6061E2E3E4E5E6E7                     (1/45)80          DC    X'6061E2E3E4E5E6E7E8E96A6B6C6D6E6F'
+0000A8 F0F1F2F3F4F5F6F7                     (1/46)81          DC    X'F0F1F2F3F4F5F6F7F8F97A7B7C7D7E7F'
+0000B8 0000000000000000                     (1/47)82 SAVE     DC    18F'0'
+000100 4040404040404040                     (1/48)83 INBUFF   DC    CL80' '
+000150                                      (1/49)84          END   GREGTEST
+
+Symbol Table Listing
+
+ SYM=$PRIVATE LOC=00000000 LEN=00000000 ESD=0001 TYPE=CST  XREF=3 
+ SYM=GREGTEST LOC=00000000 LEN=00000150 ESD=0002 TYPE=CST  XREF=20 25 
+ SYM=INBUFF   LOC=00000100 LEN=00000050 ESD=0002 TYPE=REL  XREF=83 49 
+ SYM=MAINLOOP LOC=00000018 LEN=00000002 ESD=0002 TYPE=REL  XREF=31 48 
+ SYM=MESGLEN  LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=75 38 
+ SYM=MESSAGE  LOC=00000064 LEN=00000002 ESD=0002 TYPE=REL  XREF=71 39 75 
+ SYM=R0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=3 31 32 33 34 35 
+  38 50 
+ SYM=R10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=13 
+ SYM=R1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=4 39 40 49 51 59 
+ SYM=R11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=14 24 25 
+ SYM=R12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=15 23 68 
+ SYM=R13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=16 23 27 28 29 67 
+  68 
+ SYM=R14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=17 23 68 70 
+ SYM=R15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=18 24 69 
+ SYM=R2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=5 26 27 28 29 30 
+  31 48 
+ SYM=R3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=6 
+ SYM=R4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=7 
+ SYM=R5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=8 
+ SYM=R6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=9 
+ SYM=R7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=10 
+ SYM=R8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=11 
+ SYM=R9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=12 
+ SYM=SAVE     LOC=000000B8 LEN=00000004 ESD=0002 TYPE=REL  XREF=82 26 
+ SYM=SBA1     LOC=00000066 LEN=00000001 ESD=0002 TYPE=REL  XREF=72 35 37 
+ SYM=SBA2     LOC=00000067 LEN=00000001 ESD=0002 TYPE=REL  XREF=73 33 36 
+ SYM=TABLE    LOC=00000078 LEN=00000010 ESD=0002 TYPE=REL  XREF=78 37 
+
+Literal Table Listing
+
+ LIT=X'00'    LOC=00000072 LEN=00000001 ESD=0002 POOL=0001 XREF=59 
+ LIT=X'03'    LOC=00000070 LEN=00000001 ESD=0002 POOL=0001 XREF=40 
+ LIT=X'80'    LOC=00000071 LEN=00000001 ESD=0002 POOL=0001 XREF=51 
+ 
+AZ390I total mnote warnings = 0
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 0
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+TESTGP2   MZ390 ENDED   RC= 0 MEM(MB)= MB IO=599

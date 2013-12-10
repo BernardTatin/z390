@@ -1,0 +1,21 @@
+Comparing files VSAM\TEST\KSF2TST1.LOG and RT\VSAM\TEST\SAVE\KSF2TST1.LOG
+***** VSAM\TEST\KSF2TST1.LOG
+EZ390I program = vsam\test\KSF2TST1.390
+EZ390I options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF2TEST UPDATE WITH DSH2
+***** RT\VSAM\TEST\SAVE\KSF2TST1.LOG
+EZ390I program = vsam\test\KSF2TST1.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF2TEST UPDATE WITH DSH2
+*****
+
+***** VSAM\TEST\KSF2TST1.LOG
+EZ390I total errors         = 0
+KSF2TST1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=473 INS=93
+***** RT\VSAM\TEST\SAVE\KSF2TST1.LOG
+EZ390I total errors         = 0
+KSF2TST1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=471 INS=93
+*****
+

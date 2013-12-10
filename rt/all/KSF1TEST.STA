@@ -1,0 +1,211 @@
+Comparing files VSAM\TEST\KSF1TEST.STA and RT\VSAM\TEST\SAVE\KSF1TEST.STA
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  MZ390 program = vsam\test\KSF1TEST.MLC
+KSF1TEST  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1TEST  MZ390 final_options=ALIGN
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  MZ390 program = vsam\test\KSF1TEST.MLC
+KSF1TEST  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @vsam\rtvsam=(notiming stats tracev traceq dump) 
+  systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1TEST  MZ390 final_options=ALIGN
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=PROFILE=
+KSF1TEST  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1TES
+KSF1TEST  MZ390 final_options=T.STA
+KSF1TEST  MZ390 final_options=SYSPARM=
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=PROFILE=
+KSF1TEST  MZ390 final_options=STATS=W:\work\z390\vsam\test\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=SYSPARM=
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=TESTDD=
+KSF1TEST  MZ390 final_options=TIME=15
+KSF1TEST  MZ390 final_options=TRACE=
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=TESTDD=
+KSF1TEST  MZ390 final_options=TIME=60
+KSF1TEST  MZ390 final_options=TRACE=
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=SYSBAL=vsam\test\
+KSF1TEST  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+KSF1TEST  MZ390 final_options=SYSDAT=vsam\test\
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=SYSBAL=vsam\test\
+KSF1TEST  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+KSF1TEST  MZ390 final_options=SYSDAT=vsam\test\
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=SYSLST=vsam\test\
+KSF1TEST  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+KSF1TEST  MZ390 final_options=SYSMLC=vsam\test\
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  MZ390 final_options=SYSLST=vsam\test\
+KSF1TEST  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+KSF1TEST  MZ390 final_options=SYSMLC=vsam\test\
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  MZ390 total pcode exec opt  = 4
+KSF1TEST  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1TEST.MLC
+KSF1TEST  MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+KSF1TEST  MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+KSF1TEST  MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\OPEN.MAC
+KSF1TEST  MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZOPEN.MAC
+KSF1TEST  MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\DCBD.MAC
+KSF1TEST  MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\GET.MAC
+KSF1TEST  MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\MODCB.MAC
+KSF1TEST  MZ390 FID=  9 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZGENOPTD.MAC
+KSF1TEST  MZ390 FID= 10 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZMODCB.MAC
+KSF1TEST  MZ390 FID= 11 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\POINT.MAC
+KSF1TEST  MZ390 FID= 12 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CLOSE.MAC
+KSF1TEST  MZ390 FID= 13 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCLOSE.MAC
+KSF1TEST  MZ390 FID= 14 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+KSF1TEST  MZ390 FID= 15 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ABEND.MAC
+KSF1TEST  MZ390 FID= 16 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ACB.MAC
+KSF1TEST  MZ390 FID= 17 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZGENMACF.MAC
+KSF1TEST  MZ390 FID= 18 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ACBD.MAC
+KSF1TEST  MZ390 FID= 19 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RPL.MAC
+KSF1TEST  MZ390 FID= 20 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RPLD.MAC
+KSF1TEST  MZ390 FID= 21 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\EQUREGS.MAC
+KSF1TEST  MZ390 total mnote warnings  = 0
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  MZ390 total pcode exec opt  = 4
+KSF1TEST  MZ390 FID=  1 ERR= 0 W:\work\z390\vsam\test\KSF1TEST.MLC
+KSF1TEST  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+KSF1TEST  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+KSF1TEST  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\OPEN.MAC
+KSF1TEST  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\ZOPEN.MAC
+KSF1TEST  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\DCBD.MAC
+KSF1TEST  MZ390 FID=  7 ERR= 0 W:\work\z390\mac\GET.MAC
+KSF1TEST  MZ390 FID=  8 ERR= 0 W:\work\z390\mac\MODCB.MAC
+KSF1TEST  MZ390 FID=  9 ERR= 0 W:\work\z390\mac\ZGENOPTD.MAC
+KSF1TEST  MZ390 FID= 10 ERR= 0 W:\work\z390\mac\ZMODCB.MAC
+KSF1TEST  MZ390 FID= 11 ERR= 0 W:\work\z390\mac\POINT.MAC
+KSF1TEST  MZ390 FID= 12 ERR= 0 W:\work\z390\mac\CLOSE.MAC
+KSF1TEST  MZ390 FID= 13 ERR= 0 W:\work\z390\mac\ZCLOSE.MAC
+KSF1TEST  MZ390 FID= 14 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+KSF1TEST  MZ390 FID= 15 ERR= 0 W:\work\z390\mac\ABEND.MAC
+KSF1TEST  MZ390 FID= 16 ERR= 0 W:\work\z390\mac\ACB.MAC
+KSF1TEST  MZ390 FID= 17 ERR= 0 W:\work\z390\mac\ZGENMACF.MAC
+KSF1TEST  MZ390 FID= 18 ERR= 0 W:\work\z390\mac\ACBD.MAC
+KSF1TEST  MZ390 FID= 19 ERR= 0 W:\work\z390\mac\RPL.MAC
+KSF1TEST  MZ390 FID= 20 ERR= 0 W:\work\z390\mac\RPLD.MAC
+KSF1TEST  MZ390 FID= 21 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+KSF1TEST  MZ390 total mnote warnings  = 0
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  AZ390 total az390 errors    = 0
+KSF1TEST  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=5710
+KSF1TEST  LZ390 START
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  AZ390 total az390 errors    = 0
+KSF1TEST  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=5709
+KSF1TEST  LZ390 START
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  LZ390 z390 is licensed under GNU General Public License
+KSF1TEST  LZ390 options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1TEST  LZ390 program = vsam\test\KSF1TEST.OBJ
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  LZ390 z390 is licensed under GNU General Public License
+KSF1TEST  LZ390 options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1TEST  LZ390 program = vsam\test\KSF1TEST.OBJ
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  LZ390 final_options=PROFILE=
+KSF1TEST  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1TES
+KSF1TEST  LZ390 final_options=T.STA
+KSF1TEST  LZ390 final_options=SYSPARM=
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  LZ390 final_options=PROFILE=
+KSF1TEST  LZ390 final_options=STATS=W:\work\z390\vsam\test\KSF1TEST.STA
+KSF1TEST  LZ390 final_options=SYSPARM=
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  LZ390 final_options=TESTDD=
+KSF1TEST  LZ390 final_options=TIME=15
+KSF1TEST  LZ390 final_options=TRACE=
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  LZ390 final_options=TESTDD=
+KSF1TEST  LZ390 final_options=TIME=60
+KSF1TEST  LZ390 final_options=TRACE=
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  LZ390 total errors          = 0
+KSF1TEST  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=491
+KSF1TEST  EZ390 START
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  LZ390 total errors          = 0
+KSF1TEST  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=490
+KSF1TEST  EZ390 START
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  EZ390 program = vsam\test\KSF1TEST.390
+KSF1TEST  EZ390 options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1TEST  EZ390 final_options=ALIGN
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  EZ390 program = vsam\test\KSF1TEST.390
+KSF1TEST  EZ390 options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+KSF1TEST  EZ390 final_options=ALIGN
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=PROFILE=
+KSF1TEST  EZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1TES
+KSF1TEST  EZ390 final_options=T.STA
+KSF1TEST  EZ390 final_options=SYSPARM=
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=PROFILE=
+KSF1TEST  EZ390 final_options=STATS=W:\work\z390\vsam\test\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=SYSPARM=
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=TESTDD=
+KSF1TEST  EZ390 final_options=TIME=15
+KSF1TEST  EZ390 final_options=TRACE=
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=TESTDD=
+KSF1TEST  EZ390 final_options=TIME=60
+KSF1TEST  EZ390 final_options=TRACE=
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=IPL=
+KSF1TEST  EZ390 final options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1TEST.
+KSF1TEST  EZ390 final_options=LOG
+KSF1TEST  EZ390 final_options=SYS390=vsam\test\+linklib
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  EZ390 final_options=IPL=
+KSF1TEST  EZ390 final_options=LOG=W:\work\z390\vsam\test\KSF1TEST.LOG
+KSF1TEST  EZ390 final_options=SYS390=vsam\test\+linklib
+*****
+
+***** VSAM\TEST\KSF1TEST.STA
+KSF1TEST  EZ390 total errors          = 0
+KSF1TEST  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=489 INS=331
+***** RT\VSAM\TEST\SAVE\KSF1TEST.STA
+KSF1TEST  EZ390 total errors          = 0
+KSF1TEST  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=487 INS=331
+*****
+

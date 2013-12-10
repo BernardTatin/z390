@@ -1,0 +1,27 @@
+Comparing files RT\TEST\TESTERR2.PRN and RT\TEST\SAVE\TESTERR2.PRN
+***** RT\TEST\TESTERR2.PRN
+AZ390I program = rt\test\TESTERR2
+AZ390I options = bal notiming sysmac(mac) syscpy(mac) stats 
+  ERR(0) systerm(rt\test\rttest)
+External Symbol Definitions
+***** RT\TEST\SAVE\TESTERR2.PRN
+AZ390I program = rt\test\TESTERR2
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats ERR(0) systerm(rt\test\rttest)
+External Symbol Definitions
+*****
+
+***** RT\TEST\TESTERR2.PRN
+AZ390E ERRSUM total az390 errors    = 32
+AZ390I FID=  1 ERR=  31 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTERR2.MLC
+AZ390I FID=  2 ERR=   3 C:\Program Files (x86)\Automated Software Tools\z390\mac\WTO.MAC
+AZ390I FID=  4 ERR=   3 C:\Program Files (x86)\Automated Software Tools\z390\mac\ZCALL.MAC
+AZ390I total mnote warnings = 1
+***** RT\TEST\SAVE\TESTERR2.PRN
+AZ390E ERRSUM total az390 errors    = 32
+AZ390I FID=  1 ERR=  31 W:\work\z390\rt\test\TESTERR2.MLC
+AZ390I FID=  2 ERR=   3 W:\work\z390\mac\WTO.MAC
+AZ390I FID=  4 ERR=   3 W:\work\z390\mac\ZCALL.MAC
+AZ390I total mnote warnings = 1
+*****
+

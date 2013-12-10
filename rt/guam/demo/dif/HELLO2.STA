@@ -1,0 +1,216 @@
+Comparing files GUAM\DEMO\HELLO2.STA and RT\GUAM\DEMO\SAVE\HELLO2.STA
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 START
+HELLO2    MZ390 Copyright 2011 Automated Software Tools Corporation
+HELLO2    MZ390 z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 START
+HELLO2    MZ390 Copyright 2010 Automated Software Tools Corporation
+HELLO2    MZ390 z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 program = guam\demo\HELLO2.MLC
+HELLO2    MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 program = guam\demo\HELLO2.MLC
+HELLO2    MZ390 options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 final_options=PCOPT
+HELLO2    MZ390 final_options=NOPDSMEM8
+HELLO2    MZ390 final_options=NOPRINTALL
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 final_options=PCOPT
+HELLO2    MZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 final_options=NOTRACEG
+HELLO2    MZ390 final_options=NOTRACEI
+HELLO2    MZ390 final_options=NOTRACEL
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 final_options=NOTRACEG
+HELLO2    MZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 final_options=MINWIDTH=150
+HELLO2    MZ390 final_options=MNOTE=0
+HELLO2    MZ390 final_options=PARM=
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 final_options=MINWIDTH=150
+HELLO2    MZ390 final_options=PARM=
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 final_options=TESTDD=
+HELLO2    MZ390 final_options=TIME=60
+HELLO2    MZ390 final_options=TRACE=
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 final_options=TESTDD=
+HELLO2    MZ390 final_options=TIME=15
+HELLO2    MZ390 final_options=TRACE=
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    MZ390 total array expansions= 0
+HELLO2    MZ390 total Keys            = 1536
+HELLO2    MZ390 Key searches          = 2465
+HELLO2    MZ390 Key avg comps         = 0
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    MZ390 total array expansions= 0
+HELLO2    MZ390 total Keys            = 1398
+HELLO2    MZ390 Key searches          = 2327
+HELLO2    MZ390 Key avg comps         = 0
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    AZ390 alloc passes          = 2
+HELLO2    AZ390 Keys                  = 1327
+HELLO2    AZ390 Key searches          = 1619
+HELLO2    AZ390 Key avg comps         = 0
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    AZ390 alloc passes          = 2
+HELLO2    AZ390 Keys                  = 1189
+HELLO2    AZ390 Key searches          = 1481
+HELLO2    AZ390 Key avg comps         = 0
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    AZ390 total az390 errors    = 0
+HELLO2    MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1204
+HELLO2    LZ390 START
+HELLO2    LZ390 Copyright 2011 Automated Software Tools Corporation
+HELLO2    LZ390 z390 is licensed under GNU General Public License
+HELLO2    LZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+HELLO2    LZ390 program = guam\demo\HELLO2.OBJ
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    AZ390 total az390 errors    = 0
+HELLO2    MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1199
+HELLO2    LZ390 START
+HELLO2    LZ390 Copyright 2010 Automated Software Tools Corporation
+HELLO2    LZ390 z390 is licensed under GNU General Public License
+HELLO2    LZ390 options = @rt\RT1=(bal notiming stats) guam
+HELLO2    LZ390 program = guam\demo\HELLO2.OBJ
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    LZ390 final_options=PCOPT
+HELLO2    LZ390 final_options=NOPDSMEM8
+HELLO2    LZ390 final_options=NOPRINTALL
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    LZ390 final_options=PCOPT
+HELLO2    LZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    LZ390 final_options=NOTRACEG
+HELLO2    LZ390 final_options=NOTRACEI
+HELLO2    LZ390 final_options=NOTRACEL
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    LZ390 final_options=NOTRACEG
+HELLO2    LZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    LZ390 final_options=MINWIDTH=150
+HELLO2    LZ390 final_options=MNOTE=0
+HELLO2    LZ390 final_options=PARM=
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    LZ390 final_options=MINWIDTH=150
+HELLO2    LZ390 final_options=PARM=
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    LZ390 final_options=TESTDD=
+HELLO2    LZ390 final_options=TIME=60
+HELLO2    LZ390 final_options=TRACE=
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    LZ390 final_options=TESTDD=
+HELLO2    LZ390 final_options=TIME=15
+HELLO2    LZ390 final_options=TRACE=
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    LZ390 total errors          = 0
+HELLO2    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=165
+HELLO2    EZ390 START
+HELLO2    EZ390 Copyright 2011 Automated Software Tools Corporation
+HELLO2    EZ390 z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    LZ390 total errors          = 0
+HELLO2    LZ390 ENDED   RC= 0 MEM(MB)= MB IO=162
+HELLO2    EZ390 START
+HELLO2    EZ390 Copyright 2010 Automated Software Tools Corporation
+HELLO2    EZ390 z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 program = guam\demo\HELLO2.390
+HELLO2    EZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+HELLO2    EZ390 final_options=ALIGN
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 program = guam\demo\HELLO2.390
+HELLO2    EZ390 options = @rt\RT1=(bal notiming stats) guam
+HELLO2    EZ390 final_options=ALIGN
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 final_options=PCOPT
+HELLO2    EZ390 final_options=NOPDSMEM8
+HELLO2    EZ390 final_options=NOPRINTALL
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 final_options=PCOPT
+HELLO2    EZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 final_options=NOTRACEG
+HELLO2    EZ390 final_options=NOTRACEI
+HELLO2    EZ390 final_options=NOTRACEL
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 final_options=NOTRACEG
+HELLO2    EZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 final_options=MINWIDTH=150
+HELLO2    EZ390 final_options=MNOTE=0
+HELLO2    EZ390 final_options=PARM=
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 final_options=MINWIDTH=150
+HELLO2    EZ390 final_options=PARM=
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 final_options=TESTDD=
+HELLO2    EZ390 final_options=TIME=60
+HELLO2    EZ390 final_options=TRACE=
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 final_options=TESTDD=
+HELLO2    EZ390 final_options=TIME=15
+HELLO2    EZ390 final_options=TRACE=
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 VSAM operations       = 0
+HELLO2    EZ390 Keys                  = 2467
+HELLO2    EZ390 Key searches          = 2
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 VSAM operations       = 0
+HELLO2    EZ390 Keys                  = 2212
+HELLO2    EZ390 Key searches          = 2
+*****
+
+***** GUAM\DEMO\HELLO2.STA
+HELLO2    EZ390 total errors          = 0
+HELLO2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=151 INS=19
+***** RT\GUAM\DEMO\SAVE\HELLO2.STA
+HELLO2    EZ390 total errors          = 0
+HELLO2    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=19
+*****
+

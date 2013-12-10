@@ -1,0 +1,21 @@
+Comparing files LINKLIB\TESTFPC1.LOG and RT\LINKLIB\SAVE\TESTFPC1.LOG
+***** LINKLIB\TESTFPC1.LOG
+EZ390I program = linklib\TESTFPC1.390
+EZ390I options = @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+TESTFPC1 RT1 STARTED
+***** RT\LINKLIB\SAVE\TESTFPC1.LOG
+EZ390I program = linklib\TESTFPC1.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+TESTFPC1 RT1 STARTED
+*****
+
+***** LINKLIB\TESTFPC1.LOG
+EZ390I total errors         = 0
+TESTFPC1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=3288 INS=1128555
+***** RT\LINKLIB\SAVE\TESTFPC1.LOG
+EZ390I total errors         = 0
+TESTFPC1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=3285 INS=1128555
+*****
+

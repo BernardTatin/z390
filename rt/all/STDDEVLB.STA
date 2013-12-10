@@ -1,0 +1,161 @@
+Comparing files DEMO\STDDEVLB.STA and RT\DEMO\SAVE\STDDEVLB.STA
+***** DEMO\STDDEVLB.STA
+STDDEVLB  MZ390 program = demo\STDDEVLB.MLC
+STDDEVLB  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) notiming stats systerm(demo\rtdemo)
+STDDEVLB  MZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  MZ390 program = demo\STDDEVLB.MLC
+STDDEVLB  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) notiming stats systerm(demo\rtdemo)
+STDDEVLB  MZ390 final_options=ALIGN
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=PROFILE=
+STDDEVLB  MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=SYSPARM=
+STDDEVLB  MZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+STDDEVLB  MZ390 final_options=TESTDD=
+STDDEVLB  MZ390 final_options=TIME=15
+STDDEVLB  MZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=PROFILE=
+STDDEVLB  MZ390 final_options=STATS=W:\work\z390\demo\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=SYSPARM=
+STDDEVLB  MZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+STDDEVLB  MZ390 final_options=TESTDD=
+STDDEVLB  MZ390 final_options=TIME=60
+STDDEVLB  MZ390 final_options=TRACE=
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=SYSBAL=demo\
+STDDEVLB  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+STDDEVLB  MZ390 final_options=SYSDAT=demo\
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=SYSBAL=demo\
+STDDEVLB  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+STDDEVLB  MZ390 final_options=SYSDAT=demo\
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=SYSLST=demo\
+STDDEVLB  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+STDDEVLB  MZ390 final_options=SYSMLC=demo\
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  MZ390 final_options=SYSLST=demo\
+STDDEVLB  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+STDDEVLB  MZ390 final_options=SYSMLC=demo\
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  MZ390 total pcode exec opt  = 10
+STDDEVLB  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\demo\STDDEVLB.MLC
+STDDEVLB  MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ASMMSP.CPY
+STDDEVLB  MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZSTRMAC.CPY
+STDDEVLB  MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+STDDEVLB  MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CALL.MAC
+STDDEVLB  MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZCALL.MAC
+STDDEVLB  MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\IF.MAC
+STDDEVLB  MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZSTRGBL.CPY
+STDDEVLB  MZ390 FID=  9 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZSTREQU.MAC
+STDDEVLB  MZ390 FID= 10 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+STDDEVLB  MZ390 FID= 11 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ABEND.MAC
+STDDEVLB  MZ390 FID= 12 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ENDIF.MAC
+STDDEVLB  MZ390 FID= 13 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CTD.MAC
+STDDEVLB  MZ390 FID= 14 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+STDDEVLB  MZ390 FID= 15 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\EQUREGS.MAC
+STDDEVLB  MZ390 FID= 16 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\DO.MAC
+STDDEVLB  MZ390 FID= 17 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ENDDO.MAC
+STDDEVLB  MZ390 total mnote warnings  = 0
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  MZ390 total pcode exec opt  = 10
+STDDEVLB  MZ390 FID=  1 ERR= 0 W:\work\z390\demo\STDDEVLB.MLC
+STDDEVLB  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\ASMMSP.CPY
+STDDEVLB  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\ZSTRMAC.CPY
+STDDEVLB  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+STDDEVLB  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\CALL.MAC
+STDDEVLB  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\ZCALL.MAC
+STDDEVLB  MZ390 FID=  7 ERR= 0 W:\work\z390\mac\IF.MAC
+STDDEVLB  MZ390 FID=  8 ERR= 0 W:\work\z390\mac\ZSTRGBL.CPY
+STDDEVLB  MZ390 FID=  9 ERR= 0 W:\work\z390\mac\ZSTREQU.MAC
+STDDEVLB  MZ390 FID= 10 ERR= 0 W:\work\z390\mac\WTO.MAC
+STDDEVLB  MZ390 FID= 11 ERR= 0 W:\work\z390\mac\ABEND.MAC
+STDDEVLB  MZ390 FID= 12 ERR= 0 W:\work\z390\mac\ENDIF.MAC
+STDDEVLB  MZ390 FID= 13 ERR= 0 W:\work\z390\mac\CTD.MAC
+STDDEVLB  MZ390 FID= 14 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+STDDEVLB  MZ390 FID= 15 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+STDDEVLB  MZ390 FID= 16 ERR= 0 W:\work\z390\mac\DO.MAC
+STDDEVLB  MZ390 FID= 17 ERR= 0 W:\work\z390\mac\ENDDO.MAC
+STDDEVLB  MZ390 total mnote warnings  = 0
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  LZ390 z390 is licensed under GNU General Public License
+STDDEVLB  LZ390 options = notiming stats systerm(demo\rtdemo)
+STDDEVLB  LZ390 program = demo\STDDEVLB.OBJ
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  LZ390 z390 is licensed under GNU General Public License
+STDDEVLB  LZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+STDDEVLB  LZ390 program = demo\STDDEVLB.OBJ
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  LZ390 final_options=PROFILE=
+STDDEVLB  LZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\STDDEVLB.STA
+STDDEVLB  LZ390 final_options=SYSPARM=
+STDDEVLB  LZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+STDDEVLB  LZ390 final_options=TESTDD=
+STDDEVLB  LZ390 final_options=TIME=15
+STDDEVLB  LZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  LZ390 final_options=PROFILE=
+STDDEVLB  LZ390 final_options=STATS=W:\work\z390\demo\STDDEVLB.STA
+STDDEVLB  LZ390 final_options=SYSPARM=
+STDDEVLB  LZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+STDDEVLB  LZ390 final_options=TESTDD=
+STDDEVLB  LZ390 final_options=TIME=60
+STDDEVLB  LZ390 final_options=TRACE=
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  EZ390 program = demo\STDDEVLB.390
+STDDEVLB  EZ390 options = notiming stats systerm(demo\rtdemo)
+STDDEVLB  EZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  EZ390 program = demo\STDDEVLB.390
+STDDEVLB  EZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+STDDEVLB  EZ390 final_options=ALIGN
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  EZ390 final_options=PROFILE=
+STDDEVLB  EZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\STDDEVLB.STA
+STDDEVLB  EZ390 final_options=SYSPARM=
+STDDEVLB  EZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+STDDEVLB  EZ390 final_options=TESTDD=
+STDDEVLB  EZ390 final_options=TIME=15
+STDDEVLB  EZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  EZ390 final_options=PROFILE=
+STDDEVLB  EZ390 final_options=STATS=W:\work\z390\demo\STDDEVLB.STA
+STDDEVLB  EZ390 final_options=SYSPARM=
+STDDEVLB  EZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+STDDEVLB  EZ390 final_options=TESTDD=
+STDDEVLB  EZ390 final_options=TIME=60
+STDDEVLB  EZ390 final_options=TRACE=
+*****
+
+***** DEMO\STDDEVLB.STA
+STDDEVLB  EZ390 final_options=IPL=
+STDDEVLB  EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\demo\STDDEVLB.LOG
+STDDEVLB  EZ390 final_options=SYS390=demo\+linklib
+***** RT\DEMO\SAVE\STDDEVLB.STA
+STDDEVLB  EZ390 final_options=IPL=
+STDDEVLB  EZ390 final_options=LOG=W:\work\z390\demo\STDDEVLB.LOG
+STDDEVLB  EZ390 final_options=SYS390=demo\+linklib
+*****
+

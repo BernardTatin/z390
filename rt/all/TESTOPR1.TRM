@@ -1,0 +1,51 @@
+Comparing files RT\TEST\TESTOPR1.TRM and RT\TEST\SAVE\TESTOPR1.TRM
+***** RT\TEST\TESTOPR1.TRM
+MZ390I program = rt\test\TESTOPR1.MLC
+MZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) tracep 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTOPR1.TRM
+MZ390I program = rt\test\TESTOPR1.MLC
+MZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) tracep 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTOPR1.TRM
+OPEN CODE    23    (1/23) *MCALL #=     1 LV= 1 TESTOPR1 SUBENTRY 
+LOADING FILE C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+ 
+***** RT\TEST\SAVE\TESTOPR1.TRM
+OPEN CODE    23    (1/23) *MCALL #=     1 LV= 1 TESTOPR1 SUBENTRY 
+LOADING FILE W:\work\z390\mac\SUBENTRY.MAC
+ 
+*****
+
+***** RT\TEST\TESTOPR1.TRM
+OPEN CODE    24    (1/24) *MCALL #=     2 LV= 1          WTO   'TESTOPR1 TEST OPERATORS UPPER, LOWER, ETC.'
+LOADING FILE C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+ 
+***** RT\TEST\SAVE\TESTOPR1.TRM
+OPEN CODE    24    (1/24) *MCALL #=     2 LV= 1          WTO   'TESTOPR1 TEST OPERATORS UPPER, LOWER, ETC.'
+LOADING FILE W:\work\z390\mac\WTO.MAC
+ 
+*****
+
+***** RT\TEST\TESTOPR1.TRM
+OPEN CODE    25    (1/25) *MCALL #=     3 LV= 1          SUBEXIT 
+LOADING FILE C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+ 
+***** RT\TEST\SAVE\TESTOPR1.TRM
+OPEN CODE    25    (1/25) *MCALL #=     3 LV= 1          SUBEXIT 
+LOADING FILE W:\work\z390\mac\SUBEXIT.MAC
+ 
+*****
+
+***** RT\TEST\TESTOPR1.TRM
+MZ390I total az390 errors    = 0
+TESTOPR1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1991
+***** RT\TEST\SAVE\TESTOPR1.TRM
+MZ390I total az390 errors    = 0
+TESTOPR1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1989
+*****
+

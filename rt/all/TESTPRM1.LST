@@ -1,0 +1,19 @@
+Comparing files RT\TEST\TESTPRM1.LST and RT\TEST\SAVE\TESTPRM1.LST
+***** RT\TEST\TESTPRM1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) 
+  sysmac(mac+rt\test) systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTPRM1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysmac(mac+rt\test) systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTPRM1.LST
+LZ390I total errors         = 0
+TESTPRM1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=187
+***** RT\TEST\SAVE\TESTPRM1.LST
+LZ390I total errors         = 0
+TESTPRM1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=185
+*****
+

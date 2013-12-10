@@ -1,0 +1,21 @@
+Comparing files LINKLIB\TESTFPC2.LST and RT\LINKLIB\SAVE\TESTFPC2.LST
+***** LINKLIB\TESTFPC2.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+LZ390I program = linklib\TESTFPC2.OBJ
+***** RT\LINKLIB\SAVE\TESTFPC2.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+LZ390I program = linklib\TESTFPC2.OBJ
+*****
+
+***** LINKLIB\TESTFPC2.LST
+LZ390I total errors         = 0
+TESTFPC2  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=3756
+***** RT\LINKLIB\SAVE\TESTFPC2.LST
+LZ390I total errors         = 0
+TESTFPC2  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=3754
+*****
+

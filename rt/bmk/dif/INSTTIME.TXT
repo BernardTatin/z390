@@ -1,0 +1,3 @@
+Comparing files BMK\INSTTIME.TXT and RT\BMK\SAVE\INSTTIME.TXT
+FC: no differences encountered
+

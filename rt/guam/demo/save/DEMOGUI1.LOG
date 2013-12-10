@@ -1,0 +1,9 @@
+DEMOGUI1  EZ390 START
+EZ390I Copyright 2010 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = guam\demo\DEMOGUI1.390
+EZ390I options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI1 DEMO WTO AND WTOR WAIT LOOP
+ENTER TEXT TO DISPLAY OR END
+EZ390I total errors         = 0
+DEMOGUI1  EZ390 ENDED   RC=16 MEM(MB)= MB IO=150 INS=15

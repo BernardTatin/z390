@@ -1,0 +1,19 @@
+Comparing files MFACC\P9MM2.LOG and RT\MFACC\SAVE\P9MM2.LOG
+***** MFACC\P9MM2.LOG
+EZ390I program = mfacc\P9MM2.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P9MM2.LOG
+EZ390I program = mfacc\P9MM2.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P9MM2.LOG
+EZ390I total errors         = 0
+P9MM2     EZ390 ENDED   RC= 0 MEM(MB)= MB IO=168 INS=53
+***** RT\MFACC\SAVE\P9MM2.LOG
+EZ390I total errors         = 0
+P9MM2     EZ390 ENDED   RC= 0 MEM(MB)= MB IO=167 INS=53
+*****
+

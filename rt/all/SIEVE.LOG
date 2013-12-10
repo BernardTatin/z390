@@ -1,0 +1,32 @@
+Comparing files DEMO\SIEVE.LOG and RT\DEMO\SAVE\SIEVE.LOG
+***** DEMO\SIEVE.LOG
+EZ390I program = demo\SIEVE.390
+EZ390I options = notiming stats systerm(demo\rtdemo)
+
+***** RT\DEMO\SAVE\SIEVE.LOG
+EZ390I program = demo\SIEVE.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+
+*****
+
+***** DEMO\SIEVE.LOG
+
+2012-05-21 14:47:17.063467950 INS=             49 MIPS=   0.00
+     1,999
+***** RT\DEMO\SAVE\SIEVE.LOG
+
+2012-05-21 13:10:32.617872584 INS=             49 MIPS=   0.00
+     1,999
+*****
+
+***** DEMO\SIEVE.LOG
+    98,999
+2012-05-21 14:47:17.234151713 INS=        522,189 MIPS=   3.06
+EZ390I total errors         = 0
+***** RT\DEMO\SAVE\SIEVE.LOG
+    98,999
+2012-05-21 13:10:32.802419302 INS=        522,189 MIPS=   2.83
+EZ390I total errors         = 0
+*****
+

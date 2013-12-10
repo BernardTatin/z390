@@ -1,0 +1,13 @@
+Comparing files LINKLIB\SQXTR.PRN and RT\LINKLIB\SAVE\SQXTR.PRN
+***** LINKLIB\SQXTR.PRN
+AZ390I program = linklib\SQXTR
+AZ390I options = bal notiming sysmac(mac) syscpy(mac) stats 
+  systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\SQXTR.PRN
+AZ390I program = linklib\SQXTR
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

@@ -1,0 +1,23 @@
+Comparing files GUAM\TEST\TESTGP4.LOG and RT\GUAM\TEST\SAVE\TESTGP4.LOG
+***** GUAM\TEST\TESTGP4.LOG
+TESTGP4   EZ390 START
+EZ390I Copyright 2011 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+***** RT\GUAM\TEST\SAVE\TESTGP4.LOG
+TESTGP4   EZ390 START
+EZ390I Copyright 2010 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\TEST\TESTGP4.LOG
+EZ390I program = guam\test\TESTGP4.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+EZ390I total errors         = 0
+TESTGP4   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=151 INS=29
+***** RT\GUAM\TEST\SAVE\TESTGP4.LOG
+EZ390I program = guam\test\TESTGP4.390
+EZ390I options = @rt\RT1=(bal notiming stats) guam
+EZ390I total errors         = 0
+TESTGP4   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=29
+*****
+

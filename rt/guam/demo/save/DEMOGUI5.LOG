@@ -1,0 +1,8 @@
+DEMOGUI5  EZ390 START
+EZ390I Copyright 2010 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = guam\demo\DEMOGUI5.390
+EZ390I options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI5 GRAPHICS DEMO - MSG FOR MCS LOG
+EZ390I total errors         = 0
+DEMOGUI5  EZ390 ENDED   RC=16 MEM(MB)= MB IO=167 INS=48

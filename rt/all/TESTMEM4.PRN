@@ -1,0 +1,13 @@
+Comparing files RT\TEST\TESTMEM4.PRN and RT\TEST\SAVE\TESTMEM4.PRN
+***** RT\TEST\TESTMEM4.PRN
+AZ390I program = rt\test\TESTMEM4
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) mem(2) 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTMEM4.PRN
+AZ390I program = rt\test\TESTMEM4
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) mem(2) 
+  systerm(rt\test\rttest)
+*****
+
