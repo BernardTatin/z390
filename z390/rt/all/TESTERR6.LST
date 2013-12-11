@@ -1,0 +1,12 @@
+Comparing files RT\TEST\TESTERR6.LST and RT\TEST\SAVE\TESTERR6.LST
+***** RT\TEST\TESTERR6.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = bal notiming systerm(rt\test\rttest)
+LZ390I program = rt\test\TESTERR6.OBJ
+***** RT\TEST\SAVE\TESTERR6.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming 
+  systerm(rt\test\rttest)
+LZ390I program = rt\test\TESTERR6.OBJ
+*****
+

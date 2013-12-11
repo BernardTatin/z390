@@ -1,0 +1,72 @@
+Comparing files DEMO\DEMONUM1.STA and RT\DEMO\SAVE\DEMONUM1.STA
+***** DEMO\DEMONUM1.STA
+DEMONUM1  MZ390 program = demo\DEMONUM1.MLC
+DEMONUM1  MZ390 options = bal noasm 
+  sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) chksrc(0) chkmac(0) notiming stats
+DEMONUM1  MZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\DEMONUM1.STA
+DEMONUM1  MZ390 program = demo\DEMONUM1.MLC
+DEMONUM1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) bal noasm 
+  sysmac(W:\work\z390\mac+.) syscpy(W:\work\z390\mac+.) chksrc(0) chkmac(0) 
+  notiming stats
+DEMONUM1  MZ390 final_options=ALIGN
+*****
+
+***** DEMO\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=PROFILE=
+DEMONUM1  MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=SYSPARM=
+DEMONUM1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMONUM1.E
+DEMONUM1  MZ390 final_options=RR
+DEMONUM1  MZ390 final_options=TESTDD=
+DEMONUM1  MZ390 final_options=TIME=15
+DEMONUM1  MZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=PROFILE=
+DEMONUM1  MZ390 final_options=STATS=W:\work\z390\demo\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=SYSPARM=
+DEMONUM1  MZ390 final_options=SYSTERM=W:\work\z390\demo\DEMONUM1.ERR
+DEMONUM1  MZ390 final_options=TESTDD=
+DEMONUM1  MZ390 final_options=TIME=60
+DEMONUM1  MZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=SYSBAL=demo\
+DEMONUM1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+DEMONUM1  MZ390 final_options=SYSDAT=demo\
+***** RT\DEMO\SAVE\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=SYSBAL=demo\
+DEMONUM1  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+DEMONUM1  MZ390 final_options=SYSDAT=demo\
+*****
+
+***** DEMO\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=SYSLST=demo\
+DEMONUM1  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+DEMONUM1  MZ390 final_options=SYSMLC=demo\
+***** RT\DEMO\SAVE\DEMONUM1.STA
+DEMONUM1  MZ390 final_options=SYSLST=demo\
+DEMONUM1  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+DEMONUM1  MZ390 final_options=SYSMLC=demo\
+*****
+
+***** DEMO\DEMONUM1.STA
+DEMONUM1  MZ390 total pcode exec opt  = 1
+DEMONUM1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMONUM1.MLC
+DEMONUM1  MZ390 total mnote warnings  = 0
+***** RT\DEMO\SAVE\DEMONUM1.STA
+DEMONUM1  MZ390 total pcode exec opt  = 1
+DEMONUM1  MZ390 FID=  1 ERR= 0 W:\work\z390\demo\DEMONUM1.MLC
+DEMONUM1  MZ390 total mnote warnings  = 0
+*****
+
+***** DEMO\DEMONUM1.STA
+DEMONUM1  MZ390 total mz390 errors    = 0
+DEMONUM1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1308
+***** RT\DEMO\SAVE\DEMONUM1.STA
+DEMONUM1  MZ390 total mz390 errors    = 0
+DEMONUM1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1307
+*****
+

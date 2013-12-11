@@ -1,0 +1,20 @@
+Comparing files RT\TEST\TESTDMP2.LOG and RT\TEST\SAVE\TESTDMP2.LOG
+***** RT\TEST\TESTDMP2.LOG
+EZ390I program = rt\test\TESTDMP2.390
+EZ390I options = notiming stats dump systerm(rt\test\rttest)
+TESTDMP2 FORCE 0C1 ABEND TO TEST DUMP OPTION
+***** RT\TEST\SAVE\TESTDMP2.LOG
+EZ390I program = rt\test\TESTDMP2.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) notiming stats dump 
+  systerm(rt\test\rttest)
+TESTDMP2 FORCE 0C1 ABEND TO TEST DUMP OPTION
+*****
+
+***** RT\TEST\TESTDMP2.LOG
+EZ390I total errors         = 1
+TESTDMP2  EZ390 ENDED   RC=16 MEM(MB)= MB IO=230 INS=9
+***** RT\TEST\SAVE\TESTDMP2.LOG
+EZ390I total errors         = 1
+TESTDMP2  EZ390 ENDED   RC=16 MEM(MB)= MB IO=227 INS=9
+*****
+

@@ -1,0 +1,216 @@
+Comparing files GUAM\TEST\TESTGP3.STA and RT\GUAM\TEST\SAVE\TESTGP3.STA
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 START
+TESTGP3   MZ390 Copyright 2011 Automated Software Tools Corporation
+TESTGP3   MZ390 z390 is licensed under GNU General Public License
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 START
+TESTGP3   MZ390 Copyright 2010 Automated Software Tools Corporation
+TESTGP3   MZ390 z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 program = guam\test\TESTGP3.MLC
+TESTGP3   MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 program = guam\test\TESTGP3.MLC
+TESTGP3   MZ390 options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 final_options=PCOPT
+TESTGP3   MZ390 final_options=NOPDSMEM8
+TESTGP3   MZ390 final_options=NOPRINTALL
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 final_options=PCOPT
+TESTGP3   MZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 final_options=NOTRACEG
+TESTGP3   MZ390 final_options=NOTRACEI
+TESTGP3   MZ390 final_options=NOTRACEL
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 final_options=NOTRACEG
+TESTGP3   MZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 final_options=MINWIDTH=150
+TESTGP3   MZ390 final_options=MNOTE=0
+TESTGP3   MZ390 final_options=PARM=
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 final_options=MINWIDTH=150
+TESTGP3   MZ390 final_options=PARM=
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 final_options=TESTDD=
+TESTGP3   MZ390 final_options=TIME=60
+TESTGP3   MZ390 final_options=TRACE=
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 final_options=TESTDD=
+TESTGP3   MZ390 final_options=TIME=15
+TESTGP3   MZ390 final_options=TRACE=
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   MZ390 total array expansions= 0
+TESTGP3   MZ390 total Keys            = 1672
+TESTGP3   MZ390 Key searches          = 4274
+TESTGP3   MZ390 Key avg comps         = 0
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   MZ390 total array expansions= 0
+TESTGP3   MZ390 total Keys            = 1534
+TESTGP3   MZ390 Key searches          = 4136
+TESTGP3   MZ390 Key avg comps         = 0
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   AZ390 alloc passes          = 2
+TESTGP3   AZ390 Keys                  = 1419
+TESTGP3   AZ390 Key searches          = 2509
+TESTGP3   AZ390 Key avg comps         = 0
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   AZ390 alloc passes          = 2
+TESTGP3   AZ390 Keys                  = 1281
+TESTGP3   AZ390 Key searches          = 2371
+TESTGP3   AZ390 Key avg comps         = 0
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   AZ390 total az390 errors    = 0
+TESTGP3   MZ390 ENDED   RC= 0 MEM(MB)= MB IO=2849
+TESTGP3   LZ390 START
+TESTGP3   LZ390 Copyright 2011 Automated Software Tools Corporation
+TESTGP3   LZ390 z390 is licensed under GNU General Public License
+TESTGP3   LZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+TESTGP3   LZ390 program = guam\test\TESTGP3.OBJ
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   AZ390 total az390 errors    = 0
+TESTGP3   MZ390 ENDED   RC= 0 MEM(MB)= MB IO=2846
+TESTGP3   LZ390 START
+TESTGP3   LZ390 Copyright 2010 Automated Software Tools Corporation
+TESTGP3   LZ390 z390 is licensed under GNU General Public License
+TESTGP3   LZ390 options = @rt\RT1=(bal notiming stats) guam
+TESTGP3   LZ390 program = guam\test\TESTGP3.OBJ
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   LZ390 final_options=PCOPT
+TESTGP3   LZ390 final_options=NOPDSMEM8
+TESTGP3   LZ390 final_options=NOPRINTALL
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   LZ390 final_options=PCOPT
+TESTGP3   LZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   LZ390 final_options=NOTRACEG
+TESTGP3   LZ390 final_options=NOTRACEI
+TESTGP3   LZ390 final_options=NOTRACEL
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   LZ390 final_options=NOTRACEG
+TESTGP3   LZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   LZ390 final_options=MINWIDTH=150
+TESTGP3   LZ390 final_options=MNOTE=0
+TESTGP3   LZ390 final_options=PARM=
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   LZ390 final_options=MINWIDTH=150
+TESTGP3   LZ390 final_options=PARM=
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   LZ390 final_options=TESTDD=
+TESTGP3   LZ390 final_options=TIME=60
+TESTGP3   LZ390 final_options=TRACE=
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   LZ390 final_options=TESTDD=
+TESTGP3   LZ390 final_options=TIME=15
+TESTGP3   LZ390 final_options=TRACE=
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   LZ390 total errors          = 0
+TESTGP3   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=175
+TESTGP3   EZ390 START
+TESTGP3   EZ390 Copyright 2011 Automated Software Tools Corporation
+TESTGP3   EZ390 z390 is licensed under GNU General Public License
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   LZ390 total errors          = 0
+TESTGP3   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=172
+TESTGP3   EZ390 START
+TESTGP3   EZ390 Copyright 2010 Automated Software Tools Corporation
+TESTGP3   EZ390 z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 program = guam\test\TESTGP3.390
+TESTGP3   EZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+TESTGP3   EZ390 final_options=ALIGN
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 program = guam\test\TESTGP3.390
+TESTGP3   EZ390 options = @rt\RT1=(bal notiming stats) guam
+TESTGP3   EZ390 final_options=ALIGN
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 final_options=PCOPT
+TESTGP3   EZ390 final_options=NOPDSMEM8
+TESTGP3   EZ390 final_options=NOPRINTALL
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 final_options=PCOPT
+TESTGP3   EZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 final_options=NOTRACEG
+TESTGP3   EZ390 final_options=NOTRACEI
+TESTGP3   EZ390 final_options=NOTRACEL
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 final_options=NOTRACEG
+TESTGP3   EZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 final_options=MINWIDTH=150
+TESTGP3   EZ390 final_options=MNOTE=0
+TESTGP3   EZ390 final_options=PARM=
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 final_options=MINWIDTH=150
+TESTGP3   EZ390 final_options=PARM=
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 final_options=TESTDD=
+TESTGP3   EZ390 final_options=TIME=60
+TESTGP3   EZ390 final_options=TRACE=
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 final_options=TESTDD=
+TESTGP3   EZ390 final_options=TIME=15
+TESTGP3   EZ390 final_options=TRACE=
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 VSAM operations       = 0
+TESTGP3   EZ390 Keys                  = 2467
+TESTGP3   EZ390 Key searches          = 2
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 VSAM operations       = 0
+TESTGP3   EZ390 Keys                  = 2212
+TESTGP3   EZ390 Key searches          = 2
+*****
+
+***** GUAM\TEST\TESTGP3.STA
+TESTGP3   EZ390 total errors          = 0
+TESTGP3   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=151 INS=41
+***** RT\GUAM\TEST\SAVE\TESTGP3.STA
+TESTGP3   EZ390 total errors          = 0
+TESTGP3   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=41
+*****
+

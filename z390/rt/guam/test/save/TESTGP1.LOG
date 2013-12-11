@@ -1,0 +1,7 @@
+TESTGP1   EZ390 START
+EZ390I Copyright 2010 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = guam\test\TESTGP1.390
+EZ390I options = @rt\RT1=(bal notiming stats) guam
+EZ390I total errors         = 0
+TESTGP1   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=148 INS=23060

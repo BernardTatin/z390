@@ -1,0 +1,19 @@
+Comparing files RT\TEST\TESTMAC9.LOG and RT\TEST\SAVE\TESTMAC9.LOG
+***** RT\TEST\TESTMAC9.LOG
+EZ390I program = rt\test\TESTMAC9.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  sysmac(rt\test+mac) syscpy(rt\test) systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTMAC9.LOG
+EZ390I program = rt\test\TESTMAC9.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysmac(rt\test+mac) syscpy(rt\test) systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTMAC9.LOG
+EZ390I total errors         = 0
+TESTMAC9  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=158 INS=17
+***** RT\TEST\SAVE\TESTMAC9.LOG
+EZ390I total errors         = 0
+TESTMAC9  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=155 INS=17
+*****
+

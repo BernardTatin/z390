@@ -1,0 +1,21 @@
+Comparing files VSAM\TEST\TESTCAT.LST and RT\VSAM\TEST\SAVE\TESTCAT.LST
+***** VSAM\TEST\TESTCAT.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = notiming stats @vsam\rtvsam=(notiming stats 
+  tracev traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+LZ390I program = vsam\test\TESTCAT.OBJ
+***** RT\VSAM\TEST\SAVE\TESTCAT.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) notiming stats @vsam\rtvsam=(
+  notiming stats tracev traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+LZ390I program = vsam\test\TESTCAT.OBJ
+*****
+
+***** VSAM\TEST\TESTCAT.LST
+LZ390I total errors         = 0
+TESTCAT   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1165
+***** RT\VSAM\TEST\SAVE\TESTCAT.LST
+LZ390I total errors         = 0
+TESTCAT   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1164
+*****
+

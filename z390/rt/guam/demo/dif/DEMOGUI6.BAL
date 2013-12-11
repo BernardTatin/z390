@@ -1,0 +1,189 @@
+Comparing files GUAM\DEMO\DEMOGUI6.BAL and RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+***** GUAM\DEMO\DEMOGUI6.BAL
+*********************************************************************
+*MCALL #=     1 LV= 1 DEMOGUI4 SUBENTRY 
+DEMOGUI4 CSECT 
+         STM   14,12,12(13)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*********************************************************************
+*MCALL #=     1 LV= 1 DEMOGUI4 SUBENTRY
+DEMOGUI4    CSECT
+         STM   14,12,12(13)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+         B     LOOP
+*MCALL #=     7 LV= 1 EXIT     SUBEXIT 
+EXIT     DS    0H
+         LA    15,0
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+         B     LOOP
+*MCALL #=     7 LV= 1 EXIT     SUBEXIT
+EXIT    DS    0H
+         LA    15,0
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+               ATT_PA)
+TITLE    EQU   *
+         DC    AL1(ESC,WRT_EW,WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+               ATT_PA)
+TITLE       EQU   *
+         DC    AL1(ESC,WRT_EW,WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    17 LV= 1 PROMPT   TN3270 WCC_KD
+PROMPT   EQU   *
+         DC    AL1(WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    17 LV= 1 PROMPT   TN3270 WCC_KD
+PROMPT       EQU   *
+         DC    AL1(WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    27 LV= 1 NAME_KEY TN3270 (SBA,3,22)
+NAME_KEY EQU   *
+         DC    AL1(SBA,194,245)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    27 LV= 1 NAME_KEY TN3270 (SBA,3,22)
+NAME_KEY       EQU   *
+         DC    AL1(SBA,194,245)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    28 LV= 1 ADDR_KEY TN3270 (SBA,5,22)
+ADDR_KEY EQU   *
+         DC    AL1(SBA,197,213)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    28 LV= 1 ADDR_KEY TN3270 (SBA,5,22)
+ADDR_KEY       EQU   *
+         DC    AL1(SBA,197,213)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    29 LV= 1 ZIP_KEY  TN3270 (SBA,7,22)
+ZIP_KEY  EQU   *
+         DC    AL1(SBA,199,245)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    29 LV= 1 ZIP_KEY  TN3270 (SBA,7,22)
+ZIP_KEY       EQU   *
+         DC    AL1(SBA,199,245)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    30 LV= 1 SHOW_NAME TN3270 WCC_KD,(SBA,9,10),(SF,ATT_PA)
+SHOW_NAME EQU  *
+         DC    AL1(WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    30 LV= 1 SHOW_NAME TN3270 WCC_KD,(SBA,9,10),(SF,ATT_PA)
+SHOW_NAME       EQU   *
+         DC    AL1(WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    33 LV= 1 SHOW_ADDR TN3270 WCC_KD,(SBA,11,10),(SF,ATT_PA)
+SHOW_ADDR EQU  *
+         DC    AL1(WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    33 LV= 1 SHOW_ADDR TN3270 WCC_KD,(SBA,11,10),(SF,ATT_PA)
+SHOW_ADDR       EQU   *
+         DC    AL1(WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    36 LV= 1 SHOW_ZIP TN3270 WCC_KD,(SBA,13,10),(SF,ATT_PA)
+SHOW_ZIP EQU   *
+         DC    AL1(WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    36 LV= 1 SHOW_ZIP TN3270 WCC_KD,(SBA,13,10),(SF,ATT_PA)
+SHOW_ZIP       EQU   *
+         DC    AL1(WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    39 LV= 1 SHOW_AID TN3270 WCC_BKD,(SBA,15,10),(SF,ATT_PA)
+SHOW_AID EQU   *
+         DC    AL1(WCC_BKD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    39 LV= 1 SHOW_AID TN3270 WCC_BKD,(SBA,15,10),(SF,ATT_PA)
+SHOW_AID       EQU   *
+         DC    AL1(WCC_BKD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+               A)
+SHOW_NOFIELD EQU *
+         DC    AL1(WCC_BKD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+               A)
+SHOW_NOFIELD       EQU   *
+         DC    AL1(WCC_BKD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+               PA)
+SHOW_BADFIELD EQU *
+         DC    AL1(WCC_BKD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+               PA)
+SHOW_BADFIELD       EQU   *
+         DC    AL1(WCC_BKD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MCALL #=    46 LV= 1 SHOW_HELP TN3270 ESC,WRT_EW,WCC_KD
+SHOW_HELP EQU  *
+         DC    AL1(ESC,WRT_EW,WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MCALL #=    46 LV= 1 SHOW_HELP TN3270 ESC,WRT_EW,WCC_KD
+SHOW_HELP       EQU   *
+         DC    AL1(ESC,WRT_EW,WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI6.BAL
+*MEXIT #=    58 LV= 1 GUAM
+*MCALL #=    59 LV= 1          EQUREGS 
+R0     EQU 0
+R1     EQU 1
+R2     EQU 2
+R3     EQU 3
+R4     EQU 4
+R5     EQU 5
+R6     EQU 6
+R7     EQU 7
+R8     EQU 8
+R9     EQU 9
+R10    EQU 10
+R11    EQU 11
+R12    EQU 12
+R13    EQU 13
+R14    EQU 14
+R15    EQU 15
+*MEXIT #=    59 LV= 1 EQUREGS
+         END 
+***** RT\GUAM\DEMO\SAVE\DEMOGUI6.BAL
+*MEXIT #=    58 LV= 1 GUAM
+*MCALL #=    59 LV= 1          EQUREGS
+R0 EQU 0
+R1 EQU 1
+R2 EQU 2
+R3 EQU 3
+R4 EQU 4
+R5 EQU 5
+R6 EQU 6
+R7 EQU 7
+R8 EQU 8
+R9 EQU 9
+R10 EQU 10
+R11 EQU 11
+R12 EQU 12
+R13 EQU 13
+R14 EQU 14
+R15 EQU 15
+*MEXIT #=    59 LV= 1 EQUREGS
+         END
+*****
+

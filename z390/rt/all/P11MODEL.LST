@@ -1,0 +1,19 @@
+Comparing files MFACC\P11MODEL.LST and RT\MFACC\SAVE\P11MODEL.LST
+***** MFACC\P11MODEL.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) 
+  SYSCPY(mfacc+mac) systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P11MODEL.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  SYSCPY(mfacc+mac) systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P11MODEL.LST
+LZ390I total errors         = 0
+P11MODEL  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1320
+***** RT\MFACC\SAVE\P11MODEL.LST
+LZ390I total errors         = 0
+P11MODEL  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1318
+*****
+

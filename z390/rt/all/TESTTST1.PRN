@@ -1,0 +1,13 @@
+Comparing files RT\TEST\TESTTST1.PRN and RT\TEST\SAVE\TESTTST1.PRN
+***** RT\TEST\TESTTST1.PRN
+AZ390I program = rt\test\TESTTST1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTTST1.PRN
+AZ390I program = rt\test\TESTTST1
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+*****
+

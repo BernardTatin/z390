@@ -1,0 +1,61 @@
+Comparing files LINKLIB\CVTTOHEX.STA and RT\LINKLIB\SAVE\CVTTOHEX.STA
+***** LINKLIB\CVTTOHEX.STA
+CVTTOHEX  MZ390 program = linklib\CVTTOHEX.MLC
+CVTTOHEX  MZ390 options = bal notiming sysmac(mac) syscpy(mac) stats 
+  systerm(linklib\rtlink)
+CVTTOHEX  MZ390 final_options=ALIGN
+***** RT\LINKLIB\SAVE\CVTTOHEX.STA
+CVTTOHEX  MZ390 program = linklib\CVTTOHEX.MLC
+CVTTOHEX  MZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats systerm(linklib\rtlink)
+CVTTOHEX  MZ390 final_options=ALIGN
+*****
+
+***** LINKLIB\CVTTOHEX.STA
+CVTTOHEX  MZ390 final_options=PROFILE=
+CVTTOHEX  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\linklib\CVTTOHEX.
+CVTTOHEX  MZ390 final_options=STA
+CVTTOHEX  MZ390 final_options=SYSPARM=
+CVTTOHEX  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\linklib\rtlink.
+CVTTOHEX  MZ390 final_options=ERR
+CVTTOHEX  MZ390 final_options=TESTDD=
+CVTTOHEX  MZ390 final_options=TIME=15
+CVTTOHEX  MZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\CVTTOHEX.STA
+CVTTOHEX  MZ390 final_options=PROFILE=
+CVTTOHEX  MZ390 final_options=STATS=W:\work\z390\linklib\CVTTOHEX.STA
+CVTTOHEX  MZ390 final_options=SYSPARM=
+CVTTOHEX  MZ390 final_options=SYSTERM=W:\work\z390\linklib\rtlink.ERR
+CVTTOHEX  MZ390 final_options=TESTDD=
+CVTTOHEX  MZ390 final_options=TIME=60
+CVTTOHEX  MZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\CVTTOHEX.STA
+CVTTOHEX  MZ390 total pcode exec opt  = 3
+CVTTOHEX  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\linklib\CVTTOHEX.MLC
+CVTTOHEX  MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ASMMSP.CPY
+CVTTOHEX  MZ390 FID=  3 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ZSTRMAC.CPY
+CVTTOHEX  MZ390 FID=  4 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\SUBENTRY.MAC
+CVTTOHEX  MZ390 FID=  5 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\SUBEXIT.MAC
+CVTTOHEX  MZ390 FID=  6 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\EQUREGS.MAC
+CVTTOHEX  MZ390 total mnote warnings  = 0
+***** RT\LINKLIB\SAVE\CVTTOHEX.STA
+CVTTOHEX  MZ390 total pcode exec opt  = 3
+CVTTOHEX  MZ390 FID=  1 ERR= 0 W:\work\z390\linklib\CVTTOHEX.MLC
+CVTTOHEX  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\ASMMSP.CPY
+CVTTOHEX  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\ZSTRMAC.CPY
+CVTTOHEX  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+CVTTOHEX  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+CVTTOHEX  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+CVTTOHEX  MZ390 total mnote warnings  = 0
+*****
+
+***** LINKLIB\CVTTOHEX.STA
+CVTTOHEX  AZ390 total az390 errors    = 0
+CVTTOHEX  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1290
+***** RT\LINKLIB\SAVE\CVTTOHEX.STA
+CVTTOHEX  AZ390 total az390 errors    = 0
+CVTTOHEX  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1288
+*****
+

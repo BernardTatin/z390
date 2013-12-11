@@ -1,0 +1,83 @@
+Comparing files LINKLIB\FPCONMFC.STA and RT\LINKLIB\SAVE\FPCONMFC.STA
+***** LINKLIB\FPCONMFC.STA
+FPCONMFC  MZ390 program = linklib\FPCONMFC.MLC
+FPCONMFC  MZ390 options = bal notiming sysmac(mac) syscpy(mac) stats 
+  sysmac(mac+linklib) systerm(linklib\rtlink)
+FPCONMFC  MZ390 final_options=ALIGN
+***** RT\LINKLIB\SAVE\FPCONMFC.STA
+FPCONMFC  MZ390 program = linklib\FPCONMFC.MLC
+FPCONMFC  MZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats sysmac(mac+linklib) systerm(linklib\rtlink)
+FPCONMFC  MZ390 final_options=ALIGN
+*****
+
+***** LINKLIB\FPCONMFC.STA
+FPCONMFC  MZ390 final_options=PROFILE=
+FPCONMFC  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\linklib\FPCONMFC.
+FPCONMFC  MZ390 final_options=STA
+FPCONMFC  MZ390 final_options=SYSPARM=
+FPCONMFC  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\linklib\rtlink.
+FPCONMFC  MZ390 final_options=ERR
+FPCONMFC  MZ390 final_options=TESTDD=
+FPCONMFC  MZ390 final_options=TIME=15
+FPCONMFC  MZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\FPCONMFC.STA
+FPCONMFC  MZ390 final_options=PROFILE=
+FPCONMFC  MZ390 final_options=STATS=W:\work\z390\linklib\FPCONMFC.STA
+FPCONMFC  MZ390 final_options=SYSPARM=
+FPCONMFC  MZ390 final_options=SYSTERM=W:\work\z390\linklib\rtlink.ERR
+FPCONMFC  MZ390 final_options=TESTDD=
+FPCONMFC  MZ390 final_options=TIME=60
+FPCONMFC  MZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\FPCONMFC.STA
+FPCONMFC  MZ390 total pcode exec opt  = 10
+FPCONMFC  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\linklib\FPCONMFC.MLC
+FPCONMFC  MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ASMMSP.CPY
+FPCONMFC  MZ390 FID=  3 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ZSTRMAC.CPY
+FPCONMFC  MZ390 FID=  4 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\linklib\ARCHLVL.MAC
+FPCONMFC  MZ390 FID=  5 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\SUBENTRY.MAC
+FPCONMFC  MZ390 FID=  6 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\IF.MAC
+FPCONMFC  MZ390 FID=  7 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ZSTRGBL.CPY
+FPCONMFC  MZ390 FID=  8 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ZSTREQU.MAC
+FPCONMFC  MZ390 FID=  9 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ELSE.MAC
+FPCONMFC  MZ390 FID= 10 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ENDIF.MAC
+FPCONMFC  MZ390 FID= 11 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\SUBEXIT.MAC
+FPCONMFC  MZ390 FID= 12 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ZOPTLR.MAC
+FPCONMFC  MZ390 FID= 13 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ELSEIF.MAC
+FPCONMFC  MZ390 FID= 14 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\DO.MAC
+FPCONMFC  MZ390 FID= 15 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ENDDO.MAC
+FPCONMFC  MZ390 FID= 16 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\EQUREGS.MAC
+FPCONMFC  MZ390 FID= 17 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\linklib\FPCONVRT.MAC
+FPCONMFC  MZ390 total mnote warnings  = 0
+***** RT\LINKLIB\SAVE\FPCONMFC.STA
+FPCONMFC  MZ390 total pcode exec opt  = 10
+FPCONMFC  MZ390 FID=  1 ERR= 0 W:\work\z390\linklib\FPCONMFC.MLC
+FPCONMFC  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\ASMMSP.CPY
+FPCONMFC  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\ZSTRMAC.CPY
+FPCONMFC  MZ390 FID=  4 ERR= 0 W:\work\z390\linklib\ARCHLVL.MAC
+FPCONMFC  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+FPCONMFC  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\IF.MAC
+FPCONMFC  MZ390 FID=  7 ERR= 0 W:\work\z390\mac\ZSTRGBL.CPY
+FPCONMFC  MZ390 FID=  8 ERR= 0 W:\work\z390\mac\ZSTREQU.MAC
+FPCONMFC  MZ390 FID=  9 ERR= 0 W:\work\z390\mac\ELSE.MAC
+FPCONMFC  MZ390 FID= 10 ERR= 0 W:\work\z390\mac\ENDIF.MAC
+FPCONMFC  MZ390 FID= 11 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+FPCONMFC  MZ390 FID= 12 ERR= 0 W:\work\z390\mac\ZOPTLR.MAC
+FPCONMFC  MZ390 FID= 13 ERR= 0 W:\work\z390\mac\ELSEIF.MAC
+FPCONMFC  MZ390 FID= 14 ERR= 0 W:\work\z390\mac\DO.MAC
+FPCONMFC  MZ390 FID= 15 ERR= 0 W:\work\z390\mac\ENDDO.MAC
+FPCONMFC  MZ390 FID= 16 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+FPCONMFC  MZ390 FID= 17 ERR= 0 W:\work\z390\linklib\FPCONVRT.MAC
+FPCONMFC  MZ390 total mnote warnings  = 0
+*****
+
+***** LINKLIB\FPCONMFC.STA
+FPCONMFC  AZ390 total az390 errors    = 0
+FPCONMFC  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=13118
+***** RT\LINKLIB\SAVE\FPCONMFC.STA
+FPCONMFC  AZ390 total az390 errors    = 0
+FPCONMFC  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=13116
+*****
+

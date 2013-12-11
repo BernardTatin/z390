@@ -1,0 +1,49 @@
+Comparing files LINKLIB\ZSTRMAC.STA and RT\LINKLIB\SAVE\ZSTRMAC.STA
+***** LINKLIB\ZSTRMAC.STA
+ZSTRMAC   MZ390 program = LINKLIB\ZSTRMAC.MLC
+ZSTRMAC   MZ390 options = NOASM STATS notiming stats
+ZSTRMAC   MZ390 final_options=ALIGN
+***** RT\LINKLIB\SAVE\ZSTRMAC.STA
+ZSTRMAC   MZ390 program = LINKLIB\ZSTRMAC.MLC
+ZSTRMAC   MZ390 options = W:\work\z390\z390.OPT=(time(60)) NOASM STATS notiming stats
+ZSTRMAC   MZ390 final_options=ALIGN
+*****
+
+***** LINKLIB\ZSTRMAC.STA
+ZSTRMAC   MZ390 final_options=PROFILE=
+ZSTRMAC   MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\LINKLIB\ZSTRMAC.S
+ZSTRMAC   MZ390 final_options=TA
+ZSTRMAC   MZ390 final_options=SYSPARM=
+ZSTRMAC   MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\LINKLIB\ZSTRMAC
+ZSTRMAC   MZ390 final_options=.ERR
+ZSTRMAC   MZ390 final_options=TESTDD=
+ZSTRMAC   MZ390 final_options=TIME=15
+ZSTRMAC   MZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\ZSTRMAC.STA
+ZSTRMAC   MZ390 final_options=PROFILE=
+ZSTRMAC   MZ390 final_options=STATS=W:\work\z390\LINKLIB\ZSTRMAC.STA
+ZSTRMAC   MZ390 final_options=SYSPARM=
+ZSTRMAC   MZ390 final_options=SYSTERM=W:\work\z390\LINKLIB\ZSTRMAC.ERR
+ZSTRMAC   MZ390 final_options=TESTDD=
+ZSTRMAC   MZ390 final_options=TIME=60
+ZSTRMAC   MZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\ZSTRMAC.STA
+ZSTRMAC   MZ390 total pcode exec opt  = 5
+ZSTRMAC   MZ390 FID=  1 ERR=102 C:\Program Files (x86)\Automated Software Tools\z390\LINKLIB\ZSTRMAC.MLC
+ZSTRMAC   MZ390 total mnote warnings  = 0
+***** RT\LINKLIB\SAVE\ZSTRMAC.STA
+ZSTRMAC   MZ390 total pcode exec opt  = 5
+ZSTRMAC   MZ390 FID=  1 ERR=102 W:\work\z390\LINKLIB\ZSTRMAC.MLC
+ZSTRMAC   MZ390 total mnote warnings  = 0
+*****
+
+***** LINKLIB\ZSTRMAC.STA
+ZSTRMAC   MZ390 total mz390 errors    = 102
+ZSTRMAC   MZ390 ENDED   RC=16 MEM(MB)= MB IO=1609
+***** RT\LINKLIB\SAVE\ZSTRMAC.STA
+ZSTRMAC   MZ390 total mz390 errors    = 102
+ZSTRMAC   MZ390 ENDED   RC=16 MEM(MB)= MB IO=1607
+*****
+

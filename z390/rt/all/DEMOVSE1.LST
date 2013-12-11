@@ -1,0 +1,19 @@
+Comparing files VSE\DEMO\DEMOVSE1.LST and RT\VSE\DEMO\SAVE\DEMOVSE1.LST
+***** VSE\DEMO\DEMOVSE1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) 
+  sysmac(vse\mac+mac) systerm(vse\test\rtvse)
+***** RT\VSE\DEMO\SAVE\DEMOVSE1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysmac(vse\mac+mac) systerm(vse\test\rtvse)
+*****
+
+***** VSE\DEMO\DEMOVSE1.LST
+LZ390I total errors         = 0
+DEMOVSE1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=203
+***** RT\VSE\DEMO\SAVE\DEMOVSE1.LST
+LZ390I total errors         = 0
+DEMOVSE1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=201
+*****
+

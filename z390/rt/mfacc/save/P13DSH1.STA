@@ -1,0 +1,467 @@
+P13DSH1   MZ390 START
+P13DSH1   MZ390 Copyright 2011 Automated Software Tools Corporation
+P13DSH1   MZ390 z390 is licensed under GNU General Public License
+P13DSH1   MZ390 program = mfacc\P13DSH1.MLC
+P13DSH1   MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+P13DSH1   MZ390 final_options=ALIGN
+P13DSH1   MZ390 final_options=NOALLOW
+P13DSH1   MZ390 final_options=NOAMODE24
+P13DSH1   MZ390 final_options=AMODE31
+P13DSH1   MZ390 final_options=NOASCII
+P13DSH1   MZ390 final_options=ASM
+P13DSH1   MZ390 final_options=NOASSIST
+P13DSH1   MZ390 final_options=AUTOLINK
+P13DSH1   MZ390 final_options=BAL
+P13DSH1   MZ390 final_options=NOBS2000
+P13DSH1   MZ390 final_options=EDF
+P13DSH1   MZ390 final_options=NOCICS
+P13DSH1   MZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+P13DSH1   MZ390 final_options=COMMENT
+P13DSH1   MZ390 final_options=CON
+P13DSH1   MZ390 final_options=NODUMP
+P13DSH1   MZ390 final_options=EPILOG
+P13DSH1   MZ390 final_options=NOERRSUM
+P13DSH1   MZ390 final_options=EXTEND
+P13DSH1   MZ390 final_options=FLOAT(DECIMAL)
+P13DSH1   MZ390 final_options=NOGUAM
+P13DSH1   MZ390 final_options=INIT
+P13DSH1   MZ390 final_options=LIST
+P13DSH1   MZ390 final_options=LISTCALL
+P13DSH1   MZ390 final_options=LISTUSE
+P13DSH1   MZ390 final_options=LOADHIGH
+P13DSH1   MZ390 final_options=NOMCALL
+P13DSH1   MZ390 final_options=NOMOD
+P13DSH1   MZ390 final_options=OBJ
+P13DSH1   MZ390 final_options=NOOBJHEX
+P13DSH1   MZ390 final_options=PC
+P13DSH1   MZ390 final_options=PCOPT
+P13DSH1   MZ390 final_options=NOPDSMEM8
+P13DSH1   MZ390 final_options=NOPRINTALL
+P13DSH1   MZ390 final_options=PROLOG
+P13DSH1   MZ390 final_options=PROTECT
+P13DSH1   MZ390 final_options=R64
+P13DSH1   MZ390 final_options=NOREFORMAT
+P13DSH1   MZ390 final_options=NOREGS
+P13DSH1   MZ390 final_options=RMODE24
+P13DSH1   MZ390 final_options=NORMODE31
+P13DSH1   MZ390 final_options=STATS
+P13DSH1   MZ390 final_options=NOTEST
+P13DSH1   MZ390 final_options=THREAD
+P13DSH1   MZ390 final_options=NOTIME
+P13DSH1   MZ390 final_options=NOTIMING
+P13DSH1   MZ390 final_options=NOTRACE
+P13DSH1   MZ390 final_options=NOTRACEA
+P13DSH1   MZ390 final_options=NOTRACEALL
+P13DSH1   MZ390 final_options=NOTRACEC
+P13DSH1   MZ390 final_options=NOTRACEG
+P13DSH1   MZ390 final_options=NOTRACEI
+P13DSH1   MZ390 final_options=NOTRACEL
+P13DSH1   MZ390 final_options=NOTRACEM
+P13DSH1   MZ390 final_options=NOTRACEP
+P13DSH1   MZ390 final_options=NOTRACEQ
+P13DSH1   MZ390 final_options=NOTRACES
+P13DSH1   MZ390 final_options=NOTRACET
+P13DSH1   MZ390 final_options=NOTRACEV
+P13DSH1   MZ390 final_options=TRAP
+P13DSH1   MZ390 final_options=NOTRUNC
+P13DSH1   MZ390 final_options=NOTS
+P13DSH1   MZ390 final_options=VCB
+P13DSH1   MZ390 final_options=WARN
+P13DSH1   MZ390 final_options=XREF
+P13DSH1   MZ390 final_options=ZSTRMAC
+P13DSH1   MZ390 final_options=CHKMAC=0
+P13DSH1   MZ390 final_options=CHKSRC=1
+P13DSH1   MZ390 final_options=ERR=100
+P13DSH1   MZ390 final_options=MAXCALL=50
+P13DSH1   MZ390 final_options=MAXDISPLAY=80
+P13DSH1   MZ390 final_options=MAXESD=1000
+P13DSH1   MZ390 final_options=MAXFILE=1000
+P13DSH1   MZ390 final_options=MAXGBL=100000
+P13DSH1   MZ390 final_options=MAXHEIGHT=600
+P13DSH1   MZ390 final_options=MAXLCL=100000
+P13DSH1   MZ390 final_options=MAXLEN=80
+P13DSH1   MZ390 final_options=MAXLINE=200000
+P13DSH1   MZ390 final_options=MAXLOG=1000000
+P13DSH1   MZ390 final_options=MAXPARM=10000
+P13DSH1   MZ390 final_options=MAXPASS=2
+P13DSH1   MZ390 final_options=MAXPC=50000
+P13DSH1   MZ390 final_options=MAXQUE=1000
+P13DSH1   MZ390 final_options=MAXRLD=10000
+P13DSH1   MZ390 final_options=MAXSIZE=52428800
+P13DSH1   MZ390 final_options=MAXSYM=50000
+P13DSH1   MZ390 final_options=MAXWARN=4
+P13DSH1   MZ390 final_options=MAXWIDTH=800
+P13DSH1   MZ390 final_options=MEM=1
+P13DSH1   MZ390 final_options=MINHEIGHT=150
+P13DSH1   MZ390 final_options=MINWIDTH=150
+P13DSH1   MZ390 final_options=MNOTE=0
+P13DSH1   MZ390 final_options=PARM=
+P13DSH1   MZ390 final_options=PROFILE=
+P13DSH1   MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P13DSH1.STA
+P13DSH1   MZ390 final_options=SYSPARM=
+P13DSH1   MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\rtmfacc.E
+P13DSH1   MZ390 final_options=RR
+P13DSH1   MZ390 final_options=TESTDD=
+P13DSH1   MZ390 final_options=TIME=15
+P13DSH1   MZ390 final_options=TRACE=
+P13DSH1   MZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+P13DSH1   MZ390 final_options=Z390BROWSER=cmd.exe /c Start
+P13DSH1   MZ390 final_options=Z390COMMAND=cmd.exe
+P13DSH1   MZ390 final_options=Z390EDITOR=notepad.exe
+P13DSH1   MZ390 final_options=INSTALL=
+P13DSH1   MZ390 final_options=IPL=
+P13DSH1   MZ390 final_options=LOG=
+P13DSH1   MZ390 final_options=SYS390=mfacc\+linklib
+P13DSH1   MZ390 final_options=SYSBAL=mfacc\
+P13DSH1   MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+P13DSH1   MZ390 final_options=SYSDAT=mfacc\
+P13DSH1   MZ390 final_options=SYSERR=mfacc\
+P13DSH1   MZ390 final_options=SYSLOG=mfacc\
+P13DSH1   MZ390 final_options=SYSLST=mfacc\
+P13DSH1   MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+P13DSH1   MZ390 final_options=SYSMLC=mfacc\
+P13DSH1   MZ390 final_options=SYSPCH=mfacc\
+P13DSH1   MZ390 final_options=SYSPRN=mfacc\
+P13DSH1   MZ390 final_options=SYSOBJ=mfacc\
+P13DSH1   MZ390 final_options=SYSOPT=mfacc\
+P13DSH1   MZ390 final_options=SYSTRC=mfacc\
+P13DSH1   MZ390 total MLC/MAC loaded  = 391
+P13DSH1   MZ390 total BAL output lines= 155
+P13DSH1   MZ390 total BAL instructions= 33
+P13DSH1   MZ390 total macros          = 4
+P13DSH1   MZ390 total macro loads     = 4
+P13DSH1   MZ390 total macro calls     = 11
+P13DSH1   MZ390 total AENTRY blocks   = 0
+P13DSH1   MZ390 total ACALL  calls    = 0
+P13DSH1   MZ390 total AIF    blocks   = 0
+P13DSH1   MZ390 total ACASE  blocks   = 0
+P13DSH1   MZ390 total AWHILE calls    = 0
+P13DSH1   MZ390 total AUNTIL blocks   = 0
+P13DSH1   MZ390 total global set names= 48
+P13DSH1   MZ390 tot global seta cells = 0
+P13DSH1   MZ390 tot global setb cells = 8
+P13DSH1   MZ390 tot global setc cells = 40
+P13DSH1   MZ390 max local pos parms   = 7
+P13DSH1   MZ390 max local key parms   = 23
+P13DSH1   MZ390 max local set names   = 34
+P13DSH1   MZ390 max local seta cells  = 11
+P13DSH1   MZ390 max local setb cells  = 0
+P13DSH1   MZ390 max local setc cells  = 23
+P13DSH1   MZ390 total array expansions= 0
+P13DSH1   MZ390 total Keys            = 1708
+P13DSH1   MZ390 Key searches          = 3677
+P13DSH1   MZ390 Key avg comps         = 0
+P13DSH1   MZ390 Key max comps         = 3
+P13DSH1   MZ390 total macro line exec = 329
+P13DSH1   MZ390 total pcode line exec = 56
+P13DSH1   MZ390 total pcode line gen. = 62
+P13DSH1   MZ390 total pcode line reuse= 0
+P13DSH1   MZ390 total pcode op   gen. = 244
+P13DSH1   MZ390 total pcode op   exec = 208
+P13DSH1   MZ390 total pcode gen  opt  = 138
+P13DSH1   MZ390 total pcode exec opt  = 0
+P13DSH1   MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P13DSH1.MLC
+P13DSH1   MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ZMFACC.MAC
+P13DSH1   MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+P13DSH1   MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SNAP.MAC
+P13DSH1   MZ390 total mnote warnings  = 1
+P13DSH1   MZ390 total mnote errors    = 0
+P13DSH1   MZ390 max   mnote level     = 4
+P13DSH1   MZ390 total mz390 errors    = 0
+P13DSH1   AZ390 BAL lines             = 155
+P13DSH1   AZ390 symbols               = 60
+P13DSH1   AZ390 Literals              = 6
+P13DSH1   AZ390 alloc passes          = 2
+P13DSH1   AZ390 Keys                  = 1385
+P13DSH1   AZ390 Key searches          = 2373
+P13DSH1   AZ390 Key avg comps         = 0
+P13DSH1   AZ390 Key max comps         = 3
+P13DSH1   AZ390 ESD symbols           = 1
+P13DSH1   AZ390 object bytes          = 524
+P13DSH1   AZ390 object rlds           = 4
+P13DSH1   AZ390 total mnote warnings  = 1
+P13DSH1   AZ390 total mnote errors    = 0
+P13DSH1   AZ390 max   mnote level     = 4
+P13DSH1   AZ390 total mz390 errors    = 0
+P13DSH1   AZ390 total az390 errors    = 0
+P13DSH1   MZ390 ENDED   RC= 4 MEM(MB)= MB IO=2070
+P13DSH1   LZ390 START
+P13DSH1   LZ390 Copyright 2011 Automated Software Tools Corporation
+P13DSH1   LZ390 z390 is licensed under GNU General Public License
+P13DSH1   LZ390 options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+P13DSH1   LZ390 program = mfacc\P13DSH1.OBJ
+P13DSH1   LZ390 final_options=ALIGN
+P13DSH1   LZ390 final_options=NOALLOW
+P13DSH1   LZ390 final_options=NOAMODE24
+P13DSH1   LZ390 final_options=AMODE31
+P13DSH1   LZ390 final_options=NOASCII
+P13DSH1   LZ390 final_options=ASM
+P13DSH1   LZ390 final_options=NOASSIST
+P13DSH1   LZ390 final_options=AUTOLINK
+P13DSH1   LZ390 final_options=BAL
+P13DSH1   LZ390 final_options=NOBS2000
+P13DSH1   LZ390 final_options=EDF
+P13DSH1   LZ390 final_options=NOCICS
+P13DSH1   LZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+P13DSH1   LZ390 final_options=COMMENT
+P13DSH1   LZ390 final_options=CON
+P13DSH1   LZ390 final_options=NODUMP
+P13DSH1   LZ390 final_options=EPILOG
+P13DSH1   LZ390 final_options=NOERRSUM
+P13DSH1   LZ390 final_options=EXTEND
+P13DSH1   LZ390 final_options=FLOAT(DECIMAL)
+P13DSH1   LZ390 final_options=NOGUAM
+P13DSH1   LZ390 final_options=INIT
+P13DSH1   LZ390 final_options=LIST
+P13DSH1   LZ390 final_options=LISTCALL
+P13DSH1   LZ390 final_options=LISTUSE
+P13DSH1   LZ390 final_options=LOADHIGH
+P13DSH1   LZ390 final_options=NOMCALL
+P13DSH1   LZ390 final_options=NOMOD
+P13DSH1   LZ390 final_options=OBJ
+P13DSH1   LZ390 final_options=NOOBJHEX
+P13DSH1   LZ390 final_options=PC
+P13DSH1   LZ390 final_options=PCOPT
+P13DSH1   LZ390 final_options=NOPDSMEM8
+P13DSH1   LZ390 final_options=NOPRINTALL
+P13DSH1   LZ390 final_options=PROLOG
+P13DSH1   LZ390 final_options=PROTECT
+P13DSH1   LZ390 final_options=R64
+P13DSH1   LZ390 final_options=NOREFORMAT
+P13DSH1   LZ390 final_options=NOREGS
+P13DSH1   LZ390 final_options=RMODE24
+P13DSH1   LZ390 final_options=NORMODE31
+P13DSH1   LZ390 final_options=STATS
+P13DSH1   LZ390 final_options=NOTEST
+P13DSH1   LZ390 final_options=THREAD
+P13DSH1   LZ390 final_options=NOTIME
+P13DSH1   LZ390 final_options=NOTIMING
+P13DSH1   LZ390 final_options=NOTRACE
+P13DSH1   LZ390 final_options=NOTRACEA
+P13DSH1   LZ390 final_options=NOTRACEALL
+P13DSH1   LZ390 final_options=NOTRACEC
+P13DSH1   LZ390 final_options=NOTRACEG
+P13DSH1   LZ390 final_options=NOTRACEI
+P13DSH1   LZ390 final_options=NOTRACEL
+P13DSH1   LZ390 final_options=NOTRACEM
+P13DSH1   LZ390 final_options=NOTRACEP
+P13DSH1   LZ390 final_options=NOTRACEQ
+P13DSH1   LZ390 final_options=NOTRACES
+P13DSH1   LZ390 final_options=NOTRACET
+P13DSH1   LZ390 final_options=NOTRACEV
+P13DSH1   LZ390 final_options=TRAP
+P13DSH1   LZ390 final_options=NOTRUNC
+P13DSH1   LZ390 final_options=NOTS
+P13DSH1   LZ390 final_options=VCB
+P13DSH1   LZ390 final_options=WARN
+P13DSH1   LZ390 final_options=XREF
+P13DSH1   LZ390 final_options=ZSTRMAC
+P13DSH1   LZ390 final_options=CHKMAC=0
+P13DSH1   LZ390 final_options=CHKSRC=1
+P13DSH1   LZ390 final_options=ERR=100
+P13DSH1   LZ390 final_options=MAXCALL=50
+P13DSH1   LZ390 final_options=MAXDISPLAY=80
+P13DSH1   LZ390 final_options=MAXESD=1000
+P13DSH1   LZ390 final_options=MAXFILE=1000
+P13DSH1   LZ390 final_options=MAXGBL=100000
+P13DSH1   LZ390 final_options=MAXHEIGHT=600
+P13DSH1   LZ390 final_options=MAXLCL=100000
+P13DSH1   LZ390 final_options=MAXLEN=80
+P13DSH1   LZ390 final_options=MAXLINE=200000
+P13DSH1   LZ390 final_options=MAXLOG=1000000
+P13DSH1   LZ390 final_options=MAXPARM=10000
+P13DSH1   LZ390 final_options=MAXPASS=2
+P13DSH1   LZ390 final_options=MAXPC=50000
+P13DSH1   LZ390 final_options=MAXQUE=1000
+P13DSH1   LZ390 final_options=MAXRLD=10000
+P13DSH1   LZ390 final_options=MAXSIZE=52428800
+P13DSH1   LZ390 final_options=MAXSYM=50000
+P13DSH1   LZ390 final_options=MAXWARN=4
+P13DSH1   LZ390 final_options=MAXWIDTH=800
+P13DSH1   LZ390 final_options=MEM=1
+P13DSH1   LZ390 final_options=MINHEIGHT=150
+P13DSH1   LZ390 final_options=MINWIDTH=150
+P13DSH1   LZ390 final_options=MNOTE=0
+P13DSH1   LZ390 final_options=PARM=
+P13DSH1   LZ390 final_options=PROFILE=
+P13DSH1   LZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P13DSH1.STA
+P13DSH1   LZ390 final_options=SYSPARM=
+P13DSH1   LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\rtmfacc.E
+P13DSH1   LZ390 final_options=RR
+P13DSH1   LZ390 final_options=TESTDD=
+P13DSH1   LZ390 final_options=TIME=15
+P13DSH1   LZ390 final_options=TRACE=
+P13DSH1   LZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+P13DSH1   LZ390 final_options=Z390BROWSER=cmd.exe /c Start
+P13DSH1   LZ390 final_options=Z390COMMAND=cmd.exe
+P13DSH1   LZ390 final_options=Z390EDITOR=notepad.exe
+P13DSH1   LZ390 final_options=INSTALL=
+P13DSH1   LZ390 final_options=IPL=
+P13DSH1   LZ390 final_options=LOG=
+P13DSH1   LZ390 final_options=SYS390=mfacc\+linklib
+P13DSH1   LZ390 final_options=SYSBAL=mfacc\
+P13DSH1   LZ390 final_options=SYSCPY=mfacc\
+P13DSH1   LZ390 final_options=SYSDAT=mfacc\
+P13DSH1   LZ390 final_options=SYSERR=mfacc\
+P13DSH1   LZ390 final_options=SYSLOG=mfacc\
+P13DSH1   LZ390 final_options=SYSLST=mfacc\
+P13DSH1   LZ390 final_options=SYSMAC=mfacc\
+P13DSH1   LZ390 final_options=SYSMLC=mfacc\
+P13DSH1   LZ390 final_options=SYSPCH=mfacc\
+P13DSH1   LZ390 final_options=SYSPRN=mfacc\
+P13DSH1   LZ390 final_options=SYSOBJ=mfacc\
+P13DSH1   LZ390 final_options=SYSOPT=mfacc\
+P13DSH1   LZ390 final_options=SYSTRC=mfacc\
+P13DSH1   LZ390 Stats total obj files = 1
+P13DSH1   LZ390 Stats total esds      = 1
+P13DSH1   LZ390 Stats total csects    = 1
+P13DSH1   LZ390 Stats total entries   = 0
+P13DSH1   LZ390 Stats missing wxtrn's = 0
+P13DSH1   LZ390 Stats Keys            = 1
+P13DSH1   LZ390 Stats Key searches    = 2
+P13DSH1   LZ390 Stats Key avg comps   = 0
+P13DSH1   LZ390 Stats Key max comps   = 1
+P13DSH1   LZ390 Stats total obj byte  = 524
+P13DSH1   LZ390 Stats total obj rlds  = 4
+P13DSH1   LZ390 total errors          = 0
+P13DSH1   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=250
+P13DSH1   EZ390 START
+P13DSH1   EZ390 Copyright 2011 Automated Software Tools Corporation
+P13DSH1   EZ390 z390 is licensed under GNU General Public License
+P13DSH1   EZ390 program = mfacc\P13DSH1.390
+P13DSH1   EZ390 options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+P13DSH1   EZ390 final_options=ALIGN
+P13DSH1   EZ390 final_options=NOALLOW
+P13DSH1   EZ390 final_options=NOAMODE24
+P13DSH1   EZ390 final_options=AMODE31
+P13DSH1   EZ390 final_options=NOASCII
+P13DSH1   EZ390 final_options=ASM
+P13DSH1   EZ390 final_options=NOASSIST
+P13DSH1   EZ390 final_options=AUTOLINK
+P13DSH1   EZ390 final_options=BAL
+P13DSH1   EZ390 final_options=NOBS2000
+P13DSH1   EZ390 final_options=EDF
+P13DSH1   EZ390 final_options=NOCICS
+P13DSH1   EZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+P13DSH1   EZ390 final_options=COMMENT
+P13DSH1   EZ390 final_options=CON
+P13DSH1   EZ390 final_options=NODUMP
+P13DSH1   EZ390 final_options=EPILOG
+P13DSH1   EZ390 final_options=NOERRSUM
+P13DSH1   EZ390 final_options=EXTEND
+P13DSH1   EZ390 final_options=FLOAT(DECIMAL)
+P13DSH1   EZ390 final_options=NOGUAM
+P13DSH1   EZ390 final_options=INIT
+P13DSH1   EZ390 final_options=LIST
+P13DSH1   EZ390 final_options=LISTCALL
+P13DSH1   EZ390 final_options=LISTUSE
+P13DSH1   EZ390 final_options=LOADHIGH
+P13DSH1   EZ390 final_options=NOMCALL
+P13DSH1   EZ390 final_options=NOMOD
+P13DSH1   EZ390 final_options=OBJ
+P13DSH1   EZ390 final_options=NOOBJHEX
+P13DSH1   EZ390 final_options=PC
+P13DSH1   EZ390 final_options=PCOPT
+P13DSH1   EZ390 final_options=NOPDSMEM8
+P13DSH1   EZ390 final_options=NOPRINTALL
+P13DSH1   EZ390 final_options=PROLOG
+P13DSH1   EZ390 final_options=PROTECT
+P13DSH1   EZ390 final_options=R64
+P13DSH1   EZ390 final_options=NOREFORMAT
+P13DSH1   EZ390 final_options=NOREGS
+P13DSH1   EZ390 final_options=RMODE24
+P13DSH1   EZ390 final_options=NORMODE31
+P13DSH1   EZ390 final_options=STATS
+P13DSH1   EZ390 final_options=NOTEST
+P13DSH1   EZ390 final_options=THREAD
+P13DSH1   EZ390 final_options=NOTIME
+P13DSH1   EZ390 final_options=NOTIMING
+P13DSH1   EZ390 final_options=NOTRACE
+P13DSH1   EZ390 final_options=NOTRACEA
+P13DSH1   EZ390 final_options=NOTRACEALL
+P13DSH1   EZ390 final_options=NOTRACEC
+P13DSH1   EZ390 final_options=NOTRACEG
+P13DSH1   EZ390 final_options=NOTRACEI
+P13DSH1   EZ390 final_options=NOTRACEL
+P13DSH1   EZ390 final_options=NOTRACEM
+P13DSH1   EZ390 final_options=NOTRACEP
+P13DSH1   EZ390 final_options=NOTRACEQ
+P13DSH1   EZ390 final_options=NOTRACES
+P13DSH1   EZ390 final_options=NOTRACET
+P13DSH1   EZ390 final_options=NOTRACEV
+P13DSH1   EZ390 final_options=TRAP
+P13DSH1   EZ390 final_options=NOTRUNC
+P13DSH1   EZ390 final_options=NOTS
+P13DSH1   EZ390 final_options=VCB
+P13DSH1   EZ390 final_options=WARN
+P13DSH1   EZ390 final_options=XREF
+P13DSH1   EZ390 final_options=ZSTRMAC
+P13DSH1   EZ390 final_options=CHKMAC=0
+P13DSH1   EZ390 final_options=CHKSRC=1
+P13DSH1   EZ390 final_options=ERR=100
+P13DSH1   EZ390 final_options=MAXCALL=50
+P13DSH1   EZ390 final_options=MAXDISPLAY=80
+P13DSH1   EZ390 final_options=MAXESD=1000
+P13DSH1   EZ390 final_options=MAXFILE=1000
+P13DSH1   EZ390 final_options=MAXGBL=100000
+P13DSH1   EZ390 final_options=MAXHEIGHT=600
+P13DSH1   EZ390 final_options=MAXLCL=100000
+P13DSH1   EZ390 final_options=MAXLEN=80
+P13DSH1   EZ390 final_options=MAXLINE=200000
+P13DSH1   EZ390 final_options=MAXLOG=1000000
+P13DSH1   EZ390 final_options=MAXPARM=10000
+P13DSH1   EZ390 final_options=MAXPASS=2
+P13DSH1   EZ390 final_options=MAXPC=50000
+P13DSH1   EZ390 final_options=MAXQUE=1000
+P13DSH1   EZ390 final_options=MAXRLD=10000
+P13DSH1   EZ390 final_options=MAXSIZE=52428800
+P13DSH1   EZ390 final_options=MAXSYM=50000
+P13DSH1   EZ390 final_options=MAXWARN=4
+P13DSH1   EZ390 final_options=MAXWIDTH=800
+P13DSH1   EZ390 final_options=MEM=1
+P13DSH1   EZ390 final_options=MINHEIGHT=150
+P13DSH1   EZ390 final_options=MINWIDTH=150
+P13DSH1   EZ390 final_options=MNOTE=0
+P13DSH1   EZ390 final_options=PARM=
+P13DSH1   EZ390 final_options=PROFILE=
+P13DSH1   EZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P13DSH1.STA
+P13DSH1   EZ390 final_options=SYSPARM=
+P13DSH1   EZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\rtmfacc.E
+P13DSH1   EZ390 final_options=RR
+P13DSH1   EZ390 final_options=TESTDD=
+P13DSH1   EZ390 final_options=TIME=15
+P13DSH1   EZ390 final_options=TRACE=
+P13DSH1   EZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+P13DSH1   EZ390 final_options=Z390BROWSER=cmd.exe /c Start
+P13DSH1   EZ390 final_options=Z390COMMAND=cmd.exe
+P13DSH1   EZ390 final_options=Z390EDITOR=notepad.exe
+P13DSH1   EZ390 final_options=INSTALL=
+P13DSH1   EZ390 final_options=IPL=
+P13DSH1   EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\mfacc\P13DSH1.LOG
+P13DSH1   EZ390 final_options=SYS390=mfacc\+linklib
+P13DSH1   EZ390 final_options=SYSBAL=mfacc\
+P13DSH1   EZ390 final_options=SYSCPY=mfacc\
+P13DSH1   EZ390 final_options=SYSDAT=mfacc\
+P13DSH1   EZ390 final_options=SYSERR=mfacc\
+P13DSH1   EZ390 final_options=SYSLOG=mfacc\
+P13DSH1   EZ390 final_options=SYSLST=mfacc\
+P13DSH1   EZ390 final_options=SYSMAC=mfacc\
+P13DSH1   EZ390 final_options=SYSMLC=mfacc\
+P13DSH1   EZ390 final_options=SYSPCH=mfacc\
+P13DSH1   EZ390 final_options=SYSPRN=mfacc\
+P13DSH1   EZ390 final_options=SYSOBJ=mfacc\
+P13DSH1   EZ390 final_options=SYSOPT=mfacc\
+P13DSH1   EZ390 final_options=SYSTRC=mfacc\
+P13DSH1   EZ390 TCPIO operations      = 0
+P13DSH1   EZ390 DCB operations        = 0
+P13DSH1   EZ390 VSAM operations       = 0
+P13DSH1   EZ390 Keys                  = 2467
+P13DSH1   EZ390 Key searches          = 2
+P13DSH1   EZ390 Key avg comps         = 1
+P13DSH1   EZ390 Key max comps         = 1
+P13DSH1   EZ390 total errors          = 0
+P13DSH1   EZ390 ENDED   RC= 0 MEM(MB)= MB IO=169 INS=42

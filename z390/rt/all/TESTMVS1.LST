@@ -1,0 +1,21 @@
+Comparing files MVS\TEST\TESTMVS1.LST and RT\MVS\TEST\SAVE\TESTMVS1.LST
+***** MVS\TEST\TESTMVS1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = bal notiming stats sysmac(mvs\maclib+mac) 
+  objhex systerm(mvs\test\rtmvs)
+LZ390I program = mvs\test\TESTMVS1.OBJ
+***** RT\MVS\TEST\SAVE\TESTMVS1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats 
+  sysmac(mvs\maclib+mac) objhex systerm(mvs\test\rtmvs)
+LZ390I program = mvs\test\TESTMVS1.OBJ
+*****
+
+***** MVS\TEST\TESTMVS1.LST
+LZ390I total errors         = 0
+TESTMVS1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=539
+***** RT\MVS\TEST\SAVE\TESTMVS1.LST
+LZ390I total errors         = 0
+TESTMVS1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=537
+*****
+

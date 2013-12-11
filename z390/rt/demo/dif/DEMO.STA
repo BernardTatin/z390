@@ -1,0 +1,135 @@
+Comparing files DEMO\DEMO.STA and RT\DEMO\SAVE\DEMO.STA
+***** DEMO\DEMO.STA
+DEMO      MZ390 program = demo\DEMO.MLC
+DEMO      MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) notiming stats systerm(demo\rtdemo)
+DEMO      MZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      MZ390 program = demo\DEMO.MLC
+DEMO      MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) notiming stats systerm(demo\rtdemo)
+DEMO      MZ390 final_options=ALIGN
+*****
+
+***** DEMO\DEMO.STA
+DEMO      MZ390 final_options=PROFILE=
+DEMO      MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMO.STA
+DEMO      MZ390 final_options=SYSPARM=
+DEMO      MZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+DEMO      MZ390 final_options=TESTDD=
+DEMO      MZ390 final_options=TIME=15
+DEMO      MZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      MZ390 final_options=PROFILE=
+DEMO      MZ390 final_options=STATS=W:\work\z390\demo\DEMO.STA
+DEMO      MZ390 final_options=SYSPARM=
+DEMO      MZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+DEMO      MZ390 final_options=TESTDD=
+DEMO      MZ390 final_options=TIME=60
+DEMO      MZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMO.STA
+DEMO      MZ390 final_options=SYSBAL=demo\
+DEMO      MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+DEMO      MZ390 final_options=SYSDAT=demo\
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      MZ390 final_options=SYSBAL=demo\
+DEMO      MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+DEMO      MZ390 final_options=SYSDAT=demo\
+*****
+
+***** DEMO\DEMO.STA
+DEMO      MZ390 final_options=SYSLST=demo\
+DEMO      MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+DEMO      MZ390 final_options=SYSMLC=demo\
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      MZ390 final_options=SYSLST=demo\
+DEMO      MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+DEMO      MZ390 final_options=SYSMLC=demo\
+*****
+
+***** DEMO\DEMO.STA
+DEMO      MZ390 total pcode exec opt  = 0
+DEMO      MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMO.MLC
+DEMO      MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+DEMO      MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+DEMO      MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+DEMO      MZ390 total mnote warnings  = 0
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      MZ390 total pcode exec opt  = 0
+DEMO      MZ390 FID=  1 ERR= 0 W:\work\z390\demo\DEMO.MLC
+DEMO      MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+DEMO      MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+DEMO      MZ390 FID=  4 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+DEMO      MZ390 total mnote warnings  = 0
+*****
+
+***** DEMO\DEMO.STA
+DEMO      LZ390 z390 is licensed under GNU General Public License
+DEMO      LZ390 options = notiming stats systerm(demo\rtdemo)
+DEMO      LZ390 program = demo\DEMO.OBJ
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      LZ390 z390 is licensed under GNU General Public License
+DEMO      LZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+DEMO      LZ390 program = demo\DEMO.OBJ
+*****
+
+***** DEMO\DEMO.STA
+DEMO      LZ390 final_options=PROFILE=
+DEMO      LZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMO.STA
+DEMO      LZ390 final_options=SYSPARM=
+DEMO      LZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+DEMO      LZ390 final_options=TESTDD=
+DEMO      LZ390 final_options=TIME=15
+DEMO      LZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      LZ390 final_options=PROFILE=
+DEMO      LZ390 final_options=STATS=W:\work\z390\demo\DEMO.STA
+DEMO      LZ390 final_options=SYSPARM=
+DEMO      LZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+DEMO      LZ390 final_options=TESTDD=
+DEMO      LZ390 final_options=TIME=60
+DEMO      LZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMO.STA
+DEMO      EZ390 program = demo\DEMO.390
+DEMO      EZ390 options = notiming stats systerm(demo\rtdemo)
+DEMO      EZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      EZ390 program = demo\DEMO.390
+DEMO      EZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+DEMO      EZ390 final_options=ALIGN
+*****
+
+***** DEMO\DEMO.STA
+DEMO      EZ390 final_options=PROFILE=
+DEMO      EZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMO.STA
+DEMO      EZ390 final_options=SYSPARM=
+DEMO      EZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+DEMO      EZ390 final_options=TESTDD=
+DEMO      EZ390 final_options=TIME=15
+DEMO      EZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      EZ390 final_options=PROFILE=
+DEMO      EZ390 final_options=STATS=W:\work\z390\demo\DEMO.STA
+DEMO      EZ390 final_options=SYSPARM=
+DEMO      EZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+DEMO      EZ390 final_options=TESTDD=
+DEMO      EZ390 final_options=TIME=60
+DEMO      EZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMO.STA
+DEMO      EZ390 final_options=IPL=
+DEMO      EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMO.LOG
+DEMO      EZ390 final_options=SYS390=demo\+linklib
+***** RT\DEMO\SAVE\DEMO.STA
+DEMO      EZ390 final_options=IPL=
+DEMO      EZ390 final_options=LOG=W:\work\z390\demo\DEMO.LOG
+DEMO      EZ390 final_options=SYS390=demo\+linklib
+*****
+

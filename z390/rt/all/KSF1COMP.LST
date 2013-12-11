@@ -1,0 +1,23 @@
+Comparing files VSAM\TEST\KSF1COMP.LST and RT\VSAM\TEST\SAVE\KSF1COMP.LST
+***** VSAM\TEST\KSF1COMP.LST
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+LZ390I program = C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1COMP.OBJ
+LZ390I ESD=KSF1COMP LOC=00000000 LEN=00000398
+LZ390I INCLUDE = C:\Program Files (x86)\Automated Software Tools\z390\vsam\test\KSF1COMP.OBJ
+LZ390I RLD LOC=00000250 FLD=00000200 EXT=00000000
+***** RT\VSAM\TEST\SAVE\KSF1COMP.LST
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+LZ390I program = W:\work\z390\vsam\test\KSF1COMP.OBJ
+LZ390I ESD=KSF1COMP LOC=00000000 LEN=00000398
+LZ390I INCLUDE = W:\work\z390\vsam\test\KSF1COMP.OBJ
+LZ390I RLD LOC=00000250 FLD=00000200 EXT=00000000
+*****
+
+***** VSAM\TEST\KSF1COMP.LST
+LZ390I total errors         = 0
+KSF1COMP  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=307
+***** RT\VSAM\TEST\SAVE\KSF1COMP.LST
+LZ390I total errors         = 0
+KSF1COMP  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=305
+*****
+

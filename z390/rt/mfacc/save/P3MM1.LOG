@@ -1,0 +1,13 @@
+P3MM1     EZ390 START
+EZ390I Copyright 2011 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = mfacc\P3MM1.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+ZMFACC Solution for problem P3MM1 by Melvyn Maltz using RUNSYS=390
+SNAP DUMP ID=1 TEXT=Input Area
+ 000FFD64 *FFA193BC 120A                      * *?~l¯.?          *
+SNAP DUMP ID=2 TEXT=Output Area
+ 000FFD6C *C6C6C1F1 F9F3C2C3 F1F2F0C1         * *FFA193BC120A    *
+EZ390I total errors         = 0
+P3MM1     EZ390 ENDED   RC= 0 MEM(MB)= MB IO=166 INS=31

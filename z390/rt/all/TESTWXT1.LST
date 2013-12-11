@@ -1,0 +1,19 @@
+Comparing files RT\TEST\TESTWXT1.LST and RT\TEST\SAVE\TESTWXT1.LST
+***** RT\TEST\TESTWXT1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTWXT1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTWXT1.LST
+LZ390I total errors         = 0
+TESTWXT1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=315
+***** RT\TEST\SAVE\TESTWXT1.LST
+LZ390I total errors         = 0
+TESTWXT1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=313
+*****
+

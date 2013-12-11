@@ -1,0 +1,13 @@
+Comparing files MFACC\P8MM1.PRN and RT\MFACC\SAVE\P8MM1.PRN
+***** MFACC\P8MM1.PRN
+AZ390I program = mfacc\P8MM1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P8MM1.PRN
+AZ390I program = mfacc\P8MM1
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+

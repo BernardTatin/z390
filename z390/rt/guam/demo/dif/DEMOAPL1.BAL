@@ -1,0 +1,61 @@
+Comparing files GUAM\DEMO\DEMOAPL1.BAL and RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+***** GUAM\DEMO\DEMOAPL1.BAL
+*********************************************************************
+*MCALL #=     1 LV= 1 DEMOAPL1 SUBENTRY 
+DEMOAPL1 CSECT 
+         STM   14,12,12(13)
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+*********************************************************************
+*MCALL #=     1 LV= 1 DEMOAPL1 SUBENTRY
+DEMOAPL1    CSECT
+         STM   14,12,12(13)
+*****
+
+***** GUAM\DEMO\DEMOAPL1.BAL
+*MEXIT #=     5 LV= 1 TGET
+*MCALL #=     6 LV= 1          SUBEXIT 
+         LA    15,0
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+*MEXIT #=     5 LV= 1 TGET
+*MCALL #=     6 LV= 1          SUBEXIT
+         LA    15,0
+*****
+
+***** GUAM\DEMO\DEMOAPL1.BAL
+*MCALL #=     8 LV= 1 STREAM   TN3270 ESC,WRT_EW,WCC_KD
+STREAM   EQU   *
+         DC    AL1(ESC,WRT_EW,WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+*MCALL #=     8 LV= 1 STREAM   TN3270 ESC,WRT_EW,WCC_KD
+STREAM       EQU   *
+         DC    AL1(ESC,WRT_EW,WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOAPL1.BAL
+*MCALL #=   284 LV= 1 GREEN    GUAM  COLOR,GREEN
+GREEN    DS    0H
+         DC    AL1(0,0,255,0) RGB GREEN COLOR
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+*MCALL #=   284 LV= 1 GREEN    GUAM  COLOR,GREEN
+GREEN       DS    0H
+         DC    AL1(0,0,255,0) RGB GREEN COLOR
+*****
+
+***** GUAM\DEMO\DEMOAPL1.BAL
+*MCALL #=   285 LV= 1 BLACK    GUAM  COLOR,BLACK
+BLACK    DS    0H
+         DC    AL1(0,0,0,0) RGB BLACK COLOR
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+*MCALL #=   285 LV= 1 BLACK    GUAM  COLOR,BLACK
+BLACK       DS    0H
+         DC    AL1(0,0,0,0) RGB BLACK COLOR
+*****
+
+***** GUAM\DEMO\DEMOAPL1.BAL
+*MEXIT #=   286 LV= 1 GUAM
+         END 
+***** RT\GUAM\DEMO\SAVE\DEMOAPL1.BAL
+*MEXIT #=   286 LV= 1 GUAM
+         END
+*****
+

@@ -1,0 +1,38 @@
+Z390I V1.5.06
+Copyright 2011 Automated Software Tools Corporation
+z390 is licensed under GNU General Public License
+Log file = C:\Downloads\z390\z390\z390_2013_1211_202625.LOG
+Enter command or help
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+*** 12/11/13 20:26:29 CMD task started
+C:\Downloads\z390\z390>CD \Downloads\z390\z390\
+C:\Downloads\z390\z390>IVP
+C:\Downloads\z390\z390>rem run z390 installation  verification program iz390.class 
+C:\Downloads\z390\z390>ECHO OFF 
+IVP OS   version = Windows XP
+IVP J2SE version = 1.7.0_03
+IVP z390 version = V1.5.06
+IVP RT optional  zip not installed
+IVP MVS optional  zip not installed
+IVP see warnings above
+IVP exiting with RC = 4
+C:\Downloads\z390\z390> exit
+*** 12/11/13 20:26:30 CMD task ended TOT SEC=0 TOT LOG IO=14
+SZ390E error 71 previous command execution ended with rc =4
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+*** 12/11/13 20:26:51 CMD task started
+C:\Downloads\z390\z390>CD \Downloads\z390\z390\
+C:\Downloads\z390\z390>IVP
+C:\Downloads\z390\z390>rem run z390 installation  verification program iz390.class 
+C:\Downloads\z390\z390>ECHO OFF 
+IVP OS   version = Windows XP
+IVP J2SE version = 1.7.0_03
+IVP z390 version = V1.5.06
+IVP z390 install = V1.5.06
+IVP MVS  install = V1.5.06
+IVP exiting with RC = 0
+C:\Downloads\z390\z390> exit
+*** 12/11/13 20:26:51 CMD task ended TOT SEC=0 TOT LOG IO=13
+Z390I total errors = 1

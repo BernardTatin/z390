@@ -1,0 +1,117 @@
+Comparing files GUAM\DEMO\DEMOGUI4.PRN and RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+***** GUAM\DEMO\DEMOGUI4.PRN
+DEMOGUI4  MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+DEMOGUI4  MZ390 START
+AZ390I Copyright 2010 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+AZ390I program = guam\demo\DEMOGUI4
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+AZ390I program = guam\demo\DEMOGUI4
+AZ390I options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+000000                                      (1/21)21 *********************************************************************
+000000                                      (1/22)22 DEMOGUI4 SUBENTRY 
+000000                                      (2/77)23+DEMOGUI4 CSECT 
+000000 90ECD00C                            (2/167)24+         STM   14,12,12(13)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+000000                                      (1/21)21 *********************************************************************
+000000                                      (1/22)22 DEMOGUI4 SUBENTRY
+000000                                      (2/77)23+DEMOGUI4    CSECT
+000000 90ECD00C                            (2/167)24+         STM   14,12,12(13)
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+0000F6                  000000F6            (1/48)94 EXIT     EQU   *
+0000F6                                      (1/49)95          SUBEXIT 
+0000F6 41F00000                             (7/33)96+         LA    15,0
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+0000F6                  000000F6            (1/48)94 EXIT     EQU   *
+0000F6                                      (1/49)95          SUBEXIT
+0000F6 41F00000                             (7/33)96+         LA    15,0
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+00016C                                     (1/52)104 MSG1     TN3270 ESC,WRT_EW,WCC_KD,(SBA,2,10),(SF,ATT_PA)
+00016C                  0000016C           (8/37)106+MSG1     EQU   *
+00016C 27F5C3                              (8/58)107+         DC    AL1(ESC,WRT_EW,WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+00016C                                     (1/52)104 MSG1     TN3270 ESC,WRT_EW,WCC_KD,(SBA,2,10),(SF,ATT_PA)
+00016C                  0000016C           (8/37)106+MSG1       EQU   *
+00016C 27F5C3                              (8/58)107+         DC    AL1(ESC,WRT_EW,WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+000196                                     (1/55)113 MSG2     TN3270 WCC_KD
+000196                  00000196           (8/37)114+MSG2     EQU   *
+000196 C3                                  (8/88)115+         DC    AL1(WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+000196                                     (1/55)113 MSG2     TN3270 WCC_KD
+000196                  00000196           (8/37)114+MSG2       EQU   *
+000196 C3                                  (8/88)115+         DC    AL1(WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+0001B3                                     (1/60)132 MSG3     TN3270 WCC_KD,(SBA,6,10),(SF,ATT_PA)
+0001B3                  000001B3           (8/37)133+MSG3     EQU   *
+0001B3 C3                                  (8/58)134+         DC    AL1(WCC_KD)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+0001B3                                     (1/60)132 MSG3     TN3270 WCC_KD,(SBA,6,10),(SF,ATT_PA)
+0001B3                  000001B3           (8/37)133+MSG3       EQU   *
+0001B3 C3                                  (8/58)134+         DC    AL1(WCC_KD)
+*****
+
+***** GUAM\DEMO\DEMOGUI4.PRN
+0001E3                  00000601          (3/352)281+GUI_SOUND_PLAY         EQU X'0601' GUI SOUND,PLAY,wav_file
+0001E3                                     (1/67)283          EQUREGS 
+0001E3                  00000000           (9/41)284+R0     EQU 0
+0001E3                  00000001           (9/41)285+R1     EQU 1
+0001E3                  00000002           (9/41)286+R2     EQU 2
+0001E3                  00000003           (9/41)287+R3     EQU 3
+0001E3                  00000004           (9/41)288+R4     EQU 4
+0001E3                  00000005           (9/41)289+R5     EQU 5
+0001E3                  00000006           (9/41)290+R6     EQU 6
+0001E3                  00000007           (9/41)291+R7     EQU 7
+0001E3                  00000008           (9/41)292+R8     EQU 8
+0001E3                  00000009           (9/41)293+R9     EQU 9
+0001E3                  0000000A           (9/41)294+R10    EQU 10
+0001E3                  0000000B           (9/41)295+R11    EQU 11
+0001E3                  0000000C           (9/41)296+R12    EQU 12
+0001E3                  0000000D           (9/41)297+R13    EQU 13
+0001E3                  0000000E           (9/41)298+R14    EQU 14
+0001E3                  0000000F           (9/41)299+R15    EQU 15
+0001E3                                     (1/68)301          END 
+0001E8 00000000         =A(*-*)
+***** RT\GUAM\DEMO\SAVE\DEMOGUI4.PRN
+0001E3                  00000601          (3/352)281+GUI_SOUND_PLAY         EQU X'0601' GUI SOUND,PLAY,wav_file
+0001E3                                     (1/67)283          EQUREGS
+0001E3                  00000000           (9/41)284+R0 EQU 0
+0001E3                  00000001           (9/41)285+R1 EQU 1
+0001E3                  00000002           (9/41)286+R2 EQU 2
+0001E3                  00000003           (9/41)287+R3 EQU 3
+0001E3                  00000004           (9/41)288+R4 EQU 4
+0001E3                  00000005           (9/41)289+R5 EQU 5
+0001E3                  00000006           (9/41)290+R6 EQU 6
+0001E3                  00000007           (9/41)291+R7 EQU 7
+0001E3                  00000008           (9/41)292+R8 EQU 8
+0001E3                  00000009           (9/41)293+R9 EQU 9
+0001E3                  0000000A           (9/41)294+R10 EQU 10
+0001E3                  0000000B           (9/41)295+R11 EQU 11
+0001E3                  0000000C           (9/41)296+R12 EQU 12
+0001E3                  0000000D           (9/41)297+R13 EQU 13
+0001E3                  0000000E           (9/41)298+R14 EQU 14
+0001E3                  0000000F           (9/41)299+R15 EQU 15
+0001E3                                     (1/68)301          END
+0001E8 00000000         =A(*-*)
+*****
+

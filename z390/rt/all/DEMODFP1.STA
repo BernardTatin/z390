@@ -1,0 +1,137 @@
+Comparing files DEMO\DEMODFP1.STA and RT\DEMO\SAVE\DEMODFP1.STA
+***** DEMO\DEMODFP1.STA
+DEMODFP1  MZ390 program = demo\DEMODFP1.MLC
+DEMODFP1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) notiming stats systerm(demo\rtdemo)
+DEMODFP1  MZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  MZ390 program = demo\DEMODFP1.MLC
+DEMODFP1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) notiming stats systerm(demo\rtdemo)
+DEMODFP1  MZ390 final_options=ALIGN
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=PROFILE=
+DEMODFP1  MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=SYSPARM=
+DEMODFP1  MZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+DEMODFP1  MZ390 final_options=TESTDD=
+DEMODFP1  MZ390 final_options=TIME=15
+DEMODFP1  MZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=PROFILE=
+DEMODFP1  MZ390 final_options=STATS=W:\work\z390\demo\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=SYSPARM=
+DEMODFP1  MZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+DEMODFP1  MZ390 final_options=TESTDD=
+DEMODFP1  MZ390 final_options=TIME=60
+DEMODFP1  MZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=SYSBAL=demo\
+DEMODFP1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+DEMODFP1  MZ390 final_options=SYSDAT=demo\
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=SYSBAL=demo\
+DEMODFP1  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+DEMODFP1  MZ390 final_options=SYSDAT=demo\
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=SYSLST=demo\
+DEMODFP1  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+DEMODFP1  MZ390 final_options=SYSMLC=demo\
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  MZ390 final_options=SYSLST=demo\
+DEMODFP1  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+DEMODFP1  MZ390 final_options=SYSMLC=demo\
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  MZ390 total pcode exec opt  = 0
+DEMODFP1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMODFP1.MLC
+DEMODFP1  MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+DEMODFP1  MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+DEMODFP1  MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\CTD.MAC
+DEMODFP1  MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+DEMODFP1  MZ390 total mnote warnings  = 0
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  MZ390 total pcode exec opt  = 0
+DEMODFP1  MZ390 FID=  1 ERR= 0 W:\work\z390\demo\DEMODFP1.MLC
+DEMODFP1  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+DEMODFP1  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\WTO.MAC
+DEMODFP1  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\CTD.MAC
+DEMODFP1  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+DEMODFP1  MZ390 total mnote warnings  = 0
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  LZ390 z390 is licensed under GNU General Public License
+DEMODFP1  LZ390 options = notiming stats systerm(demo\rtdemo)
+DEMODFP1  LZ390 program = demo\DEMODFP1.OBJ
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  LZ390 z390 is licensed under GNU General Public License
+DEMODFP1  LZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+DEMODFP1  LZ390 program = demo\DEMODFP1.OBJ
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  LZ390 final_options=PROFILE=
+DEMODFP1  LZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMODFP1.STA
+DEMODFP1  LZ390 final_options=SYSPARM=
+DEMODFP1  LZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+DEMODFP1  LZ390 final_options=TESTDD=
+DEMODFP1  LZ390 final_options=TIME=15
+DEMODFP1  LZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  LZ390 final_options=PROFILE=
+DEMODFP1  LZ390 final_options=STATS=W:\work\z390\demo\DEMODFP1.STA
+DEMODFP1  LZ390 final_options=SYSPARM=
+DEMODFP1  LZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+DEMODFP1  LZ390 final_options=TESTDD=
+DEMODFP1  LZ390 final_options=TIME=60
+DEMODFP1  LZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  EZ390 program = demo\DEMODFP1.390
+DEMODFP1  EZ390 options = notiming stats systerm(demo\rtdemo)
+DEMODFP1  EZ390 final_options=ALIGN
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  EZ390 program = demo\DEMODFP1.390
+DEMODFP1  EZ390 options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+DEMODFP1  EZ390 final_options=ALIGN
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  EZ390 final_options=PROFILE=
+DEMODFP1  EZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMODFP1.STA
+DEMODFP1  EZ390 final_options=SYSPARM=
+DEMODFP1  EZ390 final_options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\demo\rtdemo.ERR
+DEMODFP1  EZ390 final_options=TESTDD=
+DEMODFP1  EZ390 final_options=TIME=15
+DEMODFP1  EZ390 final_options=TRACE=
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  EZ390 final_options=PROFILE=
+DEMODFP1  EZ390 final_options=STATS=W:\work\z390\demo\DEMODFP1.STA
+DEMODFP1  EZ390 final_options=SYSPARM=
+DEMODFP1  EZ390 final_options=SYSTERM=W:\work\z390\demo\rtdemo.ERR
+DEMODFP1  EZ390 final_options=TESTDD=
+DEMODFP1  EZ390 final_options=TIME=60
+DEMODFP1  EZ390 final_options=TRACE=
+*****
+
+***** DEMO\DEMODFP1.STA
+DEMODFP1  EZ390 final_options=IPL=
+DEMODFP1  EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\demo\DEMODFP1.LOG
+DEMODFP1  EZ390 final_options=SYS390=demo\+linklib
+***** RT\DEMO\SAVE\DEMODFP1.STA
+DEMODFP1  EZ390 final_options=IPL=
+DEMODFP1  EZ390 final_options=LOG=W:\work\z390\demo\DEMODFP1.LOG
+DEMODFP1  EZ390 final_options=SYS390=demo\+linklib
+*****
+

@@ -1,0 +1,3 @@
+Comparing files LINKLIB\MISSING.TXT and RT\LINKLIB\SAVE\MISSING.TXT
+FC: no differences encountered
+

@@ -1,0 +1,20 @@
+Comparing files RT\TEST\TESTDCBF.LOG and RT\TEST\SAVE\TESTDCBF.LOG
+***** RT\TEST\TESTDCBF.LOG
+EZ390I program = rt\test\TESTDCBF.390
+EZ390I options = bal notiming stats systerm(rt\test\rttest)
+TESTDCBF COPY SYSUT1 FB FILE TO SYSUT2 FB USING GL/PL
+***** RT\TEST\SAVE\TESTDCBF.LOG
+EZ390I program = rt\test\TESTDCBF.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats 
+  systerm(rt\test\rttest)
+TESTDCBF COPY SYSUT1 FB FILE TO SYSUT2 FB USING GL/PL
+*****
+
+***** RT\TEST\TESTDCBF.LOG
+EZ390I total errors         = 0
+TESTDCBF  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=178 INS=93
+***** RT\TEST\SAVE\TESTDCBF.LOG
+EZ390I total errors         = 0
+TESTDCBF  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=175 INS=93
+*****
+

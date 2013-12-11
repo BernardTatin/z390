@@ -1,0 +1,13 @@
+Comparing files LINKLIB\DAT.PRN and RT\LINKLIB\SAVE\DAT.PRN
+***** LINKLIB\DAT.PRN
+AZ390I program = linklib\DAT
+AZ390I options = bal notiming sysmac(mac) syscpy(mac) stats 
+  systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\DAT.PRN
+AZ390I program = linklib\DAT
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

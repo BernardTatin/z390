@@ -1,0 +1,149 @@
+Comparing files RT\TEST\zstrmac1.STA and RT\TEST\SAVE\ZSTRMAC1.STA
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 program = rt\test\zstrmac1.MLC
+zstrmac1  MZ390 options = NOASM STATS NOTIMING 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 program = rt\test\zstrmac1.MLC
+zstrmac1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) NOASM STATS NOTIMING 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 final_options=PROFILE=
+zstrmac1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\zstrmac1.
+zstrmac1  MZ390 final_options=STA
+zstrmac1  MZ390 final_options=SYSPARM=
+zstrmac1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+zstrmac1  MZ390 final_options=ERR
+zstrmac1  MZ390 final_options=TESTDD=
+zstrmac1  MZ390 final_options=TIME=15
+zstrmac1  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 final_options=PROFILE=
+zstrmac1  MZ390 final_options=STATS=W:\work\z390\rt\test\zstrmac1.STA
+zstrmac1  MZ390 final_options=SYSPARM=
+zstrmac1  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+zstrmac1  MZ390 final_options=TESTDD=
+zstrmac1  MZ390 final_options=TIME=60
+zstrmac1  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 total pcode exec opt  = 18
+zstrmac1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\zstrmac1.MLC
+zstrmac1  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 total pcode exec opt  = 18
+zstrmac1  MZ390 FID=  1 ERR= 0 W:\work\z390\rt\test\zstrmac1.MLC
+zstrmac1  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 total mz390 errors    = 0
+zstrmac1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1281
+zstrmac1  MZ390 START
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 total mz390 errors    = 0
+zstrmac1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1279
+zstrmac1  MZ390 START
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 program = rt\test\zstrmac1.MLC
+zstrmac1  MZ390 options = NOASM STATS NOTIMING 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 program = rt\test\zstrmac1.MLC
+zstrmac1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) NOASM STATS NOTIMING 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 final_options=PROFILE=
+zstrmac1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\zstrmac1.
+zstrmac1  MZ390 final_options=STA
+zstrmac1  MZ390 final_options=SYSPARM=
+zstrmac1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+zstrmac1  MZ390 final_options=ERR
+zstrmac1  MZ390 final_options=TESTDD=
+zstrmac1  MZ390 final_options=TIME=15
+zstrmac1  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 final_options=PROFILE=
+zstrmac1  MZ390 final_options=STATS=W:\work\z390\rt\test\zstrmac1.STA
+zstrmac1  MZ390 final_options=SYSPARM=
+zstrmac1  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+zstrmac1  MZ390 final_options=TESTDD=
+zstrmac1  MZ390 final_options=TIME=60
+zstrmac1  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 total pcode exec opt  = 18
+zstrmac1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\zstrmac1.MLC
+zstrmac1  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 total pcode exec opt  = 18
+zstrmac1  MZ390 FID=  1 ERR= 0 W:\work\z390\rt\test\zstrmac1.MLC
+zstrmac1  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 total mz390 errors    = 0
+zstrmac1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1281
+zstrmac1  MZ390 START
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 total mz390 errors    = 0
+zstrmac1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1279
+zstrmac1  MZ390 START
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 program = rt\test\zstrmac1.MLC
+zstrmac1  MZ390 options = NOASM STATS NOTIMING 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 program = rt\test\zstrmac1.MLC
+zstrmac1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) NOASM STATS NOTIMING 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 final_options=PROFILE=
+zstrmac1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\zstrmac1.
+zstrmac1  MZ390 final_options=STA
+zstrmac1  MZ390 final_options=SYSPARM=
+zstrmac1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+zstrmac1  MZ390 final_options=ERR
+zstrmac1  MZ390 final_options=TESTDD=
+zstrmac1  MZ390 final_options=TIME=15
+zstrmac1  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 final_options=PROFILE=
+zstrmac1  MZ390 final_options=STATS=W:\work\z390\rt\test\zstrmac1.STA
+zstrmac1  MZ390 final_options=SYSPARM=
+zstrmac1  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+zstrmac1  MZ390 final_options=TESTDD=
+zstrmac1  MZ390 final_options=TIME=60
+zstrmac1  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 total pcode exec opt  = 19
+zstrmac1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\zstrmac1.MLC
+zstrmac1  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 total pcode exec opt  = 19
+zstrmac1  MZ390 FID=  1 ERR= 0 W:\work\z390\rt\test\zstrmac1.MLC
+zstrmac1  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\zstrmac1.STA
+zstrmac1  MZ390 total mz390 errors    = 0
+zstrmac1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=3991
+***** RT\TEST\SAVE\ZSTRMAC1.STA
+zstrmac1  MZ390 total mz390 errors    = 0
+zstrmac1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=3989
+*****
+

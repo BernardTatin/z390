@@ -1,0 +1,344 @@
+P8DSH1    MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = mfacc\P8DSH1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=00000310 TYPE=CST NAME=P8DSH1
+Assembler Listing
+000000                                        (1/1)1 * Calc extended precision PI using the series:
+000000                                        (1/2)2 * (PI**2)/12=1-1/4+1/9-1/16+1/25 etc.
+000000                                        (1/3)3 P8DSH1   ZMFACC CODE,START,NAME='Don Higgins'
+000000                                       (2/28)4+         MNOTE 4,'No RUNSYS= on first ZMFACC, 390 assumed.'
+000000                                       (2/42)5+         MNOTE 'ZRUNSYS=390'                          DSH2
+000000                                      (2/123)6+P8DSH1   CSECT 
+000000 90ECD00C                             (2/125)7+         STM   14,12,12(13)
+000004 45FF0068                             (2/126)8+         BAL   15,GO0001-P8DSH1(15)
+000008 0000000000000000                     (2/127)9+SV0001    DC    18F'0'
+000050 D7F8C4E2C8F14040                    (2/128)10+         DC    CL8'P8DSH1'
+000058 F0F161F0F261F0F5                    (2/129)11+         DC    CL8'01/02/05'
+000060 F2F24BF3F3404040                    (2/130)12+         DC    CL8'22.33'
+000068                                     (2/141)13+GO0001    DS    0H
+000068 50FD0008                            (2/142)14+         ST    15,8(13)
+00006C 50DF0004                            (2/143)15+         ST    13,4(15)
+000070 18DF                                (2/144)16+         LR    13,15
+000072                                     (2/145)17+      USING SV0001,13
+LISTUSE P8DSH1   ESD=0001 LOC=00000008 LEN=01000 REG=D OFF=00000 LAB=
+000072 A7150025                0000BC       (3/49)20+         BRAS  1,*+(WTO#0002_EOT-*+1)/2*2
+000076 00460000E9D4C6C1                     (3/50)21+         DC    AL2(WTO#0002_EOT-*,0),C'ZMFACC Solution for problem P8DSH1 by Don Higgins using RUNSYS=390'
+0000BC                  000000BC            (3/51)23+WTO#0002_EOT     EQU *
+0000BC 0A23                                 (3/52)24+         SVC   35
+0000BE                                     (2/274)28+         DS    0H
+0000BE 58E0D230                000238      (4/112)31+         L     14,=A(INPUTSTR)
+0000C2 58F0D234                00023C      (4/118)32+         L     15,=A(INPUTEND)
+0000C6 A5030001                            (4/126)33+         IILL  0,1                  RPI158
+0000CA A5028000                            (4/131)34+         IILH 0,32768               RPI158
+0000CE 4110D238                000240      (4/138)35+         LA    1,=CL60'Input Area'
+0000D2 0A33                                (4/146)36+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+0000D4                                       (1/4)40          MACRO
+0000D4                                       (1/5)41 &N       LX    &F1,&S2      LOAD EXTENDED FP REG PAIR FROM LONG FP
+0000D4                                       (1/6)42 &XREGS(1) SETA 1,1,0,0,4,5,0,0,8,9,0,0,12,13
+0000D4                                       (1/7)43          AIF   (&XREGS(&F1+1) NE 0).OK
+0000D4                                       (1/8)44          MNOTE 12,'LX INVALID EXTENDED REGISTER PAIR LOAD'
+0000D4                                       (1/9)45 .OK      ANOP
+0000D4                                      (1/10)46          LD    &F1,&S2
+0000D4                                      (1/11)47          LD    &F1+2,&S2+8
+0000D4                                      (1/12)48          MEND
+0000D4                                      (1/13)49          MACRO
+0000D4                                      (1/14)50 &N       STX   &F1,&S2      STORE EXTENDED FP REG PAIR TO LONG FP
+0000D4                                      (1/15)51 &XREGS(1) SETA 1,1,0,0,4,5,0,0,8,9,0,0,12,13
+0000D4                                      (1/16)52          AIF   (&XREGS(&F1+1) NE 0).OK
+0000D4                                      (1/17)53          MNOTE 12,'STX INVALID EXTENDED REGISTER PAIR STORE'
+0000D4                                      (1/18)54 .OK      ANOP
+0000D4                                      (1/19)55          STD   &F1,&S2
+0000D4                                      (1/20)56          STD   &F1+2,&S2+8
+0000D4                                      (1/21)57          MEND
+0000D4                                      (1/22)58          LX    F0,=LH'1'     F0=SUM
+0000D4 6800D200                000208       (1/10)59+         LD    F0,=LH'1'
+0000D8 6820D208                000210       (1/11)60+         LD    F0+2,=LH'1'+8
+0000DC                                      (1/23)62          LX    F1,=LH'1'     F1=N
+0000DC 6810D200                000208       (1/10)63+         LD    F1,=LH'1'
+0000E0 6830D208                000210       (1/11)64+         LD    F1+2,=LH'1'+8
+0000E4                                      (1/24)66          LX    F4,=LH'1'     F4=1
+0000E4 6840D200                000208       (1/10)67+         LD    F4,=LH'1'
+0000E8 6860D208                000210       (1/11)68+         LD    F4+2,=LH'1'+8
+0000EC                                      (1/25)70          LX    F5,=LH'1E-34' F5=ERROR LIMIT
+0000EC 6850D210                000218       (1/10)71+         LD    F5,=LH'1E-34'
+0000F0 6870D218                000220       (1/11)72+         LD    F5+2,=LH'1E-34'+8
+0000F4 41A00064                             (1/26)74          LA    R10,100       MAX INTERATIONS
+0000F8                                      (1/27)75 LOOP     DS    0H
+0000F8 3614                                 (1/28)76          AXR   F1,F4         N=N+1
+0000FA B3650084                             (1/29)77          LXR   F8,F4
+0000FE                                      (1/30)78          STX   F8,LH
+0000FE 6080D1E8                0001F0       (1/19)79+         STD   F8,LH
+000102 60A0D1F0                0001F8       (1/20)80+         STD   F8+2,LH+8
+000106                                      (1/31)82          CTD   CTD_LH,IN=LH,OUT=SNX
+000106                  00000001            (5/53)83+CTD_INT128 EQU 1 CONVERT 128 BIT INT TO 45 BYTE EBCDIC DECIMAL
+000106                  00000002            (5/54)84+CTD_EH   EQU   2 CONVERT HFP SHORT EH TO 45 BYTE EBCDIC N.N( 6)+ENNNN
+000106                  00000003            (5/55)85+CTD_EB   EQU   3 CONVERT BFP SHORT EB TO 45 BYTE EBCDIC N.N( 7)+ENNNN
+000106                  00000004            (5/56)86+CTD_DH   EQU   4 CONVERT HFP LONG  DH TO 45 BYTE EBCDIC N.N(14)+ENNNN
+000106                  00000005            (5/57)87+CTD_DB   EQU   5 CONVERT BFP LONG  DB TO 45 BYTE EBCDIC N.N(15)+ENNNN
+000106                  00000006            (5/58)88+CTD_LH   EQU   6 CONVERT HFP EXT.  LH TO 45 BYTE EBCDIC N.N(34)+ENNNN
+000106                  00000007            (5/59)89+CTD_LB   EQU   7 CONVERT BFP EXT.  LB TO 45 BYTE EBCDIC N.N(34)+ENNNN
+000106                  00000008            (5/60)90+CTD_DD   EQU   8 CONVERT DFP LONG  DD TO 45 BYTE EBCDIC N.N(16)+ENNNN
+000106                  00000009            (5/61)91+CTD_ED   EQU   9 CONVERT DFP SHORT ED TO 45 BYTE EBCDIC N.N( 7)+ENNNN
+000106                  0000000A            (5/62)92+CTD_LD   EQU  10 CONVERT DFP EXT.  LD TO 45 BYTE EBCDIC N.N(34)+ENNNN
+000106 4110D274                00027C       (5/65)93+         LA    1,=A(CTD_LH,LH,SNX)
+00010A 0AAA                                 (5/82)94+         SVC   170 CTD R1=A(TYPE,IN,OUT)
+00010C                                      (1/32)96          SNAP  PDATA=,STORAGE=(SNX,SNX+45),TEXT='TRIAL'
+00010C 58E0D280                000288      (4/112)98+         L     14,=A(SNX)
+000110 58F0D284                00028C      (4/118)99+         L     15,=A(SNX+45)
+000114 A5030000                           (4/126)100+         IILL  0,0                  RPI158
+000118 A5028000                           (4/131)101+         IILH 0,32768               RPI158
+00011C 4110D288                000290     (4/138)102+         LA    1,=CL60'TRIAL'
+000120 0A33                               (4/146)103+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+000122 B3650091                            (1/33)105          LXR   F9,F1
+000126 2699                                (1/34)106          MXR   F9,F9
+000128 B22D0089                            (1/35)107          DXR   F8,F9         F8=1/(N*N)
+00012C B3690085                            (1/36)108          CXR   R8,F5
+000130 4740D16C                000174      (1/37)109          BL    DONE
+000134 9560D1F8                000200      (1/38)110          CLI   SIGN,C'-'
+000138 4780D13E                000146      (1/39)111          BE    SUB
+00013C                                     (1/40)112 ADD      DS    0H
+00013C 9260D1F8                000200      (1/41)113          MVI   SIGN,C'-'
+000140 3608                                (1/42)114          AXR   F0,F8
+000142 47F0D144                00014C      (1/43)115          B     NEXT
+000146                                     (1/44)116 SUB      DS    0H
+000146 924ED1F8                000200      (1/45)117          MVI   SIGN,C'+'
+00014A 3708                                (1/46)118          SXR   F0,F8
+00014C                                     (1/47)119 NEXT     DS    0H
+00014C                                     (1/48)120          STX   F0,LH
+00014C 6000D1E8                0001F0      (1/19)121+         STD   F0,LH
+000150 6020D1F0                0001F8      (1/20)122+         STD   F0+2,LH+8
+000154                                     (1/49)124          CTD   CTD_LH,IN=LH,OUT=SNX
+000154 4110D274                00027C      (5/65)125+         LA    1,=A(CTD_LH,LH,SNX)
+000158 0AAA                                (5/82)126+         SVC   170 CTD R1=A(TYPE,IN,OUT)
+00015A                                     (1/50)128          SNAP  PDATA=,STORAGE=(SNX,SNX+45),TEXT='TRIAL'
+00015A 58E0D280                000288     (4/112)130+         L     14,=A(SNX)
+00015E 58F0D284                00028C     (4/118)131+         L     15,=A(SNX+45)
+000162 A5030000                           (4/126)132+         IILL  0,0                  RPI158
+000166 A5028000                           (4/131)133+         IILH 0,32768               RPI158
+00016A 4110D288                000290     (4/138)134+         LA    1,=CL60'TRIAL'
+00016E 0A33                               (4/146)135+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+000170 46A0D0F0                0000F8      (1/51)137          BCT   R10,LOOP
+000174                                     (1/52)138 DONE     DS    0H
+000174                                     (1/53)139          LX    F8,=LH'12'
+000174 6880D220                000228      (1/10)140+         LD    F8,=LH'12'
+000178 68A0D228                000230      (1/11)141+         LD    F8+2,=LH'12'+8
+00017C 2608                                (1/54)143          MXR   F0,F8
+00017E B3650010                            (1/55)144          LXR   F1,F0
+000182 B3360001                            (1/56)145          SQXR  F0,F1
+000186                                     (1/57)146          STX   F0,LH
+000186 6000D1E8                0001F0      (1/19)147+         STD   F0,LH
+00018A 6020D1F0                0001F8      (1/20)148+         STD   F0+2,LH+8
+00018E                                     (1/58)150          CTD   CTD_LH,IN=LH,OUT=SNX
+00018E 4110D274                00027C      (5/65)151+         LA    1,=A(CTD_LH,LH,SNX)
+000192 0AAA                                (5/82)152+         SVC   170 CTD R1=A(TYPE,IN,OUT)
+000194                                     (1/59)154          ZMFACC CODE,END
+000194                                    (2/274)157+         DS    0H
+000194 58E0D2C4                0002CC     (4/112)160+         L     14,=A(OUTPUTST)
+000198 58F0D2C8                0002D0     (4/118)161+         L     15,=A(OUTPUTEN)
+00019C A5030002                           (4/126)162+         IILL  0,2                  RPI158
+0001A0 A5028000                           (4/131)163+         IILH 0,32768               RPI158
+0001A4 4110D2CC                0002D4     (4/138)164+         LA    1,=CL60'Output Area'
+0001A8 0A33                               (4/146)165+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+0001AA 58D0D004                           (2/167)168+         L     13,4(,13)
+0001AE 58E0D00C                           (2/168)169+         L     14,12(,13)
+0001B2 982CD01C                           (2/169)170+         LM    2,12,28(13)
+0001B6 1BFF                               (2/170)171+         SR    15,15
+0001B8 07FE                               (2/171)172+         BR    14
+0001BA                                    (2/176)173+*        YREGS
+0001BA                                    (2/177)174+***      REGISTER EQUATES
+0001BA                                    (2/178)175+*
+0001BA                                    (2/181)177+* GENERAL  REGISTERS
+0001BA                  00000000          (2/183)179+R0        EQU  0
+0001BA                  00000001          (2/184)180+R1        EQU  1
+0001BA                  00000002          (2/185)181+R2        EQU  2
+0001BA                  00000003          (2/186)182+R3        EQU  3
+0001BA                  00000004          (2/187)183+R4        EQU  4
+0001BA                  00000005          (2/188)184+R5        EQU  5
+0001BA                  00000006          (2/189)185+R6        EQU  6
+0001BA                  00000007          (2/190)186+R7        EQU  7
+0001BA                  00000008          (2/191)187+R8        EQU  8
+0001BA                  00000009          (2/192)188+R9        EQU  9
+0001BA                  0000000A          (2/193)189+R10       EQU  10
+0001BA                  0000000B          (2/194)190+R11       EQU  11
+0001BA                  0000000C          (2/195)191+R12       EQU  12
+0001BA                  0000000D          (2/196)192+R13       EQU  13
+0001BA                  0000000E          (2/197)193+R14       EQU  14
+0001BA                  0000000F          (2/198)194+R15       EQU  15
+0001BA                                    (2/200)196+* FLOATING POINT REGISTERS
+0001BA                  00000000          (2/202)198+F0        EQU  0  L0
+0001BA                  00000001          (2/203)199+F1        EQU  1  L1
+0001BA                  00000002          (2/204)200+F2        EQU  2  L0+
+0001BA                  00000003          (2/205)201+F3        EQU  3  L1+
+0001BA                  00000004          (2/206)202+F4        EQU  4  L4
+0001BA                  00000005          (2/207)203+F5        EQU  5  L5
+0001BA                  00000006          (2/208)204+F6        EQU  6  L4+
+0001BA                  00000007          (2/209)205+F7        EQU  7  L5+
+0001BA                  00000008          (2/210)206+F8        EQU  8  L8
+0001BA                  00000009          (2/211)207+F9        EQU  9  L9
+0001BA                  0000000A          (2/212)208+F10       EQU  10 L8+
+0001BA                  0000000B          (2/213)209+F11       EQU  11 L9+
+0001BA                  0000000C          (2/214)210+F12       EQU  12 L12
+0001BA                  0000000D          (2/215)211+F13       EQU  13 L13
+0001BA                  0000000E          (2/216)212+F14       EQU  14 L12+
+0001BA                  0000000F          (2/217)213+F15       EQU  15 L13+
+0001BA                                    (2/219)215+* EXTENDED CONTROL REGISTERS
+0001BA                  00000000          (2/221)217+C0        EQU  0
+0001BA                  00000001          (2/222)218+C1        EQU  1
+0001BA                  00000002          (2/223)219+C2        EQU  2
+0001BA                  00000003          (2/224)220+C3        EQU  3
+0001BA                  00000004          (2/225)221+C4        EQU  4
+0001BA                  00000005          (2/226)222+C5        EQU  5
+0001BA                  00000006          (2/227)223+C6        EQU  6
+0001BA                  00000007          (2/228)224+C7        EQU  7
+0001BA                  00000008          (2/229)225+C8        EQU  8
+0001BA                  00000009          (2/230)226+C9        EQU  9
+0001BA                  0000000A          (2/231)227+C10       EQU  10
+0001BA                  0000000B          (2/232)228+C11       EQU  11
+0001BA                  0000000C          (2/233)229+C12       EQU  12
+0001BA                  0000000D          (2/234)230+C13       EQU  13
+0001BA                  0000000E          (2/235)231+C14       EQU  14
+0001BA                  0000000F          (2/236)232+C15       EQU  15
+0001BA                                     (1/60)234          ZMFACC INPUT,START
+0001BC                                    (2/247)235+INPUTSTR DS    0F
+0001BC                                     (1/61)237          ZMFACC INPUT,END
+0001BC                  000001BC          (2/250)238+INPUTEND  EQU  *
+0001BC                                     (1/62)240          ZMFACC OUTPUT,START
+0001BC                                    (2/261)241+OUTPUTST DS    0F
+0001BC 4040404040404040                    (1/63)243 SNX      DC     CL45' '
+0001E9                                     (1/64)244          ZMFACC OUTPUT,END
+0001E9                  000001E9          (2/264)245+OUTPUTEN  EQU  *
+0001F0 0000000000000000                    (1/65)247 LH       DC     LH'0'
+000200 60                                  (1/66)248 SIGN     DC     C'-'
+000201                                     (1/67)249          END 
+000208 4110000000000000 =LH'1'
+000218 2484EC3C97DA624A =LH'1E-34'
+000228 41C0000000000000 =LH'12'
+000238 000001BC         =A(INPUTSTR)
+00023C 000001BC         =A(INPUTEND)
+000240 C99597A4A340C199 =CL60'Input Area'
+00027C 00000006000001F0 =A(CTD_LH,LH,SNX)
+000288 000001BC         =A(SNX)
+00028C 000001E9         =A(SNX+45)
+000290 E3D9C9C1D3404040 =CL60'TRIAL'
+0002CC 000001BC         =A(OUTPUTST)
+0002D0 000001E9         =A(OUTPUTEN)
+0002D4 D6A4A397A4A340C1 =CL60'Output Area'
+Relocation Definitions
+ ESD=0001 LOC=00000238 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000023C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000280 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000284 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000288 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000028C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002CC LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002D0 LEN=4 SIGN=+ XESD=0001
+
+Symbol Table Listing
+
+ SYM=ADD      LOC=0000013C LEN=00000002 ESD=0001 TYPE=REL  XREF=112 
+ SYM=C0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=217 
+ SYM=C10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=227 
+ SYM=C1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=218 
+ SYM=C11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=228 
+ SYM=C12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=229 
+ SYM=C13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=230 
+ SYM=C14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=231 
+ SYM=C15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=232 
+ SYM=C2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=219 
+ SYM=C3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=220 
+ SYM=C4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=221 
+ SYM=C5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=222 
+ SYM=C6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=223 
+ SYM=C7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=224 
+ SYM=C8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=225 
+ SYM=C9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=226 
+ SYM=CTD_DB   LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=87 
+ SYM=CTD_DD   LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=90 
+ SYM=CTD_DH   LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=86 
+ SYM=CTD_EB   LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=85 
+ SYM=CTD_ED   LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=91 
+ SYM=CTD_EH   LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=84 
+ SYM=CTD_INT128 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=83 
+ SYM=CTD_LB   LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=89 
+ SYM=CTD_LD   LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=92 
+ SYM=CTD_LH   LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=88 93 125 151 249 
+ SYM=DONE     LOC=00000174 LEN=00000002 ESD=0001 TYPE=REL  XREF=138 109 
+ SYM=F0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=198 59 60 114 118 
+  121 122 143 144 145 147 148 
+ SYM=F10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=208 
+ SYM=F1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=199 63 64 76 105 
+  144 145 
+ SYM=F11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=209 
+ SYM=F12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=210 
+ SYM=F13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=211 
+ SYM=F14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=212 
+ SYM=F15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=213 
+ SYM=F2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=200 
+ SYM=F3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=201 
+ SYM=F4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=202 67 68 76 77 
+ SYM=F5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=203 71 72 108 
+ SYM=F6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=204 
+ SYM=F7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=205 
+ SYM=F8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=206 77 79 80 107 
+  114 118 140 141 143 
+ SYM=F9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=207 105 106 107 
+ SYM=GO0001   LOC=00000068 LEN=00000002 ESD=0001 TYPE=REL  XREF=13 8 
+ SYM=INPUTEND LOC=000001BC LEN=00000001 ESD=0001 TYPE=REL  XREF=238 32 249 
+ SYM=INPUTSTR LOC=000001BC LEN=00000004 ESD=0001 TYPE=REL  XREF=235 31 249 
+ SYM=LH       LOC=000001F0 LEN=00000010 ESD=0001 TYPE=REL  XREF=247 79 80 93 121 
+  122 125 147 148 151 249 
+ SYM=LOOP     LOC=000000F8 LEN=00000002 ESD=0001 TYPE=REL  XREF=75 137 
+ SYM=NEXT     LOC=0000014C LEN=00000002 ESD=0001 TYPE=REL  XREF=119 115 
+ SYM=OUTPUTEN LOC=000001E9 LEN=00000001 ESD=0001 TYPE=REL  XREF=245 161 249 
+ SYM=OUTPUTST LOC=000001BC LEN=00000004 ESD=0001 TYPE=REL  XREF=241 160 249 
+ SYM=P8DSH1   LOC=00000000 LEN=00000310 ESD=0001 TYPE=CST  XREF=6 8 
+ SYM=R0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=179 
+ SYM=R10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=189 74 137 
+ SYM=R1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=180 
+ SYM=R11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=190 
+ SYM=R12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=191 
+ SYM=R13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=192 
+ SYM=R14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=193 
+ SYM=R15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=194 
+ SYM=R2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=181 
+ SYM=R3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=182 
+ SYM=R4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=183 
+ SYM=R5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=184 
+ SYM=R6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=185 
+ SYM=R7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=186 
+ SYM=R8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=187 108 
+ SYM=R9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=188 
+ SYM=SIGN     LOC=00000200 LEN=00000001 ESD=0001 TYPE=REL  XREF=248 110 113 117 
+ SYM=SNX      LOC=000001BC LEN=0000002D ESD=0001 TYPE=REL  XREF=243 93 98 99 125 
+  130 131 151 249 
+ SYM=SUB      LOC=00000146 LEN=00000002 ESD=0001 TYPE=REL  XREF=116 111 
+ SYM=SV0001   LOC=00000008 LEN=00000004 ESD=0001 TYPE=REL  XREF=9 17 
+ SYM=WTO#0002_EOT LOC=000000BC LEN=00000001 ESD=0001 TYPE=REL  XREF=23 20 21 
+
+Literal Table Listing
+
+ LIT=A(CTD_LH,LH,SNX) LOC=0000027C LEN=00000004 ESD=0001 POOL=0001 XREF=93 125 151 
+ LIT=A(INPUTEND) LOC=0000023C LEN=00000004 ESD=0001 POOL=0001 XREF=32 
+ LIT=A(INPUTSTR) LOC=00000238 LEN=00000004 ESD=0001 POOL=0001 XREF=31 
+ LIT=A(OUTPUTEN) LOC=000002D0 LEN=00000004 ESD=0001 POOL=0001 XREF=161 
+ LIT=A(OUTPUTST) LOC=000002CC LEN=00000004 ESD=0001 POOL=0001 XREF=160 
+ LIT=A(SNX)   LOC=00000288 LEN=00000004 ESD=0001 POOL=0001 XREF=98 130 
+ LIT=A(SNX+45) LOC=0000028C LEN=00000004 ESD=0001 POOL=0001 XREF=99 131 
+ LIT=CL60'Input Area' LOC=00000240 LEN=0000003C ESD=0001 POOL=0001 XREF=35 
+ LIT=CL60'Output Area' LOC=000002D4 LEN=0000003C ESD=0001 POOL=0001 XREF=164 
+ LIT=CL60'TRIAL' LOC=00000290 LEN=0000003C ESD=0001 POOL=0001 XREF=102 134 
+ LIT=LH'1'    LOC=00000208 LEN=00000010 ESD=0001 POOL=0001 XREF=59 60 63 64 67 68 
+ LIT=LH'12'   LOC=00000228 LEN=00000010 ESD=0001 POOL=0001 XREF=140 141 
+ LIT=LH'1E-34' LOC=00000218 LEN=00000010 ESD=0001 POOL=0001 XREF=71 72 
+ 
+AZ390I total mnote warnings = 1
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 4
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+P8DSH1    MZ390 ENDED   RC= 4 MEM(MB)= MB IO=1438

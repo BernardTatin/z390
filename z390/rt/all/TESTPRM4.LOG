@@ -1,0 +1,21 @@
+Comparing files RT\TEST\TESTPRM4.LOG and RT\TEST\SAVE\TESTPRM4.LOG
+***** RT\TEST\TESTPRM4.LOG
+EZ390I program = rt\test\TESTPRM4.390
+EZ390I options = @rt\RT1=(bal notiming stats) @TESTPRM4=(
+  "parm('a, b')" "sysparm(a, b)" trace) systerm(rt\test\rttest)
+TESTPRM4 TEST PARM(a, b) MAPPED TO JCL EXEC PARM=a, b
+***** RT\TEST\SAVE\TESTPRM4.LOG
+EZ390I program = rt\test\TESTPRM4.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  @TESTPRM4=("parm('a, b')" "sysparm(a, b)" trace) systerm(rt\test\rttest)
+TESTPRM4 TEST PARM(a, b) MAPPED TO JCL EXEC PARM=a, b
+*****
+
+***** RT\TEST\TESTPRM4.LOG
+EZ390I total errors         = 0
+TESTPRM4  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=157 INS=20
+***** RT\TEST\SAVE\TESTPRM4.LOG
+EZ390I total errors         = 0
+TESTPRM4  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=154 INS=20
+*****
+

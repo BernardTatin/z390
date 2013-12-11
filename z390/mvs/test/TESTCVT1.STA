@@ -1,0 +1,330 @@
+TESTCVT1  MZ390 START
+TESTCVT1  MZ390 Copyright 2011 Automated Software Tools Corporation
+TESTCVT1  MZ390 z390 is licensed under GNU General Public License
+TESTCVT1  MZ390 program = mvs\test\TESTCVT1.MLC
+TESTCVT1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats 
+  sysmac(mvs\maclib+mac) objhex systerm(mvs\test\rtmvs)
+TESTCVT1  MZ390 final_options=ALIGN
+TESTCVT1  MZ390 final_options=NOALLOW
+TESTCVT1  MZ390 final_options=NOAMODE24
+TESTCVT1  MZ390 final_options=AMODE31
+TESTCVT1  MZ390 final_options=NOASCII
+TESTCVT1  MZ390 final_options=ASM
+TESTCVT1  MZ390 final_options=NOASSIST
+TESTCVT1  MZ390 final_options=AUTOLINK
+TESTCVT1  MZ390 final_options=BAL
+TESTCVT1  MZ390 final_options=NOBS2000
+TESTCVT1  MZ390 final_options=EDF
+TESTCVT1  MZ390 final_options=NOCICS
+TESTCVT1  MZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTCVT1  MZ390 final_options=COMMENT
+TESTCVT1  MZ390 final_options=CON
+TESTCVT1  MZ390 final_options=NODUMP
+TESTCVT1  MZ390 final_options=EPILOG
+TESTCVT1  MZ390 final_options=NOERRSUM
+TESTCVT1  MZ390 final_options=EXTEND
+TESTCVT1  MZ390 final_options=FLOAT(DECIMAL)
+TESTCVT1  MZ390 final_options=NOGUAM
+TESTCVT1  MZ390 final_options=INIT
+TESTCVT1  MZ390 final_options=LIST
+TESTCVT1  MZ390 final_options=LISTCALL
+TESTCVT1  MZ390 final_options=LISTUSE
+TESTCVT1  MZ390 final_options=LOADHIGH
+TESTCVT1  MZ390 final_options=NOMCALL
+TESTCVT1  MZ390 final_options=NOMOD
+TESTCVT1  MZ390 final_options=OBJ
+TESTCVT1  MZ390 final_options=OBJHEX
+TESTCVT1  MZ390 final_options=PC
+TESTCVT1  MZ390 final_options=PCOPT
+TESTCVT1  MZ390 final_options=NOPDSMEM8
+TESTCVT1  MZ390 final_options=NOPRINTALL
+TESTCVT1  MZ390 final_options=PROLOG
+TESTCVT1  MZ390 final_options=PROTECT
+TESTCVT1  MZ390 final_options=R64
+TESTCVT1  MZ390 final_options=NOREFORMAT
+TESTCVT1  MZ390 final_options=NOREGS
+TESTCVT1  MZ390 final_options=RMODE24
+TESTCVT1  MZ390 final_options=NORMODE31
+TESTCVT1  MZ390 final_options=STATS
+TESTCVT1  MZ390 final_options=NOTEST
+TESTCVT1  MZ390 final_options=THREAD
+TESTCVT1  MZ390 final_options=NOTIME
+TESTCVT1  MZ390 final_options=NOTIMING
+TESTCVT1  MZ390 final_options=NOTRACE
+TESTCVT1  MZ390 final_options=NOTRACEA
+TESTCVT1  MZ390 final_options=NOTRACEALL
+TESTCVT1  MZ390 final_options=NOTRACEC
+TESTCVT1  MZ390 final_options=NOTRACEG
+TESTCVT1  MZ390 final_options=NOTRACEI
+TESTCVT1  MZ390 final_options=NOTRACEL
+TESTCVT1  MZ390 final_options=NOTRACEM
+TESTCVT1  MZ390 final_options=NOTRACEP
+TESTCVT1  MZ390 final_options=NOTRACEQ
+TESTCVT1  MZ390 final_options=NOTRACES
+TESTCVT1  MZ390 final_options=NOTRACET
+TESTCVT1  MZ390 final_options=NOTRACEV
+TESTCVT1  MZ390 final_options=TRAP
+TESTCVT1  MZ390 final_options=NOTRUNC
+TESTCVT1  MZ390 final_options=NOTS
+TESTCVT1  MZ390 final_options=VCB
+TESTCVT1  MZ390 final_options=WARN
+TESTCVT1  MZ390 final_options=XREF
+TESTCVT1  MZ390 final_options=ZSTRMAC
+TESTCVT1  MZ390 final_options=CHKMAC=0
+TESTCVT1  MZ390 final_options=CHKSRC=1
+TESTCVT1  MZ390 final_options=ERR=100
+TESTCVT1  MZ390 final_options=MAXCALL=50
+TESTCVT1  MZ390 final_options=MAXDISPLAY=80
+TESTCVT1  MZ390 final_options=MAXESD=1000
+TESTCVT1  MZ390 final_options=MAXFILE=1000
+TESTCVT1  MZ390 final_options=MAXGBL=100000
+TESTCVT1  MZ390 final_options=MAXHEIGHT=600
+TESTCVT1  MZ390 final_options=MAXLCL=100000
+TESTCVT1  MZ390 final_options=MAXLEN=80
+TESTCVT1  MZ390 final_options=MAXLINE=200000
+TESTCVT1  MZ390 final_options=MAXLOG=1000000
+TESTCVT1  MZ390 final_options=MAXPARM=10000
+TESTCVT1  MZ390 final_options=MAXPASS=2
+TESTCVT1  MZ390 final_options=MAXPC=50000
+TESTCVT1  MZ390 final_options=MAXQUE=1000
+TESTCVT1  MZ390 final_options=MAXRLD=10000
+TESTCVT1  MZ390 final_options=MAXSIZE=52428800
+TESTCVT1  MZ390 final_options=MAXSYM=50000
+TESTCVT1  MZ390 final_options=MAXWARN=4
+TESTCVT1  MZ390 final_options=MAXWIDTH=800
+TESTCVT1  MZ390 final_options=MEM=1
+TESTCVT1  MZ390 final_options=MINHEIGHT=150
+TESTCVT1  MZ390 final_options=MINWIDTH=150
+TESTCVT1  MZ390 final_options=MNOTE=0
+TESTCVT1  MZ390 final_options=PARM=
+TESTCVT1  MZ390 final_options=PROFILE=
+TESTCVT1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTCVT1
+TESTCVT1  MZ390 final_options=.STA
+TESTCVT1  MZ390 final_options=SYSPARM=
+TESTCVT1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\rtmvs.
+TESTCVT1  MZ390 final_options=ERR
+TESTCVT1  MZ390 final_options=TESTDD=
+TESTCVT1  MZ390 final_options=TIME=15
+TESTCVT1  MZ390 final_options=TRACE=
+TESTCVT1  MZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTCVT1  MZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTCVT1  MZ390 final_options=Z390COMMAND=cmd.exe
+TESTCVT1  MZ390 final_options=Z390EDITOR=notepad.exe
+TESTCVT1  MZ390 final_options=INSTALL=
+TESTCVT1  MZ390 final_options=IPL=
+TESTCVT1  MZ390 final_options=LOG=
+TESTCVT1  MZ390 final_options=SYS390=mvs\test\+linklib
+TESTCVT1  MZ390 final_options=SYSBAL=mvs\test\
+TESTCVT1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTCVT1  MZ390 final_options=SYSDAT=mvs\test\
+TESTCVT1  MZ390 final_options=SYSERR=mvs\test\
+TESTCVT1  MZ390 final_options=SYSLOG=mvs\test\
+TESTCVT1  MZ390 final_options=SYSLST=mvs\test\
+TESTCVT1  MZ390 final_options=SYSMAC=mvs\maclib+mac
+TESTCVT1  MZ390 final_options=SYSMLC=mvs\test\
+TESTCVT1  MZ390 final_options=SYSPCH=mvs\test\
+TESTCVT1  MZ390 final_options=SYSPRN=mvs\test\
+TESTCVT1  MZ390 final_options=SYSOBJ=mvs\test\
+TESTCVT1  MZ390 final_options=SYSOPT=mvs\test\
+TESTCVT1  MZ390 final_options=SYSTRC=mvs\test\
+TESTCVT1  MZ390 total MLC/MAC loaded  = 1294
+TESTCVT1  MZ390 total BAL output lines= 1007
+TESTCVT1  MZ390 total BAL instructions= 13
+TESTCVT1  MZ390 total macros          = 2
+TESTCVT1  MZ390 total macro loads     = 2
+TESTCVT1  MZ390 total macro calls     = 1
+TESTCVT1  MZ390 total AENTRY blocks   = 0
+TESTCVT1  MZ390 total ACALL  calls    = 0
+TESTCVT1  MZ390 total AIF    blocks   = 0
+TESTCVT1  MZ390 total ACASE  blocks   = 0
+TESTCVT1  MZ390 total AWHILE calls    = 0
+TESTCVT1  MZ390 total AUNTIL blocks   = 0
+TESTCVT1  MZ390 total global set names= 46
+TESTCVT1  MZ390 tot global seta cells = 0
+TESTCVT1  MZ390 tot global setb cells = 7
+TESTCVT1  MZ390 tot global setc cells = 39
+TESTCVT1  MZ390 max local pos parms   = 1
+TESTCVT1  MZ390 max local key parms   = 17
+TESTCVT1  MZ390 max local set names   = 12
+TESTCVT1  MZ390 max local seta cells  = 2
+TESTCVT1  MZ390 max local setb cells  = 2
+TESTCVT1  MZ390 max local setc cells  = 8
+TESTCVT1  MZ390 total array expansions= 0
+TESTCVT1  MZ390 total Keys            = 1456
+TESTCVT1  MZ390 Key searches          = 4456
+TESTCVT1  MZ390 Key avg comps         = 1
+TESTCVT1  MZ390 Key max comps         = 3
+TESTCVT1  MZ390 total macro line exec = 1046
+TESTCVT1  MZ390 total pcode line exec = 0
+TESTCVT1  MZ390 total pcode line gen. = 33
+TESTCVT1  MZ390 total pcode line reuse= 0
+TESTCVT1  MZ390 total pcode op   gen. = 95
+TESTCVT1  MZ390 total pcode op   exec = 0
+TESTCVT1  MZ390 total pcode gen  opt  = 40
+TESTCVT1  MZ390 total pcode exec opt  = 0
+TESTCVT1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTCVT1.MLC
+TESTCVT1  MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\CVT.MAC
+TESTCVT1  MZ390 total mnote warnings  = 0
+TESTCVT1  MZ390 total mnote errors    = 0
+TESTCVT1  MZ390 max   mnote level     = 0
+TESTCVT1  MZ390 total mz390 errors    = 0
+TESTCVT1  AZ390 BAL lines             = 1007
+TESTCVT1  AZ390 symbols               = 700
+TESTCVT1  AZ390 Literals              = 1
+TESTCVT1  AZ390 alloc passes          = 2
+TESTCVT1  AZ390 Keys                  = 2020
+TESTCVT1  AZ390 Key searches          = 7091
+TESTCVT1  AZ390 Key avg comps         = 0
+TESTCVT1  AZ390 Key max comps         = 4
+TESTCVT1  AZ390 ESD symbols           = 129
+TESTCVT1  AZ390 object bytes          = 963
+TESTCVT1  AZ390 object rlds           = 133
+TESTCVT1  AZ390 total mnote warnings  = 0
+TESTCVT1  AZ390 total mnote errors    = 0
+TESTCVT1  AZ390 max   mnote level     = 0
+TESTCVT1  AZ390 total mz390 errors    = 0
+TESTCVT1  AZ390 total az390 errors    = 0
+TESTCVT1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=6384
+TESTCVT1  LZ390 START
+TESTCVT1  LZ390 Copyright 2011 Automated Software Tools Corporation
+TESTCVT1  LZ390 z390 is licensed under GNU General Public License
+TESTCVT1  LZ390 options = bal notiming stats sysmac(mvs\maclib+mac) 
+  objhex systerm(mvs\test\rtmvs)
+TESTCVT1  LZ390 program = mvs\test\TESTCVT1.OBJ
+TESTCVT1  LZ390 final_options=ALIGN
+TESTCVT1  LZ390 final_options=NOALLOW
+TESTCVT1  LZ390 final_options=NOAMODE24
+TESTCVT1  LZ390 final_options=AMODE31
+TESTCVT1  LZ390 final_options=NOASCII
+TESTCVT1  LZ390 final_options=ASM
+TESTCVT1  LZ390 final_options=NOASSIST
+TESTCVT1  LZ390 final_options=AUTOLINK
+TESTCVT1  LZ390 final_options=BAL
+TESTCVT1  LZ390 final_options=NOBS2000
+TESTCVT1  LZ390 final_options=EDF
+TESTCVT1  LZ390 final_options=NOCICS
+TESTCVT1  LZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTCVT1  LZ390 final_options=COMMENT
+TESTCVT1  LZ390 final_options=CON
+TESTCVT1  LZ390 final_options=NODUMP
+TESTCVT1  LZ390 final_options=EPILOG
+TESTCVT1  LZ390 final_options=NOERRSUM
+TESTCVT1  LZ390 final_options=EXTEND
+TESTCVT1  LZ390 final_options=FLOAT(DECIMAL)
+TESTCVT1  LZ390 final_options=NOGUAM
+TESTCVT1  LZ390 final_options=INIT
+TESTCVT1  LZ390 final_options=LIST
+TESTCVT1  LZ390 final_options=LISTCALL
+TESTCVT1  LZ390 final_options=LISTUSE
+TESTCVT1  LZ390 final_options=LOADHIGH
+TESTCVT1  LZ390 final_options=NOMCALL
+TESTCVT1  LZ390 final_options=NOMOD
+TESTCVT1  LZ390 final_options=OBJ
+TESTCVT1  LZ390 final_options=OBJHEX
+TESTCVT1  LZ390 final_options=PC
+TESTCVT1  LZ390 final_options=PCOPT
+TESTCVT1  LZ390 final_options=NOPDSMEM8
+TESTCVT1  LZ390 final_options=NOPRINTALL
+TESTCVT1  LZ390 final_options=PROLOG
+TESTCVT1  LZ390 final_options=PROTECT
+TESTCVT1  LZ390 final_options=R64
+TESTCVT1  LZ390 final_options=NOREFORMAT
+TESTCVT1  LZ390 final_options=NOREGS
+TESTCVT1  LZ390 final_options=RMODE24
+TESTCVT1  LZ390 final_options=NORMODE31
+TESTCVT1  LZ390 final_options=STATS
+TESTCVT1  LZ390 final_options=NOTEST
+TESTCVT1  LZ390 final_options=THREAD
+TESTCVT1  LZ390 final_options=NOTIME
+TESTCVT1  LZ390 final_options=NOTIMING
+TESTCVT1  LZ390 final_options=NOTRACE
+TESTCVT1  LZ390 final_options=NOTRACEA
+TESTCVT1  LZ390 final_options=NOTRACEALL
+TESTCVT1  LZ390 final_options=NOTRACEC
+TESTCVT1  LZ390 final_options=NOTRACEG
+TESTCVT1  LZ390 final_options=NOTRACEI
+TESTCVT1  LZ390 final_options=NOTRACEL
+TESTCVT1  LZ390 final_options=NOTRACEM
+TESTCVT1  LZ390 final_options=NOTRACEP
+TESTCVT1  LZ390 final_options=NOTRACEQ
+TESTCVT1  LZ390 final_options=NOTRACES
+TESTCVT1  LZ390 final_options=NOTRACET
+TESTCVT1  LZ390 final_options=NOTRACEV
+TESTCVT1  LZ390 final_options=TRAP
+TESTCVT1  LZ390 final_options=NOTRUNC
+TESTCVT1  LZ390 final_options=NOTS
+TESTCVT1  LZ390 final_options=VCB
+TESTCVT1  LZ390 final_options=WARN
+TESTCVT1  LZ390 final_options=XREF
+TESTCVT1  LZ390 final_options=ZSTRMAC
+TESTCVT1  LZ390 final_options=CHKMAC=0
+TESTCVT1  LZ390 final_options=CHKSRC=1
+TESTCVT1  LZ390 final_options=ERR=100
+TESTCVT1  LZ390 final_options=MAXCALL=50
+TESTCVT1  LZ390 final_options=MAXDISPLAY=80
+TESTCVT1  LZ390 final_options=MAXESD=1000
+TESTCVT1  LZ390 final_options=MAXFILE=1000
+TESTCVT1  LZ390 final_options=MAXGBL=100000
+TESTCVT1  LZ390 final_options=MAXHEIGHT=600
+TESTCVT1  LZ390 final_options=MAXLCL=100000
+TESTCVT1  LZ390 final_options=MAXLEN=80
+TESTCVT1  LZ390 final_options=MAXLINE=200000
+TESTCVT1  LZ390 final_options=MAXLOG=1000000
+TESTCVT1  LZ390 final_options=MAXPARM=10000
+TESTCVT1  LZ390 final_options=MAXPASS=2
+TESTCVT1  LZ390 final_options=MAXPC=50000
+TESTCVT1  LZ390 final_options=MAXQUE=1000
+TESTCVT1  LZ390 final_options=MAXRLD=10000
+TESTCVT1  LZ390 final_options=MAXSIZE=52428800
+TESTCVT1  LZ390 final_options=MAXSYM=50000
+TESTCVT1  LZ390 final_options=MAXWARN=4
+TESTCVT1  LZ390 final_options=MAXWIDTH=800
+TESTCVT1  LZ390 final_options=MEM=1
+TESTCVT1  LZ390 final_options=MINHEIGHT=150
+TESTCVT1  LZ390 final_options=MINWIDTH=150
+TESTCVT1  LZ390 final_options=MNOTE=0
+TESTCVT1  LZ390 final_options=PARM=
+TESTCVT1  LZ390 final_options=PROFILE=
+TESTCVT1  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTCVT1
+TESTCVT1  LZ390 final_options=.STA
+TESTCVT1  LZ390 final_options=SYSPARM=
+TESTCVT1  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\rtmvs.
+TESTCVT1  LZ390 final_options=ERR
+TESTCVT1  LZ390 final_options=TESTDD=
+TESTCVT1  LZ390 final_options=TIME=15
+TESTCVT1  LZ390 final_options=TRACE=
+TESTCVT1  LZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTCVT1  LZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTCVT1  LZ390 final_options=Z390COMMAND=cmd.exe
+TESTCVT1  LZ390 final_options=Z390EDITOR=notepad.exe
+TESTCVT1  LZ390 final_options=INSTALL=
+TESTCVT1  LZ390 final_options=IPL=
+TESTCVT1  LZ390 final_options=LOG=
+TESTCVT1  LZ390 final_options=SYS390=mvs\test\+linklib
+TESTCVT1  LZ390 final_options=SYSBAL=mvs\test\
+TESTCVT1  LZ390 final_options=SYSCPY=mvs\test\
+TESTCVT1  LZ390 final_options=SYSDAT=mvs\test\
+TESTCVT1  LZ390 final_options=SYSERR=mvs\test\
+TESTCVT1  LZ390 final_options=SYSLOG=mvs\test\
+TESTCVT1  LZ390 final_options=SYSLST=mvs\test\
+TESTCVT1  LZ390 final_options=SYSMAC=mvs\maclib+mac
+TESTCVT1  LZ390 final_options=SYSMLC=mvs\test\
+TESTCVT1  LZ390 final_options=SYSPCH=mvs\test\
+TESTCVT1  LZ390 final_options=SYSPRN=mvs\test\
+TESTCVT1  LZ390 final_options=SYSOBJ=mvs\test\
+TESTCVT1  LZ390 final_options=SYSOPT=mvs\test\
+TESTCVT1  LZ390 final_options=SYSTRC=mvs\test\
+TESTCVT1  LZ390 Stats total obj files = 2
+TESTCVT1  LZ390 Stats total esds      = 129
+TESTCVT1  LZ390 Stats total csects    = 2
+TESTCVT1  LZ390 Stats total entries   = 127
+TESTCVT1  LZ390 Stats missing wxtrn's = 0
+TESTCVT1  LZ390 Stats Keys            = 129
+TESTCVT1  LZ390 Stats Key searches    = 514
+TESTCVT1  LZ390 Stats Key avg comps   = 0
+TESTCVT1  LZ390 Stats Key max comps   = 2
+TESTCVT1  LZ390 Stats total obj byte  = 967
+TESTCVT1  LZ390 Stats total obj rlds  = 133
+TESTCVT1  LZ390 total errors          = 0
+TESTCVT1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=1638

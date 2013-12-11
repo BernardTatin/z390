@@ -1,0 +1,14 @@
+Comparing files ASSIST\DEMOAST1.PRN and RT\ASSIST\SAVE\DEMOAST1.PRN
+***** ASSIST\DEMOAST1.PRN
+AZ390I program = assist\DEMOAST1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) assist notiming stats 
+  systerm(assist\rtast)
+External Symbol Definitions
+***** RT\ASSIST\SAVE\DEMOAST1.PRN
+AZ390I program = assist\DEMOAST1
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) assist notiming stats systerm(assist\rtast)
+External Symbol Definitions
+*****
+

@@ -1,0 +1,164 @@
+Comparing files ASSIST\TESTAST1.STA and RT\ASSIST\SAVE\TESTAST1.STA
+***** ASSIST\TESTAST1.STA
+TESTAST1  MZ390 program = assist\TESTAST1.MLC
+TESTAST1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) assist notiming stats 
+  systerm(assist\rtast)
+TESTAST1  MZ390 final_options=ALIGN
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  MZ390 program = assist\TESTAST1.MLC
+TESTAST1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) assist notiming stats systerm(assist\rtast)
+TESTAST1  MZ390 final_options=ALIGN
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  MZ390 final_options=PROFILE=
+TESTAST1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\assist\TESTAST1.S
+TESTAST1  MZ390 final_options=TA
+TESTAST1  MZ390 final_options=SYSPARM=
+TESTAST1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\assist\rtast.ER
+TESTAST1  MZ390 final_options=R
+TESTAST1  MZ390 final_options=TESTDD=
+TESTAST1  MZ390 final_options=TIME=15
+TESTAST1  MZ390 final_options=TRACE=
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  MZ390 final_options=PROFILE=
+TESTAST1  MZ390 final_options=STATS=W:\work\z390\assist\TESTAST1.STA
+TESTAST1  MZ390 final_options=SYSPARM=
+TESTAST1  MZ390 final_options=SYSTERM=W:\work\z390\assist\rtast.ERR
+TESTAST1  MZ390 final_options=TESTDD=
+TESTAST1  MZ390 final_options=TIME=60
+TESTAST1  MZ390 final_options=TRACE=
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  MZ390 final_options=SYSBAL=assist\
+TESTAST1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTAST1  MZ390 final_options=SYSDAT=assist\
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  MZ390 final_options=SYSBAL=assist\
+TESTAST1  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+TESTAST1  MZ390 final_options=SYSDAT=assist\
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  MZ390 final_options=SYSLST=assist\
+TESTAST1  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTAST1  MZ390 final_options=SYSMLC=assist\
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  MZ390 final_options=SYSLST=assist\
+TESTAST1  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+TESTAST1  MZ390 final_options=SYSMLC=assist\
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  MZ390 total pcode exec opt  = 0
+TESTAST1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\assist\TESTAST1.MLC
+TESTAST1  MZ390 total mnote warnings  = 0
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  MZ390 total pcode exec opt  = 0
+TESTAST1  MZ390 FID=  1 ERR= 0 W:\work\z390\assist\TESTAST1.MLC
+TESTAST1  MZ390 total mnote warnings  = 0
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  AZ390 total az390 errors    = 0
+TESTAST1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=507
+TESTAST1  LZ390 START
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  AZ390 total az390 errors    = 0
+TESTAST1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=505
+TESTAST1  LZ390 START
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  LZ390 z390 is licensed under GNU General Public License
+TESTAST1  LZ390 options = assist notiming stats systerm(assist\rtast)
+TESTAST1  LZ390 program = assist\TESTAST1.OBJ
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  LZ390 z390 is licensed under GNU General Public License
+TESTAST1  LZ390 options = W:\work\z390\z390.OPT=(time(60)) assist notiming stats 
+  systerm(assist\rtast)
+TESTAST1  LZ390 program = assist\TESTAST1.OBJ
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  LZ390 final_options=PROFILE=
+TESTAST1  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\assist\TESTAST1.S
+TESTAST1  LZ390 final_options=TA
+TESTAST1  LZ390 final_options=SYSPARM=
+TESTAST1  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\assist\rtast.ER
+TESTAST1  LZ390 final_options=R
+TESTAST1  LZ390 final_options=TESTDD=
+TESTAST1  LZ390 final_options=TIME=15
+TESTAST1  LZ390 final_options=TRACE=
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  LZ390 final_options=PROFILE=
+TESTAST1  LZ390 final_options=STATS=W:\work\z390\assist\TESTAST1.STA
+TESTAST1  LZ390 final_options=SYSPARM=
+TESTAST1  LZ390 final_options=SYSTERM=W:\work\z390\assist\rtast.ERR
+TESTAST1  LZ390 final_options=TESTDD=
+TESTAST1  LZ390 final_options=TIME=60
+TESTAST1  LZ390 final_options=TRACE=
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  LZ390 total errors          = 0
+TESTAST1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=225
+TESTAST1  EZ390 START
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  LZ390 total errors          = 0
+TESTAST1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=223
+TESTAST1  EZ390 START
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  EZ390 program = assist\TESTAST1.390
+TESTAST1  EZ390 options = assist notiming stats systerm(assist\rtast)
+TESTAST1  EZ390 final_options=ALIGN
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  EZ390 program = assist\TESTAST1.390
+TESTAST1  EZ390 options = W:\work\z390\z390.OPT=(time(60)) assist notiming stats 
+  systerm(assist\rtast)
+TESTAST1  EZ390 final_options=ALIGN
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  EZ390 final_options=PROFILE=
+TESTAST1  EZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\assist\TESTAST1.S
+TESTAST1  EZ390 final_options=TA
+TESTAST1  EZ390 final_options=SYSPARM=
+TESTAST1  EZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\assist\rtast.ER
+TESTAST1  EZ390 final_options=R
+TESTAST1  EZ390 final_options=TESTDD=
+TESTAST1  EZ390 final_options=TIME=15
+TESTAST1  EZ390 final_options=TRACE=
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  EZ390 final_options=PROFILE=
+TESTAST1  EZ390 final_options=STATS=W:\work\z390\assist\TESTAST1.STA
+TESTAST1  EZ390 final_options=SYSPARM=
+TESTAST1  EZ390 final_options=SYSTERM=W:\work\z390\assist\rtast.ERR
+TESTAST1  EZ390 final_options=TESTDD=
+TESTAST1  EZ390 final_options=TIME=60
+TESTAST1  EZ390 final_options=TRACE=
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  EZ390 final_options=IPL=
+TESTAST1  EZ390 final_options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\assist\TESTAST1.LOG
+TESTAST1  EZ390 final_options=SYS390=assist\+linklib
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  EZ390 final_options=IPL=
+TESTAST1  EZ390 final_options=LOG=W:\work\z390\assist\TESTAST1.LOG
+TESTAST1  EZ390 final_options=SYS390=assist\+linklib
+*****
+
+***** ASSIST\TESTAST1.STA
+TESTAST1  EZ390 total errors          = 0
+TESTAST1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=271 INS=112
+***** RT\ASSIST\SAVE\TESTAST1.STA
+TESTAST1  EZ390 total errors          = 0
+TESTAST1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=269 INS=112
+*****
+

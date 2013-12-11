@@ -1,0 +1,11 @@
+Comparing files VSAM\TEST\RRV1REPO.RLG and RT\VSAM\TEST\SAVE\RRV1REPO.RLG
+***** VSAM\TEST\RRV1REPO.RLG
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = C:\Program Files (x86)\Automated Software Tools\z390\linklib\REPRO.390
+EZ390I options = @..\rtvsam=(notiming stats tracev traceq 
+***** RT\VSAM\TEST\SAVE\RRV1REPO.RLG
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = W:\work\z390\linklib\REPRO.390
+EZ390I options = @..\rtvsam=(notiming stats tracev traceq 
+*****
+

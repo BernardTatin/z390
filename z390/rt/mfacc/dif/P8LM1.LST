@@ -1,0 +1,19 @@
+Comparing files MFACC\P8LM1.LST and RT\MFACC\SAVE\P8LM1.LST
+***** MFACC\P8LM1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P8LM1.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P8LM1.LST
+LZ390I total errors         = 0
+P8LM1     LZ390 ENDED   RC= 0 MEM(MB)= MB IO=335
+***** RT\MFACC\SAVE\P8LM1.LST
+LZ390I total errors         = 0
+P8LM1     LZ390 ENDED   RC= 0 MEM(MB)= MB IO=334
+*****
+

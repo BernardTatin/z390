@@ -1,0 +1,403 @@
+TESTMVS1  MZ390 START
+TESTMVS1  MZ390 Copyright 2011 Automated Software Tools Corporation
+TESTMVS1  MZ390 z390 is licensed under GNU General Public License
+TESTMVS1  MZ390 program = mvs\test\TESTMVS1.MLC
+TESTMVS1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats 
+  sysmac(mvs\maclib+mac) objhex systerm(mvs\test\rtmvs)
+TESTMVS1  MZ390 final_options=ALIGN
+TESTMVS1  MZ390 final_options=NOALLOW
+TESTMVS1  MZ390 final_options=NOAMODE24
+TESTMVS1  MZ390 final_options=AMODE31
+TESTMVS1  MZ390 final_options=NOASCII
+TESTMVS1  MZ390 final_options=ASM
+TESTMVS1  MZ390 final_options=NOASSIST
+TESTMVS1  MZ390 final_options=AUTOLINK
+TESTMVS1  MZ390 final_options=BAL
+TESTMVS1  MZ390 final_options=NOBS2000
+TESTMVS1  MZ390 final_options=EDF
+TESTMVS1  MZ390 final_options=NOCICS
+TESTMVS1  MZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTMVS1  MZ390 final_options=COMMENT
+TESTMVS1  MZ390 final_options=CON
+TESTMVS1  MZ390 final_options=NODUMP
+TESTMVS1  MZ390 final_options=EPILOG
+TESTMVS1  MZ390 final_options=NOERRSUM
+TESTMVS1  MZ390 final_options=EXTEND
+TESTMVS1  MZ390 final_options=FLOAT(DECIMAL)
+TESTMVS1  MZ390 final_options=NOGUAM
+TESTMVS1  MZ390 final_options=INIT
+TESTMVS1  MZ390 final_options=LIST
+TESTMVS1  MZ390 final_options=LISTCALL
+TESTMVS1  MZ390 final_options=LISTUSE
+TESTMVS1  MZ390 final_options=LOADHIGH
+TESTMVS1  MZ390 final_options=NOMCALL
+TESTMVS1  MZ390 final_options=NOMOD
+TESTMVS1  MZ390 final_options=OBJ
+TESTMVS1  MZ390 final_options=OBJHEX
+TESTMVS1  MZ390 final_options=PC
+TESTMVS1  MZ390 final_options=PCOPT
+TESTMVS1  MZ390 final_options=NOPDSMEM8
+TESTMVS1  MZ390 final_options=NOPRINTALL
+TESTMVS1  MZ390 final_options=PROLOG
+TESTMVS1  MZ390 final_options=PROTECT
+TESTMVS1  MZ390 final_options=R64
+TESTMVS1  MZ390 final_options=NOREFORMAT
+TESTMVS1  MZ390 final_options=NOREGS
+TESTMVS1  MZ390 final_options=RMODE24
+TESTMVS1  MZ390 final_options=NORMODE31
+TESTMVS1  MZ390 final_options=STATS
+TESTMVS1  MZ390 final_options=NOTEST
+TESTMVS1  MZ390 final_options=THREAD
+TESTMVS1  MZ390 final_options=NOTIME
+TESTMVS1  MZ390 final_options=NOTIMING
+TESTMVS1  MZ390 final_options=NOTRACE
+TESTMVS1  MZ390 final_options=NOTRACEA
+TESTMVS1  MZ390 final_options=NOTRACEALL
+TESTMVS1  MZ390 final_options=NOTRACEC
+TESTMVS1  MZ390 final_options=NOTRACEG
+TESTMVS1  MZ390 final_options=NOTRACEI
+TESTMVS1  MZ390 final_options=NOTRACEL
+TESTMVS1  MZ390 final_options=NOTRACEM
+TESTMVS1  MZ390 final_options=NOTRACEP
+TESTMVS1  MZ390 final_options=NOTRACEQ
+TESTMVS1  MZ390 final_options=NOTRACES
+TESTMVS1  MZ390 final_options=NOTRACET
+TESTMVS1  MZ390 final_options=NOTRACEV
+TESTMVS1  MZ390 final_options=TRAP
+TESTMVS1  MZ390 final_options=NOTRUNC
+TESTMVS1  MZ390 final_options=NOTS
+TESTMVS1  MZ390 final_options=VCB
+TESTMVS1  MZ390 final_options=WARN
+TESTMVS1  MZ390 final_options=XREF
+TESTMVS1  MZ390 final_options=ZSTRMAC
+TESTMVS1  MZ390 final_options=CHKMAC=0
+TESTMVS1  MZ390 final_options=CHKSRC=1
+TESTMVS1  MZ390 final_options=ERR=100
+TESTMVS1  MZ390 final_options=MAXCALL=50
+TESTMVS1  MZ390 final_options=MAXDISPLAY=80
+TESTMVS1  MZ390 final_options=MAXESD=1000
+TESTMVS1  MZ390 final_options=MAXFILE=1000
+TESTMVS1  MZ390 final_options=MAXGBL=100000
+TESTMVS1  MZ390 final_options=MAXHEIGHT=600
+TESTMVS1  MZ390 final_options=MAXLCL=100000
+TESTMVS1  MZ390 final_options=MAXLEN=80
+TESTMVS1  MZ390 final_options=MAXLINE=200000
+TESTMVS1  MZ390 final_options=MAXLOG=1000000
+TESTMVS1  MZ390 final_options=MAXPARM=10000
+TESTMVS1  MZ390 final_options=MAXPASS=2
+TESTMVS1  MZ390 final_options=MAXPC=50000
+TESTMVS1  MZ390 final_options=MAXQUE=1000
+TESTMVS1  MZ390 final_options=MAXRLD=10000
+TESTMVS1  MZ390 final_options=MAXSIZE=52428800
+TESTMVS1  MZ390 final_options=MAXSYM=50000
+TESTMVS1  MZ390 final_options=MAXWARN=4
+TESTMVS1  MZ390 final_options=MAXWIDTH=800
+TESTMVS1  MZ390 final_options=MEM=1
+TESTMVS1  MZ390 final_options=MINHEIGHT=150
+TESTMVS1  MZ390 final_options=MINWIDTH=150
+TESTMVS1  MZ390 final_options=MNOTE=0
+TESTMVS1  MZ390 final_options=PARM=
+TESTMVS1  MZ390 final_options=PROFILE=
+TESTMVS1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTMVS1
+TESTMVS1  MZ390 final_options=.STA
+TESTMVS1  MZ390 final_options=SYSPARM=
+TESTMVS1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\rtmvs.
+TESTMVS1  MZ390 final_options=ERR
+TESTMVS1  MZ390 final_options=TESTDD=
+TESTMVS1  MZ390 final_options=TIME=15
+TESTMVS1  MZ390 final_options=TRACE=
+TESTMVS1  MZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTMVS1  MZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTMVS1  MZ390 final_options=Z390COMMAND=cmd.exe
+TESTMVS1  MZ390 final_options=Z390EDITOR=notepad.exe
+TESTMVS1  MZ390 final_options=INSTALL=
+TESTMVS1  MZ390 final_options=IPL=
+TESTMVS1  MZ390 final_options=LOG=
+TESTMVS1  MZ390 final_options=SYS390=mvs\test\+linklib
+TESTMVS1  MZ390 final_options=SYSBAL=mvs\test\
+TESTMVS1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTMVS1  MZ390 final_options=SYSDAT=mvs\test\
+TESTMVS1  MZ390 final_options=SYSERR=mvs\test\
+TESTMVS1  MZ390 final_options=SYSLOG=mvs\test\
+TESTMVS1  MZ390 final_options=SYSLST=mvs\test\
+TESTMVS1  MZ390 final_options=SYSMAC=mvs\maclib+mac
+TESTMVS1  MZ390 final_options=SYSMLC=mvs\test\
+TESTMVS1  MZ390 final_options=SYSPCH=mvs\test\
+TESTMVS1  MZ390 final_options=SYSPRN=mvs\test\
+TESTMVS1  MZ390 final_options=SYSOBJ=mvs\test\
+TESTMVS1  MZ390 final_options=SYSOPT=mvs\test\
+TESTMVS1  MZ390 final_options=SYSTRC=mvs\test\
+TESTMVS1  MZ390 total MLC/MAC loaded  = 15864
+TESTMVS1  MZ390 total BAL output lines= 2152
+TESTMVS1  MZ390 total BAL instructions= 36
+TESTMVS1  MZ390 total macros          = 75
+TESTMVS1  MZ390 total macro loads     = 75
+TESTMVS1  MZ390 total macro calls     = 165
+TESTMVS1  MZ390 total AENTRY blocks   = 0
+TESTMVS1  MZ390 total ACALL  calls    = 0
+TESTMVS1  MZ390 total AIF    blocks   = 0
+TESTMVS1  MZ390 total ACASE  blocks   = 0
+TESTMVS1  MZ390 total AWHILE calls    = 0
+TESTMVS1  MZ390 total AUNTIL blocks   = 0
+TESTMVS1  MZ390 total global set names= 158
+TESTMVS1  MZ390 tot global seta cells = 271
+TESTMVS1  MZ390 tot global setb cells = 73
+TESTMVS1  MZ390 tot global setc cells = 177
+TESTMVS1  MZ390 max local pos parms   = 23
+TESTMVS1  MZ390 max local key parms   = 283
+TESTMVS1  MZ390 max local set names   = 234
+TESTMVS1  MZ390 max local seta cells  = 266
+TESTMVS1  MZ390 max local setb cells  = 170
+TESTMVS1  MZ390 max local setc cells  = 46
+TESTMVS1  MZ390 total array expansions= 0
+TESTMVS1  MZ390 total Keys            = 8375
+TESTMVS1  MZ390 Key searches          = 62616
+TESTMVS1  MZ390 Key avg comps         = 1
+TESTMVS1  MZ390 Key max comps         = 8
+TESTMVS1  MZ390 total macro line exec = 8468
+TESTMVS1  MZ390 total pcode line exec = 2480
+TESTMVS1  MZ390 total pcode line gen. = 1851
+TESTMVS1  MZ390 total pcode line reuse= 0
+TESTMVS1  MZ390 total pcode op   gen. = 8266
+TESTMVS1  MZ390 total pcode op   exec = 9088
+TESTMVS1  MZ390 total pcode gen  opt  = 3602
+TESTMVS1  MZ390 total pcode exec opt  = 20
+TESTMVS1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTMVS1.MLC
+TESTMVS1  MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ABEND.MAC
+TESTMVS1  MZ390 FID=  3 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IHBINNRA.MAC
+TESTMVS1  MZ390 FID=  4 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ACB.MAC
+TESTMVS1  MZ390 FID=  5 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ACBVS.MAC
+TESTMVS1  MZ390 FID=  6 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDAVSACB.MAC
+TESTMVS1  MZ390 FID=  7 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDAVSCB3.MAC
+TESTMVS1  MZ390 FID=  8 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ATTACH.MAC
+TESTMVS1  MZ390 FID=  9 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\BLDL.MAC
+TESTMVS1  MZ390 FID= 10 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\BUILD.MAC
+TESTMVS1  MZ390 FID= 11 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\LINK.MAC
+TESTMVS1  MZ390 FID= 12 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IHBINNRB.MAC
+TESTMVS1  MZ390 FID= 13 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\CALL.MAC
+TESTMVS1  MZ390 FID= 14 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IHBOPLST.MAC
+TESTMVS1  MZ390 FID= 15 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\CHECK.MAC
+TESTMVS1  MZ390 FID= 16 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\CLOSE.MAC
+TESTMVS1  MZ390 FID= 17 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\CVT.MAC
+TESTMVS1  MZ390 FID= 18 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\DCB.MAC
+TESTMVS1  MZ390 FID= 19 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IHB01.MAC
+TESTMVS1  MZ390 FID= 20 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\DCBD.MAC
+TESTMVS1  MZ390 FID= 21 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IHBERMAC.MAC
+TESTMVS1  MZ390 FID= 22 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\DELETE.MAC
+TESTMVS1  MZ390 FID= 23 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\DEQ.MAC
+TESTMVS1  MZ390 FID= 24 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ENQ.MAC
+TESTMVS1  MZ390 FID= 25 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\DETACH.MAC
+TESTMVS1  MZ390 FID= 26 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\DYNALLOC.MAC
+TESTMVS1  MZ390 FID= 27 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ESETL.MAC
+TESTMVS1  MZ390 FID= 28 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\ESPIE.MAC
+TESTMVS1  MZ390 FID= 29 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\ESTAE.MAC
+TESTMVS1  MZ390 FID= 30 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\EXLST.MAC
+TESTMVS1  MZ390 FID= 31 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\EXLVS.MAC
+TESTMVS1  MZ390 FID= 32 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\EXTRACT.MAC
+TESTMVS1  MZ390 FID= 33 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\FREEMAIN.MAC
+TESTMVS1  MZ390 FID= 34 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\GETMAIN.MAC
+TESTMVS1  MZ390 FID= 35 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\GENCB.MAC
+TESTMVS1  MZ390 FID= 36 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDACB2.MAC
+TESTMVS1  MZ390 FID= 37 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDACBRPL.MAC
+TESTMVS1  MZ390 FID= 38 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDACB3.MAC
+TESTMVS1  MZ390 FID= 39 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDACB1.MAC
+TESTMVS1  MZ390 FID= 40 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDACBOPT.MAC
+TESTMVS1  MZ390 FID= 41 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\GET.MAC
+TESTMVS1  MZ390 FID= 42 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDENTIFY.MAC
+TESTMVS1  MZ390 FID= 43 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\LOAD.MAC
+TESTMVS1  MZ390 FID= 44 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\LOCATE.MAC
+TESTMVS1  MZ390 FID= 45 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\MODCB.MAC
+TESTMVS1  MZ390 FID= 46 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDACBACB.MAC
+TESTMVS1  MZ390 FID= 47 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\OPEN.MAC
+TESTMVS1  MZ390 FID= 48 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\POINT.MAC
+TESTMVS1  MZ390 FID= 49 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\POST.MAC
+TESTMVS1  MZ390 FID= 50 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\PUT.MAC
+TESTMVS1  MZ390 FID= 51 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\PUTX.MAC
+TESTMVS1  MZ390 FID= 52 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\RDJFCB.MAC
+TESTMVS1  MZ390 FID= 53 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\READ.MAC
+TESTMVS1  MZ390 FID= 54 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IHBRDWRS.MAC
+TESTMVS1  MZ390 FID= 55 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\RPL.MAC
+TESTMVS1  MZ390 FID= 56 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\RPLVS.MAC
+TESTMVS1  MZ390 FID= 57 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDAVSRPL.MAC
+TESTMVS1  MZ390 FID= 58 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\IDAVSOPT.MAC
+TESTMVS1  MZ390 FID= 59 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\RETURN.MAC
+TESTMVS1  MZ390 FID= 60 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\SAVE.MAC
+TESTMVS1  MZ390 FID= 61 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\SETL.MAC
+TESTMVS1  MZ390 FID= 62 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\SHOWCAT.MAC
+TESTMVS1  MZ390 FID= 63 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\SHOWCB.MAC
+TESTMVS1  MZ390 FID= 64 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\SNAP.MAC
+TESTMVS1  MZ390 FID= 65 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\STIMER.MAC
+TESTMVS1  MZ390 FID= 66 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\TGET.MAC
+TESTMVS1  MZ390 FID= 67 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\TIME.MAC
+TESTMVS1  MZ390 FID= 68 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\TPUT.MAC
+TESTMVS1  MZ390 FID= 69 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\TTIMER.MAC
+TESTMVS1  MZ390 FID= 70 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\WRITE.MAC
+TESTMVS1  MZ390 FID= 71 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\WTO.MAC
+TESTMVS1  MZ390 FID= 72 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\WTOR.MAC
+TESTMVS1  MZ390 FID= 73 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\XCTL.MAC
+TESTMVS1  MZ390 FID= 74 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mvs\maclib\XLATE.MAC
+TESTMVS1  MZ390 FID= 75 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\YREGS.MAC
+TESTMVS1  MZ390 total mnote warnings  = 0
+TESTMVS1  MZ390 total mnote errors    = 0
+TESTMVS1  MZ390 max   mnote level     = 0
+TESTMVS1  MZ390 total mz390 errors    = 0
+TESTMVS1  AZ390 BAL lines             = 2152
+TESTMVS1  AZ390 symbols               = 790
+TESTMVS1  AZ390 Literals              = 3
+TESTMVS1  AZ390 alloc passes          = 2
+TESTMVS1  AZ390 Keys                  = 2112
+TESTMVS1  AZ390 Key searches          = 12336
+TESTMVS1  AZ390 Key avg comps         = 0
+TESTMVS1  AZ390 Key max comps         = 4
+TESTMVS1  AZ390 ESD symbols           = 7
+TESTMVS1  AZ390 object bytes          = 1262
+TESTMVS1  AZ390 object rlds           = 41
+TESTMVS1  AZ390 total mnote warnings  = 0
+TESTMVS1  AZ390 total mnote errors    = 0
+TESTMVS1  AZ390 max   mnote level     = 0
+TESTMVS1  AZ390 total mz390 errors    = 0
+TESTMVS1  AZ390 total az390 errors    = 0
+TESTMVS1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=48591
+TESTMVS1  LZ390 START
+TESTMVS1  LZ390 Copyright 2011 Automated Software Tools Corporation
+TESTMVS1  LZ390 z390 is licensed under GNU General Public License
+TESTMVS1  LZ390 options = bal notiming stats sysmac(mvs\maclib+mac) 
+  objhex systerm(mvs\test\rtmvs)
+TESTMVS1  LZ390 program = mvs\test\TESTMVS1.OBJ
+TESTMVS1  LZ390 final_options=ALIGN
+TESTMVS1  LZ390 final_options=NOALLOW
+TESTMVS1  LZ390 final_options=NOAMODE24
+TESTMVS1  LZ390 final_options=AMODE31
+TESTMVS1  LZ390 final_options=NOASCII
+TESTMVS1  LZ390 final_options=ASM
+TESTMVS1  LZ390 final_options=NOASSIST
+TESTMVS1  LZ390 final_options=AUTOLINK
+TESTMVS1  LZ390 final_options=BAL
+TESTMVS1  LZ390 final_options=NOBS2000
+TESTMVS1  LZ390 final_options=EDF
+TESTMVS1  LZ390 final_options=NOCICS
+TESTMVS1  LZ390 final_options=CODEPAGE(ISO-8859-1+IBM1047)
+TESTMVS1  LZ390 final_options=COMMENT
+TESTMVS1  LZ390 final_options=CON
+TESTMVS1  LZ390 final_options=NODUMP
+TESTMVS1  LZ390 final_options=EPILOG
+TESTMVS1  LZ390 final_options=NOERRSUM
+TESTMVS1  LZ390 final_options=EXTEND
+TESTMVS1  LZ390 final_options=FLOAT(DECIMAL)
+TESTMVS1  LZ390 final_options=NOGUAM
+TESTMVS1  LZ390 final_options=INIT
+TESTMVS1  LZ390 final_options=LIST
+TESTMVS1  LZ390 final_options=LISTCALL
+TESTMVS1  LZ390 final_options=LISTUSE
+TESTMVS1  LZ390 final_options=LOADHIGH
+TESTMVS1  LZ390 final_options=NOMCALL
+TESTMVS1  LZ390 final_options=NOMOD
+TESTMVS1  LZ390 final_options=OBJ
+TESTMVS1  LZ390 final_options=OBJHEX
+TESTMVS1  LZ390 final_options=PC
+TESTMVS1  LZ390 final_options=PCOPT
+TESTMVS1  LZ390 final_options=NOPDSMEM8
+TESTMVS1  LZ390 final_options=NOPRINTALL
+TESTMVS1  LZ390 final_options=PROLOG
+TESTMVS1  LZ390 final_options=PROTECT
+TESTMVS1  LZ390 final_options=R64
+TESTMVS1  LZ390 final_options=NOREFORMAT
+TESTMVS1  LZ390 final_options=NOREGS
+TESTMVS1  LZ390 final_options=RMODE24
+TESTMVS1  LZ390 final_options=NORMODE31
+TESTMVS1  LZ390 final_options=STATS
+TESTMVS1  LZ390 final_options=NOTEST
+TESTMVS1  LZ390 final_options=THREAD
+TESTMVS1  LZ390 final_options=NOTIME
+TESTMVS1  LZ390 final_options=NOTIMING
+TESTMVS1  LZ390 final_options=NOTRACE
+TESTMVS1  LZ390 final_options=NOTRACEA
+TESTMVS1  LZ390 final_options=NOTRACEALL
+TESTMVS1  LZ390 final_options=NOTRACEC
+TESTMVS1  LZ390 final_options=NOTRACEG
+TESTMVS1  LZ390 final_options=NOTRACEI
+TESTMVS1  LZ390 final_options=NOTRACEL
+TESTMVS1  LZ390 final_options=NOTRACEM
+TESTMVS1  LZ390 final_options=NOTRACEP
+TESTMVS1  LZ390 final_options=NOTRACEQ
+TESTMVS1  LZ390 final_options=NOTRACES
+TESTMVS1  LZ390 final_options=NOTRACET
+TESTMVS1  LZ390 final_options=NOTRACEV
+TESTMVS1  LZ390 final_options=TRAP
+TESTMVS1  LZ390 final_options=NOTRUNC
+TESTMVS1  LZ390 final_options=NOTS
+TESTMVS1  LZ390 final_options=VCB
+TESTMVS1  LZ390 final_options=WARN
+TESTMVS1  LZ390 final_options=XREF
+TESTMVS1  LZ390 final_options=ZSTRMAC
+TESTMVS1  LZ390 final_options=CHKMAC=0
+TESTMVS1  LZ390 final_options=CHKSRC=1
+TESTMVS1  LZ390 final_options=ERR=100
+TESTMVS1  LZ390 final_options=MAXCALL=50
+TESTMVS1  LZ390 final_options=MAXDISPLAY=80
+TESTMVS1  LZ390 final_options=MAXESD=1000
+TESTMVS1  LZ390 final_options=MAXFILE=1000
+TESTMVS1  LZ390 final_options=MAXGBL=100000
+TESTMVS1  LZ390 final_options=MAXHEIGHT=600
+TESTMVS1  LZ390 final_options=MAXLCL=100000
+TESTMVS1  LZ390 final_options=MAXLEN=80
+TESTMVS1  LZ390 final_options=MAXLINE=200000
+TESTMVS1  LZ390 final_options=MAXLOG=1000000
+TESTMVS1  LZ390 final_options=MAXPARM=10000
+TESTMVS1  LZ390 final_options=MAXPASS=2
+TESTMVS1  LZ390 final_options=MAXPC=50000
+TESTMVS1  LZ390 final_options=MAXQUE=1000
+TESTMVS1  LZ390 final_options=MAXRLD=10000
+TESTMVS1  LZ390 final_options=MAXSIZE=52428800
+TESTMVS1  LZ390 final_options=MAXSYM=50000
+TESTMVS1  LZ390 final_options=MAXWARN=4
+TESTMVS1  LZ390 final_options=MAXWIDTH=800
+TESTMVS1  LZ390 final_options=MEM=1
+TESTMVS1  LZ390 final_options=MINHEIGHT=150
+TESTMVS1  LZ390 final_options=MINWIDTH=150
+TESTMVS1  LZ390 final_options=MNOTE=0
+TESTMVS1  LZ390 final_options=PARM=
+TESTMVS1  LZ390 final_options=PROFILE=
+TESTMVS1  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\TESTMVS1
+TESTMVS1  LZ390 final_options=.STA
+TESTMVS1  LZ390 final_options=SYSPARM=
+TESTMVS1  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\mvs\test\rtmvs.
+TESTMVS1  LZ390 final_options=ERR
+TESTMVS1  LZ390 final_options=TESTDD=
+TESTMVS1  LZ390 final_options=TIME=15
+TESTMVS1  LZ390 final_options=TRACE=
+TESTMVS1  LZ390 final_options=Z390ACROBAT=cmd.exe /c Start
+TESTMVS1  LZ390 final_options=Z390BROWSER=cmd.exe /c Start
+TESTMVS1  LZ390 final_options=Z390COMMAND=cmd.exe
+TESTMVS1  LZ390 final_options=Z390EDITOR=notepad.exe
+TESTMVS1  LZ390 final_options=INSTALL=
+TESTMVS1  LZ390 final_options=IPL=
+TESTMVS1  LZ390 final_options=LOG=
+TESTMVS1  LZ390 final_options=SYS390=mvs\test\+linklib
+TESTMVS1  LZ390 final_options=SYSBAL=mvs\test\
+TESTMVS1  LZ390 final_options=SYSCPY=mvs\test\
+TESTMVS1  LZ390 final_options=SYSDAT=mvs\test\
+TESTMVS1  LZ390 final_options=SYSERR=mvs\test\
+TESTMVS1  LZ390 final_options=SYSLOG=mvs\test\
+TESTMVS1  LZ390 final_options=SYSLST=mvs\test\
+TESTMVS1  LZ390 final_options=SYSMAC=mvs\maclib+mac
+TESTMVS1  LZ390 final_options=SYSMLC=mvs\test\
+TESTMVS1  LZ390 final_options=SYSPCH=mvs\test\
+TESTMVS1  LZ390 final_options=SYSPRN=mvs\test\
+TESTMVS1  LZ390 final_options=SYSOBJ=mvs\test\
+TESTMVS1  LZ390 final_options=SYSOPT=mvs\test\
+TESTMVS1  LZ390 final_options=SYSTRC=mvs\test\
+TESTMVS1  LZ390 Stats total obj files = 1
+TESTMVS1  LZ390 Stats total esds      = 2
+TESTMVS1  LZ390 Stats total csects    = 1
+TESTMVS1  LZ390 Stats total entries   = 1
+TESTMVS1  LZ390 Stats missing wxtrn's = 0
+TESTMVS1  LZ390 Stats Keys            = 2
+TESTMVS1  LZ390 Stats Key searches    = 6
+TESTMVS1  LZ390 Stats Key avg comps   = 0
+TESTMVS1  LZ390 Stats Key max comps   = 1
+TESTMVS1  LZ390 Stats total obj byte  = 1262
+TESTMVS1  LZ390 Stats total obj rlds  = 41
+TESTMVS1  LZ390 total errors          = 0
+TESTMVS1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=539

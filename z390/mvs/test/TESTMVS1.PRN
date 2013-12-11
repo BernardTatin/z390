@@ -1,0 +1,1777 @@
+TESTMVS1  MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = mvs\test\TESTMVS1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats 
+  sysmac(mvs\maclib+mac) objhex systerm(mvs\test\rtmvs)
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=00000520 TYPE=CST NAME=TESTMVS1
+ ESD=0001 LOC=00000034 LEN=00000001 TYPE=ENT NAME=MYPGM
+ ESD=0003 LOC=00000000 LEN=00000000 TYPE=EXT NAME=MYPGM
+Assembler Listing
+000000                                        (1/1)1          TITLE 'TESTMVS1 TEST COMMON MVS 3.8 MACROS'
+000000                                        (1/2)2 **********************************************************************
+000000                                        (1/3)3 * 06/30/09 RPI 1044 ADD MYPGM ENTRY
+000000                                        (1/4)4 **********************************************************************
+000000                                        (1/5)5 TESTMVS1 CSECT 
+000000                                        (1/6)6          USING *,15
+LISTUSE TESTMVS1 ESD=0001 LOC=00000000 LEN=01000 REG=F OFF=00000 LAB=
+000000 1BFF                                   (1/7)7          SR   15,15
+000002 07FE                                   (1/8)8          BR   14
+000004                                        (1/9)9 * DATA REFERENCES
+000004                                      (1/10)10 MYEXIT   DS   0H
+000004                                      (1/11)11 MYECB    DS   F
+000008                                      (1/12)12 DATA4    DS   F
+000010                                      (1/13)13 DATA8    DS   D
+000018                                      (1/14)14 DATA16   DS   2D
+000028                  00000028            (1/15)15 MYAREA   EQU  *
+000028                  00000028            (1/16)16 MYLIST   EQU  *
+000028                  00000028            (1/17)17 MYLIMIT  EQU  *
+000028                  00000028            (1/18)18 MYNAME   EQU  *
+000028 C3C2E4C6D9C3E3D3                     (1/19)19 CBUFRSQN DC   CL8'CBUFRCTL'
+000030 C3C2E4C6                             (1/20)20 CBUFRSRN DC   CL4'CBUF'
+000034                  00000034            (1/21)21 MYPGM    EQU  *
+000034                                      (1/22)22          ENTRY   MYPGM
+000034                                      (1/23)23          ABEND   111,DUMP
+000034                                       (2/9)24+         DS    0H
+000034 4110006F                             (3/39)27+         LA    1,111                              LOAD PARAMETER REG 1
+000038 41000080                             (2/47)29+         LA    0,128(0,0)       PICK UP DUMP/STEP/DUMPOPTS     YM1995
+00003C 89000018                             (2/48)30+         SLL   0,24(0)            SHIFT TO HIGH ORDER
+000040 1610                                 (2/49)31+         OR    1,0                OR IN WITH COMPCODE
+000042 0A0D                                 (2/52)32+         SVC   13                 LINK TO ABEND ROUTINE
+000044                                      (1/24)34 MYACB    ACB     DDNAME=MYACB
+000044                                      (5/65)60+MYACB    DS    0F
+000044 A0                                   (5/66)61+         DC    X'A0' .                  ACB IDENTIFICATION
+000045 00                                   (5/67)62+         DC    AL1(0)              ACB SUBTYPE             X04SVHS
+000046 004C                                 (5/70)63+         DC    AL2(76+0) .      ACB LENGTH             X03004HS
+000048 00000000                             (5/71)64+         DC    A(0) .                   AMB LIST POINTER
+00004C 00000000                             (5/77)65+         DC    A(0) .                   INTERFACE ROUTINE POINTER
+000050 94                                   (5/80)66+         DC    B'10010100'              MACRF(1)                X04SVHS
+000051 00                                   (5/81)67+         DC    B'00000000'              MACRF(2)                X04SVHS
+000052 00                                   (5/82)68+         DC    AL1(0) .           NO OF CONCURRENT        X04SVHS
+000053                                      (5/83)69+*                                       STRINGS FOR AIX PATH    X04SVHS
+000053 01                                   (5/84)70+         DC    AL1(1) .            NUMBER OF STRINGS       X04SVHS
+000054 0000                                 (5/85)71+         DC    AL2(0) .            NUMBER OF DATA BUFFERS
+000056 0000                                 (5/86)72+         DC    AL2(0) .            NUMBER OF INDEX BUFFERS
+000058 00                                   (5/87)73+         DC    B'00000000'              MACRF(3)                X04SVHS
+000059 00                                   (5/88)74+         DC    B'00000000' .            MACRF(4)                X04SVHS
+00005A 0000                                 (5/89)75+         DC    AL2(0) .                 JES BUFFER POOL/NUMBER  X04SVHS
+00005C                                      (5/90)76+*                                       OF JOURNAL BUFFERS
+00005C 80                                   (5/91)77+         DC    X'80' .                  RECFM=A
+00005D 00                                   (5/97)78+         DC    B'00000000' .         CONTROL CHARACTER TYPE
+00005E 0008                                 (5/98)79+         DC    X'0008' .                DSORG=ACB
+000060 00000000                            (5/109)80+         DC    A(0)                                             X04SVHS
+000064 00000000                            (5/111)81+         DC    A(0) .             PASSWORD POINTER
+000068 00000000                            (5/112)82+         DC    A(0) .              EXIT LIST POINTER
+00006C D4E8C1C3C2404040                    (5/135)83+         DC    CL8'MYACB' .           DDNAME
+000074 02                                  (5/136)84+         DC    X'02' .                  OFLAGS
+000075 00                                  (5/137)85+         DC    AL1(0) .                 ERFLAGS
+000076 00                                  (5/138)86+         DC    B'00000000'              INFLGS(1)               X04SVHS
+000077 00                                  (5/139)87+         DC    B'00000000'              INFLGS(2)               X04SVHS
+000078 00000000                            (5/140)88+         DC    A(0) .               OPENJ JFCB POINTER
+00007C 00000000                            (5/141)89+         DC    A(0)                BUFFER SPACE
+000080 0000                                (5/148)90+         DC    AL2(0) .          BLOCK SIZE
+000082 0000                                (5/161)91+         DC    AL2(0) .            RECORD SIZE
+000084 00000000                            (5/165)92+         DC    A(0) .                   USER WORKAREA POINTER
+000088 00000000                            (5/166)93+         DC    A(0)                     CONTROL BLOCK MANIPULATION
+00008C                                     (5/167)94+*                                       WORKAREA POINTER
+00008C 00000000                            (5/172)95+         DC    A(0) .                   PTR TO APPLICATION NAME  X03004
+000090                                      (1/25)98          ATTACH  EPLOC=(3),ECB=(2),SZERO=YES,JSTCB=NO
+000090                                     (8/23)100+* /* MACDATE Y-1 72271                                               */
+000090                                     (8/24)101+* /*
+000090 41F0F0A0                0000A0     (8/521)102+         LA    15,IHB0012                         LOAD 15 WITH LIST ADDR
+000094 5030F000                           (8/524)104+         ST    3,0(0,15)                 STORE EPLOC INTO LIST
+000098 BE27F009                           (8/537)105+         STCM  2,7,9(15)         STORE ECB INTO LIST
+00009C 47F0F03C                           (8/593)106+         B     60(,15)            BRANCH AROUND LIST             Y02752
+0000A0                                    (8/594)107+IHB0012  DS    0F                                SUP. PARAM. LIST
+0000A0 00000000                           (8/607)108+         DC    A(0)                              DE OR EPLOC ADDRESS
+0000A4 00                                 (8/610)109+         DC    AL1(0)
+0000A5 000000                             (8/615)110+         DC    AL3(0)                  DCB ADDRESS                 LCS1
+0000A8 08                                 (8/617)111+         DC    AL1(8)        FLAGS                          Y02752
+0000A9 000000                             (8/622)112+         DC    AL3(0)             ECB ADDRESS                    Y02752
+0000AC 00000000                           (8/632)113+         DC    A(0)                              GSPV VALUE OR GSPL ADR
+0000B0 00000000                           (8/642)114+         DC    A(0)                              SHSPL OR SHSPV
+0000B4 20                                 (8/645)115+         DC    AL1(32)        FLAGS                          Y02752
+0000B5 000000                             (8/650)116+         DC    AL3(0)                        ETXR ROUT. ADDRESS    RORI
+0000B8 0000                               (8/658)117+         DC    AL2(0)                            DPMOD VALUE
+0000BA 00                                 (8/663)118+         DC    AL1(0)                            LPMOD VALUE
+0000BB 00                                 (8/665)119+         DC    AL1(0)
+0000BC 4040404040404040                   (8/669)120+         DC    CL8' '                                              I270
+0000C4 00                                 (8/674)121+         DC    AL1(0)              LSQA=0
+0000C5 000000                             (8/679)122+         DC    AL3(0)              ADDRESS OF JSCB
+0000C8 00                                 (8/684)123+         DC    AL1(0)              TID=0
+0000C9 000000                             (8/698)124+         DC    AL3(0)             NO STAI/ESTAI PARM LIST ADDR   Y02752
+0000CC 00000000                           (8/699)125+         DC    A(0)                .NO EXIT ADDR
+0000D0 00000000                           (8/705)126+         DC    A(0)          .TASKLIB DCB ADDRESS.                20021
+0000D4 00                                 (8/717)127+         DC    X'00'                       NO FLAGS ON         @Z40RP9B
+0000D5 00003C                             (8/719)128+         DC    AL3(60)            LENGTH OF THIS PARM LIST     @Z40RP9B
+0000D8 00000000                           (8/731)129+         DC    A(0)               NSHSPV VALUE OR NSHSPL ADDR    Y02752
+0000DC 0A2A                               (8/732)130+         SVC   42                                ISSUE ATTACH SVC
+0000DE                                     (1/26)132          BLDL    MYDCB,MYLIST
+0000DE 4110F148                000148      (3/39)135+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+0000E2 4100F028                000028      (3/51)137+         LA    0,MYLIST                              LOAD PARAMETER REG 0
+0000E6 41110000                             (9/9)140+         LA    1,0(1)                     CLEAR HIGH ORDER BYTE ZA00734
+0000EA 0A12                                (9/12)141+         SVC   18                                LINK TO BLDL ROUTINE
+0000EC                                     (1/27)143          BUILD   MYAREA,10,4096
+0000EC 4110F028                000028      (3/39)145+         LA    1,MYAREA                              LOAD PARAMETER REG 1
+0000F0 47F0F0F8                0000F8     (10/42)148+         B     *+8                               BRANCH AROUND VALUES
+0000F4 000A                               (10/43)149+         DC    AL2(10)                          NUMBER OF BUFFERS
+0000F6 1000                               (10/44)150+         DC    AL2(4096)                         LENGTH OF BUFFERS
+0000F8 D2031000F0F4            0000F4     (10/45)151+         MVC   0(4,1),*-4                        MOVE INTO LIST
+0000FE 0700                              (12/101)154+         CNOP  0,4
+000100 45F0F114                000114    (12/102)155+         BAL   15,*+20          BRANCH AROUND CONSTANTS
+000104 0000010C                          (12/104)156+         DC    A(*+8)         ADDR. OF PARM. LIST
+000108 00000000                          (12/136)157+         DC    A(0)                DCB ADDRESS PARAMETER
+00010C C9C5C3C2C2C6C2F1                  (12/138)158+         DC    CL8'IECBBFB1'            EP PARAMETER
+000114 0A06                               (11/18)160+         SVC   6                   ISSUE LINK SVC
+000116                                     (1/28)163          CALL    MYPGM,(MYLIST),VL
+000116 0700                               (13/17)164+         CNOP  0,4
+000118 47F0F120                000120     (13/18)165+         B     *+8                               BRANCH AROUND VCON
+00011C 00000000                           (13/19)166+IHB0019B DC    V(MYPGM)                         ENTRY POINT ADDRESS
+000120                                    (14/57)168+         CNOP  0,4
+000120 4510F128                000128     (14/58)169+         BAL   1,IHB0020A                        LOAD LIST ADDR IN REG1
+000124                  00000124          (14/59)170+IHB0020  EQU   *
+000124 80                                 (14/75)171+         DC    B'10000000'                SET VL SWITCH BIT
+000125 000028                             (14/76)172+         DC    AL3(MYLIST)                PROB. PROG. PARAMETER
+000128                  00000128          (14/83)173+IHB0020A EQU   *
+000128 58F0F11C                00011C     (13/24)175+         L     15,IHB0019B                       LOAD 15 WITH ENTRY ADR
+00012C 05EF                               (13/25)176+         BALR  14,15                             BRANCH TO ENTRY POINT
+00012E                                     (1/29)178          CHECK   MYDCB
+00012E 4110F148                000148      (3/39)180+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+000132 58E01008                           (15/15)183+         L     14,8(0,1)                PICK UP DCB ADDR
+000136 58F0E034                           (15/16)184+         L     15,52(0,14)              LOAD CHECK ROUTINE ADDR
+00013A 05EF                               (15/17)185+         BALR  14,15                    LINK TO CHECK ROUTINE
+00013C                                     (1/30)187          CLOSE   (MYDCB)
+00013C                                   (16/116)188+         CNOP  0,4                               ALIGN LIST TO FULLWORD
+00013C 4510F144                000144    (16/118)189+         BAL   1,*+8                         LOAD REG1 W/LIST ADDR
+000140 80                                (16/124)190+         DC    AL1(128)                        OPTION BYTE
+000141 000148                            (16/125)191+         DC    AL3(MYDCB)                  DCB ADDRESS
+000144 0A14                               (16/81)192+         SVC   20                                ISSUE CLOSE SVC
+000146                                     (1/31)194          CVT     DSECT=YES
+000146                                     (17/9)195+*%CVTL1 : ;
+000146                                    (17/10)196+*/*                                                                  */
+000146                                    (17/11)197+*/*      COMMUNICATION VECTOR TABLE                                  */
+000146                                    (17/12)198+*/*                                                                  */
+000146                                    (17/13)199+*/*      OS/VS2 SU64, 04/24/80, LEVEL=6                              */
+000146                                    (17/14)200+*/*                                                                  */
+000146                                    (17/15)201+*/*  METHOD OF ACCESS                                                */
+000146                                    (17/16)202+*/*      PL/S - DCL CVTPTR PTR                                       */
+000146                                    (17/17)203+*/*      BAL  - DSECT=YES SHOULD BE SPECIFIED ON MACRO CALL EXCEPT   */
+000146                                    (17/18)204+*/*             WHEN CALLED DURING SYSGEN TO CREATE CSECT.  CVT FOR  */
+000146                                    (17/19)205+*/*             OS/VS2 IS MAPPED UNLESS SYS=AOS1 IS SPECIFIED.  THE  */
+000146                                    (17/20)206+*/*             PREFIX IS NOT MAPPED UNLESS PREFIX=YES IS SPECIFIED. */
+000146                                    (17/21)207+*/*             A USING ON CVTMAP OR DSECT NAME WILL ESTABLISH       */
+000146                                    (17/22)208+*/*             ADDRESSABILITY FOR ALL SYMBOLS EXCEPT IN THE 2       */
+000146                                    (17/23)209+*/*             EXTENSIONS.  TO ESTABLISH ADDRESSABILITY FOR THE     */
+000146                                    (17/24)210+*/*             OS - OS/VS COMMON EXTENSION, YOU SHOULD CODE         */
+000146                                    (17/25)211+*/*                                                                  */
+000146                                    (17/26)212+*/*             L     REG,CVTEXT1                                    */
+000146                                    (17/27)213+*/*             USING CVTXTNT1,REG                                   */
+000146                                    (17/28)214+*/*                                                                  */
+000146                                    (17/29)215+*/*             TO ESTABLISH ADDRESSABILITY FOR THE OS/VS1 - OS/VS2  */
+000146                                    (17/30)216+*/*             COMMON EXTENSION, YOU SHOULD CODE                    */
+000146                                    (17/31)217+*/*                                                                  */
+000146                                    (17/32)218+*/*             L     REG,CVTEXT2                                    */
+000146                                    (17/33)219+*/*             USING CVTXTNT2,REG                                   */
+000146                                    (17/34)220+*/*                                                                  */
+000146                                    (17/35)221+*/*             WHERE REG IN EITHER CASE IS ANY REGISTER OTHER       */
+000146                                    (17/36)222+*/*             THAN ZERO.                                           */
+000146                                    (17/37)223+*/*                                                                  */
+000146                                    (17/38)224+*/*             WHEN LISTING IS SUPPRESSED, YOU CAN DETERMINE WHICH  */
+000146                                    (17/39)225+*/*             DSECT A SYMBOL IS IN BY USING THE STATEMENT NUMBER   */
+000146                                    (17/40)226+*/*             IN THE DEFN COLUMN IN THE CROSS REFERENCE LISTING.   */
+000146                                    (17/41)227+*/*             FOR EXAMPLE, ANY SYMBOL DEFINED BETWEEN THE          */
+000146                                    (17/42)228+*/*             STATEMENT NUMBERS FOR CVTXTNT1 AND CVTXTNT2 IS IN    */
+000146                                    (17/43)229+*/*             THE OS - OS/VS COMMON EXTENSION.                     */
+000146                                    (17/44)230+*/*                                                                  */
+000146                                    (17/45)231+*/*  F.E.'S                                                          */
+000146                                    (17/46)232+*/*      MICROFICHE LISTING - CVT                                    */
+000146                                    (17/47)233+*/*                                                                  */
+000146                                    (17/48)234+*/*  DEVELOPERS                                                      */
+000146                                    (17/49)235+*/*      BAL LISTING  - SPECIFY LIST=YES ON MACRO CALL               */
+000146                                    (17/50)236+*/*      PL/S LISTING - SPECIFY %IHALIST='YES' BEFORE INCLUDE        */
+000146                                    (17/51)237+*/*                                                                  */
+000146                                    (17/52)238+*/*      FOR INTEGRATION, A LISTING MUST NOT BE REQUESTED UNLESS     */
+000146                                    (17/53)239+*/*      YOUR MODULE CREATES THE CSECT.                              */
+000146                                    (17/54)240+*
+000146                                    (17/55)241+*%GOTO CVTL2;   /*
+000146                                    (17/73)242+         PUSH  PRINT
+000084                                 (17/1401)1193+         POP   PRINT
+000146                                    (1/32)1195 TESTMVS1 CSECT 
+000146                                    (1/33)1196 MYDCB    DCB     DSORG=PO,MACRF=R,DDNAME=MYDCB
+000146                                  (18/333)1201+*                       DATA CONTROL BLOCK
+000146                                  (18/334)1202+*
+000148                                  (18/340)1203+MYDCB    DC    0F'0'                   ORIGIN ON WORD BOUNDARY
+000148                                  (18/396)1205+*                       DIRECT ACCESS DEVICE INTERFACE
+000148 0000000000000000                 (18/398)1207+         DC    BL16'0'                FDAD,DVTBL
+000158 00000000                         (18/400)1208+         DC    A(0)                     KEYLE,DEVT,TRBAL
+00015C                                  (18/658)1210+*                       COMMON ACCESS METHOD INTERFACE
+00015C 00                               (18/661)1212+         DC    AL1(0)             BUFNO
+00015D 000001                           (18/736)1213+         DC    AL3(1)             BUFCB
+000160 0000                             (18/738)1214+         DC    AL2(0)         BUFL
+000162 0200                             (18/746)1215+         DC    BL2'0000001000000000'  DSORG
+000164 00000001                         (18/751)1216+         DC    A(1)                IOBAD
+000168                                  (18/754)1218+*                       FOUNDATION EXTENSION
+000168 00                               (18/792)1220+         DC    BL1'00000000'  BFTEK,BFLN,HIARCHY
+000169 000001                           (18/864)1221+         DC    AL3(1)             EODAD
+00016C 00                               (18/867)1222+         DC    BL1'00000000'                   RECFM
+00016D 000000                           (18/868)1223+         DC    AL3(0)             EXLST
+000170                                  (18/872)1225+*                       FOUNDATION BLOCK
+000170 D4E8C4C3C2404040                 (18/874)1227+         DC    CL8'MYDCB'            DDNAME
+000178 02                               (18/889)1228+         DC    BL1'00000010'           OFLGS
+000179 00                               (18/890)1229+         DC    BL1'00000000'  IFLG
+00017A 2400                             (18/898)1230+         DC    BL2'0010010000000000'                   MACR
+00017C                                  (18/996)1232+*                       BSAM-BPAM-QSAM INTERFACE
+00017C 00                               (18/999)1234+         DC    BL1'00000000'                                               RER1
+00017D 000001                          (18/1000)1236+         DC    AL3(1)                  CHECK, GERR, PERR
+000180 00000001                        (18/1001)1237+         DC    A(1)               SYNAD
+000184 0000                            (18/1012)1238+         DC    H'0'                    CIND1, CIND2
+000186 0000                            (18/1016)1239+         DC    AL2(0)           BLKSIZE
+000188 00000000                        (18/1023)1240+         DC    F'0'                    WCPO, WCPL, OFFSR, OFFSW
+00018C 00000001                        (18/1024)1241+         DC    A(1)                    IOBA
+000190 00                              (18/1025)1242+         DC    AL1(0)               NCP
+000191 000001                          (18/1026)1243+         DC    AL3(1)                  EOBR, EOBAD
+000194                                 (18/1029)1245+*                         BSAM-BPAM INTERFACE
+000194 00000001                        (18/1031)1247+         DC    A(1)                    EOBW
+000198 0000                            (18/1049)1248+         DC    H'0'                    DIRCT
+00019A 0000                            (18/1077)1249+         DC    AL2(0)    LRECL
+00019C 00000001                        (18/1052)1250+         DC    A(1)                    CNTRL, NOTE, POINT
+0001A0                                    (1/34)1252          DCBD 
+0001A0                                  (21/193)1254+         MNOTE *,'***  IHB068  NO VALID DSORG SPECIFIED-EXCP ASSUMED'
+0001A0                                  (20/143)1257+*                       DCB SYMBOLIC DEFINITION FOR
+0001A0                                  (20/183)1258+*                       EXCP WITH EXTENSION
+000000                                  (20/186)1260+IHADCB   DSECT , -            DCBPTR                           @ZA05613
+000000                                  (20/188)1262+***********************************************************************
+000000                                  (20/189)1263+*  OS/VS2 RELEASE 02, 02/14/73                                        *
+000000                                  (20/190)1264+*  OS/VS2 RELEASE 03, 10/23/74                                        *
+000000                                  (20/191)1265+*  OS/VS2 RELEASE 3.7, 3/15/78                                        *
+000000                                  (20/192)1266+*C80400037                                                     @ZA33630
+000000                                  (20/193)1267+*                                                                     *
+000000                                  (20/194)1268+*  OS/VS2 RELEASE 3.8, 5/15/80    FMID=FDM1133                        *
+000000                                  (20/195)1269+*                                                                     *
+000000                                  (20/196)1270+*C(116500),A(116638-116914),D(117000),A(117052-117466)         @ZA46311
+000000                                  (20/197)1271+*D(117500),A(117604-117880),D(118000),A(118018-118432)         @ZA46311
+000000                                  (20/198)1272+*D(118500-118510),A(118570-118846)                             @ZA46311
+000000                                  (20/199)1273+*$F01=UZ59799,FDM1133:DCBDEVT DEFINITION FOR D/T3375 AND D/T3380  @F01A
+000000                                  (20/200)1274+*                                                                     *
+000000                                  (20/201)1275+***********************************************************************
+000000                  00000080        (20/204)1277+DCBBIT0  EQU   128                                             @ZA05613
+000000                  00000040        (20/205)1278+DCBBIT1  EQU   64                                              @ZA05613
+000000                  00000020        (20/206)1279+DCBBIT2  EQU   32                                              @ZA05613
+000000                  00000010        (20/207)1280+DCBBIT3  EQU   16                                              @ZA05613
+000000                  00000008        (20/208)1281+DCBBIT4  EQU   8                                               @ZA05613
+000000                  00000004        (20/209)1282+DCBBIT5  EQU   4                                               @ZA05613
+000000                  00000002        (20/210)1283+DCBBIT6  EQU   2                                               @ZA05613
+000000                  00000001        (20/211)1284+DCBBIT7  EQU   1                                               @ZA05613
+000000                                  (20/213)1286+***********************************************************************
+000000                                  (20/576)1288+***********************************************************************
+000000                                  (20/577)1289+*                       ACCESS METHOD COMMON INTERFACE
+000000                                  (20/578)1290+***********************************************************************
+000000                  000010          (20/580)1292+         ORG   IHADCB+16
+000010                                  (20/581)1293+DCBRELB  DS    0F -           SAME AS DCBREL BELOW
+000010                                  (20/582)1294+DCBKEYLE DS    FL1 -          KEY LENGTH OF DATA SET
+000011                                  (20/583)1295+DCBDEVT  DS    0C -           DEVICE TYPE
+000011                  0000004F        (20/584)1296+DCBDVTRM EQU   X'4F' -        TERMINAL.  (DD CONTAINS TERM=TS)
+000011                                  (20/585)1297+DCBREL   DS    FL3 -          NUMBER OF RELATIVE TRACKS OR BLOCKS IN
+000014                                  (20/586)1298+*                             THIS DATA SET (BDAM)
+000014                                  (20/587)1299+DCBBUFCB DS    0A -           ADDRESS OF BUFFER POOL CONTROL BLOCK
+000014                                  (20/588)1300+DCBBUFNO DS    FL1 -          NUMBER OF BUFFERS REQUIRED FOR THIS DATA
+000015                                  (20/589)1301+*                             SET.  MAY RANGE FROM 0 TO 255.  IF
+000015                                  (20/590)1302+*                             UNBLOCKED SPANNED RECORDS ARE USED,
+000015                                  (20/591)1303+*                             NUMBER OF SEGMENT WORK AREAS REQUIRED
+000015                                  (20/592)1304+*                             FOR THIS DATA SET.
+000015                                  (20/593)1305+DCBBUFCA DS    AL3 -          ADDRESS OF BUFFER POOL CONTROL BLOCK
+000018                                  (20/594)1306+DCBBUFL  DS    H -            LENGTH OF BUFFER.  MAY RANGE FROM 0 TO
+00001A                                  (20/595)1307+*                             32,767.
+00001A                                  (20/596)1308+DCBDSORG DS    0BL2 -         DATA SET ORGANIZATION BEING USED
+00001A                                  (20/597)1309+DCBDSRG1 DS    BL1 -          FIRST BYTE OF DCBDSORG
+00001B                  00000080        (20/598)1310+DCBDSGIS EQU   DCBBIT0 -      IS - INDEXED SEQUENTIAL ORGANIZATION
+00001B                  00000040        (20/599)1311+DCBDSGPS EQU   DCBBIT1 -      PS - PHYSICAL SEQUENTIAL ORGANIZATION
+00001B                  00000020        (20/600)1312+DCBDSGDA EQU   DCBBIT2 -      DA - DIRECT ORGANIZATION
+00001B                  00000010        (20/601)1313+DCBDSGCX EQU   DCBBIT3 -      CX - BTAM OR QTAM LINE GROUP
+00001B                  00000002        (20/602)1314+DCBDSGPO EQU   DCBBIT6 -      PO - PARTITIONED ORGANIZATION
+00001B                  00000001        (20/603)1315+DCBDSGU  EQU   DCBBIT7 -      U  - UNMOVABLE, THE DATA CONTAINS
+00001B                                  (20/604)1316+*                                  LOCATION DEPENDENT INFORMATION
+00001B                                  (20/605)1317+DCBDSRG2 DS    BL1 -          SECOND BYTE OF DCBDSORG
+00001C                  00000080        (20/606)1318+DCBDSGGS EQU   DCBBIT0 -      GS - GRAPHICS ORGANIZATION
+00001C                  00000040        (20/607)1319+DCBDSGTX EQU   DCBBIT1 -      TX - TCAM LINE GROUP
+00001C                  00000020        (20/608)1320+DCBDSGTQ EQU   DCBBIT2 -      TQ - TCAM MESSAGE QUEUE
+00001C                  00000008        (20/609)1321+DCBACBM  EQU   DCBBIT4 -      ACCESS METHOD CONTROL BLOCK
+00001C                  00000004        (20/610)1322+DCBDSGTR EQU   DCBBIT5 -      TR - TCAM 3705
+00001C                                  (20/611)1323+DCBIOBAD DS    0A -           ADDRESS OF IOB WHEN CHAINED SCHEDULING IS
+00001C                                  (20/612)1324+*                             USED OR FOR 1419/1275
+00001C                                  (20/613)1325+DCBODEB  DS    0A -           ADDRESS OF OLD DEB
+00001C                                  (20/614)1326+DCBLNP   DS    0FL1 -         3525 PRINTER LINE POSITION COUNTER
+00001C                                  (20/615)1327+DCBQSLM  DS    BL1 -          QSAM LOCATE MODE LOGICAL RECORD INTERFACE
+00001D                                  (20/616)1328+*                             INDICATOR BYTE FOR UPDAT PROCESSING OF
+00001D                                  (20/617)1329+*                             SPANNED RECORDS
+00001D                  00000080        (20/618)1330+DCB1DVDS EQU   DCBBIT0 -      ONLY ONE DEVICE IS ALLOCATED TO THIS
+00001D                                  (20/619)1331+*                             DATA SET
+00001D                  00000040        (20/620)1332+DCBUPDCM EQU   DCBBIT1 -      UPDATE COMPLETE, FREE OLD DEB
+00001D                  00000030        (20/621)1333+DCBUPDBT EQU   DCBBIT2+DCBBIT3 - UPDATE BITS
+00001D                  00000020        (20/622)1334+DCBUPDT  EQU   DCBBIT2 -      UPDATE TO TAKE PLACE
+00001D                  00000030        (20/623)1335+DCBNUPD  EQU   DCBBIT2+DCBBIT3 - NO UPDATE TO TAKE PLACE
+00001D                  00000010        (20/624)1336+DCBSVDEB EQU   DCBBIT3 -      OLD DEB ADDRESS MUST BE SAVED
+00001D                                  (20/625)1337+DCBIOBAA DS    0AL3 -         SAME AS DCBIOBAD ABOVE
+00001D                                  (20/626)1338+DCBODEBA DS    AL3 -          ADDRESS OF OLD DEB
+000020                  00001C          (20/627)1339+         ORG   IHADCB+28
+00001C                                  (20/628)1340+DCBSVCXL DS    0A -           SAME AS DCBSVCXA BELOW
+00001C                                  (20/629)1341+         DS    X -            RESERVED
+00001D                                  (20/630)1342+DCBSVCXA DS    AL3 -          POINTER TO EXIT LIST OF JES
+000020                                  (20/631)1343+*                             C.I. INTERFACE CONTROL SVC
+000020                                  (20/633)1345+***********************************************************************
+000020                                  (20/634)1346+*                       FOUNDATION EXTENSION
+000020                                  (20/635)1347+***********************************************************************
+000020                                  (20/637)1349+DCBEODAD DS    0A -           SAME AS DCBEODA BELOW
+000020                                  (20/638)1350+DCBHIARC DS    0BL1 -         HIERARCHY BITS
+000020                                  (20/639)1351+DCBBFTEK DS    0BL1 -         BUFFERING TECHNIQUE BITS
+000020                                  (20/640)1352+DCBBFALN DS    BL1 -          BUFFER ALIGNMENT BITS
+000021                  00000080        (20/641)1353+DCBH1    EQU   DCBBIT0 -      HIERARCHY 1 MAIN STORAGE - BIT 5 IS ZERO
+000021                  00000070        (20/642)1354+DCBBFT   EQU   DCBBIT1+DCBBIT2+DCBBIT3 BUFFERING TECHNIQUE
+000021                  00000060        (20/643)1355+DCBBFTA  EQU   DCBBIT1+DCBBIT2 - QSAM LOCATE MODE PROCESSING OF SPANNED
+000021                                  (20/644)1356+*                             RECORDS - OPEN IS TO CONSTRUCT A RECORD
+000021                                  (20/645)1357+*                             AREA IF IT AUTOMATICALLY CONSTRUCTS
+000021                                  (20/646)1358+*                             BUFFERS
+000021                  00000020        (20/647)1359+DCBBFTR  EQU   DCBBIT2 -      FOR BSAM CREATE BDAM PROCESSING OF
+000021                                  (20/648)1360+*                             UNBLOCKED SPANNED RECORDS - SOFTWARE
+000021                                  (20/649)1361+*                             TRACK OVERFLOW.  FOR BSAM INPUT
+000021                                  (20/650)1362+*                             PROCESSING OF UNBLOCKED SPANNED RECORDS
+000021                                  (20/651)1363+*                             WITH KEYS - RECORD OFFSET PROCESSING.
+000021                  00000040        (20/652)1364+DCBBFTS  EQU   DCBBIT1 -      SIMPLE BUFFERING - BIT 3 IS ZERO
+000021                  00000020        (20/653)1365+DCBBFTKR EQU   DCBBIT2 -      UNBLOCKED SPANNED RECORDS - SOFTWARE
+000021                                  (20/654)1366+*                             TRACK OVERFLOW (BDAM)
+000021                  00000010        (20/655)1367+DCBBFTE  EQU   DCBBIT3 -      EXCHANGE BUFFERING - BIT 1 IS ZERO
+000021                  00000008        (20/656)1368+DCBBFTKD EQU   DCBBIT4 -      DYNAMIC BUFFERING (BTAM)
+000021                  00000004        (20/657)1369+DCBH0    EQU   DCBBIT5 -      HIERARCHY 0 MAIN STORAGE - BIT 0 IS ZERO
+000021                  00000003        (20/658)1370+DCBBFA   EQU   DCBBIT6+DCBBIT7 - BUFFER ALIGNMENT
+000021                  00000002        (20/659)1371+DCBBFAD  EQU   DCBBIT6 -      DOUBLEWORD BOUNDARY
+000021                  00000001        (20/660)1372+DCBBFAF1 EQU   DCBBIT7 -      FULLWORD NOT A DOUBLEWORD BOUNDARY,
+000021                                  (20/661)1373+*                             CODED IN DCB MACRO INSTRUCTION
+000021                  00000003        (20/662)1374+DCBBFAF2 EQU   DCBBIT6+DCBBIT7 - FULLWORD NOT A DOUBLEWORD BOUNDARY,
+000021                                  (20/663)1375+*                             CODED IN DCB MACRO INSTRUCTION
+000021                                  (20/664)1376+DCBEODA  DS    AL3 -          ADDRESS OF A USER-PROVIDED ROUTINE TO
+000024                                  (20/665)1377+*                             HANDLE END-OF-DATA CONDITIONS
+000024                                  (20/666)1378+DCBEXLST DS    0A -           ADDRESS OF USER-PROVIDED LIST OF EXITS
+000024                                  (20/667)1379+DCBRECFM DS    BL1 -          RECORD FORMAT
+000025                  000000E0        (20/668)1380+DCBRECLA EQU   DCBBIT0+DCBBIT1+DCBBIT2 RECORD LENGTH INDICATOR - ASCII
+000025                  00000020        (20/669)1381+DCBRECD  EQU   DCBBIT2 -      ASCII VARIABLE RECORD LENGTH
+000025                  000000C0        (20/670)1382+DCBRECL  EQU   DCBBIT0+DCBBIT1 - RECORD LENGTH INDICATOR
+000025                  00000080        (20/671)1383+DCBRECF  EQU   DCBBIT0 -      FIXED RECORD LENGTH
+000025                  00000040        (20/672)1384+DCBRECV  EQU   DCBBIT1 -      VARIABLE RECORD LENGTH
+000025                  000000C0        (20/673)1385+DCBRECU  EQU   DCBBIT0+DCBBIT1 - UNDEFINED RECORD LENGTH
+000025                  00000020        (20/674)1386+DCBRECTO EQU   DCBBIT2 -      TRACK OVERFLOW
+000025                  00000010        (20/675)1387+DCBRECBR EQU   DCBBIT3 -      BLOCKED RECORDS
+000025                  00000008        (20/676)1388+DCBRECSB EQU   DCBBIT4 -      FOR FIXED LENGTH RECORD FORMAT - STANDARD
+000025                                  (20/677)1389+*                             BLOCKS.  FOR VARIABLE LENGTH RECORD
+000025                                  (20/678)1390+*                             FORMAT - SPANNED RECORDS
+000025                  00000006        (20/679)1391+DCBRECCC EQU   DCBBIT5+DCBBIT6 - CONTROL CHARACTER INDICATOR
+000025                  00000004        (20/680)1392+DCBRECCA EQU   DCBBIT5 -      ASA CONTROL CHARACTER
+000025                  00000002        (20/681)1393+DCBRECCM EQU   DCBBIT6 -      MACHINE CONTROL CHARACTER
+000025                  00000000        (20/682)1394+DCBRECC  EQU   X'00' -        NO CONTROL CHARACTER
+000025                  00000001        (20/683)1395+DCBRECKL EQU   DCBBIT7 -      KEY LENGTH (KEYLEN) WAS SPECIFIED IN DCB
+000025                                  (20/684)1396+*                             MACRO INSTRUCTION
+000025                                  (20/685)1397+DCBEXLSA DS    AL3 -          ADDRESS OF USER-PROVIDED LIST OF EXITS
+000028                                 (20/1056)1400+***********************************************************************
+000028                                 (20/1057)1401+*                       FOUNDATION BEFORE OPEN
+000028                                 (20/1058)1402+***********************************************************************
+000028                  000028         (20/1060)1404+         ORG   IHADCB+40
+000028                                 (20/1061)1405+DCBDDNAM DS    CL8 -          NAME ON THE DD STATEMENT WHICH DEFINES
+000030                                 (20/1062)1406+*                             THE DATA SET ASSOCIATED WITH THIS DCB
+000030                                 (20/1063)1407+DCBOFLGS DS    BL1 -          FLAGS USED BY OPEN ROUTINE
+000031                  00000080       (20/1064)1408+DCBOFLWR EQU   DCBBIT0 -      IF ZERO, LAST I/O OPERATION WAS READ OR
+000031                                 (20/1065)1409+*                             POINT.  IF ONE, LAST I/O OPERATION WAS
+000031                                 (20/1066)1410+*                             WRITE.
+000031                  00000080       (20/1067)1411+DCBOFIOD EQU   DCBBIT0 -      DATA SET IS BEING OPENED FOR INPUT OR
+000031                                 (20/1068)1412+*                             OUTPUT (BDAM)
+000031                  00000040       (20/1069)1413+DCBOFLRB EQU   DCBBIT1 -      LAST I/O OPERATION WAS IN READ BACKWARD
+000031                                 (20/1070)1414+*                             MODE
+000031                  00000020       (20/1071)1415+DCBOFEOV EQU   DCBBIT2 -      SET TO 1 BY EOV WHEN IT CALLS CLOSE
+000031                                 (20/1072)1416+*                             ROUTINE FOR CONCATENATION OF DATA SETS
+000031                                 (20/1073)1417+*                             WITH UNLIKE ATTRIBUTES
+000031                  00000010       (20/1074)1418+DCBOFOPN EQU   DCBBIT3 -      AN OPEN HAS BEEN SUCCESSFULLY COMPLETED
+000031                  00000008       (20/1075)1419+DCBOFPPC EQU   DCBBIT4 -      SET TO 1 BY PROBLEM PROGRAM TO INDICATE A
+000031                                 (20/1076)1420+*                             CONCATENATION OF UNLIKE ATTRIBUTES
+000031                  00000004       (20/1077)1421+DCBOFTM  EQU   DCBBIT5 -      TAPE MARK HAS BEEN READ
+000031                  00000002       (20/1078)1422+DCBOFUEX EQU   DCBBIT6 -      SET TO 0 BY AN I/O SUPPORT FUNCTION WHEN
+000031                                 (20/1079)1423+*                             THAT FUNCTION TAKES A USER EXIT. SET TO 1
+000031                                 (20/1080)1424+*                             ON RETURN FROM USER EXIT TO THE I/O
+000031                                 (20/1081)1425+*                             SUPPORT FUNCTION WHICH TOOK THE EXIT.
+000031                  00000001       (20/1082)1426+DCBOFIOF EQU   DCBBIT7 -      SET TO 1 BY AN I/O SUPPORT FUNCTION IF
+000031                                 (20/1083)1427+*                             DCB IS TO BE PROCESSED BY THAT FUNCTION
+000031                                 (20/1084)1428+DCBIFLG  DS    BL1 -          FLAGS USED BY IOS IN COMMUNICATING ERROR
+000032                                 (20/1085)1429+*                             CONDITIONS AND IN DETERMINING CORRECTIVE
+000032                                 (20/1086)1430+*                             PROCEDURES
+000032                  000000C0       (20/1087)1431+DCBIBEC  EQU   DCBBIT0+DCBBIT1 - ERROR CORRECTION INDICATOR
+000032                  00000000       (20/1088)1432+DCBIFNEP EQU   X'00' -        NOT IN ERROR PROCEDURE
+000032                  00000040       (20/1089)1433+DCBEX    EQU   DCBBIT1 -      ERROR CORRECTION OR IOS PAGE FIX IN
+000032                                 (20/1090)1434+*                             PROCESS
+000032                  000000C0       (20/1091)1435+DCBIFPEC EQU   DCBBIT0+DCBBIT1 - PERMANENT ERROR CORRECTION
+000032                  00000030       (20/1092)1436+DCBIBPCT EQU   DCBBIT2+DCBBIT3 - PRINTER CARRIAGE TAPE PUNCH INDICATOR
+000032                  00000020       (20/1093)1437+DCBIFC9  EQU   DCBBIT2 -      CHANNEL 9 PRINTER CARRIAGE TAPE PUNCH
+000032                                 (20/1094)1438+*                             SENSED
+000032                  00000010       (20/1095)1439+DCBIFC12 EQU   DCBBIT3 -      CHANNEL 12 PRINTER CARRIAGE TAPE PUNCH
+000032                                 (20/1096)1440+*                             SENSED
+000032                  0000000C       (20/1097)1441+DCBIBIOE EQU   DCBBIT4+DCBBIT5 - IOS ERROR ROUTINE USE INDICATOR
+000032                  00000000       (20/1098)1442+DCBIFER  EQU   X'00' -        ALWAYS USE I/O SUPERVISOR ERROR ROUTINE
+000032                  00000004       (20/1099)1443+DCBIFNE1 EQU   DCBBIT5 -      NEVER USE I/O SUPERVISOR ERROR ROUTINE
+000032                  00000004       (20/1100)1444+DCBIFTIM EQU   DCBBIT5 -      TEST IOS MASK (IMSK) FOR ERROR PROCEDURE
+000032                                 (20/1101)1445+*                             (BTAM)
+000032                  00000008       (20/1102)1446+DCBIFNE2 EQU   DCBBIT4 -      NEVER USE I/O SUPERVISOR ERROR ROUTINE
+000032                  0000000C       (20/1103)1447+DCBIFNE3 EQU   DCBBIT4+DCBBIT5 - NEVER USE I/O SUPERVISOR ERROR ROUTINE
+000032                                 (20/1104)1448+DCBMACR  DS    0BL2 -         MACRO INSTRUCTION REFERENCE
+000032                                 (20/1105)1449+DCBMACR1 DS    BL1 -          FIRST BYTE OF DCBMACR
+000033                  00000080       (20/1106)1450+DCBMRECP EQU   DCBBIT0 -      EXECUTE CHANNEL PROGRAM (EXCP) ---
+000033                                 (20/1107)1451+*                             ALWAYS ZERO (BSAM, QSAM, BPAM, BISAM,
+000033                                 (20/1108)1452+*                             QISAM, BDAM) --- RESERVED (QTAM, BTAM)
+000033                  00000040       (20/1109)1453+DCBMRFE  EQU   DCBBIT1 -      FOUNDATION EXTENSION IS PRESENT (EXCP)
+000033                  00000040       (20/1110)1454+DCBMRGET EQU   DCBBIT1 -      GET (QSAM, QISAM, TCAM)
+000033                  00000040       (20/1111)1455+DCBMRPTQ EQU   DCBBIT1 -      PUT FOR MESSAGE GROUP (QTAM) ---
+000033                                 (20/1112)1456+*                             ALWAYS ZERO (BSAM, BPAM, BISAM, BDAM) ---
+000033                                 (20/1113)1457+*                             RESERVED (BTAM)
+000033                  00000020       (20/1114)1458+DCBMRAPG EQU   DCBBIT2 -      APPENDAGES ARE REQUIRED (EXCP)
+000033                  00000020       (20/1115)1459+DCBMRRD  EQU   DCBBIT2 -      READ (BSAM, BPAM, BISAM, BDAM, BTAM)
+000033                  00000020       (20/1116)1460+DCBMRWRQ EQU   DCBBIT2 -      WRITE FOR LINE GROUP (QTAM) ---
+000033                                 (20/1117)1461+*                             ALWAYS ZERO (QSAM, QISAM)
+000033                  00000010       (20/1118)1462+DCBMRCI  EQU   DCBBIT3 -      COMMON INTERFACE (EXCP)
+000033                  00000010       (20/1119)1463+DCBMRMVG EQU   DCBBIT3 -      MOVE MODE OF GET (QSAM, QISAM)
+000033                  00000010       (20/1120)1464+DCBMRRDK EQU   DCBBIT3 -      KEY SEGMENT WITH READ (BDAM) ---
+000033                                 (20/1121)1465+*                             ALWAYS ZERO (BISAM) ---
+000033                                 (20/1122)1466+*                             RESERVED (BSAM, BPAM, QTAM, BTAM)
+000033                  00000008       (20/1123)1467+DCBMRLCG EQU   DCBBIT4 -      LOCATE MODE OF GET (QSAM, QISAM)
+000033                  00000008       (20/1124)1468+DCBMRRDI EQU   DCBBIT4 -      ID ARGUMENT WITH READ (BDAM) ---
+000033                                 (20/1125)1469+*                             ALWAYS ZERO (BISAM) ---
+000033                                 (20/1126)1470+*                             RESERVED (EXCP, BSAM, BPAM, QTAM, BTAM)
+000033                  00000004       (20/1127)1471+DCBMRABC EQU   DCBBIT5 -      USER'S PROGRAM MAINTAINS ACCURATE BLOCK
+000033                                 (20/1128)1472+*                             COUNT (EXCP)
+000033                  00000004       (20/1129)1473+DCBMRPT1 EQU   DCBBIT5 -      POINT (WHICH IMPLIES NOTE) (BSAM, BPAM)
+000033                  00000004       (20/1130)1474+DCBMRSBG EQU   DCBBIT5 -      SUBSTITUTE MODE OF GET (QSAM)
+000033                  00000004       (20/1131)1475+DCBMRDBF EQU   DCBBIT5 -      DYNAMIC BUFFERING (BISAM, BDAM) ---
+000033                                 (20/1132)1476+*                             ALWAYS ZERO (QISAM) ---
+000033                                 (20/1133)1477+*                             RESERVED (QTAM, BTAM)
+000033                  00000002       (20/1134)1478+DCBPGFXA EQU   DCBBIT6 -      PAGE FIX APPENDAGE IS SPECIFIED (EXCP)
+000033                  00000002       (20/1135)1479+DCBMRCRL EQU   DCBBIT6 -      CNTRL (BSAM, QSAM)
+000033                  00000002       (20/1136)1480+DCBMRCHK EQU   DCBBIT6 -      CHECK (BISAM)
+000033                  00000002       (20/1137)1481+DCBMRRDX EQU   DCBBIT6 -      READ EXCLUSIVE (BDAM) ---
+000033                                 (20/1138)1482+*                             RESERVED (BPAM, QISAM, QTAM, BTAM)
+000033                  00000001       (20/1139)1483+DCBMRDMG EQU   DCBBIT7 -      DATA MODE OF GET (QSAM)
+000033                  00000001       (20/1140)1484+DCBMRCK  EQU   DCBBIT7 -      CHECK (BDAM) --- RESERVED (EXCP, BSAM,
+000033                                 (20/1141)1485+*                             BPAM, BISAM, QISAM, QTAM, BTAM)
+000033                                 (20/1142)1486+DCBMACR2 DS    BL1 -          SECOND BYTE OF DCBMACR
+000034                  00000080       (20/1143)1487+DCBMRSTL EQU   DCBBIT0 -      SETL (QISAM) --- ALWAYS ZERO (BSAM, QSAM,
+000034                                 (20/1144)1488+*                             BPAM, BISAM, BDAM) ---
+000034                                 (20/1145)1489+*                             RESERVED (EXCP, QTAM, BTAM)
+000034                  00000040       (20/1146)1490+DCBMRPUT EQU   DCBBIT1 -      PUT (QSAM, TCAM) - PUT OR PUTX (QISAM)
+000034                  00000040       (20/1147)1491+DCBMRGTQ EQU   DCBBIT1 -      GET FOR MESSAGE GROUP (QTAM) ---
+000034                                 (20/1148)1492+*                             ALWAYS ZERO (BSAM, BPAM, BISAM, BDAM) ---
+000034                                 (20/1149)1493+*                             RESERVED (EXCP, BTAM)
+000034                  00000020       (20/1150)1494+DCBMRWRT EQU   DCBBIT2 -      WRITE (BSAM, BPAM, BISAM, BDAM, BTAM)
+000034                  00000020       (20/1151)1495+DCBMRRDQ EQU   DCBBIT2 -      READ FOR LINE GROUP (QTAM) ---
+000034                                 (20/1152)1496+*                             ALWAYS ZERO (QSAM, QISAM) ---
+000034                                 (20/1153)1497+*                             RESERVED (EXCP)
+000034                  00000010       (20/1154)1498+DCBMRMVP EQU   DCBBIT3 -      MOVE MODE OF PUT (QSAM, QISAM)
+000034                  00000010       (20/1155)1499+DCBMRWRK EQU   DCBBIT3 -      KEY SEGMENT WITH WRITE (BDAM) ---
+000034                                 (20/1156)1500+*                             ALWAYS ZERO (BISAM) ---
+000034                                 (20/1157)1501+*                             RESERVED (EXCP, BSAM, BPAM, QTAM, BTAM)
+000034                  00000008       (20/1158)1502+DCBMR5WD EQU   DCBBIT4 -      FIVE-WORD DEVICE INTERFACE (EXCP)
+000034                  00000008       (20/1159)1503+DCBMRLDM EQU   DCBBIT4 -      LOAD MODE BSAM (CREATE BDAM DATA SET)
+000034                                 (20/1160)1504+*                             (BSAM)
+000034                  00000008       (20/1161)1505+DCBMRLCP EQU   DCBBIT4 -      LOCATE MODE OF PUT (QSAM, QISAM)
+000034                  00000008       (20/1162)1506+DCBMRIDW EQU   DCBBIT4 -      ID ARGUMENT WITH WRITE (BDAM) ---
+000034                                 (20/1163)1507+*                             ALWAYS ZERO (BISAM) ---
+000034                                 (20/1164)1508+*                             RESERVED (BPAM, QTAM, BTAM)
+000034                  00000004       (20/1165)1509+DCBMR4WD EQU   DCBBIT5 -      FOUR-WORD DEVICE INTERFACE (EXCP)
+000034                  00000004       (20/1166)1510+DCBMRPT2 EQU   DCBBIT5 -      POINT (WHICH IMPLIES NOTE) (BSAM, BPAM)
+000034                  00000004       (20/1167)1511+DCBMRTMD EQU   DCBBIT5 -      SUBSTITUTE MODE (QSAM)
+000034                  00000004       (20/1168)1512+DCBMRUIP EQU   DCBBIT5 -      UPDATE IN PLACE (PUTX) (QISAM) ---
+000034                                 (20/1169)1513+*                             ALWAYS ZERO (BISAM) ---
+000034                                 (20/1170)1514+*                             RESERVED (BDAM, QTAM, BTAM)
+000034                  00000002       (20/1171)1515+DCBMR3WD EQU   DCBBIT6 -      THREE-WORD DEVICE INTERFACE (EXCP)
+000034                  00000002       (20/1172)1516+DCBMRCTL EQU   DCBBIT6 -      CNTRL (BSAM, QSAM)
+000034                  00000002       (20/1173)1517+DCBMRSTK EQU   DCBBIT6 -      SETL BY KEY (QISAM)
+000034                  00000002       (20/1174)1518+DCBMRAWR EQU   DCBBIT6 -      ADD TYPE OF WRITE (BDAM) ---
+000034                                 (20/1175)1519+*                             ALWAYS ZERO (BISAM) ---
+000034                                 (20/1176)1520+*                             RESERVED (BPAM, QTAM, BTAM)
+000034                  00000001       (20/1177)1521+DCBMR1WD EQU   DCBBIT7 -      ONE-WORD DEVICE INTERFACE (EXCP)
+000034                  00000001       (20/1178)1522+DCBMRSWA EQU   DCBBIT7 -      USER'S PROGRAM HAS PROVIDED A SEGMENT
+000034                                 (20/1179)1523+*                             WORK AREA POOL (BSAM CREATE BDAM, BDAM)
+000034                  00000001       (20/1180)1524+DCBMRDMD EQU   DCBBIT7 -      DATA MODE (QSAM)
+000034                  00000001       (20/1181)1525+DCBMRSTI EQU   DCBBIT7 -      SETL BY ID (QISAM) ---
+000034                                 (20/1182)1526+*                             ALWAYS ZERO (BISAM) ---
+000034                                 (20/1183)1527+*                             RESERVED (BPAM, QTAM, BTAM)
+000034                                 (20/1185)1529+***********************************************************************
+000034                                 (20/1186)1530+*                       FOUNDATION AFTER OPEN
+000034                                 (20/1187)1531+***********************************************************************
+000034                  000028         (20/1189)1533+         ORG   IHADCB+40
+000028                                 (20/1190)1534+DCBTIOT  DS    H -            OFFSET FROM TIOT ORIGIN TO TIOELNGH FIELD
+00002A                                 (20/1191)1535+*                             IN TIOT ENTRY FOR DD STATEMENT ASSOCIATED
+00002A                                 (20/1192)1536+*                             WITH THIS DCB
+00002A                                 (20/1193)1537+DCBMACRF DS    0BL2 -         SAME AS DCBMACR BEFORE OPEN
+00002A                                 (20/1194)1538+DCBMACF1 DS    BL1 -          FIRST BYTE OF DCBMACRF
+00002B                                 (20/1195)1539+DCBMACF2 DS    BL1 -          SECOND BYTE OF DCBMACRF
+00002C                                 (20/1196)1540+DCBDEBAD DS    0A -           ADDRESS OF ASSOCIATED DEB
+00002C                                 (20/1197)1541+DCBIFLGS DS    BL1 -          SAME AS DCBIFLG BEFORE OPEN
+00002D                  000000C0       (20/1198)1542+DCBIFEC  EQU   DCBBIT0+DCBBIT1 - ERROR CORRECTION INDICATOR
+00002D                  00000030       (20/1199)1543+DCBIFPCT EQU   DCBBIT2+DCBBIT3 - PRINTER CARRIAGE TAPE PUNCH INDICATOR
+00002D                  0000000C       (20/1200)1544+DCBIFIOE EQU   DCBBIT4+DCBBIT5 - IOS ERROR ROUTINE USE INDICATOR
+00002D                  00000002       (20/1201)1545+DCBIFLDT EQU   DCBBIT6 -      3800 PRINTER LOST DATA INDICATOR @G38ESMH
+00002D                                 (20/1202)1546+DCBDEBA  DS    AL3 -          ADDRESS OF ASSOCIATED DEB
+000030                  000034         (20/1300)1550+         ORG   IHADCB+52
+000034                                 (20/1301)1551+DCBOPTCD DS    0BL1 -                   OPTION CODE
+0001A0                                    (1/35)1554 TESTMVS1 CSECT 
+0001A0                                    (1/36)1555          DELETE EP=MYPGM
+0001A0 4500F1AC                0001AC    (22/11)1556+         BAL   0,*+12                            LOAD ADDR OF EP SYMBOL
+0001A4 D4E8D7C7D4404040                  (22/12)1557+         DC    CL8'MYPGM'                          EP SYMBOL
+0001AC 0A09                              (22/13)1558+         SVC   9                                 ISSUE DELETE SVC
+0001AE                                    (1/37)1560          DEQ  (CBUFRSQN,CBUFRSRN,4,STEP),MF=L
+0001B0                                   (24/91)1563+         DS    0F                      ESTABLISH A FULLWORD BOUNBARY
+0001B0 C0                               (24/157)1564+         DC    AL1(192)            LISTEND BYTE              X02113
+0001B1 04                               (24/164)1565+         DC    AL1(4)            RNAME LENGTH
+0001B2 00                               (24/173)1566+         DC    BL1'00000000'  OPTIONS
+0001B3 00                               (24/174)1567+         DC    AL1(0)                  RETURN CODE FIELD
+0001B4 00000028                         (24/179)1568+         DC    A(CBUFRSQN)              QNAME ADDRESS
+0001B8 00000030                         (24/191)1569+         DC    A(CBUFRSRN)              RNAME ADDRESS
+0001BC                                    (1/38)1572          DETACH  4(2)
+0001BC                                    (25/8)1573+* /* MACDATE Y-1 72271                                               */
+0001BC                                    (25/9)1574+* /*
+0001BC 41120004                           (3/39)1577+         LA    1,4(2)                              LOAD PARAMETER REG 1
+0001C0 0A3E                              (25/17)1579+        SVC   62             ISSUE DETACH SVC
+0001C2                                    (1/39)1581          DYNALLOC 
+0001C2                                    (26/7)1582+*        MACDATE Y-2 73082
+0001C2 0A63                               (26/9)1583+         SVC   99 CALL DYNAMIC ALLOCATION
+0001C4                                    (1/40)1585          ESETL MYDCB
+0001C4 4110F148                000148     (3/39)1587+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+0001C8 58F01054                           (27/6)1590+         L     15,84(0,1)                        LOAD ESETL ROUT. ADDR.
+0001CC 05EF                               (27/7)1591+         BALR  14,15                             LINK TO ESETL ROUTINE
+0001CE                                    (1/41)1593          ESPIE SET,MYEXIT,5
+0001CE 1BFF                              (28/86)1594+        SR     15,15
+0001D0 B2220000                          (28/94)1595+        IPM    0  GET CURRENT PGM MASK
+0001D4 0400                             (28/131)1596+        SPM    0 TURN ON ANY MASKS REQUIRED
+0001D6 5800F518                000518   (28/140)1597+        L      0,=B'00000100000000000000000000000000'
+0001DA 4110F004                000004   (28/142)1598+        LA     1,MYEXIT
+0001DE 0A6D                             (28/150)1599+        SVC    X'6D' ESPIE R0=INT BITS R1=EXIT R15=PARAM
+0001E0                                    (1/42)1601          ESTAE MYEXIT
+0001E0                                    (29/8)1602+*    MACDATE Y-1 75302
+0001E0                                  (29/257)1603+         CNOP  0,4                     ESTAB. FULL WD. BOUND. ALIGN.
+0001E0 4510F1F4                0001F4   (29/259)1604+         BAL   1,*+20             LIST ADDR IN REG1 SKIP LIST
+0001E4                  000001E4        (29/260)1605+IHB0038  EQU   *
+0001E4 16                               (29/262)1606+         DC    AL1(22)             FLAGS FOR TCB, PURGE, ASYNCH
+0001E5 000004                           (29/263)1607+         DC    AL3(MYEXIT)              STAE EXIT ROUTINE ADDR.
+0001E8 00000000                         (29/270)1608+         DC    A(0)                    SPACE FOR PARM LIST ADDR
+0001EC 00000000                         (29/278)1609+         DC    A(0)                    SPACE FOR TCB ADDR
+0001F0 00                               (29/279)1610+         DC    AL1(0)            FLAGS FOR TERM AND RECORD
+0001F1 000000                           (29/280)1611+         DC    AL3(0)                  RESERVED
+0001F4 1F00                             (29/304)1612+         SLR   0,0                     INDICATE CREATE OPTION
+0001F6 41101000                         (29/352)1613+         LA    1,0(0,1)                MAKE REG1 POS.  XCTL=NO
+0001FA 0A3C                             (29/320)1614+         SVC   60                      ISSUE STAE SVC
+0001FC                                    (1/43)1616 MYEXLST  EXLST EODAD=(MYEXIT,A)
+0001FC                                   (31/34)1620+MYEXLST  DS    0F
+0001FC 81                                (31/35)1621+         DC    X'81'                    EXLIST IDENTIFICATION
+0001FD 00                                (31/46)1622+         DC    AL1(0)              EXLST SUBTYPE           X04SVHS
+0001FE 000A                             (31/137)1623+         DC    H'10'               EXLST LIST LENGTH
+000200 00                               (31/138)1624+         DC    X'00'                    EXLST FLAGS
+000201 C0                               (31/184)1625+         DC    AL1(192)               EODAD ENTRY DESCRIPTION
+000202 00000004                         (31/185)1626+         DC    AL4(MYEXIT)           POINTER TO EODAD EXIT
+000206                                    (1/44)1629          EXTRACT DATA8,FIELDS=(TIOT)
+000206 0700                              (32/69)1630+         CNOP  0,4
+000208 4510F218                000218    (32/70)1631+         BAL   1,*+16                            BRANCH AROUND LIST
+00020C 00000010                          (32/73)1632+         DC    A(DATA8)                          LIST ADDRESS
+000210 00000000                          (32/80)1633+         DC    A(0)                              TCB ADDRESS
+000214 02                                (32/84)1634+         DC    AL1(2)                         FIELD BYTE
+000215 00                                (32/85)1635+         DC    AL1(0)    .         FIELD BYTE 2               20021
+000216 0000                              (32/86)1636+         DC    AL2(0) .                                           20021
+000218 0A28                              (32/67)1637+         SVC   40                                ISSUE EXTRACT SVC
+00021A                                    (1/45)1639          FREEMAIN R,LV=(3),A=(4)
+00021A                                    (33/6)1640+*      OS/VS2 RELEASE 3 VERSION  -- 10/25/74
+00021A 1803                             (33/222)1641+         LR    0,3                          LOAD LENGTH
+00021C 41104000                         (33/194)1642+         LA    1,0(0,4)                      LOAD AREA ADDRESS
+000220 0A0A                             (33/335)1643+         SVC   10                             ISSUE FREEMAIN SVC
+000222                                    (1/46)1645          GETMAIN RU,LV=(2),LOC=BELOW
+000222                                    (34/6)1646+*      OS/VS2 RELEASE 4 VERSION -- 10/21/75
+000222 0700                             (34/256)1647+         CNOP  0,4
+000224 47F0F22C                00022C   (34/257)1648+         B     *+12-4*1-2*0                BRANCH AROUND DATA
+000228 00                               (34/261)1649+IHB0043F DC    AL1(0)                            RESERVED
+000229 00                               (34/266)1650+         DC    AL1(0)                            RESERVED
+00022A 00                               (34/274)1651+         DC    AL1(0)                            SUBPOOL
+00022B 02                               (34/275)1652+         DC    BL1'00000010'            MODE BYTE
+00022C 1802                             (34/272)1653+         LR    0,2                          LOAD LENGTH   @ZA07133
+00022E 58F0F228                000228   (34/280)1654+         L     15,IHB0043F                    LOAD GETMAIN PARMS
+000232 1B11                             (34/324)1655+         SR    1,1                               ZERO RESERVED REG 1
+000234 0A78                             (34/326)1656+         SVC   120                             ISSUE GETMAIN SVC
+000236                                    (1/47)1658          GETMAIN R,LV=(2),LOC=BELOW
+000236                                    (34/6)1659+*      OS/VS2 RELEASE 4 VERSION -- 10/21/75
+000236 1802                             (34/236)1660+         LR    0,2                          LOAD LENGTH
+000238 4510F23C                00023C   (34/233)1661+         BAL   1,*+4                             INDICATE GETMAIN
+00023C 0A0A                             (34/326)1662+         SVC   10                             ISSUE GETMAIN SVC
+00023E                                    (1/48)1664          ENQ  (CBUFRSQN,CBUFRSRN,E,4,STEP),MF=L
+000240                                   (24/91)1665+         DS    0F                      ESTABLISH A FULLWORD BOUNBARY
+000240 C0                               (24/157)1666+         DC    AL1(192)            LISTEND BYTE              X02113
+000241 04                               (24/164)1667+         DC    AL1(4)            RNAME LENGTH
+000242 00                               (24/173)1668+         DC    BL1'00000000'  OPTIONS
+000243 00                               (24/174)1669+         DC    AL1(0)                  RETURN CODE FIELD
+000244 00000028                         (24/179)1670+         DC    A(CBUFRSQN)              QNAME ADDRESS
+000248 00000030                         (24/191)1671+         DC    A(CBUFRSRN)              RNAME ADDRESS
+00024C                                    (1/49)1673          GENCB BLK=RPL,ACB=MYACB
+00024C                                  (36/928)1777+         CNOP  0,4
+00024C 4510F26C                00026C   (36/930)1778+         BAL   1,IDA0047A+28         BRANCH AROUND CONSTANTS
+000250 00000258                         (36/939)1779+IDA0047A DC    A(*+8)             ADDRESS OF HEADER
+000254 80000264                         (36/949)1780+         DC    A(IDA0047A+20+X'80000000') ADDRESS OF LAST ELEMENT
+000258 C0                               (36/953)1781+         DC    AL1(192)               BLOCK TYPE CODE
+000259 01                               (36/954)1782+         DC    AL1(1)               FUNCTION TYPE CODE
+00025A 0001                             (36/966)1783+         DC    AL2(1) HEADER FIELD VALUE
+00025C 00000000                         (36/964)1784+         DC    AL4(0)        HEADER FIELD VALUE
+000260 0000                             (36/964)1785+         DC    AL2(0)        HEADER FIELD VALUE
+000262 0000                             (36/964)1786+         DC    AL2(0)        HEADER FIELD VALUE
+000264 0000                             (36/976)1787+         DC    AL2(0)           ELEMENT ID
+000266 0000                             (36/983)1788+         DC    AL2(0)                  RESERVED                  X03004
+000268 00000044                         (36/992)1789+         DC    A(MYACB)         ELEMENT VALUE
+00026C 58F00010                        (36/1107)1790+IDA0047B     L     15,16                  POINT TO CVT         X03004HS
+000270 58F0F100                        (36/1108)1791+         L     15,256(,15)             POINT TO AMCBS
+000274 58F0F00C                        (36/1109)1792+         L     15,12(,15)              POINT TO CB MANIPULATION ROUTINE
+000278 45E0F00C                        (36/1153)1793+         BAL   14,12(,15)         BRANCH TO ROUTINE       @Z40BHCJ
+00027C                                    (1/50)1796          GET  MYDCB,MYAREA
+00027C 4110F148                000148     (3/39)1799+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+000280 4100F028                000028     (3/51)1801+         LA    0,MYAREA                              LOAD PARAMETER REG 0
+000284 58F01030                          (41/16)1804+         L     15,48(0,1)               LOAD GET ROUTINE ADDR
+000288 05EF                              (41/17)1805+         BALR  14,15                    LINK TO GET ROUTINE
+00028A                                    (1/51)1807          IDENTIFY EP=MYEXIT,ENTRY=MYEXIT
+00028A 4500F296                000296    (42/12)1808+         BAL   0,*+12                            LOAD EP SYMBOL ADDR
+00028E D4E8C5E7C9E34040                  (42/13)1809+         DC    CL8'MYEXIT'                          EP SYMBOL
+000296 4110F004                000004     (3/39)1812+         LA    1,MYEXIT                              LOAD PARAMETER REG 1
+00029A 0A29                              (42/19)1815+         SVC   41                                ISSUE IDENTIFY SVC
+00029C                                    (1/52)1817          LINK EP=MYPGM
+00029C                                  (12/101)1819+         CNOP  0,4
+00029C 45F0F2B0                0002B0   (12/102)1820+         BAL   15,*+20          BRANCH AROUND CONSTANTS
+0002A0 000002A8                         (12/104)1821+         DC    A(*+8)         ADDR. OF PARM. LIST
+0002A4 00000000                         (12/136)1822+         DC    A(0)                DCB ADDRESS PARAMETER
+0002A8 D4E8D7C7D4404040                 (12/138)1823+         DC    CL8'MYPGM'            EP PARAMETER
+0002B0 0A06                              (11/18)1825+         SVC   6                   ISSUE LINK SVC
+0002B2                                    (1/53)1827          LOAD EP=MYPGM
+0002B2 0700                              (43/51)1828+         CNOP  0,4
+0002B4 4100F2BC                0002BC    (43/53)1829+         LA    0,*+8              LOAD PARAMETER INTO REGISTER ZERO
+0002B8 47F0F2C4                0002C4    (43/54)1830+         B     *+12               BRANCH AROUND CONSTANT(S)
+0002BC D4E8D7C7D4404040                  (43/55)1831+         DC    CL8'MYPGM'           ENTRY POINT NAME
+0002C4 1B11                              (43/22)1832+         SR    1,1                SHOW NO DCB PRESENT
+0002C6 0A08                              (43/26)1833+         SVC   8
+0002C8                                    (1/54)1835          LOCATE MYLIST
+0002C8 4110F028                000028     (3/39)1838+         LA    1,MYLIST                              LOAD PARAMETER REG 1
+0002CC 0A1A                               (44/6)1841+         SVC   26                                LINK TO SERVICE ROUT.
+0002CE                                    (1/55)1843          MODCB ACB=MYACB,EXLST=MYEXLST
+0002CE 0700                             (36/928)1903+         CNOP  0,4
+0002D0 4510F2EC                0002EC   (36/930)1904+         BAL   1,IDA0086A+24         BRANCH AROUND CONSTANTS
+0002D4 000002DC                         (36/939)1905+IDA0086A DC    A(*+8)             ADDRESS OF HEADER
+0002D8 800002E4                         (36/949)1906+         DC    A(IDA0086A+16+X'80000000') ADDRESS OF LAST ELEMENT
+0002DC A0                               (36/953)1907+         DC    AL1(160)               BLOCK TYPE CODE
+0002DD 02                               (36/954)1908+         DC    AL1(2)               FUNCTION TYPE CODE
+0002DE 0000                             (36/964)1909+         DC    AL2(0)        HEADER FIELD VALUE
+0002E0 00000044                         (36/966)1910+         DC    AL4(MYACB) HEADER FIELD VALUE
+0002E4 0000                             (36/976)1911+         DC    AL2(0)           ELEMENT ID
+0002E6 0000                             (36/983)1912+         DC    AL2(0)                  RESERVED                  X03004
+0002E8 000001FC                         (36/992)1913+         DC    A(MYEXLST)         ELEMENT VALUE
+0002EC 58F00010                        (36/1107)1914+IDA0086B     L     15,16                  POINT TO CVT         X03004HS
+0002F0 58F0F100                        (36/1108)1915+         L     15,256(,15)             POINT TO AMCBS
+0002F4 58F0F00C                        (36/1109)1916+         L     15,12(,15)              POINT TO CB MANIPULATION ROUTINE
+0002F8 45E0F018                        (36/1153)1917+         BAL   14,24(,15)         BRANCH TO ROUTINE       @Z40BHCJ
+0002FC                                    (1/56)1920          OPEN (MYDCB)
+0002FC                                   (47/84)1921+         CNOP  0,4                               ALIGN LIST TO FULLWORD
+0002FC 4510F304                000304    (47/86)1922+         BAL   1,*+8                         LOAD REG1 W/LIST ADDR.
+000300 80                                (47/92)1923+         DC    AL1(128)                        OPTION BYTE
+000301 000148                            (47/93)1924+         DC    AL3(MYDCB)                  DCB ADDRESS
+000304 0A13                             (47/194)1925+         SVC   19                                ISSUE OPEN SVC
+000306                                    (1/57)1927          POINT RPL=MYRPL
+000306                                   (48/22)1928+         DS    0H
+000306 4110F36C                00036C    (48/24)1929+         LA    1,MYRPL                   LOAD RPL ADDR
+00030A 41000003                          (48/27)1930+         LA    0,X'03'                  INDICATE POINT IN REG
+00030E 58F10018                          (48/28)1931+         L     15,24(1)                 LOAD ACB ADDR FROM RPL
+000312 58FF0008                          (48/29)1932+         L     15,8(15)                 LOAD JES INTERFACE MOD ADDR
+000316 05EF                              (48/30)1933+         BALR  14,15                    LINK TO INTERFACE ROUTINE
+000318                                    (1/58)1935          POST MYECB
+000318 1B00                              (49/32)1936+         SR    0,0                    . SET POST CODE REG ZERO
+00031A 4110F004                000004    (49/66)1937+         LA    1,MYECB                 . LOAD ECB ADDRESS IN REG 1
+00031E 0A02                             (49/231)1938+         SVC   2                      . ISSUE THE POST SVC
+000320                                    (1/59)1940          PUT  MYDCB,MYAREA
+000320 4110F148                000148     (3/39)1942+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+000324 4100F028                000028     (3/51)1944+         LA    0,MYAREA                              LOAD PARAMETER REG 0
+000328 58F01030                          (50/12)1947+         L     15,48(0,1)               LOAD PUT ROUTINE ADDR
+00032C 05EF                              (50/13)1948+         BALR  14,15                    LINK TO PUT ROUTINE
+00032E                                    (1/60)1950          PUTX MYDCB
+00032E 4110F148                000148     (3/39)1952+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+000332 58F01030                           (51/6)1955+         L     15,48(0,1)                        LOAD REG 15 FROM DCB
+000336 45E0F004                           (51/7)1956+         BAL   14,4(0,15)                        LINK TO PUTX ROUTINE
+00033A                                    (1/61)1958          RDJFCB MYDCB
+00033A 0700                              (47/84)1960+         CNOP  0,4                               ALIGN LIST TO FULLWORD
+00033C 4510F344                000344    (47/86)1961+         BAL   1,*+8                         LOAD REG1 W/LIST ADDR.
+000340 80                                (47/92)1962+         DC    AL1(128)                        OPTION BYTE
+000341 000148                            (47/93)1963+         DC    AL3(MYDCB)                  DCB ADDRESS
+000344 0A40                              (52/12)1965+         SVC   64                                ISSUE RDJFCB SVC
+000346                                    (1/62)1967          READ  DECB1,SF,MYDCB,MYAREA,'S'
+000346 0700                             (54/215)1970+         CNOP  0,4
+000348 4510F360                000360   (54/218)1971+         BAL   1,*+24                LOAD DECB ADDRESS
+00034C 00000000                         (54/220)1972+DECB1    DC    F'0'                              EVENT CONTROL BLOCK
+000350 80                               (54/224)1973+         DC    X'80'                             TYPE FIELD
+000351 80                                (54/55)1974+         DC    X'80'                           TYPE FIELD
+000352 0000                             (54/238)1975+         DC    AL2(0)                            LENGTH
+000354 00000148                         (54/241)1976+         DC    A(MYDCB)                           DCB ADDRESS
+000358 00000028                         (54/249)1977+         DC    A(MYAREA)                          AREA ADDRESS
+00035C 00000000                         (54/252)1978+         DC    A(0)                              RECORD POINTER WORD
+000360 58F10008                         (54/195)1979+         L     15,8(1,0)           LOAD DCB ADDRESS
+000364 58F0F030                         (54/196)1980+         L     15,48(0,15)                       LOAD RDWR ROUTINE ADDR
+000368 05EF                             (54/197)1981+         BALR  14,15                             LINK TO RDWR ROUTINE
+00036A                                    (1/63)1984 MYRPL    RPL   ACB=MYACB
+00036C                                   (56/78)1992+MYRPL    DS    0F
+00036C 00                                (56/79)1993+         DC    AL1(0)                   RPL IDENTIFICATION
+00036D 10                                (56/89)1994+         DC    AL1(16)            RPL SUBTYPE             X04SVHS
+00036E 00                                (56/90)1995+         DC    AL1(0)                   RPL REQUEST TYPE
+00036F 4C                                (56/91)1996+         DC    AL1(76)               RPL LENGTH               X03004
+000370 00000000                         (56/108)2074+         DC    A(0) .                   POINTER TO PLACEHOLDER
+000374 00000000                         (56/124)2075+         DC    A(0) .                   ECB
+000378 00                               (56/128)2076+         DC    BL1'0' .                 STATUS BYTE
+000379 000000                           (56/129)2077+         DC    XL3'0'                   FEEDBACK CODES
+00037C 0000                             (56/136)2078+         DC    AL2(0) .           KEY LENGTH
+00037E 0000                             (56/137)2079+         DC    AL2(0) .          TRANSID                 X04SVHS
+000380 00000000                         (56/138)2080+         DC    A(0)                POINTER TO CONTROL CHARACTER
+000384 00000044                         (56/147)2081+         DC    A(MYACB) .                POINTER TO ACB
+000388 00000000                         (56/152)2082+         DC    A(0) .                   POINTER TO TCB
+00038C 00000000                         (56/153)2083+         DC    A(0) .               POINTER TO RECORD AREA
+000390 00000000                         (56/168)2084+         DC    A(0) .                POINTER TO ARGUMENT
+000394 20                               (56/171)2085+         DC    B'00100000' .        OPTCD BYTE 1
+000395 80                               (56/172)2086+         DC    B'10000000' .            OPTCD BYTE 2
+000396 00                               (56/173)2087+         DC    AL1(0) .                 OPTCD BYTE 3            X04SVHS
+000397 00                               (56/174)2088+         DC    AL1(0) .                 OPTCD BYTE 4            X04SVHS
+000398 00000000                         (56/175)2089+         DC    A(0) .             POINTER TO NEXT RPL
+00039C 00000000                         (56/185)2090+         DC    A(0) .                   RESERVED FOR LOGICAL REC LEN
+0003A0 00000000                         (56/196)2091+         DC    A(0) .                   RESERVED FOR BUFFER LENGTH
+0003A4                                  (56/198)2092+*                                       OPTCD BYTES 5-8          X03004
+0003A4 00                               (56/199)2093+         DC    B'00000000' .            BYTE 5                  X04SVHS
+0003A5 00                               (56/200)2094+         DC    B'00000000' .            BYTE 6                  X04SVHS
+0003A6 00                               (56/201)2095+         DC    B'00000000' .            BYTE 7                  X04SVHS
+0003A7 00                               (56/202)2096+         DC    B'00000000' .            BYTE 8                  X04SVHS
+0003A8 0000000000000000                 (56/215)2097+         DC    XL8'0' .                 RBA
+0003B0 40                               (56/217)2098+         DC    B'01000000'      @G40AKSL
+0003B1 00                               (56/218)2099+         DC    AL1(0)                   ACTIVE INDICATOR
+0003B2 0000                             (56/219)2100+         DC    AL2(0) .           MAXIMUM ERROR MSG LENGTH
+0003B4 00000000                         (56/229)2101+         DC    A(0) .                   RESERVED FOR MESSAGE AREA PTR
+0003B8                                    (1/64)2104          RETURN (14,12)
+0003B8 98ECD00C                          (59/14)2105+         LM    14,12,12(13)           RESTORE THE REGISTERS
+0003BC 07FE                              (59/41)2106+         BR    14                                RETURN
+0003BE                                    (1/65)2108          SAVE   (14,12)
+0003BE                                   (60/38)2109+         DS    0H
+0003BE 90ECD00C                          (60/64)2110+         STM   14,12,12(13)           SAVE REGISTERS
+0003C2                                    (1/66)2112          SETL    MYDCB,K,MYLIMIT
+0003C2 4110F148                000148     (3/39)2114+         LA    1,MYDCB                              LOAD PARAMETER REG 1
+0003C6 4100F028                000028     (3/51)2116+         LA    0,MYLIMIT                              LOAD PARAMETER REG 0
+0003CA 41E00080                          (61/44)2119+         LA    14,128                       PICK UP TYPE BYTE
+0003CE 89E00018                          (61/45)2120+         SLL   14,24                         SHIFT TO HI-ORDER BYTE
+0003D2 160E                              (61/46)2121+         OR    0,14                              PACK IN WITH LOW.LIM.
+0003D4 58F0104C                          (61/50)2122+         L     15,76(0,1)                    LOAD SETL RTN ADDR
+0003D8 05EF                              (61/51)2123+         BALR  14,15                             LINK TO SETL ROUTINE
+0003DA                                    (1/67)2125          SHOWCAT ACB=MYACB,AREA=DATA16,FWLEN=NO,NAME=MYNAME
+0003DA 0700                              (62/17)2127+         CNOP  0,4                      SHOWCAT MACRO ALIGNMENT
+0003DC 4510F3F0                0003F0    (62/18)2128+         BAL   1,IGG0142                  BRANCH AROUND PARM LIST
+0003E0 80                                (62/19)2129+         DC    X'80'                    SHOW CAT FLAGS
+0003E1 000000                            (62/20)2130+         DC    X'000000'                RESERVED
+0003E4 00000028                          (62/22)2131+         DC    A(MYNAME)                 NAME ADDRESS
+0003E8 00000044                          (62/38)2132+         DC    A(MYACB)                  ACB ADDRESS
+0003EC 00000018                          (62/42)2133+         DC    A(DATA16)                 RETURN AREA ADDRESS
+0003F0                                   (62/46)2134+IGG0142  DS    0H                       END OF PARM LIST
+0003F0                                  (12/101)2138+         CNOP  0,4
+0003F0 45F0F404                000404   (12/102)2139+         BAL   15,*+20          BRANCH AROUND CONSTANTS
+0003F4 000003FC                         (12/104)2140+         DC    A(*+8)         ADDR. OF PARM. LIST
+0003F8 00000000                         (12/136)2141+         DC    A(0)                DCB ADDRESS PARAMETER
+0003FC C9C7C7F0C3D3C1F0                 (12/138)2142+         DC    CL8'IGG0CLA0'            EP PARAMETER
+000404 0A06                              (11/18)2144+         SVC   6                   ISSUE LINK SVC
+000406                                    (1/68)2147          SHOWCB  ACB=MYACB,AREA=DATA16,LENGTH=16,FIELDS=(DDNAME)
+000406 0700                             (36/928)2157+         CNOP  0,4
+000408 4510F428                000428   (36/930)2158+         BAL   1,IDA0149A+28         BRANCH AROUND CONSTANTS
+00040C 00000414                         (36/939)2159+IDA0149A DC    A(*+8)             ADDRESS OF HEADER
+000410 80000424                         (36/949)2160+         DC    A(IDA0149A+24+X'80000000') ADDRESS OF LAST ELEMENT
+000414 A0                               (36/953)2161+         DC    AL1(160)               BLOCK TYPE CODE
+000415 03                               (36/954)2162+         DC    AL1(3)               FUNCTION TYPE CODE
+000416 0000                             (36/964)2163+         DC    AL2(0)        HEADER FIELD VALUE
+000418 00000044                         (36/966)2164+         DC    AL4(MYACB) HEADER FIELD VALUE
+00041C 00000018                         (36/966)2165+         DC    AL4(DATA16) HEADER FIELD VALUE
+000420 0010                             (36/966)2166+         DC    AL2(16) HEADER FIELD VALUE
+000422 0000                             (36/964)2167+         DC    AL2(0)        HEADER FIELD VALUE
+000424 0009                             (36/976)2168+         DC    AL2(9)           ELEMENT ID
+000426 0000                             (36/983)2169+         DC    AL2(0)                  RESERVED                  X03004
+000428 58F00010                        (36/1107)2170+IDA0149B     L     15,16                  POINT TO CVT         X03004HS
+00042C 58F0F100                        (36/1108)2171+         L     15,256(,15)             POINT TO AMCBS
+000430 58F0F00C                        (36/1109)2172+         L     15,12(,15)              POINT TO CB MANIPULATION ROUTINE
+000434 45E0F000                        (36/1159)2173+         BAL   14,0(,15)               BRANCH TO ROUTINE       @ZA07565
+000438                                    (1/69)2176          SNAP    DCB=MYDCB,STORAGE=(DATA8,DATA16)
+000438                                    (64/9)2177+* /* MACDATE Y-1 72179  LAST UPDATED -02/03/81 EBB1102 - APAR OZ51152*/
+000438                                  (64/353)2178+         CNOP  0,4
+000438 4510F45C                00045C   (64/354)2179+         BAL   1,IHB0150            BRANCH AROUND PARAM LIST
+00043C 00                               (64/361)2180+         DC    AL1(0)              ID NUMBER
+00043D 72                               (64/363)2181+         DC    AL1(114)        OPTION FLAGS                  Y02705
+00043E 0000                             (64/364)2182+         DC    H'0'                RESERVED                      Y02705
+000440 00                               (64/365)2183+         DC    AL1(0)        SDATA FLAGS ONE               Y02705
+000441 00                               (64/366)2184+         DC    AL1(0)        SDATA FLAGS TWO              G33SPHW
+000442 00                               (64/367)2185+         DC    AL1(0)        PDATA FLAGS                   Y02705
+000443 00                               (64/368)2186+         DC    AL1(0)              RESERVED                      Y02705
+000444 00000148                         (64/371)2187+         DC    A(MYDCB)             DCB ADDRESS
+000448 00000000                         (64/376)2188+         DC    A(0)                TCB ADDRESS
+00044C 00000454                         (64/403)2189+         DC    A(*+8)              ADDRESS OF SNAP-SHOT LIST
+000450 00000000                         (64/410)2190+         DC    A(0)                ADDRESS OF HEADER LIST       G33SPHW
+000454 00000010                         (64/417)2191+         DC    A(DATA8)  STARTING/ENDING ADDRESS
+000458 00000018                         (64/417)2192+         DC    A(DATA16)  STARTING/ENDING ADDRESS
+00045C                                  (64/450)2193+IHB0150  DS    0H
+00045C 9680101C                         (64/287)2194+         OI    28(1),X'80'     SET END OF LIST INDICATOR     Y02705
+000460 0A33                             (64/518)2195+         SVC   51
+000462                                    (1/70)2197          STIMER WAIT,BINTVL=DATA4
+000462                                    (65/7)2198+* /* MACDATE Y-1 72277                                               */
+000462 4110F008                000008     (3/39)2200+         LA    1,DATA4                              LOAD PARAMETER REG 1
+000466 41000011                          (65/31)2203+         LA    0,17(0,0)                       LOAD FLAG BYTE
+00046A 89000018                          (65/32)2204+         SLL   0,24(0)                           SHIFT TO HI-ORDER BYTE
+00046E 0A2F                              (65/47)2205+         SVC   47                                ISSUE STIMER SVC
+000470                                    (1/71)2207          TGET  DATA16,16,ASIS
+000470 4110F018                000018    (66/58)2208+         LA    1,DATA16
+000474 41000010                          (66/64)2209+         LA    0,16
+000478 BF18F51C                00051C   (66/105)2210+         ICM   1,8,=B'10000001'
+00047C 0A5D                             (66/107)2211+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+00047E                                    (1/72)2213          TIME  DEC
+00047E                                    (67/8)2214+* /* MACDATE Y-1 72277                                               */
+00047E                                    (67/9)2215+* /*
+00047E 41100002                          (67/29)2216+         LA    1,2(0,0)                      LOAD 1 TO SPECIFY UNIT
+000482 0A0B                              (67/42)2217+         SVC   11                                ISSUE TIME SVC
+000484                                    (1/73)2219          TPUT  DATA16,16,FULLSCR
+000484 4110F018                000018    (68/61)2220+         LA    1,DATA16
+000488 41000010                          (68/67)2221+         LA    0,16
+00048C BF18F51D                00051D   (68/134)2222+         ICM   1,8,=B'00000011'
+000490 0A5D                             (68/136)2223+         SVC   93 R0=(ASID,LENGTH) R1=(FLAGS,ADDR)
+000492                                    (1/74)2225          TTIMER CANCEL,TU
+000492                                    (69/8)2226+* /* MACDATE Y-1 72277                                               */
+000492                                    (69/9)2227+* /*
+000492 41100001                          (69/35)2228+         LA    1,1(0,0)                 LOAD 1 TO SET FLAG BYTE
+000496 0A2E                              (69/45)2229+         SVC   46                           ISSUE TTIMER
+000498                                    (1/75)2231          WRITE DECB2,SF,MYDCB,MYAREA,'S'
+000498                                  (54/215)2234+         CNOP  0,4
+000498 4510F4B0                0004B0   (54/218)2235+         BAL   1,*+24                LOAD DECB ADDRESS
+00049C 00000000                         (54/220)2236+DECB2    DC    F'0'                              EVENT CONTROL BLOCK
+0004A0 80                               (54/224)2237+         DC    X'80'                             TYPE FIELD
+0004A1 20                                (54/55)2238+         DC    X'20'                           TYPE FIELD
+0004A2 0000                             (54/238)2239+         DC    AL2(0)                            LENGTH
+0004A4 00000148                         (54/241)2240+         DC    A(MYDCB)                           DCB ADDRESS
+0004A8 00000028                         (54/249)2241+         DC    A(MYAREA)                          AREA ADDRESS
+0004AC 00000000                         (54/252)2242+         DC    A(0)                              RECORD POINTER WORD
+0004B0 58F10008                         (54/195)2243+         L     15,8(1,0)           LOAD DCB ADDRESS
+0004B4 58F0F030                         (54/196)2244+         L     15,48(0,15)                       LOAD RDWR ROUTINE ADDR
+0004B8 05EF                             (54/197)2245+         BALR  14,15                             LINK TO RDWR ROUTINE
+0004BA                                    (1/76)2248          WTO   'HELLO WORLD'
+0004BA 0700                             (71/242)2249+         CNOP  0,4
+0004BC 4510F4D0                0004D0   (71/243)2250+         BAL   1,IHB0159A                        BRANCH AROUND MESSAGE
+0004C0 000F                             (71/311)2251+         DC    AL2(15)           TEXT LENGTH
+0004C2 0000                             (71/312)2252+         DC    B'0000000000000000'     MCS FLAGS
+0004C4 C8C5D3D3D640E6D6                 (71/314)2253+         DC    C'HELLO WORLD'
+0004D0                                  (71/365)2254+IHB0159A DS    0H
+0004D0 0A23                             (71/367)2255+         SVC   35
+0004D2                                    (1/77)2257          WTOR  'ENTER',DATA8,8,MYECB
+0004D2 0700                              (72/92)2258+         CNOP  0,4
+0004D4 4510F4EA                0004EA    (72/93)2259+         BAL   1,IHB0160A                        BRANCH AROUND LIST
+0004D8 08                                (72/96)2260+         DC    AL1(8)                      REPLY LENGTH
+0004D9 000010                           (72/101)2261+         DC    AL3(DATA8)                        REPLY ADDRESS
+0004DC 00000004                         (72/106)2262+         DC    A(MYECB)                           ECB ADDRESS
+0004E0 0009                             (71/311)2265+         DC    AL2(9)           TEXT LENGTH
+0004E2 0000                             (71/312)2266+         DC    B'0000000000000000'     MCS FLAGS
+0004E4 C5D5E3C5D9                       (71/314)2267+         DC    C'ENTER'
+0004EA                                  (72/111)2269+IHB0160A DS    0H
+0004EA 0A23                              (72/66)2270+         SVC   35                                ISSUE WTOR SVC
+0004EC                                    (1/78)2272          XCTL  EP=MYPGM
+0004EC                                  (12/101)2274+         CNOP  0,4
+0004EC 45F0F500                000500   (12/102)2275+         BAL   15,*+20          BRANCH AROUND CONSTANTS
+0004F0 000004F8                         (12/104)2276+         DC    A(*+8)         ADDR. OF PARM. LIST
+0004F4 00000000                         (12/136)2277+         DC    A(0)                DCB ADDRESS PARAMETER
+0004F8 D4E8D7C7D4404040                 (12/138)2278+         DC    CL8'MYPGM'            EP PARAMETER
+000500 0A07                              (73/36)2280+         SVC   7                                 ISSUE XCTL SVC
+000502                                    (1/79)2282          XLATE DATA16,16,TO=A
+000502 4110F018                000018   (74/106)2283+         LA    1,DATA16                  ADDRESS OF AREA TO TRANSLATE
+000506 41000010                         (74/114)2284+         LA    0,16(,0)           LENGTH TO TRANSLATE
+00050A 41F00080                         (74/119)2285+         LA    15,X'80'                 CONSTRUCT BIT MASK
+00050E 89F00018                         (74/120)2286+         SLL   15,24                    IN HIGH ORDER BYTE
+000512 161F                             (74/121)2287+         OR    1,15                     SET EBCDIC TO ASCII INDICATOR
+000514 0A67                             (74/122)2288+         SVC   103                      ISSUE XLATE SVC
+000516                                    (1/80)2290          YREGS 
+000516                  00000000          (75/3)2291+R0       EQU   0
+000516                  00000001          (75/4)2292+R1       EQU   1
+000516                  00000002          (75/5)2293+R2       EQU   2
+000516                  00000003          (75/6)2294+R3       EQU   3
+000516                  00000004          (75/7)2295+R4       EQU   4
+000516                  00000005          (75/8)2296+R5       EQU   5
+000516                  00000006          (75/9)2297+R6       EQU   6
+000516                  00000007         (75/10)2298+R7       EQU   7
+000516                  00000008         (75/11)2299+R8       EQU   8
+000516                  00000009         (75/12)2300+R9       EQU   9
+000516                  0000000A         (75/13)2301+R10      EQU   10
+000516                  0000000B         (75/14)2302+R11      EQU   11
+000516                  0000000C         (75/15)2303+R12      EQU   12
+000516                  0000000D         (75/16)2304+R13      EQU   13
+000516                  0000000E         (75/17)2305+R14      EQU   14
+000516                  0000000F         (75/18)2306+R15      EQU   15
+000516                                    (1/81)2308          END 
+000518 04000000         =B'00000100000000000000000000000000'
+00051C 81               =B'10000001'
+00051D 03               =B'00000011'
+Relocation Definitions
+ ESD=0001 LOC=00000104 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000011C LEN=4 SIGN=+ XESD=0003
+ ESD=0001 LOC=00000125 LEN=3 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000141 LEN=3 SIGN=+ XESD=0001
+ ESD=0001 LOC=000001B4 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000001B8 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000001E5 LEN=3 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000202 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000020C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000244 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000248 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000250 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000254 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000268 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002A0 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002D4 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002D8 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002E0 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002E8 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000301 LEN=3 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000341 LEN=3 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000354 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000358 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000384 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000003E4 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000003E8 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000003EC LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000003F4 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000040C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000410 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000418 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000041C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000444 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000044C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000454 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000458 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000004A4 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000004A8 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000004D9 LEN=3 SIGN=+ XESD=0001
+ ESD=0001 LOC=000004DC LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000004F0 LEN=4 SIGN=+ XESD=0001
+
+Symbol Table Listing
+
+ SYM=CBUFRSQN LOC=00000028 LEN=00000008 ESD=0001 TYPE=REL  XREF=19 1568 1670 
+ SYM=CBUFRSRN LOC=00000030 LEN=00000004 ESD=0001 TYPE=REL  XREF=20 1569 1671 
+ SYM=CVT044R2 LOC=000002D4 LEN=00000004 ESD=0004 TYPE=REL  XREF=799 
+ SYM=CVT062R1 LOC=000002A0 LEN=00000004 ESD=0004 TYPE=REL  XREF=773 
+ SYM=CVT0DS   LOC=00000088 LEN=00000004 ESD=0004 TYPE=REL  XREF=348 
+ SYM=CVT0EF00 LOC=00000004 LEN=00000004 ESD=0004 TYPE=REL  XREF=264 
+ SYM=CVT0FN00 LOC=0000004C LEN=00000004 ESD=0004 TYPE=REL  XREF=304 
+ SYM=CVT0PT01 LOC=00000098 LEN=00000004 ESD=0004 TYPE=REL  XREF=354 
+ SYM=CVT0PT02 LOC=00000370 LEN=00000004 ESD=0004 TYPE=REL  XREF=950 
+ SYM=CVT0PT03 LOC=000003F0 LEN=00000004 ESD=0004 TYPE=REL  XREF=1022 
+ SYM=CVT0PT0E LOC=000003EC LEN=00000004 ESD=0004 TYPE=REL  XREF=1020 
+ SYM=CVT0SCR1 LOC=000000E8 LEN=00000004 ESD=0004 TYPE=REL  XREF=438 
+ SYM=CVT0TC0A LOC=00000354 LEN=00000004 ESD=0004 TYPE=REL  XREF=934 
+ SYM=CVT0VL00 LOC=00000018 LEN=00000004 ESD=0004 TYPE=REL  XREF=273 
+ SYM=CVT0VL01 LOC=000001A4 LEN=00000004 ESD=0004 TYPE=REL  XREF=643 
+ SYM=CVT      LOC=00000000 LEN=00000438 ESD=0004 TYPE=DST  XREF=248 
+ SYM=CVT121TR LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=389 
+ SYM=CVT1EF00 LOC=000000A8 LEN=00000004 ESD=0004 TYPE=REL  XREF=365 
+ SYM=CVT1SSS  LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=323 
+ SYM=CVT2SPS  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=324 
+ SYM=CVT4MPS  LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=327 
+ SYM=CVT4MS1  LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=325 332 
+ SYM=CVT6DAT  LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=328 332 
+ SYM=CVT8AOS2 LOC=00000012 LEN=00000001 ESD=0000 TYPE=ABS  XREF=332 
+ SYM=CVTABEND LOC=000000C8 LEN=00000004 ESD=0004 TYPE=REL  XREF=424 
+ SYM=CVTADV   LOC=000003B8 LEN=00000004 ESD=0004 TYPE=REL  XREF=993 
+ SYM=CVTAIDVT LOC=000002EC LEN=00000004 ESD=0004 TYPE=REL  XREF=811 
+ SYM=CVTAMFF  LOC=00000108 LEN=00000004 ESD=0004 TYPE=REL  XREF=490 
+ SYM=CVTAPF   LOC=00000144 LEN=00000004 ESD=0004 TYPE=REL  XREF=547 
+ SYM=CVTAPFA  LOC=00000145 LEN=00000003 ESD=0004 TYPE=REL  XREF=549 
+ SYM=CVTAPFT  LOC=00000278 LEN=00000004 ESD=0004 TYPE=REL  XREF=759 
+ SYM=CVTAPG   LOC=0000018F LEN=00000001 ESD=0004 TYPE=REL  XREF=625 
+ SYM=CVTAPR   LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=380 
+ SYM=CVTAPTHR LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=404 
+ SYM=CVTAQAVB LOC=000000F1 LEN=00000003 ESD=0004 TYPE=REL  XREF=471 
+ SYM=CVTAQAVT LOC=000000F0 LEN=00000004 ESD=0004 TYPE=REL  XREF=457 
+ SYM=CVTAQTOP LOC=00000224 LEN=00000004 ESD=0004 TYPE=REL  XREF=713 
+ SYM=CVTASCBH LOC=00000234 LEN=00000004 ESD=0004 TYPE=REL  XREF=722 
+ SYM=CVTASCBL LOC=00000238 LEN=00000004 ESD=0004 TYPE=REL  XREF=726 
+ SYM=CVTASCII LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=390 
+ SYM=CVTASCRF LOC=000001B4 LEN=00000004 ESD=0004 TYPE=REL  XREF=654 
+ SYM=CVTASCRL LOC=000001B8 LEN=00000004 ESD=0004 TYPE=REL  XREF=656 
+ SYM=CVTASMRM LOC=000003F8 LEN=00000004 ESD=0004 TYPE=REL  XREF=1025 
+ SYM=CVTASMVT LOC=000002C0 LEN=00000004 ESD=0004 TYPE=REL  XREF=788 
+ SYM=CVTASVT  LOC=0000022C LEN=00000004 ESD=0004 TYPE=REL  XREF=718 
+ SYM=CVTATACT LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1132 
+ SYM=CVTATCVT LOC=00000040 LEN=00000004 ESD=0006 TYPE=REL  XREF=1131 
+ SYM=CVTAUTHL LOC=000001E4 LEN=00000004 ESD=0004 TYPE=REL  XREF=687 
+ SYM=CVTBAH   LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1078 
+ SYM=CVTBLDCP LOC=000001E8 LEN=00000004 ESD=0004 TYPE=REL  XREF=688 
+ SYM=CVTBRET  LOC=00000052 LEN=00000002 ESD=0004 TYPE=REL  XREF=306 873 
+ SYM=CVTBTERM LOC=00000034 LEN=00000004 ESD=0004 TYPE=REL  XREF=293 
+ SYM=CVTBUF   LOC=00000010 LEN=00000004 ESD=0004 TYPE=REL  XREF=269 
+ SYM=CVTCBBR  LOC=000003CC LEN=00000004 ESD=0004 TYPE=REL  XREF=1006 
+ SYM=CVTCBSP  LOC=00000100 LEN=00000004 ESD=0004 TYPE=REL  XREF=485 
+ SYM=CVTCCH   LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=378 
+ SYM=CVTCCVT  LOC=00000028 LEN=00000004 ESD=0006 TYPE=REL  XREF=1101 
+ SYM=CVTCDAL  LOC=00000408 LEN=00000004 ESD=0004 TYPE=REL  XREF=1035 
+ SYM=CVTCGK   LOC=000003E4 LEN=00000004 ESD=0004 TYPE=REL  XREF=1017 
+ SYM=CVTCRAS  LOC=000001FC LEN=00000004 ESD=0004 TYPE=REL  XREF=694 
+ SYM=CVTCRCA  LOC=000003C0 LEN=00000004 ESD=0004 TYPE=REL  XREF=997 
+ SYM=CVTCRMN  LOC=000001F8 LEN=00000004 ESD=0004 TYPE=REL  XREF=692 
+ SYM=CVTCSD   LOC=00000294 LEN=00000004 ESD=0004 TYPE=REL  XREF=769 
+ SYM=CVTCSDRL LOC=0000039C LEN=00000004 ESD=0004 TYPE=REL  XREF=976 
+ SYM=CVTCSPIE LOC=000001CC LEN=00000004 ESD=0004 TYPE=REL  XREF=667 
+ SYM=CVTCST   LOC=0000041C LEN=00000004 ESD=0004 TYPE=REL  XREF=1044 
+ SYM=CVTCTIMS LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=396 
+ SYM=CVTCTLFG LOC=0000018E LEN=00000001 ESD=0004 TYPE=REL  XREF=609 
+ SYM=CVTCUCB  LOC=00000064 LEN=00000004 ESD=0004 TYPE=REL  XREF=314 
+ SYM=CVTDAIR  LOC=000002DC LEN=00000004 ESD=0004 TYPE=REL  XREF=803 
+ SYM=CVTDARCM LOC=0000036C LEN=00000004 ESD=0004 TYPE=REL  XREF=948 
+ SYM=CVTDATE  LOC=00000038 LEN=00000004 ESD=0004 TYPE=REL  XREF=295 
+ SYM=CVTDCB   LOC=00000074 LEN=00000001 ESD=0004 TYPE=REL  XREF=321 
+ SYM=CVTDCBA  LOC=00000075 LEN=00000003 ESD=0004 TYPE=REL  XREF=333 
+ SYM=CVTDDR   LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=382 
+ SYM=CVTDEBVR LOC=00000008 LEN=00000004 ESD=0006 TYPE=REL  XREF=1087 
+ SYM=CVTDELCP LOC=000001F4 LEN=00000004 ESD=0004 TYPE=REL  XREF=691 
+ SYM=CVTDICOM LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=574 
+ SYM=CVTDIRST LOC=00000168 LEN=00000001 ESD=0004 TYPE=REL  XREF=573 
+ SYM=CVTDMSR  LOC=00000110 LEN=00000004 ESD=0004 TYPE=REL  XREF=496 
+ SYM=CVTDMSRA LOC=00000111 LEN=00000003 ESD=0004 TYPE=REL  XREF=517 
+ SYM=CVTDMSRF LOC=00000110 LEN=00000001 ESD=0004 TYPE=REL  XREF=497 
+ SYM=CVTDQIQE LOC=00000298 LEN=00000004 ESD=0004 TYPE=REL  XREF=771 
+ SYM=CVTDSSAC LOC=000001D6 LEN=00000001 ESD=0004 TYPE=REL  XREF=674 
+ SYM=CVTDSSV  LOC=00000000 LEN=00000004 ESD=0006 TYPE=REL  XREF=1066 
+ SYM=CVTDSSVA LOC=00000001 LEN=00000003 ESD=0006 TYPE=REL  XREF=1069 
+ SYM=CVTDSTAT LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=615 
+ SYM=CVTEFF02 LOC=000003D0 LEN=00000004 ESD=0004 TYPE=REL  XREF=1008 
+ SYM=CVTEHCIR LOC=000002E4 LEN=00000004 ESD=0004 TYPE=REL  XREF=808 
+ SYM=CVTEHDEF LOC=000002E0 LEN=00000004 ESD=0004 TYPE=REL  XREF=806 
+ SYM=CVTEORM  LOC=00000138 LEN=00000004 ESD=0004 TYPE=REL  XREF=541 
+ SYM=CVTEVENT LOC=000003C4 LEN=00000004 ESD=0004 TYPE=REL  XREF=1001 
+ SYM=CVTEXIT  LOC=00000050 LEN=00000002 ESD=0004 TYPE=REL  XREF=305 
+ SYM=CVTEXP1  LOC=00000398 LEN=00000004 ESD=0004 TYPE=REL  XREF=974 
+ SYM=CVTEXPRO LOC=00000260 LEN=00000004 ESD=0004 TYPE=REL  XREF=748 
+ SYM=CVTEXSLF LOC=00000184 LEN=00000004 ESD=0004 TYPE=REL  XREF=600 
+ SYM=CVTEXSNL LOC=0000018C LEN=00000001 ESD=0004 TYPE=REL  XREF=604 
+ SYM=CVTEXSNR LOC=00000188 LEN=00000004 ESD=0004 TYPE=REL  XREF=602 
+ SYM=CVTEXT1  LOC=000000FC LEN=00000004 ESD=0004 TYPE=REL  XREF=483 
+ SYM=CVTEXT2  LOC=00000148 LEN=00000004 ESD=0004 TYPE=REL  XREF=551 
+ SYM=CVTEXT2A LOC=00000149 LEN=00000003 ESD=0004 TYPE=REL  XREF=554 
+ SYM=CVTFACHN LOC=00000000 LEN=00000004 ESD=0005 TYPE=REL  XREF=1057 
+ SYM=CVTFBOSV LOC=00000084 LEN=00000004 ESD=0004 TYPE=REL  XREF=346 
+ SYM=CVTFETCH LOC=000002D0 LEN=00000004 ESD=0004 TYPE=REL  XREF=797 
+ SYM=CVTFLGBT LOC=00000005 LEN=00000001 ESD=0006 TYPE=REL  XREF=1073 
+ SYM=CVTFP    LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=410 
+ SYM=CVTFQCB  LOC=00000280 LEN=00000004 ESD=0004 TYPE=REL  XREF=763 
+ SYM=CVTFRAS  LOC=00000204 LEN=00000004 ESD=0004 TYPE=REL  XREF=697 
+ SYM=CVTFRECL LOC=000001F0 LEN=00000004 ESD=0004 TYPE=REL  XREF=690 
+ SYM=CVTGDA   LOC=00000230 LEN=00000004 ESD=0004 TYPE=REL  XREF=720 
+ SYM=CVTGETCL LOC=000001EC LEN=00000004 ESD=0004 TYPE=REL  XREF=689 
+ SYM=CVTGETL  LOC=0000015C LEN=00000004 ESD=0004 TYPE=REL  XREF=566 
+ SYM=CVTGLMN  LOC=000002A8 LEN=00000004 ESD=0004 TYPE=REL  XREF=775 
+ SYM=CVTGMBR  LOC=00000350 LEN=00000004 ESD=0004 TYPE=REL  XREF=932 
+ SYM=CVTGSDA  LOC=000003B4 LEN=00000004 ESD=0004 TYPE=REL  XREF=989 
+ SYM=CVTGSDAB LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=991 
+ SYM=CVTGSMQ  LOC=00000264 LEN=00000004 ESD=0004 TYPE=REL  XREF=750 
+ SYM=CVTGSPL  LOC=0000026C LEN=00000004 ESD=0004 TYPE=REL  XREF=754 
+ SYM=CVTGTF   LOC=000000EC LEN=00000004 ESD=0004 TYPE=REL  XREF=440 
+ SYM=CVTGTFA  LOC=000000ED LEN=00000003 ESD=0004 TYPE=REL  XREF=455 
+ SYM=CVTGTFAV LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=443 
+ SYM=CVTGTFR8 LOC=00000384 LEN=00000004 ESD=0004 TYPE=REL  XREF=961 
+ SYM=CVTGTFST LOC=000000EC LEN=00000001 ESD=0004 TYPE=REL  XREF=442 
+ SYM=CVTGTRCE LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=621 
+ SYM=CVTHJES  LOC=0000014C LEN=00000004 ESD=0004 TYPE=REL  XREF=555 
+ SYM=CVTHJESA LOC=0000014D LEN=00000003 ESD=0004 TYPE=REL  XREF=557 
+ SYM=CVTHSM   LOC=000003DC LEN=00000004 ESD=0004 TYPE=REL  XREF=1012 
+ SYM=CVTICB   LOC=00000030 LEN=00000004 ESD=0006 TYPE=REL  XREF=1105 
+ SYM=CVTICPID LOC=0000005E LEN=00000002 ESD=0004 TYPE=REL  XREF=312 
+ SYM=CVTIHASU LOC=00000414 LEN=00000004 ESD=0004 TYPE=REL  XREF=1041 
+ SYM=CVTILCH  LOC=0000008C LEN=00000004 ESD=0004 TYPE=REL  XREF=349 
+ SYM=CVTILK1  LOC=00000024 LEN=00000004 ESD=0004 TYPE=REL  XREF=284 
+ SYM=CVTILK2  LOC=00000028 LEN=00000004 ESD=0004 TYPE=REL  XREF=286 
+ SYM=CVTIOBP  LOC=000002C4 LEN=00000004 ESD=0004 TYPE=REL  XREF=790 
+ SYM=CVTIOSCS LOC=00000220 LEN=00000004 ESD=0004 TYPE=REL  XREF=711 
+ SYM=CVTIOSPL LOC=000001D4 LEN=00000001 ESD=0004 TYPE=REL  XREF=671 
+ SYM=CVTIPCDS LOC=000002F0 LEN=00000004 ESD=0004 TYPE=REL  XREF=813 
+ SYM=CVTIPCRI LOC=000002F4 LEN=00000004 ESD=0004 TYPE=REL  XREF=815 
+ SYM=CVTIPCRP LOC=000002F8 LEN=00000004 ESD=0004 TYPE=REL  XREF=817 
+ SYM=CVTIRECM LOC=00000368 LEN=00000004 ESD=0004 TYPE=REL  XREF=946 
+ SYM=CVTIXAVL LOC=0000007C LEN=00000004 ESD=0004 TYPE=REL  XREF=338 
+ SYM=CVTJESCT LOC=00000128 LEN=00000004 ESD=0004 TYPE=REL  XREF=534 
+ SYM=CVTJRECM LOC=00000364 LEN=00000004 ESD=0004 TYPE=REL  XREF=944 
+ SYM=CVTJTERM LOC=000003FC LEN=00000004 ESD=0004 TYPE=REL  XREF=1028 
+ SYM=CVTLCCAT LOC=00000300 LEN=00000004 ESD=0004 TYPE=REL  XREF=821 
+ SYM=CVTLDEV  LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=463 
+ SYM=CVTLFRM  LOC=0000034C LEN=00000004 ESD=0004 TYPE=REL  XREF=930 
+ SYM=CVTLINK  LOC=00000008 LEN=00000004 ESD=0004 TYPE=REL  XREF=266 
+ SYM=CVTLKRMA LOC=00000290 LEN=00000004 ESD=0004 TYPE=REL  XREF=767 
+ SYM=CVTLNKSC LOC=000000D6 LEN=00000002 ESD=0004 TYPE=REL  XREF=429 
+ SYM=CVTLPDIA LOC=00000168 LEN=00000004 ESD=0004 TYPE=REL  XREF=571 
+ SYM=CVTLPDIR LOC=00000169 LEN=00000003 ESD=0004 TYPE=REL  XREF=582 
+ SYM=CVTLPDSR LOC=00000160 LEN=00000004 ESD=0004 TYPE=REL  XREF=568 
+ SYM=CVTLQCB  LOC=00000284 LEN=00000004 ESD=0004 TYPE=REL  XREF=764 
+ SYM=CVTLSMQ  LOC=00000268 LEN=00000004 ESD=0004 TYPE=REL  XREF=752 
+ SYM=CVTMAP   LOC=00000000 LEN=00000001 ESD=0004 TYPE=REL  XREF=249 
+ SYM=CVTMAXMP LOC=000001DC LEN=00000002 ESD=0004 TYPE=REL  XREF=681 
+ SYM=CVTMCHPR LOC=00000134 LEN=00000004 ESD=0004 TYPE=REL  XREF=540 
+ SYM=CVTMDLDS LOC=000000D0 LEN=00000004 ESD=0004 TYPE=REL  XREF=427 
+ SYM=CVTMFACT LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=877 
+ SYM=CVTMFCTL LOC=0000031C LEN=00000004 ESD=0004 TYPE=REL  XREF=871 
+ SYM=CVTMFRTR LOC=00000320 LEN=00000004 ESD=0004 TYPE=REL  XREF=873 
+ SYM=CVTMSER  LOC=00000094 LEN=00000004 ESD=0004 TYPE=REL  XREF=352 
+ SYM=CVTMSLT  LOC=0000003C LEN=00000004 ESD=0004 TYPE=REL  XREF=296 
+ SYM=CVTMVS2  LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=330 
+ SYM=CVTMZ00  LOC=000000A4 LEN=00000004 ESD=0004 TYPE=REL  XREF=363 
+ SYM=CVTNIP   LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=387 
+ SYM=CVTNIPSV LOC=0000005C LEN=00000002 ESD=0004 TYPE=REL  XREF=311 
+ SYM=CVTNLOG  LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=401 
+ SYM=CVTNOMP  LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=619 
+ SYM=CVTNPE   LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1074 
+ SYM=CVTNUCB  LOC=00000080 LEN=00000004 ESD=0004 TYPE=REL  XREF=343 
+ SYM=CVTNUCLS LOC=00000004 LEN=00000001 ESD=0006 TYPE=REL  XREF=1071 
+ SYM=CVTOLT0A LOC=000001C4 LEN=00000004 ESD=0004 TYPE=REL  XREF=662 
+ SYM=CVTOLTEP LOC=0000001C LEN=00000004 ESD=0006 TYPE=REL  XREF=1096 
+ SYM=CVTOPCTP LOC=0000025C LEN=00000004 ESD=0004 TYPE=REL  XREF=746 
+ SYM=CVTOPTA  LOC=000000B6 LEN=00000001 ESD=0004 TYPE=REL  XREF=377 
+ SYM=CVTOPTB  LOC=000000B7 LEN=00000001 ESD=0004 TYPE=REL  XREF=394 
+ SYM=CVTOPTE  LOC=00000218 LEN=00000004 ESD=0004 TYPE=REL  XREF=706 
+ SYM=CVTPARRL LOC=00000274 LEN=00000004 ESD=0004 TYPE=REL  XREF=757 
+ SYM=CVTPARS  LOC=0000020C LEN=00000004 ESD=0004 TYPE=REL  XREF=701 
+ SYM=CVTPATCH LOC=000000DC LEN=00000004 ESD=0004 TYPE=REL  XREF=432 
+ SYM=CVTPCCAT LOC=000002FC LEN=00000004 ESD=0004 TYPE=REL  XREF=819 
+ SYM=CVTPCNVT LOC=0000001C LEN=00000004 ESD=0004 TYPE=REL  XREF=276 
+ SYM=CVTPERFM LOC=000002D8 LEN=00000004 ESD=0004 TYPE=REL  XREF=801 
+ SYM=CVTPPGMX LOC=000001A8 LEN=00000004 ESD=0004 TYPE=REL  XREF=647 
+ SYM=CVTPRLTV LOC=00000020 LEN=00000004 ESD=0004 TYPE=REL  XREF=280 
+ SYM=CVTPROT  LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=395 
+ SYM=CVTPSAD0 LOC=0000016C LEN=00000004 ESD=0004 TYPE=REL  XREF=584 
+ SYM=CVTPSAE0 LOC=00000170 LEN=00000004 ESD=0004 TYPE=REL  XREF=585 
+ SYM=CVTPTGT  LOC=000001D0 LEN=00000004 ESD=0004 TYPE=REL  XREF=669 
+ SYM=CVTPTR   LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=244 
+ SYM=CVTPTRV  LOC=00000120 LEN=00000004 ESD=0004 TYPE=REL  XREF=529 
+ SYM=CVTPURG  LOC=00000104 LEN=00000004 ESD=0004 TYPE=REL  XREF=487 
+ SYM=CVTPURGA LOC=00000105 LEN=00000003 ESD=0004 TYPE=REL  XREF=489 
+ SYM=CVTPUTL  LOC=000001BC LEN=00000004 ESD=0004 TYPE=REL  XREF=658 
+ SYM=CVTPVBP  LOC=00000318 LEN=00000004 ESD=0004 TYPE=REL  XREF=869 
+ SYM=CVTPVTP  LOC=00000164 LEN=00000004 ESD=0004 TYPE=REL  XREF=570 
+ SYM=CVTPWI   LOC=00000314 LEN=00000004 ESD=0004 TYPE=REL  XREF=867 
+ SYM=CVTQABST LOC=000000D4 LEN=00000002 ESD=0004 TYPE=REL  XREF=428 
+ SYM=CVTQCDSR LOC=000000B8 LEN=00000004 ESD=0004 TYPE=REL  XREF=416 
+ SYM=CVTQCS01 LOC=0000027C LEN=00000004 ESD=0004 TYPE=REL  XREF=761 
+ SYM=CVTQID   LOC=00000018 LEN=00000004 ESD=0006 TYPE=REL  XREF=1092 
+ SYM=CVTQIDA  LOC=00000019 LEN=00000003 ESD=0006 TYPE=REL  XREF=1094 
+ SYM=CVTQLPAQ LOC=000000BC LEN=00000004 ESD=0004 TYPE=REL  XREF=417 
+ SYM=CVTQMSG  LOC=0000010C LEN=00000004 ESD=0004 TYPE=REL  XREF=491 
+ SYM=CVTQMSGA LOC=0000010D LEN=00000003 ESD=0004 TYPE=REL  XREF=494 
+ SYM=CVTQMWR  LOC=000000B0 LEN=00000004 ESD=0004 TYPE=REL  XREF=371 
+ SYM=CVTQOCR  LOC=000000AC LEN=00000004 ESD=0004 TYPE=REL  XREF=367 
+ SYM=CVTQSAS  LOC=00000200 LEN=00000004 ESD=0004 TYPE=REL  XREF=696 
+ SYM=CVTQTD00 LOC=0000006C LEN=00000004 ESD=0004 TYPE=REL  XREF=318 
+ SYM=CVTQTE00 LOC=00000068 LEN=00000004 ESD=0004 TYPE=REL  XREF=316 
+ SYM=CVTQUIS  LOC=00000210 LEN=00000004 ESD=0004 TYPE=REL  XREF=703 
+ SYM=CVTQUIT  LOC=00000380 LEN=00000004 ESD=0004 TYPE=REL  XREF=958 
+ SYM=CVTQV1   LOC=000003A8 LEN=00000004 ESD=0004 TYPE=REL  XREF=982 
+ SYM=CVTQV2   LOC=000003AC LEN=00000004 ESD=0004 TYPE=REL  XREF=984 
+ SYM=CVTQV3   LOC=000003B0 LEN=00000004 ESD=0004 TYPE=REL  XREF=987 
+ SYM=CVTRAC   LOC=000003E0 LEN=00000004 ESD=0004 TYPE=REL  XREF=1015 
+ SYM=CVTREAL  LOC=0000011C LEN=00000004 ESD=0004 TYPE=REL  XREF=526 
+ SYM=CVTRECRQ LOC=000002BC LEN=00000004 ESD=0004 TYPE=REL  XREF=785 
+ SYM=CVTRENQ  LOC=00000288 LEN=00000004 ESD=0004 TYPE=REL  XREF=765 
+ SYM=CVTRLSTG LOC=00000358 LEN=00000004 ESD=0004 TYPE=REL  XREF=936 
+ SYM=CVTRMBR  LOC=00000348 LEN=00000004 ESD=0004 TYPE=REL  XREF=929 
+ SYM=CVTRMPMT LOC=00000394 LEN=00000004 ESD=0004 TYPE=REL  XREF=971 
+ SYM=CVTRMPTT LOC=00000390 LEN=00000004 ESD=0004 TYPE=REL  XREF=968 
+ SYM=CVTRMS   LOC=000000E0 LEN=00000004 ESD=0004 TYPE=REL  XREF=433 
+ SYM=CVTRNIO  LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=452 
+ SYM=CVTRPOST LOC=0000029C LEN=00000004 ESD=0004 TYPE=REL  XREF=772 
+ SYM=CVTRPT   LOC=000003A4 LEN=00000004 ESD=0004 TYPE=REL  XREF=979 
+ SYM=CVTRSCN  LOC=00000194 LEN=00000004 ESD=0004 TYPE=REL  XREF=634 
+ SYM=CVTRSPIE LOC=0000028C LEN=00000004 ESD=0004 TYPE=REL  XREF=766 
+ SYM=CVTRSTWD LOC=000002CC LEN=00000004 ESD=0004 TYPE=REL  XREF=794 
+ SYM=CVTRSUME LOC=00000400 LEN=00000004 ESD=0004 TYPE=REL  XREF=1031 
+ SYM=CVTRSV08 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=322 
+ SYM=CVTRSV09 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=326 
+ SYM=CVTRSV11 LOC=0000009C LEN=00000004 ESD=0004 TYPE=REL  XREF=356 
+ SYM=CVTRSV12 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=388 
+ SYM=CVTRSV18 LOC=000000C0 LEN=00000004 ESD=0004 TYPE=REL  XREF=419 
+ SYM=CVTRSV27 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=454 
+ SYM=CVTRSV29 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=465 
+ SYM=CVTRSV30 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=466 
+ SYM=CVTRSV31 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=467 
+ SYM=CVTRSV32 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=468 
+ SYM=CVTRSV33 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=469 
+ SYM=CVTRSV34 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=470 
+ SYM=CVTRSV35 LOC=00000104 LEN=00000001 ESD=0004 TYPE=REL  XREF=488 
+ SYM=CVTRSV36 LOC=0000010C LEN=00000001 ESD=0004 TYPE=REL  XREF=493 
+ SYM=CVTRSV38 LOC=00000114 LEN=00000004 ESD=0004 TYPE=REL  XREF=521 
+ SYM=CVTRSV39 LOC=00000118 LEN=00000004 ESD=0004 TYPE=REL  XREF=522 
+ SYM=CVTRSV40 LOC=00000144 LEN=00000001 ESD=0004 TYPE=REL  XREF=548 
+ SYM=CVTRSV41 LOC=00000148 LEN=00000001 ESD=0004 TYPE=REL  XREF=553 
+ SYM=CVTRSV42 LOC=0000014C LEN=00000001 ESD=0004 TYPE=REL  XREF=556 
+ SYM=CVTRSV43 LOC=00000150 LEN=00000002 ESD=0004 TYPE=REL  XREF=559 
+ SYM=CVTRSV44 LOC=00000152 LEN=00000002 ESD=0004 TYPE=REL  XREF=560 
+ SYM=CVTRSV45 LOC=00000154 LEN=00000004 ESD=0004 TYPE=REL  XREF=561 
+ SYM=CVTRSV46 LOC=00000158 LEN=00000004 ESD=0004 TYPE=REL  XREF=562 
+ SYM=CVTRSV63 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=575 
+ SYM=CVTRSV64 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=576 
+ SYM=CVTRSV65 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=577 
+ SYM=CVTRSV66 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=578 
+ SYM=CVTRSV67 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=579 
+ SYM=CVTRSV68 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=580 
+ SYM=CVTRSV69 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=581 
+ SYM=CVTRSV78 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=614 
+ SYM=CVTRSV79 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=618 
+ SYM=CVTRSV87 LOC=00000004 LEN=00000004 ESD=0005 TYPE=REL  XREF=1059 
+ SYM=CVTRSV88 LOC=00000008 LEN=00000004 ESD=0005 TYPE=REL  XREF=1060 
+ SYM=CVTRSV89 LOC=00000000 LEN=00000001 ESD=0006 TYPE=REL  XREF=1068 
+ SYM=CVTRSV91 LOC=00000006 LEN=00000002 ESD=0006 TYPE=REL  XREF=1086 
+ SYM=CVTRSV92 LOC=0000000C LEN=00000004 ESD=0006 TYPE=REL  XREF=1089 
+ SYM=CVTRSV93 LOC=00000010 LEN=00000004 ESD=0006 TYPE=REL  XREF=1090 
+ SYM=CVTRSV94 LOC=00000014 LEN=00000004 ESD=0006 TYPE=REL  XREF=1091 
+ SYM=CVTRSV95 LOC=00000018 LEN=00000001 ESD=0006 TYPE=REL  XREF=1093 
+ SYM=CVTRSV96 LOC=00000020 LEN=00000002 ESD=0006 TYPE=REL  XREF=1098 
+ SYM=CVTRSV97 LOC=00000022 LEN=00000002 ESD=0006 TYPE=REL  XREF=1099 
+ SYM=CVTRSV98 LOC=00000024 LEN=00000004 ESD=0006 TYPE=REL  XREF=1100 
+ SYM=CVTRSV9D LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1081 
+ SYM=CVTRSV9E LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1082 
+ SYM=CVTRSV9F LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1083 
+ SYM=CVTRSV9G LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1084 
+ SYM=CVTRSV9H LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1085 
+ SYM=CVTRTMCT LOC=0000023C LEN=00000004 ESD=0004 TYPE=REL  XREF=728 
+ SYM=CVTRTMS  LOC=00000250 LEN=00000004 ESD=0004 TYPE=REL  XREF=740 
+ SYM=CVTRV139 LOC=000001D7 LEN=00000001 ESD=0004 TYPE=REL  XREF=678 
+ SYM=CVTRV144 LOC=000001DE LEN=00000002 ESD=0004 TYPE=REL  XREF=684 
+ SYM=CVTRV210 LOC=00000304 LEN=00000001 ESD=0004 TYPE=REL  XREF=822 
+ SYM=CVTRV211 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=823 
+ SYM=CVTRV212 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=824 
+ SYM=CVTRV213 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=825 
+ SYM=CVTRV214 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=826 
+ SYM=CVTRV215 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=827 
+ SYM=CVTRV216 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=828 
+ SYM=CVTRV217 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=829 
+ SYM=CVTRV218 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=830 
+ SYM=CVTRV219 LOC=00000305 LEN=00000001 ESD=0004 TYPE=REL  XREF=831 
+ SYM=CVTRV220 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=832 
+ SYM=CVTRV221 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=833 
+ SYM=CVTRV222 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=834 
+ SYM=CVTRV223 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=835 
+ SYM=CVTRV224 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=836 
+ SYM=CVTRV225 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=837 
+ SYM=CVTRV226 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=838 
+ SYM=CVTRV227 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=839 
+ SYM=CVTRV228 LOC=00000306 LEN=00000001 ESD=0004 TYPE=REL  XREF=840 
+ SYM=CVTRV229 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=841 
+ SYM=CVTRV230 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=842 
+ SYM=CVTRV231 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=843 
+ SYM=CVTRV232 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=844 
+ SYM=CVTRV233 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=845 
+ SYM=CVTRV234 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=846 
+ SYM=CVTRV235 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=847 
+ SYM=CVTRV236 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=848 
+ SYM=CVTRV237 LOC=00000307 LEN=00000001 ESD=0004 TYPE=REL  XREF=849 
+ SYM=CVTRV238 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=850 
+ SYM=CVTRV239 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=851 
+ SYM=CVTRV240 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=852 
+ SYM=CVTRV241 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=853 
+ SYM=CVTRV242 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=854 
+ SYM=CVTRV243 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=855 
+ SYM=CVTRV244 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=856 
+ SYM=CVTRV245 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=857 
+ SYM=CVTRV246 LOC=00000308 LEN=00000001 ESD=0004 TYPE=REL  XREF=858 
+ SYM=CVTRV247 LOC=00000309 LEN=00000001 ESD=0004 TYPE=REL  XREF=859 
+ SYM=CVTRV248 LOC=0000030A LEN=00000001 ESD=0004 TYPE=REL  XREF=860 
+ SYM=CVTRV249 LOC=0000030B LEN=00000001 ESD=0004 TYPE=REL  XREF=861 
+ SYM=CVTRV250 LOC=0000030C LEN=00000001 ESD=0004 TYPE=REL  XREF=862 
+ SYM=CVTRV251 LOC=0000030D LEN=00000001 ESD=0004 TYPE=REL  XREF=863 
+ SYM=CVTRV252 LOC=0000030E LEN=00000002 ESD=0004 TYPE=REL  XREF=864 
+ SYM=CVTRV253 LOC=00000310 LEN=00000002 ESD=0004 TYPE=REL  XREF=865 
+ SYM=CVTRV254 LOC=00000312 LEN=00000002 ESD=0004 TYPE=REL  XREF=866 
+ SYM=CVTRV262 LOC=00000330 LEN=00000001 ESD=0004 TYPE=REL  XREF=884 
+ SYM=CVTRV263 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=885 
+ SYM=CVTRV264 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=886 
+ SYM=CVTRV265 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=887 
+ SYM=CVTRV266 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=888 
+ SYM=CVTRV267 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=889 
+ SYM=CVTRV268 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=890 
+ SYM=CVTRV269 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=891 
+ SYM=CVTRV270 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=892 
+ SYM=CVTRV271 LOC=00000331 LEN=00000001 ESD=0004 TYPE=REL  XREF=893 
+ SYM=CVTRV272 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=894 
+ SYM=CVTRV273 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=895 
+ SYM=CVTRV274 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=896 
+ SYM=CVTRV275 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=897 
+ SYM=CVTRV276 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=898 
+ SYM=CVTRV277 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=899 
+ SYM=CVTRV278 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=900 
+ SYM=CVTRV279 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=901 
+ SYM=CVTRV280 LOC=00000332 LEN=00000001 ESD=0004 TYPE=REL  XREF=902 
+ SYM=CVTRV281 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=903 
+ SYM=CVTRV282 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=904 
+ SYM=CVTRV283 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=905 
+ SYM=CVTRV284 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=906 
+ SYM=CVTRV285 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=907 
+ SYM=CVTRV286 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=908 
+ SYM=CVTRV287 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=909 
+ SYM=CVTRV288 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=910 
+ SYM=CVTRV289 LOC=00000333 LEN=00000001 ESD=0004 TYPE=REL  XREF=911 
+ SYM=CVTRV290 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=912 
+ SYM=CVTRV291 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=913 
+ SYM=CVTRV292 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=914 
+ SYM=CVTRV293 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=915 
+ SYM=CVTRV294 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=916 
+ SYM=CVTRV295 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=917 
+ SYM=CVTRV296 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=918 
+ SYM=CVTRV297 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=919 
+ SYM=CVTRV302 LOC=00000338 LEN=00000002 ESD=0004 TYPE=REL  XREF=922 
+ SYM=CVTRV303 LOC=0000033A LEN=00000002 ESD=0004 TYPE=REL  XREF=923 
+ SYM=CVTRV304 LOC=0000033C LEN=00000002 ESD=0004 TYPE=REL  XREF=924 
+ SYM=CVTRV305 LOC=0000033E LEN=00000002 ESD=0004 TYPE=REL  XREF=925 
+ SYM=CVTRV306 LOC=00000340 LEN=00000002 ESD=0004 TYPE=REL  XREF=926 
+ SYM=CVTRV307 LOC=00000342 LEN=00000002 ESD=0004 TYPE=REL  XREF=927 
+ SYM=CVTRV315 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=445 
+ SYM=CVTRV316 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=446 
+ SYM=CVTRV317 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=447 
+ SYM=CVTRV318 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=448 
+ SYM=CVTRV322 LOC=00000178 LEN=00000004 ESD=0004 TYPE=REL  XREF=595 
+ SYM=CVTRV323 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=610 
+ SYM=CVTRV325 LOC=000001AC LEN=00000004 ESD=0004 TYPE=REL  XREF=650 
+ SYM=CVTRV326 LOC=000001B0 LEN=00000004 ESD=0004 TYPE=REL  XREF=652 
+ SYM=CVTRV328 LOC=0000017C LEN=00000004 ESD=0004 TYPE=REL  XREF=596 
+ SYM=CVTRV332 LOC=0000019C LEN=00000004 ESD=0004 TYPE=REL  XREF=637 
+ SYM=CVTRV333 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=612 
+ SYM=CVTRV400 LOC=00000034 LEN=00000001 ESD=0006 TYPE=REL  XREF=1107 
+ SYM=CVTRV401 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1108 
+ SYM=CVTRV402 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1109 
+ SYM=CVTRV403 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1110 
+ SYM=CVTRV404 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1111 
+ SYM=CVTRV405 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1112 
+ SYM=CVTRV406 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1113 
+ SYM=CVTRV407 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1114 
+ SYM=CVTRV408 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1115 
+ SYM=CVTRV409 LOC=00000035 LEN=00000001 ESD=0006 TYPE=REL  XREF=1116 
+ SYM=CVTRV410 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1117 
+ SYM=CVTRV411 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1118 
+ SYM=CVTRV412 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1119 
+ SYM=CVTRV413 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1120 
+ SYM=CVTRV414 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1121 
+ SYM=CVTRV415 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1122 
+ SYM=CVTRV416 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1123 
+ SYM=CVTRV417 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1124 
+ SYM=CVTRV418 LOC=00000036 LEN=00000001 ESD=0006 TYPE=REL  XREF=1125 
+ SYM=CVTRV419 LOC=00000037 LEN=00000001 ESD=0006 TYPE=REL  XREF=1126 
+ SYM=CVTRV420 LOC=00000038 LEN=00000002 ESD=0006 TYPE=REL  XREF=1127 
+ SYM=CVTRV421 LOC=0000003A LEN=00000002 ESD=0006 TYPE=REL  XREF=1128 
+ SYM=CVTRV422 LOC=0000003C LEN=00000002 ESD=0006 TYPE=REL  XREF=1129 
+ SYM=CVTRV423 LOC=0000003E LEN=00000002 ESD=0006 TYPE=REL  XREF=1130 
+ SYM=CVTRV425 LOC=00000044 LEN=00000004 ESD=0006 TYPE=REL  XREF=1133 
+ SYM=CVTRV426 LOC=00000048 LEN=00000004 ESD=0006 TYPE=REL  XREF=1134 
+ SYM=CVTRV427 LOC=0000004C LEN=00000004 ESD=0006 TYPE=REL  XREF=1135 
+ SYM=CVTRV428 LOC=00000050 LEN=00000004 ESD=0006 TYPE=REL  XREF=1136 
+ SYM=CVTRV429 LOC=00000054 LEN=00000001 ESD=0006 TYPE=REL  XREF=1137 
+ SYM=CVTRV430 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1138 
+ SYM=CVTRV431 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1139 
+ SYM=CVTRV432 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1140 
+ SYM=CVTRV433 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1141 
+ SYM=CVTRV434 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1142 
+ SYM=CVTRV435 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1143 
+ SYM=CVTRV436 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1144 
+ SYM=CVTRV437 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1145 
+ SYM=CVTRV438 LOC=00000055 LEN=00000001 ESD=0006 TYPE=REL  XREF=1146 
+ SYM=CVTRV439 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1147 
+ SYM=CVTRV440 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1148 
+ SYM=CVTRV441 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1149 
+ SYM=CVTRV442 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1150 
+ SYM=CVTRV443 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1151 
+ SYM=CVTRV444 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1152 
+ SYM=CVTRV445 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1153 
+ SYM=CVTRV446 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1154 
+ SYM=CVTRV447 LOC=00000056 LEN=00000001 ESD=0006 TYPE=REL  XREF=1155 
+ SYM=CVTRV448 LOC=00000057 LEN=00000001 ESD=0006 TYPE=REL  XREF=1156 
+ SYM=CVTRV449 LOC=00000058 LEN=00000002 ESD=0006 TYPE=REL  XREF=1157 
+ SYM=CVTRV450 LOC=0000005A LEN=00000002 ESD=0006 TYPE=REL  XREF=1158 
+ SYM=CVTRV451 LOC=0000005C LEN=00000002 ESD=0006 TYPE=REL  XREF=1159 
+ SYM=CVTRV452 LOC=0000005E LEN=00000002 ESD=0006 TYPE=REL  XREF=1160 
+ SYM=CVTRV453 LOC=00000060 LEN=00000004 ESD=0006 TYPE=REL  XREF=1161 
+ SYM=CVTRV454 LOC=00000064 LEN=00000004 ESD=0006 TYPE=REL  XREF=1162 
+ SYM=CVTRV455 LOC=00000068 LEN=00000004 ESD=0006 TYPE=REL  XREF=1163 
+ SYM=CVTRV456 LOC=0000006C LEN=00000004 ESD=0006 TYPE=REL  XREF=1164 
+ SYM=CVTRV457 LOC=00000070 LEN=00000001 ESD=0006 TYPE=REL  XREF=1165 
+ SYM=CVTRV458 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1166 
+ SYM=CVTRV459 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1167 
+ SYM=CVTRV460 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1168 
+ SYM=CVTRV461 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1169 
+ SYM=CVTRV462 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1170 
+ SYM=CVTRV463 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1171 
+ SYM=CVTRV464 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1172 
+ SYM=CVTRV465 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1173 
+ SYM=CVTRV466 LOC=00000071 LEN=00000001 ESD=0006 TYPE=REL  XREF=1174 
+ SYM=CVTRV467 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1175 
+ SYM=CVTRV468 LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1176 
+ SYM=CVTRV469 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1177 
+ SYM=CVTRV470 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1178 
+ SYM=CVTRV471 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1179 
+ SYM=CVTRV472 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1180 
+ SYM=CVTRV473 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1181 
+ SYM=CVTRV474 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1182 
+ SYM=CVTRV475 LOC=00000072 LEN=00000001 ESD=0006 TYPE=REL  XREF=1183 
+ SYM=CVTRV476 LOC=00000073 LEN=00000001 ESD=0006 TYPE=REL  XREF=1184 
+ SYM=CVTRV477 LOC=00000074 LEN=00000001 ESD=0006 TYPE=REL  XREF=1185 
+ SYM=CVTRV478 LOC=00000075 LEN=00000001 ESD=0006 TYPE=REL  XREF=1186 
+ SYM=CVTRV479 LOC=00000076 LEN=00000002 ESD=0006 TYPE=REL  XREF=1187 
+ SYM=CVTRV480 LOC=00000078 LEN=00000004 ESD=0006 TYPE=REL  XREF=1188 
+ SYM=CVTRV481 LOC=0000007C LEN=00000004 ESD=0006 TYPE=REL  XREF=1189 
+ SYM=CVTRV482 LOC=00000080 LEN=00000004 ESD=0006 TYPE=REL  XREF=1190 
+ SYM=CVTRV513 LOC=000001D5 LEN=00000001 ESD=0004 TYPE=REL  XREF=673 
+ SYM=CVTRV515 LOC=000000E4 LEN=00000004 ESD=0004 TYPE=REL  XREF=436 
+ SYM=CVTRV516 LOC=00000090 LEN=00000004 ESD=0004 TYPE=REL  XREF=350 
+ SYM=CVTRV517 LOC=0000013C LEN=00000004 ESD=0004 TYPE=REL  XREF=543 
+ SYM=CVTRV518 LOC=00000140 LEN=00000004 ESD=0004 TYPE=REL  XREF=545 
+ SYM=CVTRV604 LOC=000003D4 LEN=00000004 ESD=0004 TYPE=REL  XREF=1010 
+ SYM=CVTRV605 LOC=000003D8 LEN=00000004 ESD=0004 TYPE=REL  XREF=1011 
+ SYM=CVTRV609 LOC=000003E8 LEN=00000004 ESD=0004 TYPE=REL  XREF=1019 
+ SYM=CVTRV623 LOC=00000420 LEN=00000004 ESD=0004 TYPE=REL  XREF=1046 
+ SYM=CVTRV624 LOC=00000424 LEN=00000004 ESD=0004 TYPE=REL  XREF=1047 
+ SYM=CVTRV625 LOC=00000428 LEN=00000004 ESD=0004 TYPE=REL  XREF=1048 
+ SYM=CVTRV626 LOC=0000042C LEN=00000004 ESD=0004 TYPE=REL  XREF=1049 
+ SYM=CVTRV627 LOC=00000430 LEN=00000004 ESD=0004 TYPE=REL  XREF=1050 
+ SYM=CVTRV628 LOC=00000434 LEN=00000004 ESD=0004 TYPE=REL  XREF=1051 
+ SYM=CVTRV629 LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=511 
+ SYM=CVTRV630 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=512 
+ SYM=CVTRV631 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=513 
+ SYM=CVTRV632 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=514 
+ SYM=CVTRV633 LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=515 
+ SYM=CVTRV634 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=516 
+ SYM=CVTS1EE  LOC=00000208 LEN=00000004 ESD=0004 TYPE=REL  XREF=699 
+ SYM=CVTSCAN  LOC=000001E0 LEN=00000004 ESD=0004 TYPE=REL  XREF=685 
+ SYM=CVTSCBP  LOC=00000248 LEN=00000004 ESD=0004 TYPE=REL  XREF=734 
+ SYM=CVTSDBF  LOC=0000024C LEN=00000004 ESD=0004 TYPE=REL  XREF=736 
+ SYM=CVTSDMP  LOC=00000244 LEN=00000004 ESD=0004 TYPE=REL  XREF=732 
+ SYM=CVTSDRM  LOC=0000021C LEN=00000004 ESD=0004 TYPE=REL  XREF=707 
+ SYM=CVTSDTRC LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=623 
+ SYM=CVTSDUMP LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=503 
+ SYM=CVTSHRVM LOC=000001A0 LEN=00000004 ESD=0004 TYPE=REL  XREF=639 
+ SYM=CVTSIC   LOC=00000258 LEN=00000004 ESD=0004 TYPE=REL  XREF=744 
+ SYM=CVTSJQ   LOC=00000060 LEN=00000004 ESD=0004 TYPE=REL  XREF=313 
+ SYM=CVTSKTA  LOC=0000002C LEN=00000004 ESD=0006 TYPE=REL  XREF=1103 
+ SYM=CVTSLID  LOC=00000175 LEN=00000003 ESD=0004 TYPE=REL  XREF=594 
+ SYM=CVTSLIDA LOC=00000174 LEN=00000004 ESD=0004 TYPE=REL  XREF=586 
+ SYM=CVTSMCA  LOC=000000C4 LEN=00000004 ESD=0004 TYPE=REL  XREF=420 
+ SYM=CVTSMFEX LOC=000001C8 LEN=00000004 ESD=0004 TYPE=REL  XREF=664 
+ SYM=CVTSNCTR LOC=000000B4 LEN=00000002 ESD=0004 TYPE=REL  XREF=374 
+ SYM=CVTSPFRR LOC=0000035C LEN=00000004 ESD=0004 TYPE=REL  XREF=939 
+ SYM=CVTSPOST LOC=000002C8 LEN=00000004 ESD=0004 TYPE=REL  XREF=792 
+ SYM=CVTSPSA  LOC=000002AC LEN=00000004 ESD=0004 TYPE=REL  XREF=777 
+ SYM=CVTSPVLK LOC=0000018D LEN=00000001 ESD=0004 TYPE=REL  XREF=606 
+ SYM=CVTSRBRT LOC=000001C0 LEN=00000004 ESD=0004 TYPE=REL  XREF=660 
+ SYM=CVTSSAP  LOC=000002E8 LEN=00000004 ESD=0004 TYPE=REL  XREF=810 
+ SYM=CVTSSCR  LOC=000003C8 LEN=00000004 ESD=0004 TYPE=REL  XREF=1003 
+ SYM=CVTSSRB  LOC=000003A0 LEN=00000004 ESD=0004 TYPE=REL  XREF=978 
+ SYM=CVTSTB   LOC=00000070 LEN=00000004 ESD=0004 TYPE=REL  XREF=320 
+ SYM=CVTSTCK  LOC=000001D8 LEN=00000004 ESD=0004 TYPE=REL  XREF=679 
+ SYM=CVTSTPRS LOC=00000374 LEN=00000004 ESD=0004 TYPE=REL  XREF=952 
+ SYM=CVTSTXU  LOC=00000214 LEN=00000004 ESD=0004 TYPE=REL  XREF=704 
+ SYM=CVTSUSP  LOC=00000410 LEN=00000004 ESD=0004 TYPE=REL  XREF=1039 
+ SYM=CVTSV60  LOC=00000240 LEN=00000004 ESD=0004 TYPE=REL  XREF=730 
+ SYM=CVTSV76C LOC=000000A0 LEN=00000004 ESD=0004 TYPE=REL  XREF=357 
+ SYM=CVTSV76M LOC=00000078 LEN=00000004 ESD=0004 TYPE=REL  XREF=336 
+ SYM=CVTSV76Q LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=360 
+ SYM=CVTSVDCB LOC=00000054 LEN=00000004 ESD=0004 TYPE=REL  XREF=308 
+ SYM=CVTSYLK  LOC=00000174 LEN=00000001 ESD=0004 TYPE=REL  XREF=590 
+ SYM=CVTSYLKR LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=593 
+ SYM=CVTSYLKS LOC=000000FF LEN=00000001 ESD=0000 TYPE=ABS  XREF=592 
+ SYM=CVTSYSAD LOC=00000030 LEN=00000004 ESD=0004 TYPE=REL  XREF=291 
+ SYM=CVTT6SVC LOC=0000040C LEN=00000004 ESD=0004 TYPE=REL  XREF=1037 
+ SYM=CVTTAS   LOC=00000198 LEN=00000004 ESD=0004 TYPE=REL  XREF=635 
+ SYM=CVTTCASP LOC=000003F4 LEN=00000004 ESD=0004 TYPE=REL  XREF=1024 
+ SYM=CVTTCBP  LOC=00000000 LEN=00000004 ESD=0004 TYPE=REL  XREF=251 
+ SYM=CVTTCMFG LOC=000000F0 LEN=00000001 ESD=0004 TYPE=REL  XREF=461 
+ SYM=CVTTCRDY LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=462 
+ SYM=CVTTCTL  LOC=00000404 LEN=00000004 ESD=0004 TYPE=REL  XREF=1033 
+ SYM=CVTTOD   LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=400 
+ SYM=CVTTPC   LOC=00000058 LEN=00000004 ESD=0004 TYPE=REL  XREF=310 
+ SYM=CVTTPIO  LOC=000003BC LEN=00000004 ESD=0004 TYPE=REL  XREF=995 
+ SYM=CVTTPIOS LOC=00000254 LEN=00000004 ESD=0004 TYPE=REL  XREF=742 
+ SYM=CVTTRAC2 LOC=00000192 LEN=00000002 ESD=0004 TYPE=REL  XREF=630 
+ SYM=CVTTRACE LOC=00000190 LEN=00000002 ESD=0004 TYPE=REL  XREF=627 
+ SYM=CVTTRCA  LOC=00000334 LEN=00000004 ESD=0004 TYPE=REL  XREF=920 
+ SYM=CVTTSCE  LOC=000000D8 LEN=00000004 ESD=0004 TYPE=REL  XREF=430 
+ SYM=CVTTZ    LOC=00000130 LEN=00000004 ESD=0004 TYPE=REL  XREF=537 
+ SYM=CVTUDUMP LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=507 
+ SYM=CVTUSER  LOC=000000CC LEN=00000004 ESD=0004 TYPE=REL  XREF=426 
+ SYM=CVTUSR   LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=449 
+ SYM=CVTVACR  LOC=0000037C LEN=00000004 ESD=0004 TYPE=REL  XREF=955 
+ SYM=CVTVDCCR LOC=00000418 LEN=00000004 ESD=0004 TYPE=REL  XREF=1042 
+ SYM=CVTVEAC0 LOC=000002A4 LEN=00000004 ESD=0004 TYPE=REL  XREF=774 
+ SYM=CVTVEMS0 LOC=00000360 LEN=00000004 ESD=0004 TYPE=REL  XREF=943 
+ SYM=CVTVFP   LOC=0000032C LEN=00000004 ESD=0004 TYPE=REL  XREF=883 
+ SYM=CVTVIOP  LOC=00000344 LEN=00000004 ESD=0004 TYPE=REL  XREF=928 
+ SYM=CVTVLDWT LOC=00000180 LEN=00000004 ESD=0004 TYPE=REL  XREF=598 
+ SYM=CVTVME   LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1076 
+ SYM=CVTVOLF2 LOC=000000F4 LEN=00000001 ESD=0004 TYPE=REL  XREF=474 
+ SYM=CVTVOLI2 LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=477 
+ SYM=CVTVOLM2 LOC=000000F4 LEN=00000004 ESD=0004 TYPE=REL  XREF=472 
+ SYM=CVTVOLT2 LOC=000000F5 LEN=00000003 ESD=0004 TYPE=REL  XREF=479 
+ SYM=CVTVPSA  LOC=0000038C LEN=00000004 ESD=0004 TYPE=REL  XREF=966 
+ SYM=CVTVPSIB LOC=00000324 LEN=00000004 ESD=0004 TYPE=REL  XREF=881 
+ SYM=CVTVS1A  LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=412 
+ SYM=CVTVS1B  LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=414 
+ SYM=CVTVSI   LOC=00000328 LEN=00000004 ESD=0004 TYPE=REL  XREF=882 
+ SYM=CVTVSTOP LOC=00000388 LEN=00000004 ESD=0004 TYPE=REL  XREF=964 
+ SYM=CVTVVMDI LOC=00000228 LEN=00000004 ESD=0004 TYPE=REL  XREF=716 
+ SYM=CVTVWAIT LOC=00000270 LEN=00000004 ESD=0004 TYPE=REL  XREF=756 
+ SYM=CVTWSAC  LOC=000002B8 LEN=00000004 ESD=0004 TYPE=REL  XREF=783 
+ SYM=CVTWSAG  LOC=000002B4 LEN=00000004 ESD=0004 TYPE=REL  XREF=781 
+ SYM=CVTWSAL  LOC=000002B0 LEN=00000004 ESD=0004 TYPE=REL  XREF=779 
+ SYM=CVTWTCB  LOC=00000378 LEN=00000004 ESD=0004 TYPE=REL  XREF=954 
+ SYM=CVTXAPG  LOC=00000014 LEN=00000004 ESD=0004 TYPE=REL  XREF=271 
+ SYM=CVTXITP  LOC=00000044 LEN=00000004 ESD=0004 TYPE=REL  XREF=301 
+ SYM=CVTXPFP  LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=392 
+ SYM=CVTXTLER LOC=0000002C LEN=00000004 ESD=0004 TYPE=REL  XREF=288 
+ SYM=CVTXTNT1 LOC=00000000 LEN=00000010 ESD=0005 TYPE=DST  XREF=1056 483 
+ SYM=CVTXTNT2 LOC=00000000 LEN=00000088 ESD=0006 TYPE=DST  XREF=1065 554 
+ SYM=CVTZDTAB LOC=00000040 LEN=00000004 ESD=0004 TYPE=REL  XREF=300 
+ SYM=DATA16   LOC=00000018 LEN=00000008 ESD=0001 TYPE=REL  XREF=14 2133 2165 2192 
+  2208 2220 2283 
+ SYM=DATA4    LOC=00000008 LEN=00000004 ESD=0001 TYPE=REL  XREF=12 2200 
+ SYM=DATA8    LOC=00000010 LEN=00000008 ESD=0001 TYPE=REL  XREF=13 1632 2191 2261 
+ SYM=DCB1DVDS LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1330 
+ SYM=DCBACBM  LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1321 
+ SYM=DCBBFA   LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1370 
+ SYM=DCBBFAD  LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1371 
+ SYM=DCBBFAF1 LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1372 
+ SYM=DCBBFAF2 LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1374 
+ SYM=DCBBFALN LOC=00000020 LEN=00000001 ESD=0007 TYPE=REL  XREF=1352 
+ SYM=DCBBFT   LOC=00000070 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1354 
+ SYM=DCBBFTA  LOC=00000060 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1355 
+ SYM=DCBBFTE  LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1367 
+ SYM=DCBBFTEK LOC=00000020 LEN=00000001 ESD=0007 TYPE=REL  XREF=1351 
+ SYM=DCBBFTKD LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1368 
+ SYM=DCBBFTKR LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1365 
+ SYM=DCBBFTR  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1359 
+ SYM=DCBBFTS  LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1364 
+ SYM=DCBBIT0  LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1277 1310 1318 1330 
+  1353 1380 1382 1383 1385 1408 1411 1431 1435 1450 1487 1542 
+ SYM=DCBBIT1  LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1278 1311 1319 1332 
+  1354 1355 1364 1380 1382 1384 1385 1413 1431 1433 1435 1453 1454 1455 1490 1491 
+  1542 
+ SYM=DCBBIT2  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1279 1312 1320 1333 
+  1334 1335 1354 1355 1359 1365 1380 1381 1386 1415 1436 1437 1458 1459 1460 1494 
+  1495 1543 
+ SYM=DCBBIT3  LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1280 1313 1333 1335 
+  1336 1354 1367 1387 1418 1436 1439 1462 1463 1464 1498 1499 1543 
+ SYM=DCBBIT4  LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1281 1321 1368 1388 
+  1419 1441 1446 1447 1467 1468 1502 1503 1505 1506 1544 
+ SYM=DCBBIT5  LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1282 1322 1369 1391 
+  1392 1421 1441 1443 1444 1447 1471 1473 1474 1475 1509 1510 1511 1512 1544 
+ SYM=DCBBIT6  LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1283 1314 1370 1371 
+  1374 1391 1393 1422 1478 1479 1480 1481 1515 1516 1517 1518 1545 
+ SYM=DCBBIT7  LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1284 1315 1370 1372 
+  1374 1395 1426 1483 1484 1521 1522 1524 1525 
+ SYM=DCBBUFCA LOC=00000015 LEN=00000003 ESD=0007 TYPE=REL  XREF=1305 
+ SYM=DCBBUFCB LOC=00000014 LEN=00000004 ESD=0007 TYPE=REL  XREF=1299 
+ SYM=DCBBUFL  LOC=00000018 LEN=00000002 ESD=0007 TYPE=REL  XREF=1306 
+ SYM=DCBBUFNO LOC=00000014 LEN=00000001 ESD=0007 TYPE=REL  XREF=1300 
+ SYM=DCBDDNAM LOC=00000028 LEN=00000008 ESD=0007 TYPE=REL  XREF=1405 
+ SYM=DCBDEBA  LOC=0000002D LEN=00000003 ESD=0007 TYPE=REL  XREF=1546 
+ SYM=DCBDEBAD LOC=0000002C LEN=00000004 ESD=0007 TYPE=REL  XREF=1540 
+ SYM=DCBDEVT  LOC=00000011 LEN=00000001 ESD=0007 TYPE=REL  XREF=1295 
+ SYM=DCBDSGCX LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1313 
+ SYM=DCBDSGDA LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1312 
+ SYM=DCBDSGGS LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1318 
+ SYM=DCBDSGIS LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1310 
+ SYM=DCBDSGPO LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1314 
+ SYM=DCBDSGPS LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1311 
+ SYM=DCBDSGTQ LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1320 
+ SYM=DCBDSGTR LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1322 
+ SYM=DCBDSGTX LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1319 
+ SYM=DCBDSGU  LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1315 
+ SYM=DCBDSORG LOC=0000001A LEN=00000002 ESD=0007 TYPE=REL  XREF=1308 
+ SYM=DCBDSRG1 LOC=0000001A LEN=00000001 ESD=0007 TYPE=REL  XREF=1309 
+ SYM=DCBDSRG2 LOC=0000001B LEN=00000001 ESD=0007 TYPE=REL  XREF=1317 
+ SYM=DCBDVTRM LOC=0000004F LEN=00000001 ESD=0000 TYPE=ABS  XREF=1296 
+ SYM=DCBEODA  LOC=00000021 LEN=00000003 ESD=0007 TYPE=REL  XREF=1376 
+ SYM=DCBEODAD LOC=00000020 LEN=00000004 ESD=0007 TYPE=REL  XREF=1349 
+ SYM=DCBEX    LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1433 
+ SYM=DCBEXLSA LOC=00000025 LEN=00000003 ESD=0007 TYPE=REL  XREF=1397 
+ SYM=DCBEXLST LOC=00000024 LEN=00000004 ESD=0007 TYPE=REL  XREF=1378 
+ SYM=DCBH0    LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1369 
+ SYM=DCBH1    LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1353 
+ SYM=DCBHIARC LOC=00000020 LEN=00000001 ESD=0007 TYPE=REL  XREF=1350 
+ SYM=DCBIBEC  LOC=000000C0 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1431 
+ SYM=DCBIBIOE LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=1441 
+ SYM=DCBIBPCT LOC=00000030 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1436 
+ SYM=DCBIFC12 LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1439 
+ SYM=DCBIFC9  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1437 
+ SYM=DCBIFEC  LOC=000000C0 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1542 
+ SYM=DCBIFER  LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1442 
+ SYM=DCBIFIOE LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=1544 
+ SYM=DCBIFLDT LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1545 
+ SYM=DCBIFLG  LOC=00000031 LEN=00000001 ESD=0007 TYPE=REL  XREF=1428 
+ SYM=DCBIFLGS LOC=0000002C LEN=00000001 ESD=0007 TYPE=REL  XREF=1541 
+ SYM=DCBIFNE1 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1443 
+ SYM=DCBIFNE2 LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1446 
+ SYM=DCBIFNE3 LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=1447 
+ SYM=DCBIFNEP LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1432 
+ SYM=DCBIFPCT LOC=00000030 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1543 
+ SYM=DCBIFPEC LOC=000000C0 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1435 
+ SYM=DCBIFTIM LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1444 
+ SYM=DCBIOBAA LOC=0000001D LEN=00000003 ESD=0007 TYPE=REL  XREF=1337 
+ SYM=DCBIOBAD LOC=0000001C LEN=00000004 ESD=0007 TYPE=REL  XREF=1323 
+ SYM=DCBKEYLE LOC=00000010 LEN=00000001 ESD=0007 TYPE=REL  XREF=1294 
+ SYM=DCBLNP   LOC=0000001C LEN=00000001 ESD=0007 TYPE=REL  XREF=1326 
+ SYM=DCBMACF1 LOC=0000002A LEN=00000001 ESD=0007 TYPE=REL  XREF=1538 
+ SYM=DCBMACF2 LOC=0000002B LEN=00000001 ESD=0007 TYPE=REL  XREF=1539 
+ SYM=DCBMACR  LOC=00000032 LEN=00000002 ESD=0007 TYPE=REL  XREF=1448 
+ SYM=DCBMACR1 LOC=00000032 LEN=00000001 ESD=0007 TYPE=REL  XREF=1449 
+ SYM=DCBMACR2 LOC=00000033 LEN=00000001 ESD=0007 TYPE=REL  XREF=1486 
+ SYM=DCBMACRF LOC=0000002A LEN=00000002 ESD=0007 TYPE=REL  XREF=1537 
+ SYM=DCBMR1WD LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1521 
+ SYM=DCBMR3WD LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1515 
+ SYM=DCBMR4WD LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1509 
+ SYM=DCBMR5WD LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1502 
+ SYM=DCBMRABC LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1471 
+ SYM=DCBMRAPG LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1458 
+ SYM=DCBMRAWR LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1518 
+ SYM=DCBMRCHK LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1480 
+ SYM=DCBMRCI  LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1462 
+ SYM=DCBMRCK  LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1484 
+ SYM=DCBMRCRL LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1479 
+ SYM=DCBMRCTL LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1516 
+ SYM=DCBMRDBF LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1475 
+ SYM=DCBMRDMD LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1524 
+ SYM=DCBMRDMG LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1483 
+ SYM=DCBMRECP LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1450 
+ SYM=DCBMRFE  LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1453 
+ SYM=DCBMRGET LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1454 
+ SYM=DCBMRGTQ LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1491 
+ SYM=DCBMRIDW LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1506 
+ SYM=DCBMRLCG LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1467 
+ SYM=DCBMRLCP LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1505 
+ SYM=DCBMRLDM LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1503 
+ SYM=DCBMRMVG LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1463 
+ SYM=DCBMRMVP LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1498 
+ SYM=DCBMRPT1 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1473 
+ SYM=DCBMRPT2 LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1510 
+ SYM=DCBMRPTQ LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1455 
+ SYM=DCBMRPUT LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1490 
+ SYM=DCBMRRD  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1459 
+ SYM=DCBMRRDI LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1468 
+ SYM=DCBMRRDK LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1464 
+ SYM=DCBMRRDQ LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1495 
+ SYM=DCBMRRDX LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1481 
+ SYM=DCBMRSBG LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1474 
+ SYM=DCBMRSTI LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1525 
+ SYM=DCBMRSTK LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1517 
+ SYM=DCBMRSTL LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1487 
+ SYM=DCBMRSWA LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1522 
+ SYM=DCBMRTMD LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1511 
+ SYM=DCBMRUIP LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1512 
+ SYM=DCBMRWRK LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1499 
+ SYM=DCBMRWRQ LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1460 
+ SYM=DCBMRWRT LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1494 
+ SYM=DCBNUPD  LOC=00000030 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1335 
+ SYM=DCBODEB  LOC=0000001C LEN=00000004 ESD=0007 TYPE=REL  XREF=1325 
+ SYM=DCBODEBA LOC=0000001D LEN=00000003 ESD=0007 TYPE=REL  XREF=1338 
+ SYM=DCBOFEOV LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1415 
+ SYM=DCBOFIOD LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1411 
+ SYM=DCBOFIOF LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1426 
+ SYM=DCBOFLGS LOC=00000030 LEN=00000001 ESD=0007 TYPE=REL  XREF=1407 
+ SYM=DCBOFLRB LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1413 
+ SYM=DCBOFLWR LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1408 
+ SYM=DCBOFOPN LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1418 
+ SYM=DCBOFPPC LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1419 
+ SYM=DCBOFTM  LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1421 
+ SYM=DCBOFUEX LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1422 
+ SYM=DCBOPTCD LOC=00000034 LEN=00000001 ESD=0007 TYPE=REL  XREF=1551 
+ SYM=DCBPGFXA LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1478 
+ SYM=DCBQSLM  LOC=0000001C LEN=00000001 ESD=0007 TYPE=REL  XREF=1327 
+ SYM=DCBRECBR LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1387 
+ SYM=DCBRECC  LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1394 
+ SYM=DCBRECCA LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1392 
+ SYM=DCBRECCC LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1391 
+ SYM=DCBRECCM LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1393 
+ SYM=DCBRECD  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1381 
+ SYM=DCBRECF  LOC=00000080 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1383 
+ SYM=DCBRECFM LOC=00000024 LEN=00000001 ESD=0007 TYPE=REL  XREF=1379 
+ SYM=DCBRECKL LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1395 
+ SYM=DCBRECL  LOC=000000C0 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1382 
+ SYM=DCBRECLA LOC=000000E0 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1380 
+ SYM=DCBRECSB LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1388 
+ SYM=DCBRECTO LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1386 
+ SYM=DCBRECU  LOC=000000C0 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1385 
+ SYM=DCBRECV  LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1384 
+ SYM=DCBREL   LOC=00000011 LEN=00000003 ESD=0007 TYPE=REL  XREF=1297 
+ SYM=DCBRELB  LOC=00000010 LEN=00000004 ESD=0007 TYPE=REL  XREF=1293 
+ SYM=DCBSVCXA LOC=0000001D LEN=00000003 ESD=0007 TYPE=REL  XREF=1342 
+ SYM=DCBSVCXL LOC=0000001C LEN=00000004 ESD=0007 TYPE=REL  XREF=1340 
+ SYM=DCBSVDEB LOC=00000010 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1336 
+ SYM=DCBTIOT  LOC=00000028 LEN=00000002 ESD=0007 TYPE=REL  XREF=1534 
+ SYM=DCBUPDBT LOC=00000030 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1333 
+ SYM=DCBUPDCM LOC=00000040 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1332 
+ SYM=DCBUPDT  LOC=00000020 LEN=00000001 ESD=0000 TYPE=ABS  XREF=1334 
+ SYM=DECB1    LOC=0000034C LEN=00000004 ESD=0001 TYPE=REL  XREF=1972 
+ SYM=DECB2    LOC=0000049C LEN=00000004 ESD=0001 TYPE=REL  XREF=2236 
+ SYM=IDA0047A LOC=00000250 LEN=00000004 ESD=0001 TYPE=REL  XREF=1779 1778 1780 
+ SYM=IDA0047B LOC=0000026C LEN=00000004 ESD=0001 TYPE=REL  XREF=1790 
+ SYM=IDA0086A LOC=000002D4 LEN=00000004 ESD=0001 TYPE=REL  XREF=1905 1904 1906 
+ SYM=IDA0086B LOC=000002EC LEN=00000004 ESD=0001 TYPE=REL  XREF=1914 
+ SYM=IDA0149A LOC=0000040C LEN=00000004 ESD=0001 TYPE=REL  XREF=2159 2158 2160 
+ SYM=IDA0149B LOC=00000428 LEN=00000004 ESD=0001 TYPE=REL  XREF=2170 
+ SYM=IGG0142  LOC=000003F0 LEN=00000002 ESD=0001 TYPE=REL  XREF=2134 2128 
+ SYM=IHADCB   LOC=00000000 LEN=00000038 ESD=0007 TYPE=DST  XREF=1260 1292 1339 1404 
+  1533 1550 
+ SYM=IHB0012  LOC=000000A0 LEN=00000004 ESD=0001 TYPE=REL  XREF=107 102 
+ SYM=IHB0019B LOC=0000011C LEN=00000004 ESD=0001 TYPE=REL  XREF=166 175 
+ SYM=IHB0020  LOC=00000124 LEN=00000001 ESD=0001 TYPE=REL  XREF=170 
+ SYM=IHB0020A LOC=00000128 LEN=00000001 ESD=0001 TYPE=REL  XREF=173 169 
+ SYM=IHB0038  LOC=000001E4 LEN=00000001 ESD=0001 TYPE=REL  XREF=1605 
+ SYM=IHB0043F LOC=00000228 LEN=00000001 ESD=0001 TYPE=REL  XREF=1649 1654 
+ SYM=IHB0150  LOC=0000045C LEN=00000002 ESD=0001 TYPE=REL  XREF=2193 2179 
+ SYM=IHB0159A LOC=000004D0 LEN=00000002 ESD=0001 TYPE=REL  XREF=2254 2250 
+ SYM=IHB0160A LOC=000004EA LEN=00000002 ESD=0001 TYPE=REL  XREF=2269 2259 
+ SYM=MYACB    LOC=00000044 LEN=00000004 ESD=0001 TYPE=REL  XREF=60 1789 1910 2081 
+  2132 2164 
+ SYM=MYAREA   LOC=00000028 LEN=00000001 ESD=0001 TYPE=REL  XREF=15 145 1801 1944 
+  1977 2241 
+ SYM=MYDCB    LOC=00000148 LEN=00000004 ESD=0001 TYPE=REL  XREF=1203 135 180 191 
+  1587 1799 1924 1942 1952 1963 1976 2114 2187 2240 
+ SYM=MYECB    LOC=00000004 LEN=00000004 ESD=0001 TYPE=REL  XREF=11 1937 2262 
+ SYM=MYEXIT   LOC=00000004 LEN=00000002 ESD=0001 TYPE=REL  XREF=10 1598 1607 1626 
+  1812 
+ SYM=MYEXLST  LOC=000001FC LEN=00000004 ESD=0001 TYPE=REL  XREF=1620 1913 
+ SYM=MYLIMIT  LOC=00000028 LEN=00000001 ESD=0001 TYPE=REL  XREF=17 2116 
+ SYM=MYLIST   LOC=00000028 LEN=00000001 ESD=0001 TYPE=REL  XREF=16 137 172 1838 
+ SYM=MYNAME   LOC=00000028 LEN=00000001 ESD=0001 TYPE=REL  XREF=18 2131 
+ SYM=MYPGM    LOC=00000034 LEN=00000001 ESD=0001 TYPE=REL  XREF=21 22 
+ SYM=MYPGM    LOC=00000000 LEN=00000000 ESD=0003 TYPE=EXT  XREF=166 
+ SYM=MYRPL    LOC=0000036C LEN=00000004 ESD=0001 TYPE=REL  XREF=1992 1929 
+ SYM=R0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2291 
+ SYM=R10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=2301 
+ SYM=R1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2292 
+ SYM=R11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=2302 
+ SYM=R12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=2303 
+ SYM=R13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=2304 
+ SYM=R14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=2305 
+ SYM=R15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=2306 
+ SYM=R2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2293 
+ SYM=R3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2294 
+ SYM=R4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2295 
+ SYM=R5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2296 
+ SYM=R6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2297 
+ SYM=R7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2298 
+ SYM=R8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2299 
+ SYM=R9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=2300 
+ SYM=TESTMVS1 LOC=00000000 LEN=00000520 ESD=0001 TYPE=CST  XREF=5 1195 1554 
+
+Literal Table Listing
+
+ LIT=B'00000011' LOC=0000051D LEN=00000001 ESD=0001 POOL=0001 XREF=2222 
+ LIT=B'00000100000000000000000000000000' LOC=00000518 LEN=00000004 ESD=0001 POOL=0001 XREF=1597 
+ LIT=B'10000001' LOC=0000051C LEN=00000001 ESD=0001 POOL=0001 XREF=2210 
+ 
+AZ390I total mnote warnings = 0
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 0
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+TESTMVS1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=25144

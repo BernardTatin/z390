@@ -1,0 +1,13 @@
+Comparing files DEMO\DEMOBMK1.PRN and RT\DEMO\SAVE\DEMOBMK1.PRN
+***** DEMO\DEMOBMK1.PRN
+AZ390I program = demo\DEMOBMK1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) notiming stats systerm(demo\rtdemo)
+External Symbol Definitions
+***** RT\DEMO\SAVE\DEMOBMK1.PRN
+AZ390I program = demo\DEMOBMK1
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) notiming stats systerm(demo\rtdemo)
+External Symbol Definitions
+*****
+

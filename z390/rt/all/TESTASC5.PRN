@@ -1,0 +1,11 @@
+Comparing files RT\TEST\TESTASC5.PRN and RT\TEST\SAVE\TESTASC5.PRN
+***** RT\TEST\TESTASC5.PRN
+AZ390I program = rt\test\TESTASC5
+AZ390I options = assist notiming stats 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTASC5.PRN
+AZ390I program = rt\test\TESTASC5
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) assist notiming stats 
+  systerm(rt\test\rttest)
+*****
+

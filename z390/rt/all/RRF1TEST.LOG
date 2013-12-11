@@ -1,0 +1,21 @@
+Comparing files VSAM\TEST\RRF1TEST.LOG and RT\VSAM\TEST\SAVE\RRF1TEST.LOG
+***** VSAM\TEST\RRF1TEST.LOG
+EZ390I program = vsam\test\RRF1TEST.390
+EZ390I options = @vsam\rtvsam=(notiming stats tracev traceq 
+  dump) systerm(w:\work\z390\vsam\test\rtvsam)
+RRF1TEST RT1 STARTED
+***** RT\VSAM\TEST\SAVE\RRF1TEST.LOG
+EZ390I program = vsam\test\RRF1TEST.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+RRF1TEST RT1 STARTED
+*****
+
+***** VSAM\TEST\RRF1TEST.LOG
+EZ390I total errors         = 0
+RRF1TEST  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=471 INS=142
+***** RT\VSAM\TEST\SAVE\RRF1TEST.LOG
+EZ390I total errors         = 0
+RRF1TEST  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=469 INS=142
+*****
+

@@ -1,0 +1,15 @@
+Comparing files RT\TEST\TESTOBJ2.PRN and RT\TEST\SAVE\TESTOBJ2.PRN
+***** RT\TEST\TESTOBJ2.PRN
+AZ390I program = rt\test\TESTOBJ2
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  @TESTOBJ2=(objhex mem(49) rmode31) systerm(rt\test\rttest)
+External Symbol Definitions
+***** RT\TEST\SAVE\TESTOBJ2.PRN
+AZ390I program = rt\test\TESTOBJ2
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) @TESTOBJ2=(objhex 
+  mem(49) rmode31) systerm(rt\test\rttest)
+External Symbol Definitions
+*****
+

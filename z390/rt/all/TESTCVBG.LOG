@@ -1,0 +1,19 @@
+Comparing files RT\TEST\TESTCVBG.LOG and RT\TEST\SAVE\TESTCVBG.LOG
+***** RT\TEST\TESTCVBG.LOG
+EZ390I program = rt\test\TESTCVBG.390
+EZ390I options = @rt\RT1=(bal notiming stats) trace 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTCVBG.LOG
+EZ390I program = rt\test\TESTCVBG.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) trace 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTCVBG.LOG
+EZ390I total errors         = 0
+TESTCVBG  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=158 INS=621
+***** RT\TEST\SAVE\TESTCVBG.LOG
+EZ390I total errors         = 0
+TESTCVBG  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=155 INS=621
+*****
+

@@ -1,0 +1,20 @@
+Comparing files ASSIST\solp06.LOG and RT\ASSIST\SAVE\SOLP06.LOG
+***** ASSIST\solp06.LOG
+EZ390I program = assist\solp06.390
+EZ390I options = assist notiming stats systerm(assist\rtast)
+1                                                   Book Title Counts by Publisher
+***** RT\ASSIST\SAVE\SOLP06.LOG
+EZ390I program = assist\solp06.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) assist notiming stats 
+  systerm(assist\rtast)
+1                                                   Book Title Counts by Publisher
+*****
+
+***** ASSIST\solp06.LOG
+EZ390I total errors         = 0
+solp06    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=332 INS=5559
+***** RT\ASSIST\SAVE\SOLP06.LOG
+EZ390I total errors         = 0
+solp06    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=331 INS=5559
+*****
+

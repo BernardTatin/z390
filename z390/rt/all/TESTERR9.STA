@@ -1,0 +1,51 @@
+Comparing files RT\TEST\TESTERR9.STA and RT\TEST\SAVE\TESTERR9.STA
+***** RT\TEST\TESTERR9.STA
+TESTERR9  MZ390 program = rt\test\TESTERR9.MLC
+TESTERR9  MZ390 options = noasm bal notiming sysmac(mac) syscpy(mac) 
+  stats systerm(rt\test\rttest)
+TESTERR9  MZ390 final_options=ALIGN
+***** RT\TEST\SAVE\TESTERR9.STA
+TESTERR9  MZ390 program = rt\test\TESTERR9.MLC
+TESTERR9  MZ390 options = W:\work\z390\z390.OPT=(time(60)) noasm bal notiming sysmac(mac) 
+  syscpy(mac) stats systerm(rt\test\rttest)
+TESTERR9  MZ390 final_options=ALIGN
+*****
+
+***** RT\TEST\TESTERR9.STA
+TESTERR9  MZ390 final_options=PROFILE=
+TESTERR9  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTERR9.
+TESTERR9  MZ390 final_options=STA
+TESTERR9  MZ390 final_options=SYSPARM=
+TESTERR9  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTERR9  MZ390 final_options=ERR
+TESTERR9  MZ390 final_options=TESTDD=
+TESTERR9  MZ390 final_options=TIME=15
+TESTERR9  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTERR9.STA
+TESTERR9  MZ390 final_options=PROFILE=
+TESTERR9  MZ390 final_options=STATS=W:\work\z390\rt\test\TESTERR9.STA
+TESTERR9  MZ390 final_options=SYSPARM=
+TESTERR9  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTERR9  MZ390 final_options=TESTDD=
+TESTERR9  MZ390 final_options=TIME=60
+TESTERR9  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTERR9.STA
+TESTERR9  MZ390 total pcode exec opt  = 0
+TESTERR9  MZ390 FID=  1 ERR= 1 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTERR9.MLC
+TESTERR9  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\TESTERR9.STA
+TESTERR9  MZ390 total pcode exec opt  = 0
+TESTERR9  MZ390 FID=  1 ERR= 1 W:\work\z390\rt\test\TESTERR9.MLC
+TESTERR9  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\TESTERR9.STA
+TESTERR9  MZ390 total mz390 errors    = 1
+TESTERR9  MZ390 ENDED   RC=16 MEM(MB)= MB IO=204
+***** RT\TEST\SAVE\TESTERR9.STA
+TESTERR9  MZ390 total mz390 errors    = 1
+TESTERR9  MZ390 ENDED   RC=16 MEM(MB)= MB IO=202
+*****
+

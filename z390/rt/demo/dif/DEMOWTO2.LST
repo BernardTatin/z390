@@ -1,0 +1,12 @@
+Comparing files DEMO\DEMOWTO2.LST and RT\DEMO\SAVE\DEMOWTO2.LST
+***** DEMO\DEMOWTO2.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = notiming stats systerm(demo\rtdemo)
+LZ390I program = demo\DEMOWTO2.OBJ
+***** RT\DEMO\SAVE\DEMOWTO2.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) notiming stats 
+  systerm(demo\rtdemo)
+LZ390I program = demo\DEMOWTO2.OBJ
+*****
+

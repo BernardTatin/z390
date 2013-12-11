@@ -1,0 +1,502 @@
+P4RAFA2   MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = mfacc\P4RAFA2
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=00000380 TYPE=CST NAME=P4RAFA2
+Assembler Listing
+000000                                        (1/1)1 * Problem - Sort array of full word integers using fastest exec method
+000000                                        (1/2)2 * Date    - 12/21/07
+000000                                        (1/3)3 * Author  - Rafa Pereira
+000000                                        (1/4)4 * Ref.    - z390 Mainframe Assembler Coding Contest on www.z390.org
+000000                                        (1/5)5 *
+000000                                        (1/6)6 * It is an implementation of the QuickSort Algorithm.
+000000                                        (1/7)7 * This particular implementation is based on the code available at:
+000000                                        (1/8)8 * http://www.mycsresource.net/articles/programming/sorting_algos/
+000000                                        (1/9)9 * quicksort/
+000000                                      (1/10)10 * An interesting and clear explanation of the algorithm is also
+000000                                      (1/11)11 * available at the same URL.
+000000                                      (1/12)12 *
+000000                                      (1/13)13 * I have transformed it into an iterative implementation following the
+000000                                      (1/14)14 * guidance at
+000000                                      (1/15)15 * http://www.geocities.com/siliconvalley/garage/3323/aat/a_recu.html
+000000                                      (1/16)16 *
+000000                                      (1/17)17 * So, the code used as the starting point is:
+000000                                      (1/18)18 *
+000000                                      (1/19)19 * public void quickSortIterative(int start, int end)
+000000                                      (1/20)20 * {
+000000                                      (1/21)21 *   int i;
+000000                                      (1/22)22 *   int k;
+000000                                      (1/23)23 *   push (start, end);
+000000                                      (1/24)24 *
+000000                                      (1/25)25 *   while (pop(s,e) OK)  //i.e. while stack is not empty
+000000                                      (1/26)26 *   {
+000000                                      (1/27)27 *     if (e - s >= 1)
+000000                                      (1/28)28 *     {
+000000                                      (1/29)29 *       int pivot = array[s];
+000000                                      (1/30)30 *       -> I will change this to pivot=array[(s+e)/2]
+000000                                      (1/31)31 *
+000000                                      (1/32)32 *       i = s;
+000000                                      (1/33)33 *       k = e;
+000000                                      (1/34)34 *
+000000                                      (1/35)35 *       while (k > i)
+000000                                      (1/36)36 *       {
+000000                                      (1/37)37 *         while (array[i] <= pivot && i <= e && k > i) i++;
+000000                                      (1/38)38 *         while (array[k] > pivot && k >= s && k >= i) k--;
+000000                                      (1/39)39 *         if (k > i) swap(i, k);
+000000                                      (1/40)40 *       }
+000000                                      (1/41)41 *
+000000                                      (1/42)42 *       swap(s, k);
+000000                                      (1/43)43 *       push(s, k - 1);
+000000                                      (1/44)44 *       push(k + 1, e);
+000000                                      (1/45)45 *     }
+000000                                      (1/46)46 *   }
+000000                                      (1/47)47 *   return;
+000000                                      (1/48)48 * }
+000000                                      (1/49)49 *
+000000                                      (1/50)50 * Changes from P4RAFA1:
+000000                                      (1/51)51 *   Routines are now included in-stream, without BAL/BR instructions.
+000000                                      (1/52)52 *   Register usage redesigned to reduce inter-register data movement.
+000000                                      (1/53)53 *   Other minor changes.
+000000                                      (1/54)54 **********************************************************************
+000000                                      (1/55)55 * 12/23/07 DSH1 Don Higgins change F8 to F08, remove RUNSYS=MVS
+000000                                      (1/56)56 **********************************************************************
+000000                                      (1/57)57 * REGISTERS
+000000                                      (1/58)58 * ---------
+000000                                      (1/59)59 *
+000000                                      (1/60)60 *    R0   WORK
+000000                                      (1/61)61 *    R1   I, WORK
+000000                                      (1/62)62 *    R2   K
+000000                                      (1/63)63 *    R3   S, START
+000000                                      (1/64)64 *    R4   E, END
+000000                                      (1/65)65 *    R5   WORK
+000000                                      (1/66)66 *    R6
+000000                                      (1/67)67 *    R7   PIVOT
+000000                                      (1/68)68 *    R8   BASE ADDRESS OF ARRAY TO SORT
+000000                                      (1/69)69 *    R9   STACK POINTER
+000000                                      (1/70)70 *    R10  STACK BASE ADDRESS
+000000                                      (1/71)71 *    R11
+000000                                      (1/72)72 *    R12
+000000                                      (1/73)73 *    R13  BASE ADDRESSING REGISTER
+000000                                      (1/74)74 *    R14
+000000                                      (1/75)75 *    R15
+000000                                      (1/76)76 **********************************************************************
+000000                                      (1/77)77 *
+000000                                      (1/78)78 P4RAFA2  ZMFACC  CODE,START,NAME='RAFA'
+000000                                      (2/28)79+         MNOTE 4,'No RUNSYS= on first ZMFACC, 390 assumed.'
+000000                                      (2/42)80+         MNOTE 'ZRUNSYS=390'                          DSH2
+000000                                     (2/123)81+P4RAFA2  CSECT 
+000000 90ECD00C                            (2/125)82+         STM   14,12,12(13)
+000004 45FF0068                            (2/126)83+         BAL   15,GO0001-P4RAFA2(15)
+000008 0000000000000000                    (2/127)84+SV0001    DC    18F'0'
+000050 D7F4D9C1C6C1F240                    (2/128)85+         DC    CL8'P4RAFA2'
+000058 F0F161F0F261F0F5                    (2/129)86+         DC    CL8'01/02/05'
+000060 F2F24BF3F3404040                    (2/130)87+         DC    CL8'22.33'
+000068                                     (2/141)88+GO0001    DS    0H
+000068 50FD0008                            (2/142)89+         ST    15,8(13)
+00006C 50DF0004                            (2/143)90+         ST    13,4(15)
+000070 18DF                                (2/144)91+         LR    13,15
+000072                                     (2/145)92+      USING SV0001,13
+LISTUSE P4RAFA2  ESD=0001 LOC=00000008 LEN=01000 REG=D OFF=00000 LAB=
+000072 A7150022                0000B6       (3/49)95+         BRAS  1,*+(WTO#0002_EOT-*+1)/2*2
+000076 00400000E9D4C6C1                     (3/50)96+         DC    AL2(WTO#0002_EOT-*,0),C'ZMFACC Solution for problem P4RAFA2 by RAFA using RUNSYS=390'
+0000B6                  000000B6            (3/51)98+WTO#0002_EOT     EQU *
+0000B6 0A23                                 (3/52)99+         SVC   35
+0000B8                                    (2/274)103+         DS    0H
+0000B8 58E0D2F0                0002F8     (4/112)106+         L     14,=A(INPUTSTR)
+0000BC 58F0D2F4                0002FC     (4/118)107+         L     15,=A(INPUTEND)
+0000C0 A5030001                           (4/126)108+         IILL  0,1                  RPI158
+0000C4 A5028000                           (4/131)109+         IILH 0,32768               RPI158
+0000C8 4110D2F8                000300     (4/138)110+         LA    1,=CL60'Input Area'
+0000CC 0A33                               (4/146)111+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+0000CE                                     (1/79)115 *
+0000CE                                     (1/80)116 **********************************************************************
+0000CE                                     (1/81)117 * INIT ROUTINE - ROUTINE FOR INITIALIZATIONS
+0000CE                                     (1/82)118 *
+0000CE                                     (1/83)119 * R3: ZERO
+0000CE                                     (1/84)120 * R4: OFFSET OF LAST ELEMENT IN THE ARRAY TO SORT
+0000CE                                     (1/85)121 * R8: BASE ADDRESS OF THE ARRAY TO SORT
+0000CE                                     (1/86)122 * R9: ZERO
+0000CE                                     (1/87)123 * R10: BASE ADDRESS OF THE STACK
+0000CE                                     (1/88)124 **********************************************************************
+0000CE 1B33                                (1/89)125 INIT     SR      R3,R3            R3 := 0
+0000D0 5840D1C4                0001CC      (1/90)126          L       R4,TABSIZM4      R4 := OFFSET LAST ELEMENT
+0000D4 4180D29C                0002A4      (1/91)127          LA      R8,TABLE         R8 -> ARRAY TO SORT
+0000D8 1B99                                (1/92)128          SR      R9,R9            R9 := 0
+0000DA 41A0D1D4                0001DC      (1/93)129          LA      R10,STACK        R10 -> STACK
+0000DE                                     (1/94)130 **********************************************************************
+0000DE                                     (1/95)131 * INIT ROUTINE - END
+0000DE                                     (1/96)132 **********************************************************************
+0000DE                                     (1/97)133 *
+0000DE                                     (1/98)134 **********************************************************************
+0000DE                                     (1/99)135 * QUICK-SORT ROUTINE - ITERATIVE.
+0000DE                                    (1/100)136 *                      SELECTS A PIVOT ELEMENT.
+0000DE                                    (1/101)137 *                      PARTITIONS THE INPUT ARRAY INTO TWO ARRAYS,
+0000DE                                    (1/102)138 *                      ONE WITH ELEMENTS LESS-THAN-OR-EQUAL-TO THE
+0000DE                                    (1/103)139 *                      PIVOT AND ONE WITH ELEMENTS GREATER-THAN THE
+0000DE                                    (1/104)140 *                      PIVOT.
+0000DE                                    (1/105)141 *                      PROCESSES EACH OF THE TWO SUBARRAYS.
+0000DE                                    (1/106)142 *                      THE PARTITIONING IS DONE IN-PLACE.
+0000DE                                    (1/107)143 *
+0000DE                                    (1/108)144 * ON ENTRY:
+0000DE                                    (1/109)145 * R3: INDEX IN THE DATA ARRAY OF THE LEFTMOST ELEMENT
+0000DE                                    (1/110)146 * R4: INDEX IN THE DATA ARRAY OF THE RIGHTMOST ELEMENT
+0000DE                                    (1/111)147 * R8: BASE ADDRESS OF THE ARRAY TO SORT
+0000DE                                    (1/112)148 *
+0000DE                                    (1/113)149 * ON RETURN:
+0000DE                                    (1/114)150 * R3: MODIFIED
+0000DE                                    (1/115)151 * R4: MODIFIED
+0000DE                                    (1/116)152 *
+0000DE                                    (1/117)153 * public void quickSortIterative(int start, int end)
+0000DE                                    (1/118)154 * {
+0000DE                                    (1/119)155 *   int i;
+0000DE                                    (1/120)156 *   int k;
+0000DE                                    (1/121)157 *   push (start, end);
+0000DE                                    (1/122)158 *
+0000DE                                    (1/123)159 *   while (pop(s,e) OK)  //i.e. while stack is not empty
+0000DE                                    (1/124)160 *   {
+0000DE                                    (1/125)161 *     if (e - s >= 1)
+0000DE                                    (1/126)162 *     {
+0000DE                                    (1/127)163 *       int pivot = array[s];
+0000DE                                    (1/128)164 *       -> I will change this to pivot=array[(s+e)/2]:
+0000DE                                    (1/129)165 *
+0000DE                                    (1/130)166 *             swap(s, (s+e)/2);
+0000DE                                    (1/131)167 *             pivot = array[s];
+0000DE                                    (1/132)168 *
+0000DE                                    (1/133)169 *       i = s;
+0000DE                                    (1/134)170 *       k = e;
+0000DE                                    (1/135)171 *
+0000DE                                    (1/136)172 *       while (k > i)
+0000DE                                    (1/137)173 *       {
+0000DE                                    (1/138)174 *         while (array[i] <= pivot && i <= e && k > i) i++;
+0000DE                                    (1/139)175 *         while (array[k] > pivot && k >= s && k >= i) k--;
+0000DE                                    (1/140)176 *         if (k > i) swap(i, k);
+0000DE                                    (1/141)177 *       }
+0000DE                                    (1/142)178 *
+0000DE                                    (1/143)179 *       swap(s, k);
+0000DE                                    (1/144)180 *       push(s, k - 1);
+0000DE                                    (1/145)181 *       push(k + 1, e);
+0000DE                                    (1/146)182 *     }
+0000DE                                    (1/147)183 *   }
+0000DE                                    (1/148)184 *   return;
+0000DE                                    (1/149)185 * }
+0000DE                                    (1/150)186 **********************************************************************
+0000DE 47F0D0EC                0000F4     (1/151)187 QSORT    B       QSORT03           BYPASS INITIAL PUSH+POP PAIR
+0000E2                                    (1/152)188 *
+0000E2                                    (1/153)189 * BEGINNING OF WHILE (POP(S,E) OK) LOOP
+0000E2                                    (1/154)190 *
+0000E2                                    (1/155)191 **********************************************************************
+0000E2                                    (1/156)192 * POP (S,E)
+0000E2                                    (1/157)193 *
+0000E2                                    (1/158)194 * S IS LOADED INTO R3
+0000E2                                    (1/159)195 * E IS LOADED INTO R4
+0000E2                                    (1/160)196 **********************************************************************
+0000E2 1299                               (1/161)197 POP      LTR     R9,R9            STACK IS ALREADY EMPTY?
+0000E4 4780D19E                0001A6     (1/162)198          BZ      QSORTZ             YES: END WITH STACK-EMPTY
+0000E8                                    (1/163)199 *
+0000E8 5B90D1CC                0001D4     (1/164)200          S       R9,F08           UPDATE R9 (STACK POINTER)
+0000EC 5839A000                           (1/165)201          L       R3,0(R9,R10)     POP R3 FROM STACK
+0000F0 5849A004                           (1/166)202          L       R4,4(R9,R10)     POP R4 FROM STACK
+0000F4                                    (1/167)203 **********************************************************************
+0000F4                                    (1/168)204 * POP ROUTINE - END
+0000F4                                    (1/169)205 **********************************************************************
+0000F4                                    (1/170)206 *
+0000F4                                    (1/171)207 * BEGINNING OF IF (E - S >= 1) FRAGMENT
+0000F4                                    (1/172)208 *
+0000F4 1854                               (1/173)209 QSORT03  LR      R5,R4            R5 := E
+0000F6 1B53                               (1/174)210          SR      R5,R3            R5 := E - S
+0000F8 5950D1C8                0001D0     (1/175)211          C       R5,F04           R5 < 4? (4 BECAUSE FULLWORD SIZE)
+0000FC 4740D0DA                0000E2     (1/176)212          BL      POP                YES: BACK TO WHILE LOOP
+000100                                    (1/177)213 *
+000100 8A500001                           (1/178)214          SRA     R5,1             R5 := (E-S)/2
+000104 1A53                               (1/179)215          AR      R5,R3            R5 := (E-S)/2 + S = (E+S)/2
+000106 5450D1D0                0001D8     (1/180)216          N       R5,FFFFFFFC      ROUND TO MULTIPLE OF 4
+00010A 58758000                           (1/181)217          L       R7,0(R5,R8)      PIVOT (R7) := ARRAY[(S+E)/2]
+00010E                                    (1/182)218 *
+00010E 58138000                           (1/183)219          L       R1,0(R3,R8)      SWAP ...
+000112 50158000                           (1/184)220          ST      R1,0(R5,R8)      ... (E+S)/2 ...
+000116 50738000                           (1/185)221          ST      R7,0(R3,R8)      ... AND S
+00011A                                    (1/186)222 *
+00011A 1813                               (1/187)223          LR      R1,R3            I := S
+00011C 1824                               (1/188)224          LR      R2,R4            K := E
+00011E                                    (1/189)225 *
+00011E                                    (1/190)226 * BEGINNING OF WHILE (K > I) LOOP
+00011E                                    (1/191)227 *
+00011E 1912                               (1/192)228 QSORTWH2 CR      R1,R2            I < K?
+000120 47B0D16E                000176     (1/193)229          BNL     QSORT01            NO: END OF WHILE (K>I)
+000124                                    (1/194)230 *
+000124                                    (1/195)231 * BEGINNING OF WHILE (ARRAY[I] ...) LOOP
+000124                                    (1/196)232 *
+000124 59718000                           (1/197)233 QSORTWH3 C       R7,0(R1,R8)      PIVOT < ARRAY[I]?
+000128 4740D138                000140     (1/198)234          BL      QSORTWH4           YES: END OF WHILE (ARRAY[I]..)
+00012C 1912                               (1/199)235          CR      R1,R2            I < K?
+00012E 47B0D138                000140     (1/200)236          BNL     QSORTWH4           NO:  END OF WHILE (ARRAY[I]..)
+000132 1941                               (1/201)237          CR      R4,R1            E < I?
+000134 4740D138                000140     (1/202)238          BL      QSORTWH4           YES: END OF WHILE (ARRAY[I]..)
+000138 41110004                           (1/203)239          LA      R1,4(R1)         I++  (4 BECAUSE FULLWORD SIZE)
+00013C 47F0D11C                000124     (1/204)240          B       QSORTWH3         BACK TO WHILE (ARRAY[I]..) LOOP
+000140                                    (1/205)241 *
+000140                                    (1/206)242 * BEGINNING OF WHILE (ARRAY[K] ...) LOOP
+000140                                    (1/207)243 *
+000140 59728000                           (1/208)244 QSORTWH4 C       R7,0(R2,R8)      PIVOT < ARRAY[K]?
+000144 47B0D154                00015C     (1/209)245          BNL     QSORT02            NO:  END OF WHILE (ARRAY[K]..)
+000148 1921                               (1/210)246          CR      R2,R1            K < I?
+00014A 4740D154                00015C     (1/211)247          BL      QSORT02            YES: END OF WHILE (ARRAY[K]..)
+00014E 1923                               (1/212)248          CR      R2,R3            K < S?
+000150 4740D154                00015C     (1/213)249          BL      QSORT02            YES: END OF WHILE (ARRAY[K]..)
+000154 5B20D1C8                0001D0     (1/214)250          S       R2,F04           K--  (4 BECAUSE FULLWORD SIZE)
+000158 47F0D138                000140     (1/215)251          B       QSORTWH4         BACK TO WHILE (ARRAY[K]..) LOOP
+00015C                                    (1/216)252 *
+00015C                                    (1/217)253 * END       OF WHILE (ARRAY[K] ...) LOOP
+00015C                                    (1/218)254 *
+00015C 1912                               (1/219)255 QSORT02  CR      R1,R2            I < K?
+00015E 47B0D16E                000176     (1/220)256          BNL     QSORT01            NO:  END OF WHILE (K>I) LOOP
+000162                                    (1/221)257 *
+000162 58018000                           (1/222)258          L       R0,0(R1,R8)      SWAP    ...
+000166 58528000                           (1/223)259          L       R5,0(R2,R8)      ...  I  ...
+00016A 50028000                           (1/224)260          ST      R0,0(R2,R8)      ... AND ...
+00016E 50518000                           (1/225)261          ST      R5,0(R1,R8)      ...  K
+000172                                    (1/226)262 *
+000172 47F0D116                00011E     (1/227)263          B       QSORTWH2         BACK TO WHILE (K>I) LOOP
+000176                                    (1/228)264 *
+000176                                    (1/229)265 * END       OF WHILE (K > I) LOOP
+000176                                    (1/230)266 *
+000176 58038000                           (1/231)267 QSORT01  L       R0,0(R3,R8)      SWAP    ...
+00017A 58528000                           (1/232)268          L       R5,0(R2,R8)      ...  S  ...
+00017E 50028000                           (1/233)269          ST      R0,0(R2,R8)      ... AND ...
+000182 50538000                           (1/234)270          ST      R5,0(R3,R8)      ...  K
+000186                                    (1/235)271 *
+000186 5B20D1C8                0001D0     (1/236)272          S       R2,F04            R2:=K-1 (4 BECAUSE FULLWORD SIZE)
+00018A                                    (1/237)273 *
+00018A                                    (1/238)274 **********************************************************************
+00018A                                    (1/239)275 * PUSH (S,K-1)
+00018A                                    (1/240)276 * PUSH (K+1,E)
+00018A                                    (1/241)277 *
+00018A                                    (1/242)278 * NOTE: STACK-FULL CONDITION IS NOT CHECKED. STACK MUST BE PROPERLY
+00018A                                    (1/243)279 *       DIMENSIONED.
+00018A                                    (1/244)280 *
+00018A                                    (1/245)281 * S   IS IN R3
+00018A                                    (1/246)282 * K-1 IS IN R2
+00018A                                    (1/247)283 * E   IS IN R4
+00018A                                    (1/248)284 **********************************************************************
+00018A 5039A000                           (1/249)285 PUSH02   ST      R3,0(R9,R10)     PUSH R3 INTO STACK (S)
+00018E 5029A004                           (1/250)286          ST      R2,4(R9,R10)     PUSH R2 INTO STACK (K-1)
+000192 41220008                           (1/251)287          LA      R2,8(R2)         R2:=K+1 (8 BECAUSE FULLWORD SIZE)
+000196 5029A008                           (1/252)288          ST      R2,8(R9,R10)     PUSH R2 INTO STACK (K+1)
+00019A 5049A00C                           (1/253)289          ST      R4,12(R9,R10)    PUSH R4 INTO STACK (E)
+00019E 41990010                           (1/254)290          LA      R9,16(R9)         UDATE STACK POINTER
+0001A2                                    (1/255)291 **********************************************************************
+0001A2                                    (1/256)292 * PUSH ROUTINE - END
+0001A2                                    (1/257)293 **********************************************************************
+0001A2                                    (1/258)294 *
+0001A2 47F0D0DA                0000E2     (1/259)295          B       POP               BACK TO WHILE (POP(S,E) OK) LOOP
+0001A6                                    (1/260)296 *
+0001A6                  000001A6          (1/261)297 QSORTZ   EQU     *
+0001A6                                    (1/262)298 *
+0001A6                                    (1/263)299 **********************************************************************
+0001A6                                    (1/264)300 * QUICK-SORT ROUTINE - END
+0001A6                                    (1/265)301 **********************************************************************
+0001A6                                    (1/266)302 *
+0001A6                                    (1/267)303          ZMFACC  CODE,END
+0001A6                                    (2/274)306+         DS    0H
+0001A6 58E0D334                00033C     (4/112)309+         L     14,=A(OUTPUTST)
+0001AA 58F0D338                000340     (4/118)310+         L     15,=A(OUTPUTEN)
+0001AE A5030002                           (4/126)311+         IILL  0,2                  RPI158
+0001B2 A5028000                           (4/131)312+         IILH 0,32768               RPI158
+0001B6 4110D33C                000344     (4/138)313+         LA    1,=CL60'Output Area'
+0001BA 0A33                               (4/146)314+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+0001BC 58D0D004                           (2/167)317+         L     13,4(,13)
+0001C0 58E0D00C                           (2/168)318+         L     14,12(,13)
+0001C4 982CD01C                           (2/169)319+         LM    2,12,28(13)
+0001C8 1BFF                               (2/170)320+         SR    15,15
+0001CA 07FE                               (2/171)321+         BR    14
+0001CC                                    (2/176)322+*        YREGS
+0001CC                                    (2/177)323+***      REGISTER EQUATES
+0001CC                                    (2/178)324+*
+0001CC                                    (2/181)326+* GENERAL  REGISTERS
+0001CC                  00000000          (2/183)328+R0        EQU  0
+0001CC                  00000001          (2/184)329+R1        EQU  1
+0001CC                  00000002          (2/185)330+R2        EQU  2
+0001CC                  00000003          (2/186)331+R3        EQU  3
+0001CC                  00000004          (2/187)332+R4        EQU  4
+0001CC                  00000005          (2/188)333+R5        EQU  5
+0001CC                  00000006          (2/189)334+R6        EQU  6
+0001CC                  00000007          (2/190)335+R7        EQU  7
+0001CC                  00000008          (2/191)336+R8        EQU  8
+0001CC                  00000009          (2/192)337+R9        EQU  9
+0001CC                  0000000A          (2/193)338+R10       EQU  10
+0001CC                  0000000B          (2/194)339+R11       EQU  11
+0001CC                  0000000C          (2/195)340+R12       EQU  12
+0001CC                  0000000D          (2/196)341+R13       EQU  13
+0001CC                  0000000E          (2/197)342+R14       EQU  14
+0001CC                  0000000F          (2/198)343+R15       EQU  15
+0001CC                                    (2/200)345+* FLOATING POINT REGISTERS
+0001CC                  00000000          (2/202)347+F0        EQU  0  L0
+0001CC                  00000001          (2/203)348+F1        EQU  1  L1
+0001CC                  00000002          (2/204)349+F2        EQU  2  L0+
+0001CC                  00000003          (2/205)350+F3        EQU  3  L1+
+0001CC                  00000004          (2/206)351+F4        EQU  4  L4
+0001CC                  00000005          (2/207)352+F5        EQU  5  L5
+0001CC                  00000006          (2/208)353+F6        EQU  6  L4+
+0001CC                  00000007          (2/209)354+F7        EQU  7  L5+
+0001CC                  00000008          (2/210)355+F8        EQU  8  L8
+0001CC                  00000009          (2/211)356+F9        EQU  9  L9
+0001CC                  0000000A          (2/212)357+F10       EQU  10 L8+
+0001CC                  0000000B          (2/213)358+F11       EQU  11 L9+
+0001CC                  0000000C          (2/214)359+F12       EQU  12 L12
+0001CC                  0000000D          (2/215)360+F13       EQU  13 L13
+0001CC                  0000000E          (2/216)361+F14       EQU  14 L12+
+0001CC                  0000000F          (2/217)362+F15       EQU  15 L13+
+0001CC                                    (2/219)364+* EXTENDED CONTROL REGISTERS
+0001CC                  00000000          (2/221)366+C0        EQU  0
+0001CC                  00000001          (2/222)367+C1        EQU  1
+0001CC                  00000002          (2/223)368+C2        EQU  2
+0001CC                  00000003          (2/224)369+C3        EQU  3
+0001CC                  00000004          (2/225)370+C4        EQU  4
+0001CC                  00000005          (2/226)371+C5        EQU  5
+0001CC                  00000006          (2/227)372+C6        EQU  6
+0001CC                  00000007          (2/228)373+C7        EQU  7
+0001CC                  00000008          (2/229)374+C8        EQU  8
+0001CC                  00000009          (2/230)375+C9        EQU  9
+0001CC                  0000000A          (2/231)376+C10       EQU  10
+0001CC                  0000000B          (2/232)377+C11       EQU  11
+0001CC                  0000000C          (2/233)378+C12       EQU  12
+0001CC                  0000000D          (2/234)379+C13       EQU  13
+0001CC                  0000000E          (2/235)380+C14       EQU  14
+0001CC                  0000000F          (2/236)381+C15       EQU  15
+0001CC                                    (1/268)383 *
+0001CC                                    (1/269)384 **********************************************************************
+0001CC                                    (1/270)385 * DATA
+0001CC                                    (1/271)386 **********************************************************************
+0001CC 0000004C                           (1/272)387 TABSIZM4 DC    A(TABLEEND-TABLE-4)    TABLE SIZE MINUS 4
+0001D0 00000004                           (1/273)388 F04      DC      F'4'    CONSTANT 4  (F4 IS USED BY MACRO ZMFACC)
+0001D4 00000008                           (1/274)389 F08      DC      F'8'    CONSTANT 8  (F8 IS USED BY MACRO ZMFACC)
+0001D8 FFFFFFFC                           (1/275)390 FFFFFFFC DC      X'FFFFFFFC'  TWO LOW ORDER BITS = 00
+0001DC                                    (1/276)391 STACK    DS      50F     STACK
+0002A4                                    (1/277)392          ZMFACC  INPUT,START
+0002A4                                    (2/247)393+INPUTSTR DS    0F
+0002A4                                    (1/278)395          ZMFACC  OUTPUT,START
+0002A4                                    (2/261)396+OUTPUTST DS    0F
+0002A4 000000500000004C                   (1/279)398 TABLE    DC    20A(TABLEEND-*)
+0002F4                  000002F4          (1/280)399 TABLEEND EQU *
+0002F4                                    (1/281)400          ZMFACC  INPUT,END
+0002F4                  000002F4          (2/250)401+INPUTEND  EQU  *
+0002F4                                    (1/282)403          ZMFACC  OUTPUT,END
+0002F4                  000002F4          (2/264)404+OUTPUTEN  EQU  *
+0002F4                                    (1/283)406 *
+0002F4                                    (1/284)407          END 
+0002F8 000002A4         =A(INPUTSTR)
+0002FC 000002F4         =A(INPUTEND)
+000300 C99597A4A340C199 =CL60'Input Area'
+00033C 000002A4         =A(OUTPUTST)
+000340 000002F4         =A(OUTPUTEN)
+000344 D6A4A397A4A340C1 =CL60'Output Area'
+Relocation Definitions
+ ESD=0001 LOC=000002F8 LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=000002FC LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=0000033C LEN=4 SIGN=+ XESD=0001
+ ESD=0001 LOC=00000340 LEN=4 SIGN=+ XESD=0001
+
+Symbol Table Listing
+
+ SYM=C0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=366 
+ SYM=C10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=376 
+ SYM=C1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=367 
+ SYM=C11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=377 
+ SYM=C12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=378 
+ SYM=C13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=379 
+ SYM=C14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=380 
+ SYM=C15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=381 
+ SYM=C2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=368 
+ SYM=C3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=369 
+ SYM=C4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=370 
+ SYM=C5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=371 
+ SYM=C6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=372 
+ SYM=C7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=373 
+ SYM=C8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=374 
+ SYM=C9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=375 
+ SYM=F0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=347 
+ SYM=F04      LOC=000001D0 LEN=00000004 ESD=0001 TYPE=REL  XREF=388 211 250 272 
+ SYM=F08      LOC=000001D4 LEN=00000004 ESD=0001 TYPE=REL  XREF=389 200 
+ SYM=F10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=357 
+ SYM=F1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=348 
+ SYM=F11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=358 
+ SYM=F12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=359 
+ SYM=F13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=360 
+ SYM=F14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=361 
+ SYM=F15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=362 
+ SYM=F2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=349 
+ SYM=F3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=350 
+ SYM=F4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=351 
+ SYM=F5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=352 
+ SYM=F6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=353 
+ SYM=F7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=354 
+ SYM=F8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=355 
+ SYM=F9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=356 
+ SYM=FFFFFFFC LOC=000001D8 LEN=00000004 ESD=0001 TYPE=REL  XREF=390 216 
+ SYM=GO0001   LOC=00000068 LEN=00000002 ESD=0001 TYPE=REL  XREF=88 83 
+ SYM=INIT     LOC=000000CE LEN=00000002 ESD=0001 TYPE=REL  XREF=125 
+ SYM=INPUTEND LOC=000002F4 LEN=00000001 ESD=0001 TYPE=REL  XREF=401 107 407 
+ SYM=INPUTSTR LOC=000002A4 LEN=00000004 ESD=0001 TYPE=REL  XREF=393 106 407 
+ SYM=OUTPUTEN LOC=000002F4 LEN=00000001 ESD=0001 TYPE=REL  XREF=404 310 407 
+ SYM=OUTPUTST LOC=000002A4 LEN=00000004 ESD=0001 TYPE=REL  XREF=396 309 407 
+ SYM=P4RAFA2  LOC=00000000 LEN=00000380 ESD=0001 TYPE=CST  XREF=81 83 
+ SYM=POP      LOC=000000E2 LEN=00000002 ESD=0001 TYPE=REL  XREF=197 212 295 
+ SYM=PUSH02   LOC=0000018A LEN=00000004 ESD=0001 TYPE=REL  XREF=285 
+ SYM=QSORT01  LOC=00000176 LEN=00000004 ESD=0001 TYPE=REL  XREF=267 229 256 
+ SYM=QSORT02  LOC=0000015C LEN=00000002 ESD=0001 TYPE=REL  XREF=255 245 247 249 
+ SYM=QSORT03  LOC=000000F4 LEN=00000002 ESD=0001 TYPE=REL  XREF=209 187 
+ SYM=QSORT    LOC=000000DE LEN=00000004 ESD=0001 TYPE=REL  XREF=187 
+ SYM=QSORTWH2 LOC=0000011E LEN=00000002 ESD=0001 TYPE=REL  XREF=228 263 
+ SYM=QSORTWH3 LOC=00000124 LEN=00000004 ESD=0001 TYPE=REL  XREF=233 240 
+ SYM=QSORTWH4 LOC=00000140 LEN=00000004 ESD=0001 TYPE=REL  XREF=244 234 236 238 251 
+ SYM=QSORTZ   LOC=000001A6 LEN=00000001 ESD=0001 TYPE=REL  XREF=297 198 
+ SYM=R0       LOC=00000000 LEN=00000001 ESD=0000 TYPE=ABS  XREF=328 258 260 267 269 
+ SYM=R10      LOC=0000000A LEN=00000001 ESD=0000 TYPE=ABS  XREF=338 129 201 202 285 
+  286 288 289 
+ SYM=R1       LOC=00000001 LEN=00000001 ESD=0000 TYPE=ABS  XREF=329 219 220 223 228 
+  233 235 237 239 246 255 258 261 
+ SYM=R11      LOC=0000000B LEN=00000001 ESD=0000 TYPE=ABS  XREF=339 
+ SYM=R12      LOC=0000000C LEN=00000001 ESD=0000 TYPE=ABS  XREF=340 
+ SYM=R13      LOC=0000000D LEN=00000001 ESD=0000 TYPE=ABS  XREF=341 
+ SYM=R14      LOC=0000000E LEN=00000001 ESD=0000 TYPE=ABS  XREF=342 
+ SYM=R15      LOC=0000000F LEN=00000001 ESD=0000 TYPE=ABS  XREF=343 
+ SYM=R2       LOC=00000002 LEN=00000001 ESD=0000 TYPE=ABS  XREF=330 224 228 235 244 
+  246 248 250 255 259 260 268 269 272 286 287 288 
+ SYM=R3       LOC=00000003 LEN=00000001 ESD=0000 TYPE=ABS  XREF=331 125 201 210 215 
+  219 221 223 248 267 270 285 
+ SYM=R4       LOC=00000004 LEN=00000001 ESD=0000 TYPE=ABS  XREF=332 126 202 209 224 
+  237 289 
+ SYM=R5       LOC=00000005 LEN=00000001 ESD=0000 TYPE=ABS  XREF=333 209 210 211 214 
+  215 216 217 220 259 261 268 270 
+ SYM=R6       LOC=00000006 LEN=00000001 ESD=0000 TYPE=ABS  XREF=334 
+ SYM=R7       LOC=00000007 LEN=00000001 ESD=0000 TYPE=ABS  XREF=335 217 221 233 244 
+ SYM=R8       LOC=00000008 LEN=00000001 ESD=0000 TYPE=ABS  XREF=336 127 217 219 220 
+  221 233 244 258 259 260 261 267 268 269 270 
+ SYM=R9       LOC=00000009 LEN=00000001 ESD=0000 TYPE=ABS  XREF=337 128 197 200 201 
+  202 285 286 288 289 290 
+ SYM=STACK    LOC=000001DC LEN=00000004 ESD=0001 TYPE=REL  XREF=391 129 
+ SYM=SV0001   LOC=00000008 LEN=00000004 ESD=0001 TYPE=REL  XREF=84 92 
+ SYM=TABLE    LOC=000002A4 LEN=00000004 ESD=0001 TYPE=REL  XREF=398 127 387 
+ SYM=TABLEEND LOC=000002F4 LEN=00000001 ESD=0001 TYPE=REL  XREF=399 387 398 
+ SYM=TABSIZM4 LOC=000001CC LEN=00000004 ESD=0001 TYPE=REL  XREF=387 126 
+ SYM=WTO#0002_EOT LOC=000000B6 LEN=00000001 ESD=0001 TYPE=REL  XREF=98 95 96 
+
+Literal Table Listing
+
+ LIT=A(INPUTEND) LOC=000002FC LEN=00000004 ESD=0001 POOL=0001 XREF=107 
+ LIT=A(INPUTSTR) LOC=000002F8 LEN=00000004 ESD=0001 POOL=0001 XREF=106 
+ LIT=A(OUTPUTEN) LOC=00000340 LEN=00000004 ESD=0001 POOL=0001 XREF=310 
+ LIT=A(OUTPUTST) LOC=0000033C LEN=00000004 ESD=0001 POOL=0001 XREF=309 
+ LIT=CL60'Input Area' LOC=00000300 LEN=0000003C ESD=0001 POOL=0001 XREF=110 
+ LIT=CL60'Output Area' LOC=00000344 LEN=0000003C ESD=0001 POOL=0001 XREF=313 
+ 
+AZ390I total mnote warnings = 1
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 4
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+P4RAFA2   MZ390 ENDED   RC= 4 MEM(MB)= MB IO=1875

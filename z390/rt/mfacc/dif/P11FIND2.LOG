@@ -1,0 +1,19 @@
+Comparing files MFACC\P11FIND2.LOG and RT\MFACC\SAVE\P11FIND2.LOG
+***** MFACC\P11FIND2.LOG
+EZ390I program = mfacc\P11FIND2.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  SYSCPY(mfacc+mac) systerm(mfacc\rtmfacc)
+***** RT\MFACC\SAVE\P11FIND2.LOG
+EZ390I program = mfacc\P11FIND2.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  SYSCPY(mfacc+mac) systerm(mfacc\rtmfacc)
+*****
+
+***** MFACC\P11FIND2.LOG
+EZ390I total errors         = 0
+P11FIND2  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=174 INS=9918006
+***** RT\MFACC\SAVE\P11FIND2.LOG
+EZ390I total errors         = 0
+P11FIND2  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=172 INS=9918006
+*****
+

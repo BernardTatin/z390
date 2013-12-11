@@ -1,0 +1,11 @@
+Comparing files SORT\TESTSRT2.LOG and RT\SORT\SAVE\TESTSRT2.LOG
+***** SORT\TESTSRT2.LOG
+EZ390I program = sort\TESTSRT2.390
+EZ390I options = NOTIMING systerm(sort\rtsort)
+TESTSRT2 RECORDS IN SEQUENCE OK
+***** RT\SORT\SAVE\TESTSRT2.LOG
+EZ390I program = sort\TESTSRT2.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) NOTIMING systerm(sort\rtsort)
+TESTSRT2 RECORDS IN SEQUENCE OK
+*****
+

@@ -1,0 +1,216 @@
+Comparing files GUAM\DEMO\DEMOGUI5.STA and RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 START
+DEMOGUI5  MZ390 Copyright 2011 Automated Software Tools Corporation
+DEMOGUI5  MZ390 z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 START
+DEMOGUI5  MZ390 Copyright 2010 Automated Software Tools Corporation
+DEMOGUI5  MZ390 z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 program = guam\demo\DEMOGUI5.MLC
+DEMOGUI5  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 program = guam\demo\DEMOGUI5.MLC
+DEMOGUI5  MZ390 options = sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) guam
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=PCOPT
+DEMOGUI5  MZ390 final_options=NOPDSMEM8
+DEMOGUI5  MZ390 final_options=NOPRINTALL
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=PCOPT
+DEMOGUI5  MZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=NOTRACEG
+DEMOGUI5  MZ390 final_options=NOTRACEI
+DEMOGUI5  MZ390 final_options=NOTRACEL
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=NOTRACEG
+DEMOGUI5  MZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=MINWIDTH=150
+DEMOGUI5  MZ390 final_options=MNOTE=0
+DEMOGUI5  MZ390 final_options=PARM=
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=MINWIDTH=150
+DEMOGUI5  MZ390 final_options=PARM=
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=TESTDD=
+DEMOGUI5  MZ390 final_options=TIME=60
+DEMOGUI5  MZ390 final_options=TRACE=
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 final_options=TESTDD=
+DEMOGUI5  MZ390 final_options=TIME=15
+DEMOGUI5  MZ390 final_options=TRACE=
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  MZ390 total array expansions= 0
+DEMOGUI5  MZ390 total Keys            = 1689
+DEMOGUI5  MZ390 Key searches          = 3443
+DEMOGUI5  MZ390 Key avg comps         = 0
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  MZ390 total array expansions= 0
+DEMOGUI5  MZ390 total Keys            = 1551
+DEMOGUI5  MZ390 Key searches          = 3305
+DEMOGUI5  MZ390 Key avg comps         = 0
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  AZ390 alloc passes          = 2
+DEMOGUI5  AZ390 Keys                  = 1367
+DEMOGUI5  AZ390 Key searches          = 2158
+DEMOGUI5  AZ390 Key avg comps         = 0
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  AZ390 alloc passes          = 2
+DEMOGUI5  AZ390 Keys                  = 1229
+DEMOGUI5  AZ390 Key searches          = 2020
+DEMOGUI5  AZ390 Key avg comps         = 0
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  AZ390 total az390 errors    = 0
+DEMOGUI5  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=2531
+DEMOGUI5  LZ390 START
+DEMOGUI5  LZ390 Copyright 2011 Automated Software Tools Corporation
+DEMOGUI5  LZ390 z390 is licensed under GNU General Public License
+DEMOGUI5  LZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+DEMOGUI5  LZ390 program = guam\demo\DEMOGUI5.OBJ
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  AZ390 total az390 errors    = 0
+DEMOGUI5  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=2528
+DEMOGUI5  LZ390 START
+DEMOGUI5  LZ390 Copyright 2010 Automated Software Tools Corporation
+DEMOGUI5  LZ390 z390 is licensed under GNU General Public License
+DEMOGUI5  LZ390 options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI5  LZ390 program = guam\demo\DEMOGUI5.OBJ
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=PCOPT
+DEMOGUI5  LZ390 final_options=NOPDSMEM8
+DEMOGUI5  LZ390 final_options=NOPRINTALL
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=PCOPT
+DEMOGUI5  LZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=NOTRACEG
+DEMOGUI5  LZ390 final_options=NOTRACEI
+DEMOGUI5  LZ390 final_options=NOTRACEL
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=NOTRACEG
+DEMOGUI5  LZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=MINWIDTH=150
+DEMOGUI5  LZ390 final_options=MNOTE=0
+DEMOGUI5  LZ390 final_options=PARM=
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=MINWIDTH=150
+DEMOGUI5  LZ390 final_options=PARM=
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=TESTDD=
+DEMOGUI5  LZ390 final_options=TIME=60
+DEMOGUI5  LZ390 final_options=TRACE=
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  LZ390 final_options=TESTDD=
+DEMOGUI5  LZ390 final_options=TIME=15
+DEMOGUI5  LZ390 final_options=TRACE=
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  LZ390 total errors          = 0
+DEMOGUI5  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=234
+DEMOGUI5  EZ390 START
+DEMOGUI5  EZ390 Copyright 2011 Automated Software Tools Corporation
+DEMOGUI5  EZ390 z390 is licensed under GNU General Public License
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  LZ390 total errors          = 0
+DEMOGUI5  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=231
+DEMOGUI5  EZ390 START
+DEMOGUI5  EZ390 Copyright 2010 Automated Software Tools Corporation
+DEMOGUI5  EZ390 z390 is licensed under GNU General Public License
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  EZ390 program = guam\demo\DEMOGUI5.390
+DEMOGUI5  EZ390 options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) guam
+DEMOGUI5  EZ390 final_options=ALIGN
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  EZ390 program = guam\demo\DEMOGUI5.390
+DEMOGUI5  EZ390 options = @rt\RT1=(bal notiming stats) guam
+DEMOGUI5  EZ390 final_options=ALIGN
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=PCOPT
+DEMOGUI5  EZ390 final_options=NOPDSMEM8
+DEMOGUI5  EZ390 final_options=NOPRINTALL
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=PCOPT
+DEMOGUI5  EZ390 final_options=NOPRINTALL
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=NOTRACEG
+DEMOGUI5  EZ390 final_options=NOTRACEI
+DEMOGUI5  EZ390 final_options=NOTRACEL
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=NOTRACEG
+DEMOGUI5  EZ390 final_options=NOTRACEL
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=MINWIDTH=150
+DEMOGUI5  EZ390 final_options=MNOTE=0
+DEMOGUI5  EZ390 final_options=PARM=
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=MINWIDTH=150
+DEMOGUI5  EZ390 final_options=PARM=
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=TESTDD=
+DEMOGUI5  EZ390 final_options=TIME=60
+DEMOGUI5  EZ390 final_options=TRACE=
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  EZ390 final_options=TESTDD=
+DEMOGUI5  EZ390 final_options=TIME=15
+DEMOGUI5  EZ390 final_options=TRACE=
+*****
+
+***** GUAM\DEMO\DEMOGUI5.STA
+DEMOGUI5  EZ390 VSAM operations       = 0
+DEMOGUI5  EZ390 Keys                  = 2467
+DEMOGUI5  EZ390 Key searches          = 2
+DEMOGUI5  EZ390 Key avg comps         = 1
+DEMOGUI5  EZ390 Key max comps         = 1
+DEMOGUI5  EZ390 total errors          = 0
+DEMOGUI5  EZ390 ENDED   RC=16 MEM(MB)= MB IO=170 INS=48
+***** RT\GUAM\DEMO\SAVE\DEMOGUI5.STA
+DEMOGUI5  EZ390 VSAM operations       = 0
+DEMOGUI5  EZ390 Keys                  = 2212
+DEMOGUI5  EZ390 Key searches          = 2
+DEMOGUI5  EZ390 Key avg comps         = 0
+DEMOGUI5  EZ390 Key max comps         = 0
+DEMOGUI5  EZ390 total errors          = 0
+DEMOGUI5  EZ390 ENDED   RC=16 MEM(MB)= MB IO=167 INS=48
+*****
+

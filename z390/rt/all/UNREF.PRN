@@ -1,0 +1,15 @@
+Comparing files LINKLIB\UNREF.PRN and RT\LINKLIB\SAVE\UNREF.PRN
+***** LINKLIB\UNREF.PRN
+AZ390I program = linklib\UNREF
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats ASCII 
+  SYSCPY(MAC+LINKLIB) systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\UNREF.PRN
+AZ390I program = linklib\UNREF
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) bal notiming stats ASCII SYSCPY(MAC+LINKLIB) 
+  systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

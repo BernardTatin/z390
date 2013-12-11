@@ -1,0 +1,176 @@
+Comparing files RT\TEST\TESTTST1.STA and RT\TEST\SAVE\TESTTST1.STA
+***** RT\TEST\TESTTST1.STA
+TESTTST1  MZ390 program = rt\test\TESTTST1.MLC
+TESTTST1  MZ390 options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  MZ390 program = rt\test\TESTTST1.MLC
+TESTTST1  MZ390 options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  MZ390 final_options=PROFILE=
+TESTTST1  MZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTTST1.
+TESTTST1  MZ390 final_options=STA
+TESTTST1  MZ390 final_options=SYSPARM=
+TESTTST1  MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTTST1  MZ390 final_options=ERR
+TESTTST1  MZ390 final_options=TESTDD=SYSUT1
+TESTTST1  MZ390 final_options=TIME=15
+TESTTST1  MZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  MZ390 final_options=PROFILE=
+TESTTST1  MZ390 final_options=STATS=W:\work\z390\rt\test\TESTTST1.STA
+TESTTST1  MZ390 final_options=SYSPARM=
+TESTTST1  MZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTTST1  MZ390 final_options=TESTDD=SYSUT1
+TESTTST1  MZ390 final_options=TIME=60
+TESTTST1  MZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  MZ390 final_options=SYSBAL=rt\test\
+TESTTST1  MZ390 final_options=SYSCPY=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTTST1  MZ390 final_options=SYSDAT=rt\test\
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  MZ390 final_options=SYSBAL=rt\test\
+TESTTST1  MZ390 final_options=SYSCPY=W:\work\z390\mac+.
+TESTTST1  MZ390 final_options=SYSDAT=rt\test\
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  MZ390 final_options=SYSLST=rt\test\
+TESTTST1  MZ390 final_options=SYSMAC=C:\PROGRA~2\AUTOMA~1\z390\mac+.
+TESTTST1  MZ390 final_options=SYSMLC=rt\test\
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  MZ390 final_options=SYSLST=rt\test\
+TESTTST1  MZ390 final_options=SYSMAC=W:\work\z390\mac+.
+TESTTST1  MZ390 final_options=SYSMLC=rt\test\
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  MZ390 total pcode exec opt  = 2
+TESTTST1  MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTTST1.MLC
+TESTTST1  MZ390 FID=  2 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\RT1.MAC
+TESTTST1  MZ390 FID=  3 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBENTRY.MAC
+TESTTST1  MZ390 FID=  4 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\WTO.MAC
+TESTTST1  MZ390 FID=  5 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\SUBEXIT.MAC
+TESTTST1  MZ390 FID=  6 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\ABEND.MAC
+TESTTST1  MZ390 FID=  7 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\EQUREGS.MAC
+TESTTST1  MZ390 FID=  8 ERR= 0 C:\PROGRA~2\AUTOMA~1\z390\mac\LX.MAC
+TESTTST1  MZ390 total mnote warnings  = 0
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  MZ390 total pcode exec opt  = 2
+TESTTST1  MZ390 FID=  1 ERR= 0 W:\work\z390\rt\test\TESTTST1.MLC
+TESTTST1  MZ390 FID=  2 ERR= 0 W:\work\z390\mac\RT1.MAC
+TESTTST1  MZ390 FID=  3 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+TESTTST1  MZ390 FID=  4 ERR= 0 W:\work\z390\mac\WTO.MAC
+TESTTST1  MZ390 FID=  5 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+TESTTST1  MZ390 FID=  6 ERR= 0 W:\work\z390\mac\ABEND.MAC
+TESTTST1  MZ390 FID=  7 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+TESTTST1  MZ390 FID=  8 ERR= 0 W:\work\z390\mac\LX.MAC
+TESTTST1  MZ390 total mnote warnings  = 0
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  AZ390 total az390 errors    = 0
+TESTTST1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=2197
+TESTTST1  LZ390 START
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  AZ390 total az390 errors    = 0
+TESTTST1  MZ390 ENDED   RC= 0 MEM(MB)= MB IO=2195
+TESTTST1  LZ390 START
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  LZ390 z390 is licensed under GNU General Public License
+TESTTST1  LZ390 options = bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  LZ390 z390 is licensed under GNU General Public License
+TESTTST1  LZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  LZ390 final_options=PROFILE=
+TESTTST1  LZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTTST1.
+TESTTST1  LZ390 final_options=STA
+TESTTST1  LZ390 final_options=SYSPARM=
+TESTTST1  LZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTTST1  LZ390 final_options=ERR
+TESTTST1  LZ390 final_options=TESTDD=SYSUT1
+TESTTST1  LZ390 final_options=TIME=15
+TESTTST1  LZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  LZ390 final_options=PROFILE=
+TESTTST1  LZ390 final_options=STATS=W:\work\z390\rt\test\TESTTST1.STA
+TESTTST1  LZ390 final_options=SYSPARM=
+TESTTST1  LZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTTST1  LZ390 final_options=TESTDD=SYSUT1
+TESTTST1  LZ390 final_options=TIME=60
+TESTTST1  LZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  LZ390 total errors          = 0
+TESTTST1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=239
+TESTTST1  EZ390 START
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  LZ390 total errors          = 0
+TESTTST1  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=237
+TESTTST1  EZ390 START
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  EZ390 program = rt\test\TESTTST1.390
+TESTTST1  EZ390 options = bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  EZ390 program = rt\test\TESTTST1.390
+TESTTST1  EZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats test(SYSUT1) 
+  systerm(rt\test\rttest)
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  EZ390 final_options=PROFILE=
+TESTTST1  EZ390 final options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTTST1.
+TESTTST1  EZ390 final_options=STA
+TESTTST1  EZ390 final_options=SYSPARM=
+TESTTST1  EZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\rttest.
+TESTTST1  EZ390 final_options=ERR
+TESTTST1  EZ390 final_options=TESTDD=SYSUT1
+TESTTST1  EZ390 final_options=TIME=15
+TESTTST1  EZ390 final_options=TRACE=
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  EZ390 final_options=PROFILE=
+TESTTST1  EZ390 final_options=STATS=W:\work\z390\rt\test\TESTTST1.STA
+TESTTST1  EZ390 final_options=SYSPARM=
+TESTTST1  EZ390 final_options=SYSTERM=W:\work\z390\rt\test\rttest.ERR
+TESTTST1  EZ390 final_options=TESTDD=SYSUT1
+TESTTST1  EZ390 final_options=TIME=60
+TESTTST1  EZ390 final_options=TRACE=
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  EZ390 final_options=IPL=
+TESTTST1  EZ390 final options=LOG=C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTTST1.LO
+TESTTST1  EZ390 final_options=G
+TESTTST1  EZ390 final_options=SYS390=rt\test\+linklib
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  EZ390 final_options=IPL=
+TESTTST1  EZ390 final_options=LOG=W:\work\z390\rt\test\TESTTST1.LOG
+TESTTST1  EZ390 final_options=SYS390=rt\test\+linklib
+*****
+
+***** RT\TEST\TESTTST1.STA
+TESTTST1  EZ390 total errors          = 0
+TESTTST1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=271 INS=51
+***** RT\TEST\SAVE\TESTTST1.STA
+TESTTST1  EZ390 total errors          = 0
+TESTTST1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=268 INS=51
+*****
+

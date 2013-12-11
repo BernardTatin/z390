@@ -1,0 +1,14 @@
+Comparing files LINKLIB\REPRO.PRN and RT\LINKLIB\SAVE\REPRO.PRN
+***** LINKLIB\REPRO.PRN
+AZ390I program = linklib\REPRO
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) bal notiming stats 
+  systerm(linklib\rtlink)
+External Symbol Definitions
+***** RT\LINKLIB\SAVE\REPRO.PRN
+AZ390I program = linklib\REPRO
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) bal notiming stats systerm(linklib\rtlink)
+External Symbol Definitions
+*****
+

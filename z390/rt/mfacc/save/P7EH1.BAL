@@ -1,0 +1,174 @@
+*********************************************************************
+* MAINFRAME ASSEMBLER PROBLEM 7 - CALC AND DISPLAY 311/99
+* USING SINGLE PRECISION FLOATING POINT WITHOUT USING CTD OR
+* OTHER LIBRARY SERVICES.
+*********************************************************************
+* 12/20/07 EH1  SOLUTION SUBMITTED BY JOHN ERHMAN USING AW INSTR.
+* 12/21/07 DSH1 ADDED Z390 DISPLAY OF EH AND DH INTERMEDIATE RESULTS
+*               USING CTD AND WTO FOR VERIFICATION
+* 12/21/07 DSH2 ADDED Z390 ALTERNATE CODE PATH FOR AW SINCE
+*               Z390 MAINTANINS ALL FP VALUES IN CACHE FOR PERFORMANCE
+*               USING NORMALIZED SINGLE, DOUBLE, OR BIGDECIMAL JAVA
+*               FORMAT WHICH PREVENTS AW UNNORMALIZED INSTR. FROM
+*               WORKING AS INTENDED. SEE NEW Z390 PTF 767 TO DISABLE
+*               ALL THE UNNORMALIZED FP INSTRUCTIONS RATHER THAN
+*               RETURNING NORMALIZED RESULT WHICH MAY NOT BE DESIRED.
+* 05/29/08 DSH3 RPI 767 REMOVE WORK-AROUND AND TEST NEW AW SUPPORT
+*********************************************************************
+*MCALL #=     1 LV= 1 P7EH1    ZMFACC CODE,START,NAME='John Erhman'
+         MNOTE 4,'No RUNSYS= on first ZMFACC, 390 assumed.'
+         MNOTE 'ZRUNSYS=390'                          DSH2
+P7EH1    CSECT 
+         STM   14,12,12(13)
+         BAL   15,GO0001-P7EH1(15)
+SV0001    DC    18F'0'
+         DC    CL8'P7EH1'
+         DC    CL8'01/02/05'
+         DC    CL8'22.33'
+GO0001    DS    0H
+         ST    15,8(13)
+         ST    13,4(15)
+         LR    13,15
+      USING SV0001,13
+*MCALL #=     2 LV= 2          WTO   'ZMFACC Solution for problem P7EH1X
+                by John Erhman using RUNSYS=390'   DSH3
+         BRAS  1,*+(WTO#0002_EOT-*+1)/2*2
+         DC    AL2(WTO#0002_EOT-*,0),C'ZMFACC Solution for problem P7EHX
+               1 by John Erhman using RUNSYS=390'
+WTO#0002_EOT     EQU *
+         SVC   35
+*MEXIT #=     2 LV= 2 WTO
+*MCALL #=     3 LV= 2          ZMFACC DUMP,ID=1,ST=INPUTSTR,END=INPUTENX
+               D,NAME='Input Area'
+         DS    0H
+*MCALL #=     4 LV= 3          SNAP  ID=1,PDATA=,STORAGE=(INPUTSTR,INPUX
+               TEND),TEXT='Input Area'
+         L     14,=A(INPUTSTR)
+         L     15,=A(INPUTEND)
+         IILL  0,1                  RPI158
+         IILH 0,32768               RPI158
+         LA    1,=CL60'Input Area'
+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+*MEXIT #=     4 LV= 3 SNAP
+*MEXIT #=     3 LV= 2 ZMFACC
+*MEXIT #=     1 LV= 1 ZMFACC
+         LE    F0,=E'311'
+         DE    F0,=E'99'
+         MVI   ESign,C'+'
+         MVI   EDecimal,C'.'
+         MD    F0,=D'.1'
+         MD    F0,=D'1.E6'
+         AD    F0,=D'.5'
+         AW    F0,UnNormer
+         STD   F0,DWord
+         L     R0,DWord+4
+         CVD   R0,DWord
+         OI    DWord+7,X'0F'
+         UNPK  EDigits,DWord
+         MVI   ExoneE,C'E'
+         MVI   ExpSign,C'+'
+         LHI   R1,1
+         CVD   R1,DWord
+         OI    DWord+7,X'0F'
+         UNPK  Exponent,DWord
+*MCALL #=     5 LV= 1          ZMFACC CODE,END
+*MCALL #=     6 LV= 2       ZMFACC DUMP,ID=2,ST=OUTPUTST,END=OUTPUTEN,NX
+               AME='Output Area' RP2
+         DS    0H
+*MCALL #=     7 LV= 3          SNAP  ID=2,PDATA=,STORAGE=(OUTPUTST,OUTPX
+               UTEN),TEXT='Output Area'
+         L     14,=A(OUTPUTST)
+         L     15,=A(OUTPUTEN)
+         IILL  0,2                  RPI158
+         IILH 0,32768               RPI158
+         LA    1,=CL60'Output Area'
+         SVC   51  SNAP DUMP R0=FLAGS,ID,R1=A(TEXT),R14-15=A(LOW,HIGH)
+*MEXIT #=     7 LV= 3 SNAP
+*MEXIT #=     6 LV= 2 ZMFACC
+         L     13,4(,13)
+         L     14,12(,13)
+         LM    2,12,28(13)
+         SR    15,15
+         BR    14
+*        YREGS
+***      REGISTER EQUATES
+*
+         SPACE 2
+* GENERAL  REGISTERS
+         SPACE 
+R0        EQU  0
+R1        EQU  1
+R2        EQU  2
+R3        EQU  3
+R4        EQU  4
+R5        EQU  5
+R6        EQU  6
+R7        EQU  7
+R8        EQU  8
+R9        EQU  9
+R10       EQU  10
+R11       EQU  11
+R12       EQU  12
+R13       EQU  13
+R14       EQU  14
+R15       EQU  15
+         SPACE 
+* FLOATING POINT REGISTERS
+         SPACE 
+F0        EQU  0  L0
+F1        EQU  1  L1
+F2        EQU  2  L0+
+F3        EQU  3  L1+
+F4        EQU  4  L4
+F5        EQU  5  L5
+F6        EQU  6  L4+
+F7        EQU  7  L5+
+F8        EQU  8  L8
+F9        EQU  9  L9
+F10       EQU  10 L8+
+F11       EQU  11 L9+
+F12       EQU  12 L12
+F13       EQU  13 L13
+F14       EQU  14 L12+
+F15       EQU  15 L13+
+         SPACE 
+* EXTENDED CONTROL REGISTERS
+         SPACE 
+C0        EQU  0
+C1        EQU  1
+C2        EQU  2
+C3        EQU  3
+C4        EQU  4
+C5        EQU  5
+C6        EQU  6
+C7        EQU  7
+C8        EQU  8
+C9        EQU  9
+C10       EQU  10
+C11       EQU  11
+C12       EQU  12
+C13       EQU  13
+C14       EQU  14
+C15       EQU  15
+*MEXIT #=     5 LV= 1 ZMFACC
+DWord    DC    D'0'
+UnNormer DC    X'4E00000000000000'
+*MCALL #=     8 LV= 1          ZMFACC INPUT,START
+INPUTSTR DS    0F
+*MEXIT #=     8 LV= 1 ZMFACC
+*MCALL #=     9 LV= 1          ZMFACC OUTPUT,START
+OUTPUTST DS    0F
+*MEXIT #=     9 LV= 1 ZMFACC
+ESign    DS    C
+EDecimal DS    C
+EDigits  DS    CL6
+ExoneE   DS    C
+ExpSign  DS    C
+Exponent DS    CL2
+*MCALL #=    10 LV= 1          ZMFACC INPUT,END
+INPUTEND  EQU  *
+*MEXIT #=    10 LV= 1 ZMFACC
+*MCALL #=    11 LV= 1          ZMFACC OUTPUT,END
+OUTPUTEN  EQU  *
+*MEXIT #=    11 LV= 1 ZMFACC
+         END 

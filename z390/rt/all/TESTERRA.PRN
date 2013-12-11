@@ -1,0 +1,23 @@
+Comparing files RT\TEST\TESTERRA.PRN and RT\TEST\SAVE\TESTERRA.PRN
+***** RT\TEST\TESTERRA.PRN
+AZ390I program = rt\test\TESTERRA
+AZ390I options = bal notiming sysmac(mac) syscpy(mac) stats 
+  chkmac(2) systerm(rt\test\rttest)
+External Symbol Definitions
+***** RT\TEST\SAVE\TESTERRA.PRN
+AZ390I program = rt\test\TESTERRA
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats chkmac(2) systerm(rt\test\rttest)
+External Symbol Definitions
+*****
+
+***** RT\TEST\TESTERRA.PRN
+ 
+AZ390I FID=  1 ERR=   4 C:\Program Files (x86)\Automated Software Tools\z390\rt\test\TESTERRA.MLC
+AZ390I total mnote warnings = 6
+***** RT\TEST\SAVE\TESTERRA.PRN
+ 
+AZ390I FID=  1 ERR=   4 W:\work\z390\rt\test\TESTERRA.MLC
+AZ390I total mnote warnings = 6
+*****
+

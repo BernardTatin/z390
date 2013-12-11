@@ -1,0 +1,9 @@
+DEMO      LZ390 START
+LZ390I Copyright 2011 Automated Software Tools Corporation
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = notiming stats systerm(demo\rtdemo)
+LZ390I program = demo\DEMO.OBJ
+LZ390I ESD=DEMO     LOC=00000000 LEN=000000A0
+LZ390I INCLUDE = demo\DEMO.OBJ
+LZ390I total errors         = 0
+DEMO      LZ390 ENDED   RC= 0 MEM(MB)= MB IO=183

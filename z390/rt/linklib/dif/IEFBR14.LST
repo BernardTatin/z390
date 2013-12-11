@@ -1,0 +1,21 @@
+Comparing files LINKLIB\IEFBR14.LST and RT\LINKLIB\SAVE\IEFBR14.LST
+***** LINKLIB\IEFBR14.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = @rt\RT1=(bal notiming stats) sysobj(linklib) 
+  systerm(linklib\rtlink)
+LZ390I program = linklib\IEFBR14.OBJ
+***** RT\LINKLIB\SAVE\IEFBR14.LST
+LZ390I z390 is licensed under GNU General Public License
+LZ390I options = W:\work\z390\z390.OPT=(time(60)) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+LZ390I program = linklib\IEFBR14.OBJ
+*****
+
+***** LINKLIB\IEFBR14.LST
+LZ390I total errors         = 0
+IEFBR14   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=165
+***** RT\LINKLIB\SAVE\IEFBR14.LST
+LZ390I total errors         = 0
+IEFBR14   LZ390 ENDED   RC= 0 MEM(MB)= MB IO=163
+*****
+

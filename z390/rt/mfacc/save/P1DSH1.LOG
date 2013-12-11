@@ -1,0 +1,17 @@
+P1DSH1    EZ390 START
+EZ390I Copyright 2011 Automated Software Tools Corporation
+EZ390I z390 is licensed under GNU General Public License
+EZ390I program = mfacc\P1DSH1.390
+EZ390I options = @rt\RT1=(bal notiming stats) 
+  systerm(mfacc\rtmfacc)
+ZMFACC Solution for problem P1DSH1 by Don Higgins using RUNSYS=390
+SNAP DUMP ID=1 TEXT=Input Area
+ 000FFF3C *C6C9C5D3 C440C140 40404040 40404040* *FIELD A         *
+ 000FFF4C *40404040 C6C9C5D3 C440C240 40404040* *    FIELD B     *
+ 000FFF5C *40404040 40404040                  * *                *
+SNAP DUMP ID=2 TEXT=Output Area
+ 000FFF3C *C6C9C5D3 C440C240 40404040 40404040* *FIELD B         *
+ 000FFF4C *40404040 C6C9C5D3 C440C140 40404040* *    FIELD A     *
+ 000FFF5C *40404040 40404040                  * *                *
+EZ390I total errors         = 0
+P1DSH1    EZ390 ENDED   RC= 0 MEM(MB)= MB IO=170 INS=28

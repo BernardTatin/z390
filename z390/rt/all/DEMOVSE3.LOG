@@ -1,0 +1,21 @@
+Comparing files VSE\DEMO\DEMOVSE3.LOG and RT\VSE\DEMO\SAVE\DEMOVSE3.LOG
+***** VSE\DEMO\DEMOVSE3.LOG
+EZ390I program = vse\demo\DEMOVSE3.390
+EZ390I options = bal notiming stats sysmac(vse\mac+mac) 
+  systerm(vse\test\rtvse)
+DEMOVSE3 VSE COPY FILE SYSDSK TO SYSLST
+***** RT\VSE\DEMO\SAVE\DEMOVSE3.LOG
+EZ390I program = vse\demo\DEMOVSE3.390
+EZ390I options = W:\work\z390\z390.OPT=(time(60)) bal notiming stats 
+  sysmac(vse\mac+mac) systerm(vse\test\rtvse)
+DEMOVSE3 VSE COPY FILE SYSDSK TO SYSLST
+*****
+
+***** VSE\DEMO\DEMOVSE3.LOG
+EZ390I total errors         = 0
+DEMOVSE3  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=171 INS=64
+***** RT\VSE\DEMO\SAVE\DEMOVSE3.LOG
+EZ390I total errors         = 0
+DEMOVSE3  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=168 INS=64
+*****
+

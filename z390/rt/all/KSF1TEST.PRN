@@ -1,0 +1,15 @@
+Comparing files VSAM\TEST\KSF1TEST.PRN and RT\VSAM\TEST\SAVE\KSF1TEST.PRN
+***** VSAM\TEST\KSF1TEST.PRN
+AZ390I program = vsam\test\KSF1TEST
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @vsam\rtvsam=(notiming stats tracev 
+  traceq dump) systerm(w:\work\z390\vsam\test\rtvsam)
+External Symbol Definitions
+***** RT\VSAM\TEST\SAVE\KSF1TEST.PRN
+AZ390I program = vsam\test\KSF1TEST
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @vsam\rtvsam=(notiming stats tracev traceq dump) 
+  systerm(w:\work\z390\vsam\test\rtvsam)
+External Symbol Definitions
+*****
+

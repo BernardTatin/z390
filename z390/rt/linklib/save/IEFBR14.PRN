@@ -1,0 +1,28 @@
+IEFBR14   MZ390 START
+AZ390I Copyright 2011 Automated Software Tools Corporation
+AZ390I z390 is licensed under GNU General Public License
+AZ390I program = linklib\IEFBR14
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  sysobj(linklib) systerm(linklib\rtlink)
+External Symbol Definitions
+ ESD=0001 LOC=00000000 LEN=00000008 TYPE=CST NAME=IEFBR14
+Assembler Listing
+000000                                        (1/1)1 IEFBR14  CSECT 
+000000 1BFF                                   (1/2)2          SR    15,15   ZERO RETURN CODE
+000002 07FE                                   (1/3)3          BR    14      RETURN TO CALLER
+000004                                        (1/4)4          END 
+
+Symbol Table Listing
+
+ SYM=IEFBR14  LOC=00000000 LEN=00000008 ESD=0001 TYPE=CST  XREF=1 
+
+Literal Table Listing
+
+ 
+AZ390I total mnote warnings = 0
+AZ390I total mnote errors   = 0
+AZ390I max   mnote level    = 0
+AZ390I total mz390 errors   = 0
+AZ390I total az390 errors   = 0
+IEFBR14   MZ390 ENDED   RC= 0 MEM(MB)= MB IO=54

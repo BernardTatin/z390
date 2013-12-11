@@ -1,0 +1,15 @@
+Comparing files MFACC\P11FIND1.PRN and RT\MFACC\SAVE\P11FIND1.PRN
+***** MFACC\P11FIND1.PRN
+AZ390I program = mfacc\P11FIND1
+AZ390I options = sysmac(C:\PROGRA~2\AUTOMA~1\z390\mac+.) 
+  syscpy(C:\PROGRA~2\AUTOMA~1\z390\mac+.) @rt\RT1=(bal notiming stats) 
+  SYSCPY(mfacc+mac) systerm(mfacc\rtmfacc)
+External Symbol Definitions
+***** RT\MFACC\SAVE\P11FIND1.PRN
+AZ390I program = mfacc\P11FIND1
+AZ390I options = W:\work\z390\z390.OPT=(time(60)) sysmac(W:\work\z390\mac+.) 
+  syscpy(W:\work\z390\mac+.) @rt\RT1=(bal notiming stats) SYSCPY(mfacc+mac) 
+  systerm(mfacc\rtmfacc)
+External Symbol Definitions
+*****
+

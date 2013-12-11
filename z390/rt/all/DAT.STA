@@ -1,0 +1,60 @@
+Comparing files LINKLIB\DAT.STA and RT\LINKLIB\SAVE\DAT.STA
+***** LINKLIB\DAT.STA
+DAT       MZ390 program = linklib\DAT.MLC
+DAT       MZ390 options = bal notiming sysmac(mac) syscpy(mac) stats 
+  systerm(linklib\rtlink)
+DAT       MZ390 final_options=ALIGN
+***** RT\LINKLIB\SAVE\DAT.STA
+DAT       MZ390 program = linklib\DAT.MLC
+DAT       MZ390 options = W:\work\z390\z390.OPT=(time(60)) bal notiming sysmac(mac) 
+  syscpy(mac) stats systerm(linklib\rtlink)
+DAT       MZ390 final_options=ALIGN
+*****
+
+***** LINKLIB\DAT.STA
+DAT       MZ390 final_options=PROFILE=
+DAT       MZ390 final_options=STATS=C:\Program Files (x86)\Automated Software Tools\z390\linklib\DAT.STA
+DAT       MZ390 final_options=SYSPARM=
+DAT       MZ390 final options=SYSTERM=C:\Program Files (x86)\Automated Software Tools\z390\linklib\rtlink.
+DAT       MZ390 final_options=ERR
+DAT       MZ390 final_options=TESTDD=
+DAT       MZ390 final_options=TIME=15
+DAT       MZ390 final_options=TRACE=
+***** RT\LINKLIB\SAVE\DAT.STA
+DAT       MZ390 final_options=PROFILE=
+DAT       MZ390 final_options=STATS=W:\work\z390\linklib\DAT.STA
+DAT       MZ390 final_options=SYSPARM=
+DAT       MZ390 final_options=SYSTERM=W:\work\z390\linklib\rtlink.ERR
+DAT       MZ390 final_options=TESTDD=
+DAT       MZ390 final_options=TIME=60
+DAT       MZ390 final_options=TRACE=
+*****
+
+***** LINKLIB\DAT.STA
+DAT       MZ390 total pcode exec opt  = 1
+DAT       MZ390 FID=  1 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\linklib\DAT.MLC
+DAT       MZ390 FID=  2 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\SUBENTRY.MAC
+DAT       MZ390 FID=  3 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\TIME.MAC
+DAT       MZ390 FID=  4 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\WTO.MAC
+DAT       MZ390 FID=  5 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\SUBEXIT.MAC
+DAT       MZ390 FID=  6 ERR= 0 C:\Program Files (x86)\Automated Software Tools\z390\mac\EQUREGS.MAC
+DAT       MZ390 total mnote warnings  = 0
+***** RT\LINKLIB\SAVE\DAT.STA
+DAT       MZ390 total pcode exec opt  = 1
+DAT       MZ390 FID=  1 ERR= 0 W:\work\z390\linklib\DAT.MLC
+DAT       MZ390 FID=  2 ERR= 0 W:\work\z390\mac\SUBENTRY.MAC
+DAT       MZ390 FID=  3 ERR= 0 W:\work\z390\mac\TIME.MAC
+DAT       MZ390 FID=  4 ERR= 0 W:\work\z390\mac\WTO.MAC
+DAT       MZ390 FID=  5 ERR= 0 W:\work\z390\mac\SUBEXIT.MAC
+DAT       MZ390 FID=  6 ERR= 0 W:\work\z390\mac\EQUREGS.MAC
+DAT       MZ390 total mnote warnings  = 0
+*****
+
+***** LINKLIB\DAT.STA
+DAT       AZ390 total az390 errors    = 0
+DAT       MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1791
+***** RT\LINKLIB\SAVE\DAT.STA
+DAT       AZ390 total az390 errors    = 0
+DAT       MZ390 ENDED   RC= 0 MEM(MB)= MB IO=1790
+*****
+
