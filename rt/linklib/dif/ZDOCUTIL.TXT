@@ -1,3 +1,0 @@
-Comparing files LINKLIB\ZDOCUTIL.TXT and RT\LINKLIB\SAVE\ZDOCUTIL.TXT
-FC: no differences encountered
-

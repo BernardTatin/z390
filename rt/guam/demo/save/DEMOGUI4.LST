@@ -1,9 +1,0 @@
-DEMOGUI4  LZ390 START
-LZ390I Copyright 2010 Automated Software Tools Corporation
-LZ390I z390 is licensed under GNU General Public License
-LZ390I options = @rt\RT1=(bal notiming stats) guam
-LZ390I program = guam\demo\DEMOGUI4.OBJ
-LZ390I ESD=DEMOGUI4 LOC=00000000 LEN=00000220
-LZ390I INCLUDE = guam\demo\DEMOGUI4.OBJ
-LZ390I total errors         = 0
-DEMOGUI4  LZ390 ENDED   RC= 0 MEM(MB)= MB IO=184

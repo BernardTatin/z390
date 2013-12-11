@@ -1,9 +1,0 @@
-DEMO      EZ390 START
-EZ390I Copyright 2011 Automated Software Tools Corporation
-EZ390I z390 is licensed under GNU General Public License
-EZ390I program = mvs\demo\DEMO.390
-EZ390I options = @rt\RT1=(bal notiming stats) 
-  sysmac(mvs\maclib+mac) systerm(mvs\test\rtmvs)
-HELLO WORLD
-EZ390I total errors         = 0
-DEMO      EZ390 ENDED   RC= 0 MEM(MB)= MB IO=154 INS=14

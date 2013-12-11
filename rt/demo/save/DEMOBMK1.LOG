@@ -1,8 +1,0 @@
-DEMOBMK1  EZ390 START
-EZ390I Copyright 2011 Automated Software Tools Corporation
-EZ390I z390 is licensed under GNU General Public License
-EZ390I program = demo\DEMOBMK1.390
-EZ390I options = notiming stats systerm(demo\rtdemo)
-DEMO2 Z390 FIRST EMULATION BENCHMARK FOR 2,000,000 INS
-EZ390I total errors         = 0
-DEMOBMK1  EZ390 ENDED   RC= 0 MEM(MB)= MB IO=153 INS=2000014

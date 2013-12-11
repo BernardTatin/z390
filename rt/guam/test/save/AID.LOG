@@ -1,7 +1,0 @@
-AID       EZ390 START
-EZ390I Copyright 2010 Automated Software Tools Corporation
-EZ390I z390 is licensed under GNU General Public License
-EZ390I program = guam\test\AID.390
-EZ390I options = @rt\RT1=(bal notiming stats) guam
-EZ390I total errors         = 0
-AID       EZ390 ENDED   RC=16 MEM(MB)= MB IO=149 INS=50

@@ -1,8 +1,0 @@
-14:30:17 INSTTIME  EZ390 STARTED USING z390 V1.3.09 ON J2SE 1.6.0_03
-EZ390I Copyright 2006 Automated Software Tools Corporation
-EZ390I z390 is licensed under GNU General Public License
-EZ390I program = bmk\INSTTIME.390
-EZ390I options = SYSPARM(bmk) ASCII MEM(5)
-EZ390I instructions/sec     = 1089894
-EZ390I total errors         = 0
-14:36:41 INSTTIME  EZ390 ENDED   RC= 0 SEC=383 MEM(MB)= 18 IO=3491 INS=418318864

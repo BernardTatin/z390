@@ -1,5 +1,0 @@
-         LABEL KEYPRESS
-         LABEL PROCKEY
-         LABEL GETWORD
-         LABEL ALLDONE
-         LABEL ABEND
