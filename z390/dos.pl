@@ -1,6 +1,6 @@
 #!/usr/bin/perl --
 # dos.pl perl bat file and dos command processor for use with z390 on Linux
-# 
+#
 # Installation:
 #   1.  Install z390 in /usr/local/lib/z390 directory and assign rwx rights
 #   2.  Define link symbol "dos" with following command:
@@ -20,7 +20,7 @@
 ###########################################################
 # Author Don Higgins www.z390.org  don@higgins.net
 ###########################################################
-# Maintenace Log 
+# Maintenace Log
 # Copyright 2007 Automated Software Tools Corporation
 # z390 is licensed under GPL General Public License
 ###########################################################

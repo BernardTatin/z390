@@ -18,7 +18,7 @@
 #   1) Set first line to  point  to Unbuntu perl install
 #   2) Support erase command with /q for quiet mode
 #   3) Support following upper or lower case commands within BAT files:
-#      CALL, COPY, 
+#      CALL, COPY,
 #      DIFF dir1 dir2 file3 (compare files in dir1/dir2 and write diff report to file3)
 #      DIR, ERASE, EXIT,
 #      gedit file1,
@@ -40,7 +40,7 @@
 
 #                  pause on unknown BAT command file
 # 01/29/08 RPI 792 Support Windows compatible ECHO ON/OFF, IF EXIST file cmd
-# 10/07/09 RPI 1080 add support for J2SEOPTIONS 
+# 10/07/09 RPI 1080 add support for J2SEOPTIONS
 # 05/16/12 RPI 1216 patch to ignore spaces before "EXIT" command
 #              provided by Martin  Ward 01/31/12
 ##################################################################
@@ -85,17 +85,17 @@ while (<STDIN>) {
 
   print "$_\n";
 # cd command outside bat file
-  if (/^cd (.*)$/i) {  
+  if (/^cd (.*)$/i) {
     chdir $1;
     system("ls");
 # dir path command outside bat file
-  } elsif (/^dir\s+(.*)$/i) { 
+  } elsif (/^dir\s+(.*)$/i) {
       system("ls -l $1");
 # dir cur directory command outside bat file
-  } elsif (/^dir/i) { 
-      system("ls -l");       
+  } elsif (/^dir/i) {
+      system("ls -l");
 # exit dos command processor
-  } elsif (/^exit$/i) { 
+  } elsif (/^exit$/i) {
     last;
 # ignore blank lines
   } elsif (/^\s*$/) {
@@ -119,7 +119,7 @@ sub open_bat_file_error(){
 
 sub batch_file($$) {
   my ($cmd, $args) = @_;
-  $cmd =~ s/\\/\//g;              # replace \ with / 
+  $cmd =~ s/\\/\//g;              # replace \ with /
   $args =~ s/\\/\//g;             # replace \ with / (could change literals vs paths)
   $cmd =~ s/\.bat$//i;
   $cmd =~ s/(\w+)$/\U$1\E/i; # batch file names are all upper case.
@@ -134,7 +134,7 @@ sub batch_file($$) {
     $file = "$cmd.BAT";
   } else {
     # $cmd is relative path without suffix
-    $file = "$bat/$cmd.BAT"; 
+    $file = "$bat/$cmd.BAT";
   }
 # load bat file into @lines array
   my $fh;
@@ -149,7 +149,7 @@ sub batch_file($$) {
     chomp;
     s/^\s+//;
     if (/^:(\S+)/) {
-      $labline{lc $1} = $i; 
+      $labline{lc $1} = $i;
     }
     $i++;
   }
@@ -159,7 +159,7 @@ sub batch_file($$) {
   while (1) {
 # exec next line within bat file line array
      my $line = $lines[$i];
-     $line =~ s/\%\~dps0/$bat\//g;       # replace bat %dps0 with $bat path                         
+     $line =~ s/\%\~dps0/$bat\//g;       # replace bat %dps0 with $bat path
      $line =~ s/\%([1-9])/$args[$1]/g;   # substitute current bat parms 1-9
 +    $line =~ s/\%J2SEOPTIONS\%/$J2SEOPTIONS/g;   # substitute current bat parms 1-9
      $line =~ s/\s+$//;                  # Trim trailing spaces.
@@ -177,12 +177,12 @@ sub batch_file($$) {
       # Label line
 
 # call
-    } elsif ($line =~ /^call\s+(\S+)(.*)$/i) { 
+    } elsif ($line =~ /^call\s+(\S+)(.*)$/i) {
       # Call another batch file:
       batch_file($1, $2);
 
 # copy one or more files
-    } elsif ($line =~ /^copy\s+(\S+)\s+(\S+)$/i){  
+    } elsif ($line =~ /^copy\s+(\S+)\s+(\S+)$/i){
          $errorlevel = system("cp $1 $2");
          if ($errorlevel){
             print "Copy error: $errorlevel\n";
@@ -199,39 +199,39 @@ sub batch_file($$) {
       print "diff errorlevel: $errorlevel\n";
 
 # dir
-    } elsif ($line =~ /^dir\s+(.*)$/i) { 
+    } elsif ($line =~ /^dir\s+(.*)$/i) {
       $errorlevel = system("ls -l $1");
       if ($errorlevel) {
           print "dir errorlevel: $errorlevel\n";
       }
 # echo on/off
-    } elsif ($line =~ /^echo\s+(\S+)$/i) { 
+    } elsif ($line =~ /^echo\s+(\S+)$/i) {
       if ($1 eq "ON"){
          $ECHO = 1;
       } else {
          $ECHO = 0;
       }
 # erase file
-    } elsif ($line =~ /^erase\s+(\S+)$/i) { 
+    } elsif ($line =~ /^erase\s+(\S+)$/i) {
       $errorlevel = system("rm $1");
       if ($errorlevel) {
           print "erase errorlevel: $errorlevel\n";
       };
-# erase files /q    
+# erase files /q
     } elsif ($line =~ /^erase\s+(\S+)\s+(\S+)$/i) {
       $errorlevel = system("rm $1");
 # exit
-    } elsif ($line =~ /^exit\s$/i) { 
+    } elsif ($line =~ /^exit\s$/i) {
       die "EXIT\n";
 # gedit file1
-    } elsif ($line =~ /gedit\s+(.*)$/i) { 
+    } elsif ($line =~ /gedit\s+(.*)$/i) {
       $errorlevel = system("gedit $1");
       if ($errorlevel) {
           print "gedit errorlevel: $errorlevel\n";
       }
 # goto
-    } elsif ($line =~ /^goto\s+(\S+)$/i) { 
-      $i = $labline{lc $1}; 
+    } elsif ($line =~ /^goto\s+(\S+)$/i) {
+      $i = $labline{lc $1};
       die "Label $1 not found!\n" unless defined($i);
       next;
 # if exist file erase file
@@ -243,7 +243,7 @@ sub batch_file($$) {
 # if exist file goto label
     } elsif ($line =~ /^if\s+exist\s+(\S+)+\s+goto\s+(\S+)$/i) {
       if (-f "$1") {
-          $i = $labline{lc $2}; 
+          $i = $labline{lc $2};
 	  die "Label $1 not found!\n" unless defined($i);
 	  next;
       }
@@ -251,7 +251,7 @@ sub batch_file($$) {
     } elsif ($line =~ /^if\s+errorlevel\s+(\d+)\s+goto\s+(\S+)$/i) {
       my $RC = $errorlevel/256; ## RPI 548
       if ($RC >= $1) {
-	$i = $labline{lc $2}; 
+	$i = $labline{lc $2};
 	die "Label $2 not found!\n" unless defined($i);
 	next;
       }
@@ -261,17 +261,17 @@ sub batch_file($$) {
       if ($RC >= $1) {
           open(TTY,"/dev/tty");  ## RPI 548
           my $REPLY = getc(TTY);
-          close(TTY);  
+          close(TTY);
       }
 
 
 # pause
-    } elsif ($line =~ /^pause\s+(.*)$/i) { 
+    } elsif ($line =~ /^pause\s+(.*)$/i) {
       open(TTY,"/dev/tty");  ## RPI 548
       my $REPLY = getc(TTY);
       close(TTY);
 # rem
-    } elsif (($line =~ /^rem/i) || ($line =~ /^REM/i)) {  
+    } elsif (($line =~ /^rem/i) || ($line =~ /^REM/i)) {
       # Comment line
 # set
     } elsif ($line =~ /^set\s+(\w+)=(\S+)$/i){ ## RPI 713
@@ -281,8 +281,8 @@ sub batch_file($$) {
       $VAL =~ s/\\=/\>\//g;       # replace = with > to avoid Linux set error
       $ENV{$1} = $VAL;
       printf "SET ENV VALUE=%s\n", $ENV{$1}; ## RPI 713
-     
-# default - assume Linux command and attempt to execute it     
+
+# default - assume Linux command and attempt to execute it
 
     } else {
       my @args = split_args($line);
