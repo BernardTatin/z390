@@ -4,6 +4,8 @@
 *.obj
 *.elf
 
+*.?ar
+
 # Tiny Cobol
 *.s
 *.i
