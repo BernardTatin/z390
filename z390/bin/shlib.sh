@@ -13,11 +13,11 @@ onerror() {
 with_echo=0
 case $1 in
 	tron|TRON)
-		with_echo=1
+		export with_echo=1
 		shift
 		;;
 	troff|TROFF)
-		with_echo=0
+		export with_echo=0
 		shift
 		;;
 esac

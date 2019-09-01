@@ -576,7 +576,7 @@ public  class  tz390 {
 	    + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" // uppercase
 	    + "abcdefghijklmnopqrstuvwxyz" // lower case
 	    + "@#$" // additional leading symbol characters
-	    + "&’()*+-./:=_"; // mimimum zscii special char
+	    + "&â€™()*+-./:=_"; // mimimum zscii special char
         String newline = System.getProperty("line.separator"); // RPI 500
         char   alarm_bell = 0x07;          // ascii bell char for system.out alarm
         int    sdt_char_int = 0; // RPI 192 shared character sdt
@@ -7795,7 +7795,7 @@ public void put_trace(String text){
 		 * available Charset codepages will be listed.  The two
 		 * codepages will be verified to have the required minimum
 		 * ebcdic code mapping for z390 assembler A-Z,a-z,0-9,@#$,
-		 * blank, and &’()*+-./:=_.  Any characters that have mapping
+		 * blank, and &â€™()*+-./:=_.  Any characters that have mapping
 		 * will attempt to print otherwise they will appear as periods.
 		 */
 		// init hardcoded ascii/ebcdic tables if no codepage
